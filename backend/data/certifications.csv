@@ -1,0 +1,1437 @@
+student_id,cert_id,cert_name,issuing_body,tier,domain,year_obtained
+S0002,C0001,SWAYAM Management Principles,SWAYAM,National,Management,2024
+S0002,C0002,NPTEL Machine Learning,NPTEL,National,AI_ML,2025
+S0003,C0003,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2024
+S0003,C0004,Coursera Web Development,Coursera,Local,Web,2024
+S0005,C0005,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2022
+S0005,C0006,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2022
+S0006,C0007,Google Data Analytics,Google,Global_Standard,Data,2022
+S0008,C0008,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2025
+S0010,C0009,College Workshop on Data Analytics,College,Local,Data,2025
+S0011,C0010,Coursera Web Development,Coursera,Local,Web,2023
+S0011,C0011,Udemy React Complete Guide,Udemy,Local,Web,2025
+S0011,C0012,Meta Back-End Developer,Meta,Global_Standard,Web,2022
+S0011,C0013,Udemy SQL Bootcamp,Udemy,Local,Data,2025
+S0012,C0014,Coursera Python for Everybody,Coursera,Local,Programming,2022
+S0013,C0015,SWAYAM Management Principles,SWAYAM,National,Management,2023
+S0013,C0016,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2025
+S0013,C0017,Certified Kubernetes Administrator,CNCF,Global_Premium,Cloud,2025
+S0013,C0018,Meta Back-End Developer,Meta,Global_Standard,Web,2025
+S0014,C0019,College Workshop on Web Dev,College,Local,Web,2024
+S0014,C0020,IBM Data Science,IBM,Global_Standard,Data,2025
+S0015,C0021,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2024
+S0015,C0022,Azure Administrator,Microsoft,Global_Premium,Cloud,2023
+S0015,C0023,NPTEL Data Science,NPTEL,National,Data,2024
+S0015,C0024,SWAYAM Web Development,SWAYAM,National,Web,2024
+S0016,C0025,Udemy SQL Bootcamp,Udemy,Local,Data,2025
+S0016,C0026,AWS Solutions Architect,AWS,Global_Premium,Cloud,2022
+S0016,C0027,NPTEL Data Science,NPTEL,National,Data,2024
+S0016,C0028,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2022
+S0016,C0029,SWAYAM Management Principles,SWAYAM,National,Management,2022
+S0016,C0030,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2022
+S0020,C0031,TensorFlow Developer Certificate,Google,Global_Premium,AI_ML,2025
+S0020,C0032,Google Data Analytics,Google,Global_Standard,Data,2025
+S0020,C0033,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2023
+S0021,C0034,College Workshop on Python,College,Local,Programming,2023
+S0021,C0035,Udemy React Complete Guide,Udemy,Local,Web,2023
+S0022,C0036,College Workshop on Python,College,Local,Programming,2022
+S0022,C0037,College Workshop on AI,College,Local,AI_ML,2025
+S0022,C0038,Udemy React Complete Guide,Udemy,Local,Web,2025
+S0023,C0039,AWS Solutions Architect,AWS,Global_Premium,Cloud,2024
+S0023,C0040,NPTEL Deep Learning,NPTEL,National,AI_ML,2023
+S0023,C0041,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2022
+S0024,C0042,Udemy React Complete Guide,Udemy,Local,Web,2023
+S0024,C0043,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2023
+S0026,C0044,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2025
+S0026,C0045,NPTEL Deep Learning,NPTEL,National,AI_ML,2025
+S0026,C0046,College Workshop on Web Dev,College,Local,Web,2023
+S0026,C0047,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2023
+S0026,C0048,Google Data Analytics,Google,Global_Standard,Data,2023
+S0026,C0049,NPTEL Cloud Computing,NPTEL,National,Cloud,2024
+S0026,C0050,AWS Cloud Practitioner,AWS,Global_Premium,Cloud,2025
+S0027,C0051,Udemy SQL Bootcamp,Udemy,Local,Data,2023
+S0027,C0052,SWAYAM Web Development,SWAYAM,National,Web,2025
+S0028,C0053,College Workshop on AI,College,Local,AI_ML,2023
+S0029,C0054,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2023
+S0029,C0055,NPTEL Cloud Computing,NPTEL,National,Cloud,2022
+S0030,C0056,College Workshop on Python,College,Local,Programming,2024
+S0031,C0057,Coursera Python for Everybody,Coursera,Local,Programming,2022
+S0033,C0058,NPTEL Data Science,NPTEL,National,Data,2023
+S0033,C0059,NPTEL Python,NPTEL,National,Programming,2024
+S0034,C0060,SWAYAM Management Principles,SWAYAM,National,Management,2024
+S0034,C0061,College Workshop on AI,College,Local,AI_ML,2024
+S0035,C0062,NPTEL Cloud Computing,NPTEL,National,Cloud,2023
+S0036,C0063,SWAYAM Management Principles,SWAYAM,National,Management,2023
+S0036,C0064,Coursera Financial Markets,Coursera,Local,Management,2024
+S0036,C0065,Google Professional Machine Learning Engineer,Google,Global_Premium,AI_ML,2025
+S0036,C0066,NPTEL Database Management,NPTEL,National,Data,2024
+S0038,C0067,College Workshop on Web Dev,College,Local,Web,2023
+S0039,C0068,Google Data Analytics,Google,Global_Standard,Data,2022
+S0039,C0069,NPTEL Python,NPTEL,National,Programming,2024
+S0039,C0070,SWAYAM Management Principles,SWAYAM,National,Management,2023
+S0039,C0071,Salesforce Administrator,Salesforce,Global_Standard,Management,2025
+S0040,C0072,College Workshop on Data Analytics,College,Local,Data,2023
+S0040,C0073,Coursera Python for Everybody,Coursera,Local,Programming,2022
+S0041,C0074,NPTEL Cloud Computing,NPTEL,National,Cloud,2023
+S0041,C0075,NPTEL Programming in Java,NPTEL,National,Programming,2025
+S0042,C0076,Meta Back-End Developer,Meta,Global_Standard,Web,2024
+S0042,C0077,NPTEL Machine Learning,NPTEL,National,AI_ML,2024
+S0042,C0078,Coursera Python for Everybody,Coursera,Local,Programming,2022
+S0042,C0079,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0044,C0080,College Workshop on Data Analytics,College,Local,Data,2024
+S0044,C0081,Coursera Web Development,Coursera,Local,Web,2022
+S0046,C0082,Salesforce Administrator,Salesforce,Global_Standard,Management,2023
+S0048,C0083,Salesforce Administrator,Salesforce,Global_Standard,Management,2025
+S0048,C0084,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2022
+S0049,C0085,IBM Data Science,IBM,Global_Standard,Data,2023
+S0050,C0086,Coursera Financial Markets,Coursera,Local,Management,2023
+S0051,C0087,AWS Machine Learning Specialty,AWS,Global_Premium,AI_ML,2022
+S0051,C0088,NPTEL Data Science,NPTEL,National,Data,2022
+S0052,C0089,SWAYAM IoT,SWAYAM,National,Programming,2024
+S0053,C0090,Google Professional Machine Learning Engineer,Google,Global_Premium,AI_ML,2025
+S0053,C0091,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2024
+S0053,C0092,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0053,C0093,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2023
+S0054,C0094,NPTEL Programming in Java,NPTEL,National,Programming,2024
+S0054,C0095,Coursera Financial Markets,Coursera,Local,Management,2023
+S0054,C0096,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2022
+S0054,C0097,NPTEL Data Science,NPTEL,National,Data,2024
+S0055,C0098,NPTEL Data Science,NPTEL,National,Data,2025
+S0055,C0099,Coursera Financial Markets,Coursera,Local,Management,2025
+S0056,C0100,Google IT Support,Google,Global_Standard,Programming,2025
+S0056,C0101,Meta Back-End Developer,Meta,Global_Standard,Web,2025
+S0056,C0102,NPTEL Programming in Java,NPTEL,National,Programming,2025
+S0056,C0103,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2023
+S0057,C0104,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2023
+S0058,C0105,Coursera Python for Everybody,Coursera,Local,Programming,2022
+S0059,C0106,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0060,C0107,College Workshop on Data Analytics,College,Local,Data,2022
+S0060,C0108,NPTEL Database Management,NPTEL,National,Data,2024
+S0061,C0109,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2025
+S0061,C0110,Oracle Cloud Infrastructure Architect,Oracle,Global_Premium,Cloud,2023
+S0062,C0111,College Workshop on Data Analytics,College,Local,Data,2025
+S0062,C0112,NPTEL Machine Learning,NPTEL,National,AI_ML,2023
+S0063,C0113,Google IT Support,Google,Global_Standard,Programming,2024
+S0063,C0114,Udemy SQL Bootcamp,Udemy,Local,Data,2023
+S0063,C0115,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2025
+S0064,C0116,College Workshop on Data Analytics,College,Local,Data,2025
+S0065,C0117,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2025
+S0065,C0118,SWAYAM Management Principles,SWAYAM,National,Management,2024
+S0065,C0119,Coursera Financial Markets,Coursera,Local,Management,2025
+S0065,C0120,College Workshop on AI,College,Local,AI_ML,2024
+S0066,C0121,TensorFlow Developer Certificate,Google,Global_Premium,AI_ML,2024
+S0067,C0122,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2025
+S0067,C0123,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2025
+S0067,C0124,College Workshop on AI,College,Local,AI_ML,2025
+S0067,C0125,GitHub Foundations,GitHub,Global_Standard,Programming,2023
+S0068,C0126,NPTEL Machine Learning,NPTEL,National,AI_ML,2025
+S0068,C0127,College Workshop on Python,College,Local,Programming,2023
+S0068,C0128,SWAYAM IoT,SWAYAM,National,Programming,2023
+S0069,C0129,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2023
+S0069,C0130,College Workshop on Web Dev,College,Local,Web,2025
+S0069,C0131,Coursera Financial Markets,Coursera,Local,Management,2024
+S0070,C0132,SWAYAM IoT,SWAYAM,National,Programming,2022
+S0070,C0133,AWS Machine Learning Specialty,AWS,Global_Premium,AI_ML,2025
+S0070,C0134,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2022
+S0071,C0135,NPTEL Deep Learning,NPTEL,National,AI_ML,2023
+S0071,C0136,Azure Administrator,Microsoft,Global_Premium,Cloud,2022
+S0071,C0137,Meta Front-End Developer,Meta,Global_Standard,Web,2024
+S0072,C0138,SWAYAM IoT,SWAYAM,National,Programming,2024
+S0072,C0139,SWAYAM Web Development,SWAYAM,National,Web,2022
+S0073,C0140,SWAYAM Web Development,SWAYAM,National,Web,2022
+S0074,C0141,College Workshop on Python,College,Local,Programming,2025
+S0075,C0142,NPTEL Database Management,NPTEL,National,Data,2025
+S0076,C0143,SWAYAM Management Principles,SWAYAM,National,Management,2022
+S0077,C0144,Google IT Support,Google,Global_Standard,Programming,2022
+S0077,C0145,College Workshop on Web Dev,College,Local,Web,2022
+S0078,C0146,NPTEL Data Science,NPTEL,National,Data,2025
+S0079,C0147,Google Data Analytics,Google,Global_Standard,Data,2025
+S0080,C0148,Udemy React Complete Guide,Udemy,Local,Web,2025
+S0081,C0149,Coursera Web Development,Coursera,Local,Web,2025
+S0081,C0150,Meta Back-End Developer,Meta,Global_Standard,Web,2025
+S0081,C0151,Coursera Python for Everybody,Coursera,Local,Programming,2022
+S0082,C0152,College Workshop on Python,College,Local,Programming,2022
+S0082,C0153,Azure Administrator,Microsoft,Global_Premium,Cloud,2024
+S0082,C0154,Oracle Cloud Infrastructure Architect,Oracle,Global_Premium,Cloud,2023
+S0083,C0155,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2025
+S0083,C0156,NPTEL Machine Learning,NPTEL,National,AI_ML,2023
+S0084,C0157,Coursera Web Development,Coursera,Local,Web,2025
+S0084,C0158,College Workshop on Data Analytics,College,Local,Data,2023
+S0084,C0159,Google Data Analytics,Google,Global_Standard,Data,2025
+S0085,C0160,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0085,C0161,AWS Solutions Architect,AWS,Global_Premium,Cloud,2022
+S0085,C0162,TensorFlow Developer Certificate,Google,Global_Premium,AI_ML,2025
+S0088,C0163,Coursera Web Development,Coursera,Local,Web,2024
+S0088,C0164,College Workshop on Python,College,Local,Programming,2025
+S0088,C0165,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0088,C0166,Azure AI Fundamentals,Microsoft,Global_Premium,AI_ML,2024
+S0088,C0167,NPTEL Programming in Java,NPTEL,National,Programming,2024
+S0088,C0168,NPTEL Deep Learning,NPTEL,National,AI_ML,2025
+S0088,C0169,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2023
+S0089,C0170,SWAYAM Management Principles,SWAYAM,National,Management,2023
+S0089,C0171,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2023
+S0089,C0172,NPTEL Database Management,NPTEL,National,Data,2024
+S0090,C0173,NPTEL Python,NPTEL,National,Programming,2024
+S0090,C0174,Coursera Python for Everybody,Coursera,Local,Programming,2023
+S0090,C0175,NPTEL Programming in Java,NPTEL,National,Programming,2025
+S0090,C0176,NPTEL Machine Learning,NPTEL,National,AI_ML,2024
+S0092,C0177,NPTEL Machine Learning,NPTEL,National,AI_ML,2025
+S0093,C0178,Salesforce Administrator,Salesforce,Global_Standard,Management,2023
+S0093,C0179,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2025
+S0093,C0180,IBM Data Science,IBM,Global_Standard,Data,2024
+S0095,C0181,Google Cloud Associate Cloud Engineer,Google,Global_Premium,Cloud,2025
+S0095,C0182,Certified Kubernetes Administrator,CNCF,Global_Premium,Cloud,2024
+S0095,C0183,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2025
+S0096,C0184,Udemy React Complete Guide,Udemy,Local,Web,2022
+S0097,C0185,SWAYAM IoT,SWAYAM,National,Programming,2025
+S0098,C0186,SWAYAM IoT,SWAYAM,National,Programming,2023
+S0098,C0187,College Workshop on Web Dev,College,Local,Web,2025
+S0098,C0188,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2023
+S0098,C0189,Coursera Web Development,Coursera,Local,Web,2025
+S0101,C0190,Coursera Financial Markets,Coursera,Local,Management,2023
+S0102,C0191,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2022
+S0103,C0192,Coursera Python for Everybody,Coursera,Local,Programming,2025
+S0107,C0193,Meta Front-End Developer,Meta,Global_Standard,Web,2025
+S0107,C0194,College Workshop on Web Dev,College,Local,Web,2023
+S0107,C0195,Coursera Python for Everybody,Coursera,Local,Programming,2022
+S0107,C0196,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2023
+S0109,C0197,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0109,C0198,NPTEL Programming in Java,NPTEL,National,Programming,2024
+S0109,C0199,SWAYAM IoT,SWAYAM,National,Programming,2023
+S0109,C0200,College Workshop on Python,College,Local,Programming,2023
+S0110,C0201,GitHub Foundations,GitHub,Global_Standard,Programming,2025
+S0110,C0202,Coursera Financial Markets,Coursera,Local,Management,2025
+S0111,C0203,SWAYAM Management Principles,SWAYAM,National,Management,2022
+S0111,C0204,Udemy SQL Bootcamp,Udemy,Local,Data,2025
+S0112,C0205,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2025
+S0113,C0206,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2022
+S0113,C0207,SWAYAM Management Principles,SWAYAM,National,Management,2023
+S0114,C0208,SWAYAM Web Development,SWAYAM,National,Web,2025
+S0114,C0209,Coursera Web Development,Coursera,Local,Web,2022
+S0115,C0210,NPTEL Database Management,NPTEL,National,Data,2023
+S0115,C0211,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2023
+S0115,C0212,NPTEL Cloud Computing,NPTEL,National,Cloud,2024
+S0116,C0213,College Workshop on Python,College,Local,Programming,2022
+S0117,C0214,Coursera Python for Everybody,Coursera,Local,Programming,2025
+S0117,C0215,SWAYAM Web Development,SWAYAM,National,Web,2024
+S0118,C0216,College Workshop on Web Dev,College,Local,Web,2025
+S0118,C0217,Udemy React Complete Guide,Udemy,Local,Web,2023
+S0118,C0218,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2025
+S0118,C0219,Coursera Web Development,Coursera,Local,Web,2025
+S0119,C0220,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2023
+S0119,C0221,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2023
+S0121,C0222,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2022
+S0121,C0223,Certified Kubernetes Administrator,CNCF,Global_Premium,Cloud,2022
+S0121,C0224,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0124,C0225,SWAYAM Web Development,SWAYAM,National,Web,2024
+S0124,C0226,Coursera Web Development,Coursera,Local,Web,2025
+S0124,C0227,Certified Kubernetes Administrator,CNCF,Global_Premium,Cloud,2022
+S0126,C0228,AWS Machine Learning Specialty,AWS,Global_Premium,AI_ML,2022
+S0126,C0229,Google Cloud Associate Cloud Engineer,Google,Global_Premium,Cloud,2024
+S0126,C0230,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2022
+S0127,C0231,Udemy React Complete Guide,Udemy,Local,Web,2023
+S0127,C0232,Azure Administrator,Microsoft,Global_Premium,Cloud,2023
+S0128,C0233,NPTEL Database Management,NPTEL,National,Data,2022
+S0129,C0234,SWAYAM Management Principles,SWAYAM,National,Management,2025
+S0131,C0235,NPTEL Deep Learning,NPTEL,National,AI_ML,2025
+S0131,C0236,SWAYAM IoT,SWAYAM,National,Programming,2022
+S0131,C0237,Udemy React Complete Guide,Udemy,Local,Web,2024
+S0132,C0238,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2025
+S0132,C0239,Meta Back-End Developer,Meta,Global_Standard,Web,2023
+S0133,C0240,Coursera Financial Markets,Coursera,Local,Management,2024
+S0133,C0241,NPTEL Database Management,NPTEL,National,Data,2024
+S0134,C0242,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2022
+S0134,C0243,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2025
+S0135,C0244,Coursera Financial Markets,Coursera,Local,Management,2025
+S0135,C0245,College Workshop on Python,College,Local,Programming,2023
+S0135,C0246,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2022
+S0135,C0247,NPTEL Data Science,NPTEL,National,Data,2025
+S0137,C0248,Coursera Python for Everybody,Coursera,Local,Programming,2023
+S0137,C0249,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2024
+S0139,C0250,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2024
+S0140,C0251,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2023
+S0141,C0252,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2025
+S0141,C0253,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2024
+S0141,C0254,College Workshop on Python,College,Local,Programming,2022
+S0142,C0255,College Workshop on Web Dev,College,Local,Web,2023
+S0142,C0256,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2023
+S0143,C0257,NPTEL Machine Learning,NPTEL,National,AI_ML,2024
+S0143,C0258,SWAYAM Management Principles,SWAYAM,National,Management,2022
+S0143,C0259,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2024
+S0144,C0260,SWAYAM Management Principles,SWAYAM,National,Management,2023
+S0145,C0261,NPTEL Python,NPTEL,National,Programming,2022
+S0145,C0262,NPTEL Machine Learning,NPTEL,National,AI_ML,2023
+S0146,C0263,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2024
+S0146,C0264,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2025
+S0147,C0265,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2024
+S0148,C0266,SWAYAM Management Principles,SWAYAM,National,Management,2025
+S0148,C0267,IBM Data Science,IBM,Global_Standard,Data,2023
+S0148,C0268,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0149,C0269,NPTEL Machine Learning,NPTEL,National,AI_ML,2023
+S0149,C0270,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2024
+S0149,C0271,IBM Data Science,IBM,Global_Standard,Data,2025
+S0149,C0272,College Workshop on Web Dev,College,Local,Web,2025
+S0151,C0273,SWAYAM Web Development,SWAYAM,National,Web,2023
+S0152,C0274,College Workshop on AI,College,Local,AI_ML,2023
+S0152,C0275,SWAYAM Web Development,SWAYAM,National,Web,2023
+S0152,C0276,Google IT Support,Google,Global_Standard,Programming,2025
+S0152,C0277,Salesforce Administrator,Salesforce,Global_Standard,Management,2022
+S0154,C0278,NPTEL Python,NPTEL,National,Programming,2025
+S0154,C0279,TensorFlow Developer Certificate,Google,Global_Premium,AI_ML,2024
+S0154,C0280,Azure AI Fundamentals,Microsoft,Global_Premium,AI_ML,2025
+S0155,C0281,GitHub Foundations,GitHub,Global_Standard,Programming,2025
+S0155,C0282,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2024
+S0155,C0283,AWS Solutions Architect,AWS,Global_Premium,Cloud,2025
+S0155,C0284,Google Professional Machine Learning Engineer,Google,Global_Premium,AI_ML,2022
+S0156,C0285,NPTEL Data Science,NPTEL,National,Data,2025
+S0157,C0286,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2025
+S0158,C0287,NPTEL Machine Learning,NPTEL,National,AI_ML,2024
+S0158,C0288,Google Data Analytics,Google,Global_Standard,Data,2025
+S0159,C0289,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0160,C0290,Udemy SQL Bootcamp,Udemy,Local,Data,2024
+S0161,C0291,Coursera Financial Markets,Coursera,Local,Management,2023
+S0161,C0292,Udemy SQL Bootcamp,Udemy,Local,Data,2025
+S0161,C0293,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2022
+S0161,C0294,NPTEL Deep Learning,NPTEL,National,AI_ML,2022
+S0162,C0295,Coursera Financial Markets,Coursera,Local,Management,2023
+S0162,C0296,Meta Back-End Developer,Meta,Global_Standard,Web,2023
+S0163,C0297,IBM Data Science,IBM,Global_Standard,Data,2022
+S0164,C0298,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2024
+S0164,C0299,Meta Front-End Developer,Meta,Global_Standard,Web,2025
+S0164,C0300,AWS Solutions Architect,AWS,Global_Premium,Cloud,2023
+S0165,C0301,Salesforce Administrator,Salesforce,Global_Standard,Management,2023
+S0166,C0302,Coursera Financial Markets,Coursera,Local,Management,2025
+S0167,C0303,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2022
+S0167,C0304,College Workshop on AI,College,Local,AI_ML,2024
+S0168,C0305,Meta Back-End Developer,Meta,Global_Standard,Web,2024
+S0168,C0306,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2023
+S0169,C0307,AWS Machine Learning Specialty,AWS,Global_Premium,AI_ML,2023
+S0169,C0308,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2023
+S0169,C0309,NPTEL Programming in Java,NPTEL,National,Programming,2024
+S0170,C0310,Coursera Web Development,Coursera,Local,Web,2022
+S0170,C0311,Udemy SQL Bootcamp,Udemy,Local,Data,2023
+S0172,C0312,College Workshop on Python,College,Local,Programming,2024
+S0172,C0313,Google Data Analytics,Google,Global_Standard,Data,2022
+S0173,C0314,College Workshop on Python,College,Local,Programming,2025
+S0173,C0315,SWAYAM Web Development,SWAYAM,National,Web,2024
+S0173,C0316,College Workshop on Data Analytics,College,Local,Data,2023
+S0174,C0317,NPTEL Database Management,NPTEL,National,Data,2023
+S0174,C0318,Google Cloud Associate Cloud Engineer,Google,Global_Premium,Cloud,2025
+S0175,C0319,SWAYAM IoT,SWAYAM,National,Programming,2024
+S0175,C0320,SWAYAM Web Development,SWAYAM,National,Web,2023
+S0176,C0321,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2025
+S0176,C0322,Udemy React Complete Guide,Udemy,Local,Web,2022
+S0176,C0323,College Workshop on AI,College,Local,AI_ML,2023
+S0176,C0324,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2023
+S0176,C0325,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2024
+S0179,C0326,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2025
+S0179,C0327,TensorFlow Developer Certificate,Google,Global_Premium,AI_ML,2025
+S0179,C0328,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2022
+S0179,C0329,Meta Back-End Developer,Meta,Global_Standard,Web,2024
+S0179,C0330,Google Cloud Associate Cloud Engineer,Google,Global_Premium,Cloud,2024
+S0179,C0331,NPTEL Machine Learning,NPTEL,National,AI_ML,2022
+S0179,C0332,Udemy SQL Bootcamp,Udemy,Local,Data,2024
+S0181,C0333,Coursera Web Development,Coursera,Local,Web,2022
+S0183,C0334,College Workshop on Python,College,Local,Programming,2025
+S0183,C0335,College Workshop on Web Dev,College,Local,Web,2022
+S0184,C0336,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2024
+S0184,C0337,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2022
+S0185,C0338,Salesforce Administrator,Salesforce,Global_Standard,Management,2025
+S0185,C0339,NPTEL Cloud Computing,NPTEL,National,Cloud,2022
+S0185,C0340,Certified Kubernetes Administrator,CNCF,Global_Premium,Cloud,2023
+S0186,C0341,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2025
+S0186,C0342,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0186,C0343,Udemy React Complete Guide,Udemy,Local,Web,2025
+S0187,C0344,SWAYAM Management Principles,SWAYAM,National,Management,2024
+S0188,C0345,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2025
+S0188,C0346,College Workshop on Data Analytics,College,Local,Data,2023
+S0190,C0347,SWAYAM Management Principles,SWAYAM,National,Management,2024
+S0190,C0348,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0190,C0349,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2025
+S0190,C0350,College Workshop on Data Analytics,College,Local,Data,2024
+S0190,C0351,Google Cloud Professional Data Engineer,Google,Global_Premium,Cloud,2025
+S0190,C0352,NPTEL Cloud Computing,NPTEL,National,Cloud,2022
+S0190,C0353,Salesforce Administrator,Salesforce,Global_Standard,Management,2023
+S0192,C0354,College Workshop on Web Dev,College,Local,Web,2022
+S0192,C0355,College Workshop on Data Analytics,College,Local,Data,2022
+S0193,C0356,SWAYAM Web Development,SWAYAM,National,Web,2023
+S0193,C0357,NPTEL Deep Learning,NPTEL,National,AI_ML,2025
+S0195,C0358,NPTEL Programming in Java,NPTEL,National,Programming,2025
+S0196,C0359,Coursera Web Development,Coursera,Local,Web,2022
+S0198,C0360,TensorFlow Developer Certificate,Google,Global_Premium,AI_ML,2025
+S0198,C0361,NPTEL Deep Learning,NPTEL,National,AI_ML,2023
+S0198,C0362,Salesforce Administrator,Salesforce,Global_Standard,Management,2025
+S0198,C0363,Udemy React Complete Guide,Udemy,Local,Web,2025
+S0199,C0364,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2025
+S0199,C0365,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2022
+S0199,C0366,NPTEL Python,NPTEL,National,Programming,2023
+S0200,C0367,Coursera Python for Everybody,Coursera,Local,Programming,2023
+S0200,C0368,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2025
+S0200,C0369,Azure Administrator,Microsoft,Global_Premium,Cloud,2023
+S0201,C0370,Udemy SQL Bootcamp,Udemy,Local,Data,2024
+S0201,C0371,NPTEL Cloud Computing,NPTEL,National,Cloud,2022
+S0202,C0372,College Workshop on Data Analytics,College,Local,Data,2024
+S0202,C0373,College Workshop on AI,College,Local,AI_ML,2024
+S0202,C0374,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2024
+S0203,C0375,College Workshop on Python,College,Local,Programming,2022
+S0204,C0376,Udemy React Complete Guide,Udemy,Local,Web,2024
+S0206,C0377,SWAYAM IoT,SWAYAM,National,Programming,2023
+S0206,C0378,Meta Front-End Developer,Meta,Global_Standard,Web,2025
+S0206,C0379,NPTEL Machine Learning,NPTEL,National,AI_ML,2024
+S0207,C0380,Udemy React Complete Guide,Udemy,Local,Web,2024
+S0207,C0381,SWAYAM IoT,SWAYAM,National,Programming,2025
+S0209,C0382,College Workshop on Data Analytics,College,Local,Data,2025
+S0209,C0383,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2023
+S0213,C0384,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2024
+S0213,C0385,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0213,C0386,Google IT Support,Google,Global_Standard,Programming,2022
+S0213,C0387,Google Professional Machine Learning Engineer,Google,Global_Premium,AI_ML,2022
+S0215,C0388,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2024
+S0215,C0389,College Workshop on AI,College,Local,AI_ML,2025
+S0215,C0390,GitHub Foundations,GitHub,Global_Standard,Programming,2024
+S0215,C0391,Azure AI Fundamentals,Microsoft,Global_Premium,AI_ML,2024
+S0215,C0392,SWAYAM Web Development,SWAYAM,National,Web,2023
+S0216,C0393,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2023
+S0216,C0394,GitHub Foundations,GitHub,Global_Standard,Programming,2025
+S0216,C0395,College Workshop on Python,College,Local,Programming,2025
+S0216,C0396,NPTEL Deep Learning,NPTEL,National,AI_ML,2022
+S0217,C0397,NPTEL Deep Learning,NPTEL,National,AI_ML,2025
+S0217,C0398,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2022
+S0217,C0399,GitHub Foundations,GitHub,Global_Standard,Programming,2024
+S0217,C0400,NPTEL Data Science,NPTEL,National,Data,2022
+S0218,C0401,Google Data Analytics,Google,Global_Standard,Data,2022
+S0218,C0402,SWAYAM IoT,SWAYAM,National,Programming,2024
+S0218,C0403,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2023
+S0219,C0404,NPTEL Deep Learning,NPTEL,National,AI_ML,2023
+S0219,C0405,SWAYAM IoT,SWAYAM,National,Programming,2024
+S0219,C0406,NPTEL Programming in Java,NPTEL,National,Programming,2024
+S0219,C0407,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2025
+S0221,C0408,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2022
+S0221,C0409,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2024
+S0222,C0410,Coursera Python for Everybody,Coursera,Local,Programming,2022
+S0223,C0411,SWAYAM IoT,SWAYAM,National,Programming,2022
+S0224,C0412,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2024
+S0225,C0413,NPTEL Python,NPTEL,National,Programming,2024
+S0225,C0414,Google Data Analytics,Google,Global_Standard,Data,2025
+S0225,C0415,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2023
+S0227,C0416,AWS Solutions Architect,AWS,Global_Premium,Cloud,2024
+S0227,C0417,AWS Cloud Practitioner,AWS,Global_Premium,Cloud,2023
+S0227,C0418,NPTEL Deep Learning,NPTEL,National,AI_ML,2023
+S0230,C0419,SWAYAM Management Principles,SWAYAM,National,Management,2022
+S0230,C0420,NPTEL Data Science,NPTEL,National,Data,2023
+S0230,C0421,Google Cloud Professional Data Engineer,Google,Global_Premium,Cloud,2023
+S0230,C0422,College Workshop on Python,College,Local,Programming,2023
+S0231,C0423,Coursera Financial Markets,Coursera,Local,Management,2025
+S0231,C0424,College Workshop on Data Analytics,College,Local,Data,2024
+S0231,C0425,College Workshop on AI,College,Local,AI_ML,2025
+S0231,C0426,Google Data Analytics,Google,Global_Standard,Data,2022
+S0231,C0427,NPTEL Python,NPTEL,National,Programming,2023
+S0231,C0428,NPTEL Programming in Java,NPTEL,National,Programming,2025
+S0232,C0429,Certified Kubernetes Administrator,CNCF,Global_Premium,Cloud,2022
+S0232,C0430,NPTEL Python,NPTEL,National,Programming,2025
+S0232,C0431,SWAYAM IoT,SWAYAM,National,Programming,2024
+S0233,C0432,Udemy React Complete Guide,Udemy,Local,Web,2022
+S0234,C0433,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2022
+S0234,C0434,Google IT Support,Google,Global_Standard,Programming,2023
+S0234,C0435,Azure AI Fundamentals,Microsoft,Global_Premium,AI_ML,2023
+S0234,C0436,SWAYAM Web Development,SWAYAM,National,Web,2024
+S0234,C0437,NPTEL Cloud Computing,NPTEL,National,Cloud,2022
+S0234,C0438,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2025
+S0235,C0439,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2022
+S0235,C0440,Coursera Python for Everybody,Coursera,Local,Programming,2025
+S0235,C0441,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2024
+S0235,C0442,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2025
+S0236,C0443,Udemy React Complete Guide,Udemy,Local,Web,2025
+S0236,C0444,Google Cloud Professional Data Engineer,Google,Global_Premium,Cloud,2024
+S0236,C0445,Google IT Support,Google,Global_Standard,Programming,2024
+S0237,C0446,College Workshop on Data Analytics,College,Local,Data,2025
+S0238,C0447,NPTEL Data Science,NPTEL,National,Data,2025
+S0239,C0448,Udemy React Complete Guide,Udemy,Local,Web,2022
+S0239,C0449,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2025
+S0242,C0450,Udemy React Complete Guide,Udemy,Local,Web,2023
+S0243,C0451,Udemy SQL Bootcamp,Udemy,Local,Data,2025
+S0243,C0452,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2022
+S0243,C0453,Coursera Python for Everybody,Coursera,Local,Programming,2025
+S0243,C0454,IBM Data Science,IBM,Global_Standard,Data,2023
+S0244,C0455,NPTEL Programming in Java,NPTEL,National,Programming,2023
+S0244,C0456,Oracle Cloud Infrastructure Architect,Oracle,Global_Premium,Cloud,2023
+S0244,C0457,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0244,C0458,Google Cloud Professional Data Engineer,Google,Global_Premium,Cloud,2024
+S0246,C0459,AWS Cloud Practitioner,AWS,Global_Premium,Cloud,2025
+S0246,C0460,Meta Back-End Developer,Meta,Global_Standard,Web,2022
+S0246,C0461,Coursera Web Development,Coursera,Local,Web,2024
+S0248,C0462,College Workshop on Python,College,Local,Programming,2024
+S0249,C0463,AWS Cloud Practitioner,AWS,Global_Premium,Cloud,2023
+S0249,C0464,NPTEL Python,NPTEL,National,Programming,2022
+S0249,C0465,SWAYAM Management Principles,SWAYAM,National,Management,2023
+S0249,C0466,SWAYAM IoT,SWAYAM,National,Programming,2025
+S0250,C0467,Coursera Financial Markets,Coursera,Local,Management,2023
+S0250,C0468,Coursera Python for Everybody,Coursera,Local,Programming,2023
+S0252,C0469,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2024
+S0252,C0470,Google IT Support,Google,Global_Standard,Programming,2022
+S0252,C0471,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2025
+S0252,C0472,TensorFlow Developer Certificate,Google,Global_Premium,AI_ML,2025
+S0253,C0473,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2025
+S0253,C0474,Google Professional Machine Learning Engineer,Google,Global_Premium,AI_ML,2023
+S0253,C0475,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2023
+S0254,C0476,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2023
+S0254,C0477,Coursera Financial Markets,Coursera,Local,Management,2023
+S0255,C0478,Azure Administrator,Microsoft,Global_Premium,Cloud,2025
+S0255,C0479,Salesforce Administrator,Salesforce,Global_Standard,Management,2025
+S0255,C0480,Meta Back-End Developer,Meta,Global_Standard,Web,2025
+S0255,C0481,NPTEL Database Management,NPTEL,National,Data,2022
+S0255,C0482,NPTEL Machine Learning,NPTEL,National,AI_ML,2024
+S0255,C0483,Google IT Support,Google,Global_Standard,Programming,2022
+S0256,C0484,College Workshop on Python,College,Local,Programming,2025
+S0256,C0485,Coursera Python for Everybody,Coursera,Local,Programming,2025
+S0257,C0486,Udemy SQL Bootcamp,Udemy,Local,Data,2022
+S0257,C0487,College Workshop on Web Dev,College,Local,Web,2025
+S0257,C0488,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2022
+S0261,C0489,Udemy React Complete Guide,Udemy,Local,Web,2023
+S0261,C0490,NPTEL Machine Learning,NPTEL,National,AI_ML,2022
+S0262,C0491,NPTEL Deep Learning,NPTEL,National,AI_ML,2025
+S0262,C0492,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2023
+S0263,C0493,SWAYAM Web Development,SWAYAM,National,Web,2024
+S0263,C0494,Salesforce Administrator,Salesforce,Global_Standard,Management,2023
+S0263,C0495,NPTEL Cloud Computing,NPTEL,National,Cloud,2022
+S0263,C0496,AWS Solutions Architect,AWS,Global_Premium,Cloud,2023
+S0264,C0497,SWAYAM Web Development,SWAYAM,National,Web,2022
+S0264,C0498,College Workshop on Python,College,Local,Programming,2025
+S0264,C0499,College Workshop on Data Analytics,College,Local,Data,2025
+S0264,C0500,Coursera Financial Markets,Coursera,Local,Management,2022
+S0264,C0501,Salesforce Administrator,Salesforce,Global_Standard,Management,2023
+S0264,C0502,NPTEL Machine Learning,NPTEL,National,AI_ML,2023
+S0265,C0503,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0265,C0504,SWAYAM Web Development,SWAYAM,National,Web,2023
+S0265,C0505,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2025
+S0265,C0506,Azure Administrator,Microsoft,Global_Premium,Cloud,2024
+S0266,C0507,Coursera Python for Everybody,Coursera,Local,Programming,2023
+S0268,C0508,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2024
+S0269,C0509,Udemy SQL Bootcamp,Udemy,Local,Data,2022
+S0269,C0510,Google Data Analytics,Google,Global_Standard,Data,2023
+S0269,C0511,Coursera Financial Markets,Coursera,Local,Management,2023
+S0269,C0512,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2023
+S0270,C0513,NPTEL Data Science,NPTEL,National,Data,2022
+S0270,C0514,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2024
+S0270,C0515,IBM Data Science,IBM,Global_Standard,Data,2023
+S0270,C0516,NPTEL Deep Learning,NPTEL,National,AI_ML,2023
+S0271,C0517,IBM Data Science,IBM,Global_Standard,Data,2024
+S0272,C0518,Meta Front-End Developer,Meta,Global_Standard,Web,2025
+S0272,C0519,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2024
+S0272,C0520,Udemy React Complete Guide,Udemy,Local,Web,2022
+S0274,C0521,Udemy SQL Bootcamp,Udemy,Local,Data,2024
+S0274,C0522,NPTEL Deep Learning,NPTEL,National,AI_ML,2024
+S0274,C0523,Azure Administrator,Microsoft,Global_Premium,Cloud,2022
+S0274,C0524,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2023
+S0278,C0525,SWAYAM IoT,SWAYAM,National,Programming,2025
+S0278,C0526,GitHub Foundations,GitHub,Global_Standard,Programming,2022
+S0278,C0527,Oracle Cloud Infrastructure Architect,Oracle,Global_Premium,Cloud,2022
+S0279,C0528,College Workshop on AI,College,Local,AI_ML,2024
+S0279,C0529,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2024
+S0280,C0530,AWS Solutions Architect,AWS,Global_Premium,Cloud,2022
+S0282,C0531,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2023
+S0284,C0532,College Workshop on Python,College,Local,Programming,2023
+S0284,C0533,NPTEL Python,NPTEL,National,Programming,2024
+S0284,C0534,Coursera Financial Markets,Coursera,Local,Management,2025
+S0285,C0535,Google Data Analytics,Google,Global_Standard,Data,2023
+S0285,C0536,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2023
+S0285,C0537,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2023
+S0285,C0538,Meta Front-End Developer,Meta,Global_Standard,Web,2022
+S0286,C0539,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2023
+S0286,C0540,NPTEL Deep Learning,NPTEL,National,AI_ML,2024
+S0286,C0541,Google Professional Machine Learning Engineer,Google,Global_Premium,AI_ML,2023
+S0288,C0542,NPTEL Database Management,NPTEL,National,Data,2024
+S0288,C0543,Udemy React Complete Guide,Udemy,Local,Web,2024
+S0289,C0544,Udemy React Complete Guide,Udemy,Local,Web,2023
+S0289,C0545,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0289,C0546,College Workshop on Python,College,Local,Programming,2024
+S0289,C0547,College Workshop on AI,College,Local,AI_ML,2025
+S0289,C0548,Google Data Analytics,Google,Global_Standard,Data,2024
+S0289,C0549,AWS Cloud Practitioner,AWS,Global_Premium,Cloud,2025
+S0290,C0550,SWAYAM Web Development,SWAYAM,National,Web,2022
+S0291,C0551,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2024
+S0291,C0552,Salesforce Administrator,Salesforce,Global_Standard,Management,2022
+S0291,C0553,Meta Front-End Developer,Meta,Global_Standard,Web,2024
+S0292,C0554,College Workshop on AI,College,Local,AI_ML,2025
+S0292,C0555,College Workshop on Python,College,Local,Programming,2024
+S0293,C0556,College Workshop on Web Dev,College,Local,Web,2022
+S0293,C0557,AWS Solutions Architect,AWS,Global_Premium,Cloud,2022
+S0294,C0558,Udemy React Complete Guide,Udemy,Local,Web,2025
+S0294,C0559,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2022
+S0295,C0560,GitHub Foundations,GitHub,Global_Standard,Programming,2024
+S0296,C0561,Udemy SQL Bootcamp,Udemy,Local,Data,2025
+S0296,C0562,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2025
+S0297,C0563,SWAYAM IoT,SWAYAM,National,Programming,2022
+S0298,C0564,College Workshop on AI,College,Local,AI_ML,2023
+S0298,C0565,TensorFlow Developer Certificate,Google,Global_Premium,AI_ML,2022
+S0299,C0566,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2023
+S0299,C0567,Certified Kubernetes Administrator,CNCF,Global_Premium,Cloud,2022
+S0299,C0568,SWAYAM Web Development,SWAYAM,National,Web,2022
+S0299,C0569,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0300,C0570,Salesforce Administrator,Salesforce,Global_Standard,Management,2024
+S0300,C0571,NPTEL Deep Learning,NPTEL,National,AI_ML,2023
+S0300,C0572,IBM Data Science,IBM,Global_Standard,Data,2023
+S0300,C0573,College Workshop on Data Analytics,College,Local,Data,2024
+S0302,C0574,Udemy React Complete Guide,Udemy,Local,Web,2022
+S0306,C0575,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2023
+S0306,C0576,Google Professional Machine Learning Engineer,Google,Global_Premium,AI_ML,2024
+S0306,C0577,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2023
+S0306,C0578,Coursera Web Development,Coursera,Local,Web,2025
+S0308,C0579,GitHub Foundations,GitHub,Global_Standard,Programming,2022
+S0308,C0580,Coursera Financial Markets,Coursera,Local,Management,2024
+S0308,C0581,SWAYAM Web Development,SWAYAM,National,Web,2023
+S0308,C0582,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2024
+S0309,C0583,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0309,C0584,College Workshop on Python,College,Local,Programming,2025
+S0309,C0585,College Workshop on Data Analytics,College,Local,Data,2025
+S0309,C0586,College Workshop on AI,College,Local,AI_ML,2024
+S0311,C0587,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2025
+S0312,C0588,College Workshop on Web Dev,College,Local,Web,2025
+S0312,C0589,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2022
+S0312,C0590,NPTEL Deep Learning,NPTEL,National,AI_ML,2023
+S0312,C0591,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2025
+S0313,C0592,AWS Solutions Architect,AWS,Global_Premium,Cloud,2023
+S0314,C0593,Certified Kubernetes Administrator,CNCF,Global_Premium,Cloud,2022
+S0314,C0594,Oracle Cloud Infrastructure Architect,Oracle,Global_Premium,Cloud,2024
+S0314,C0595,AWS Cloud Practitioner,AWS,Global_Premium,Cloud,2022
+S0315,C0596,NPTEL Data Science,NPTEL,National,Data,2023
+S0315,C0597,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2023
+S0315,C0598,SWAYAM Management Principles,SWAYAM,National,Management,2023
+S0317,C0599,College Workshop on Python,College,Local,Programming,2022
+S0319,C0600,NPTEL Database Management,NPTEL,National,Data,2024
+S0319,C0601,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2023
+S0320,C0602,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2022
+S0320,C0603,Coursera Financial Markets,Coursera,Local,Management,2024
+S0322,C0604,NPTEL Cloud Computing,NPTEL,National,Cloud,2024
+S0326,C0605,College Workshop on Data Analytics,College,Local,Data,2024
+S0326,C0606,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2025
+S0330,C0607,Coursera Web Development,Coursera,Local,Web,2024
+S0330,C0608,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2024
+S0333,C0609,College Workshop on AI,College,Local,AI_ML,2023
+S0334,C0610,College Workshop on Python,College,Local,Programming,2025
+S0336,C0611,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2025
+S0337,C0612,Coursera Financial Markets,Coursera,Local,Management,2023
+S0337,C0613,NPTEL Programming in Java,NPTEL,National,Programming,2025
+S0337,C0614,NPTEL Deep Learning,NPTEL,National,AI_ML,2025
+S0339,C0615,Google Cloud Associate Cloud Engineer,Google,Global_Premium,Cloud,2024
+S0340,C0616,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2023
+S0340,C0617,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2022
+S0340,C0618,NPTEL Machine Learning,NPTEL,National,AI_ML,2022
+S0340,C0619,Meta Back-End Developer,Meta,Global_Standard,Web,2022
+S0341,C0620,AWS Machine Learning Specialty,AWS,Global_Premium,AI_ML,2022
+S0341,C0621,Udemy SQL Bootcamp,Udemy,Local,Data,2022
+S0341,C0622,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2024
+S0341,C0623,NPTEL Deep Learning,NPTEL,National,AI_ML,2023
+S0343,C0624,NPTEL Cloud Computing,NPTEL,National,Cloud,2023
+S0343,C0625,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2025
+S0344,C0626,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2025
+S0346,C0627,Certified Kubernetes Administrator,CNCF,Global_Premium,Cloud,2024
+S0346,C0628,Coursera Web Development,Coursera,Local,Web,2024
+S0347,C0629,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0348,C0630,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2024
+S0349,C0631,Google Cloud Associate Cloud Engineer,Google,Global_Premium,Cloud,2024
+S0349,C0632,NPTEL Database Management,NPTEL,National,Data,2024
+S0350,C0633,SWAYAM Web Development,SWAYAM,National,Web,2025
+S0350,C0634,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2022
+S0350,C0635,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2022
+S0351,C0636,SWAYAM Management Principles,SWAYAM,National,Management,2024
+S0351,C0637,Udemy SQL Bootcamp,Udemy,Local,Data,2025
+S0352,C0638,Google Professional Machine Learning Engineer,Google,Global_Premium,AI_ML,2025
+S0352,C0639,NPTEL Machine Learning,NPTEL,National,AI_ML,2025
+S0352,C0640,College Workshop on Web Dev,College,Local,Web,2024
+S0352,C0641,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2025
+S0353,C0642,NPTEL Machine Learning,NPTEL,National,AI_ML,2023
+S0353,C0643,NPTEL Cloud Computing,NPTEL,National,Cloud,2024
+S0353,C0644,College Workshop on AI,College,Local,AI_ML,2022
+S0353,C0645,SWAYAM Management Principles,SWAYAM,National,Management,2024
+S0356,C0646,NPTEL Machine Learning,NPTEL,National,AI_ML,2022
+S0357,C0647,Udemy React Complete Guide,Udemy,Local,Web,2025
+S0357,C0648,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2022
+S0359,C0649,Salesforce Administrator,Salesforce,Global_Standard,Management,2024
+S0359,C0650,Coursera Financial Markets,Coursera,Local,Management,2022
+S0359,C0651,TensorFlow Developer Certificate,Google,Global_Premium,AI_ML,2025
+S0361,C0652,NPTEL Database Management,NPTEL,National,Data,2022
+S0362,C0653,Coursera Python for Everybody,Coursera,Local,Programming,2023
+S0362,C0654,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2022
+S0362,C0655,IBM Data Science,IBM,Global_Standard,Data,2025
+S0362,C0656,Google Data Analytics,Google,Global_Standard,Data,2024
+S0363,C0657,College Workshop on Python,College,Local,Programming,2024
+S0363,C0658,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2022
+S0363,C0659,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2025
+S0363,C0660,Azure AI Fundamentals,Microsoft,Global_Premium,AI_ML,2023
+S0364,C0661,Google Data Analytics,Google,Global_Standard,Data,2022
+S0364,C0662,NPTEL Database Management,NPTEL,National,Data,2022
+S0365,C0663,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0365,C0664,College Workshop on Web Dev,College,Local,Web,2025
+S0366,C0665,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2025
+S0366,C0666,NPTEL Python,NPTEL,National,Programming,2024
+S0366,C0667,TensorFlow Developer Certificate,Google,Global_Premium,AI_ML,2023
+S0366,C0668,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2022
+S0367,C0669,College Workshop on AI,College,Local,AI_ML,2022
+S0367,C0670,Oracle Cloud Infrastructure Architect,Oracle,Global_Premium,Cloud,2024
+S0367,C0671,AWS Cloud Practitioner,AWS,Global_Premium,Cloud,2022
+S0368,C0672,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2025
+S0369,C0673,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2023
+S0370,C0674,NPTEL Deep Learning,NPTEL,National,AI_ML,2024
+S0370,C0675,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2024
+S0371,C0676,College Workshop on Python,College,Local,Programming,2023
+S0372,C0677,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2022
+S0372,C0678,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0372,C0679,College Workshop on Data Analytics,College,Local,Data,2024
+S0372,C0680,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2024
+S0373,C0681,College Workshop on AI,College,Local,AI_ML,2025
+S0373,C0682,SWAYAM IoT,SWAYAM,National,Programming,2023
+S0373,C0683,Certified Kubernetes Administrator,CNCF,Global_Premium,Cloud,2023
+S0373,C0684,NPTEL Python,NPTEL,National,Programming,2024
+S0376,C0685,Coursera Web Development,Coursera,Local,Web,2024
+S0376,C0686,GitHub Foundations,GitHub,Global_Standard,Programming,2023
+S0376,C0687,Udemy React Complete Guide,Udemy,Local,Web,2022
+S0377,C0688,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0377,C0689,College Workshop on Python,College,Local,Programming,2024
+S0377,C0690,NPTEL Deep Learning,NPTEL,National,AI_ML,2022
+S0379,C0691,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0379,C0692,Meta Back-End Developer,Meta,Global_Standard,Web,2023
+S0379,C0693,NPTEL Cloud Computing,NPTEL,National,Cloud,2024
+S0381,C0694,SWAYAM IoT,SWAYAM,National,Programming,2025
+S0381,C0695,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2025
+S0381,C0696,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2023
+S0381,C0697,Udemy React Complete Guide,Udemy,Local,Web,2022
+S0382,C0698,NPTEL Programming in Java,NPTEL,National,Programming,2025
+S0382,C0699,NPTEL Data Science,NPTEL,National,Data,2022
+S0383,C0700,Coursera Web Development,Coursera,Local,Web,2024
+S0385,C0701,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2024
+S0385,C0702,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2022
+S0385,C0703,College Workshop on Data Analytics,College,Local,Data,2022
+S0385,C0704,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2024
+S0386,C0705,NPTEL Data Science,NPTEL,National,Data,2023
+S0387,C0706,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2022
+S0387,C0707,Udemy SQL Bootcamp,Udemy,Local,Data,2024
+S0390,C0708,Google IT Support,Google,Global_Standard,Programming,2024
+S0390,C0709,NPTEL Machine Learning,NPTEL,National,AI_ML,2023
+S0390,C0710,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2025
+S0390,C0711,College Workshop on Web Dev,College,Local,Web,2024
+S0390,C0712,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2023
+S0392,C0713,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2022
+S0392,C0714,AWS Solutions Architect,AWS,Global_Premium,Cloud,2025
+S0392,C0715,Meta Front-End Developer,Meta,Global_Standard,Web,2025
+S0392,C0716,College Workshop on Python,College,Local,Programming,2024
+S0393,C0717,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0393,C0718,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2023
+S0394,C0719,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2022
+S0394,C0720,Udemy React Complete Guide,Udemy,Local,Web,2023
+S0395,C0721,College Workshop on AI,College,Local,AI_ML,2023
+S0395,C0722,Google Cloud Professional Data Engineer,Google,Global_Premium,Cloud,2025
+S0395,C0723,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2022
+S0395,C0724,SWAYAM Web Development,SWAYAM,National,Web,2022
+S0395,C0725,Coursera Web Development,Coursera,Local,Web,2022
+S0396,C0726,College Workshop on Web Dev,College,Local,Web,2023
+S0396,C0727,NPTEL Deep Learning,NPTEL,National,AI_ML,2025
+S0396,C0728,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2023
+S0397,C0729,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2025
+S0397,C0730,AWS Cloud Practitioner,AWS,Global_Premium,Cloud,2023
+S0397,C0731,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2022
+S0398,C0732,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2023
+S0398,C0733,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2023
+S0399,C0734,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0400,C0735,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0400,C0736,College Workshop on Python,College,Local,Programming,2022
+S0400,C0737,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2022
+S0400,C0738,AWS Machine Learning Specialty,AWS,Global_Premium,AI_ML,2024
+S0400,C0739,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2025
+S0400,C0740,Salesforce Administrator,Salesforce,Global_Standard,Management,2025
+S0401,C0741,SWAYAM IoT,SWAYAM,National,Programming,2023
+S0401,C0742,Coursera Financial Markets,Coursera,Local,Management,2025
+S0401,C0743,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2025
+S0401,C0744,Coursera Python for Everybody,Coursera,Local,Programming,2025
+S0402,C0745,Coursera Python for Everybody,Coursera,Local,Programming,2025
+S0402,C0746,College Workshop on AI,College,Local,AI_ML,2025
+S0402,C0747,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2025
+S0403,C0748,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2023
+S0403,C0749,Coursera Python for Everybody,Coursera,Local,Programming,2023
+S0403,C0750,Udemy SQL Bootcamp,Udemy,Local,Data,2022
+S0403,C0751,College Workshop on AI,College,Local,AI_ML,2022
+S0403,C0752,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2025
+S0403,C0753,SWAYAM Web Development,SWAYAM,National,Web,2023
+S0403,C0754,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2022
+S0404,C0755,Google Cloud Professional Data Engineer,Google,Global_Premium,Cloud,2025
+S0404,C0756,SWAYAM Web Development,SWAYAM,National,Web,2024
+S0404,C0757,College Workshop on AI,College,Local,AI_ML,2024
+S0404,C0758,Udemy SQL Bootcamp,Udemy,Local,Data,2024
+S0407,C0759,NPTEL Cloud Computing,NPTEL,National,Cloud,2025
+S0407,C0760,NPTEL Python,NPTEL,National,Programming,2024
+S0410,C0761,NPTEL Cloud Computing,NPTEL,National,Cloud,2022
+S0411,C0762,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2024
+S0411,C0763,Udemy React Complete Guide,Udemy,Local,Web,2022
+S0412,C0764,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0412,C0765,Meta Back-End Developer,Meta,Global_Standard,Web,2025
+S0412,C0766,SWAYAM Management Principles,SWAYAM,National,Management,2024
+S0412,C0767,College Workshop on Web Dev,College,Local,Web,2023
+S0413,C0768,College Workshop on Data Analytics,College,Local,Data,2022
+S0413,C0769,Coursera Financial Markets,Coursera,Local,Management,2023
+S0416,C0770,College Workshop on Web Dev,College,Local,Web,2022
+S0417,C0771,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2025
+S0418,C0772,NPTEL Cloud Computing,NPTEL,National,Cloud,2023
+S0419,C0773,Azure Administrator,Microsoft,Global_Premium,Cloud,2024
+S0422,C0774,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2022
+S0424,C0775,Coursera Python for Everybody,Coursera,Local,Programming,2025
+S0424,C0776,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2025
+S0424,C0777,GitHub Foundations,GitHub,Global_Standard,Programming,2022
+S0424,C0778,Google Data Analytics,Google,Global_Standard,Data,2024
+S0424,C0779,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2022
+S0424,C0780,College Workshop on Python,College,Local,Programming,2023
+S0428,C0781,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2023
+S0428,C0782,NPTEL Programming in Java,NPTEL,National,Programming,2025
+S0428,C0783,College Workshop on AI,College,Local,AI_ML,2025
+S0428,C0784,Azure Administrator,Microsoft,Global_Premium,Cloud,2022
+S0428,C0785,Meta Front-End Developer,Meta,Global_Standard,Web,2022
+S0428,C0786,College Workshop on Web Dev,College,Local,Web,2022
+S0429,C0787,Udemy React Complete Guide,Udemy,Local,Web,2023
+S0429,C0788,College Workshop on Web Dev,College,Local,Web,2022
+S0430,C0789,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2022
+S0433,C0790,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2025
+S0433,C0791,Oracle Cloud Infrastructure Architect,Oracle,Global_Premium,Cloud,2022
+S0436,C0792,NPTEL Data Science,NPTEL,National,Data,2023
+S0437,C0793,Coursera Web Development,Coursera,Local,Web,2022
+S0438,C0794,AWS Solutions Architect,AWS,Global_Premium,Cloud,2022
+S0439,C0795,AWS Solutions Architect,AWS,Global_Premium,Cloud,2024
+S0441,C0796,AWS Solutions Architect,AWS,Global_Premium,Cloud,2022
+S0441,C0797,NPTEL Data Science,NPTEL,National,Data,2024
+S0441,C0798,SWAYAM IoT,SWAYAM,National,Programming,2023
+S0441,C0799,NPTEL Python,NPTEL,National,Programming,2024
+S0442,C0800,NPTEL Python,NPTEL,National,Programming,2023
+S0442,C0801,College Workshop on Python,College,Local,Programming,2025
+S0444,C0802,College Workshop on Python,College,Local,Programming,2024
+S0444,C0803,College Workshop on Data Analytics,College,Local,Data,2025
+S0445,C0804,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2024
+S0445,C0805,Azure AI Fundamentals,Microsoft,Global_Premium,AI_ML,2025
+S0445,C0806,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2022
+S0446,C0807,NPTEL Data Science,NPTEL,National,Data,2022
+S0446,C0808,Coursera Web Development,Coursera,Local,Web,2025
+S0446,C0809,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2024
+S0449,C0810,NPTEL Database Management,NPTEL,National,Data,2023
+S0449,C0811,Coursera Python for Everybody,Coursera,Local,Programming,2022
+S0450,C0812,NPTEL Deep Learning,NPTEL,National,AI_ML,2024
+S0451,C0813,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2023
+S0451,C0814,Google Cloud Professional Data Engineer,Google,Global_Premium,Cloud,2023
+S0451,C0815,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2025
+S0452,C0816,AWS Solutions Architect,AWS,Global_Premium,Cloud,2022
+S0452,C0817,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2025
+S0452,C0818,Salesforce Administrator,Salesforce,Global_Standard,Management,2025
+S0453,C0819,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2025
+S0455,C0820,SWAYAM IoT,SWAYAM,National,Programming,2025
+S0455,C0821,Coursera Financial Markets,Coursera,Local,Management,2022
+S0456,C0822,NPTEL Programming in Java,NPTEL,National,Programming,2023
+S0456,C0823,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2022
+S0460,C0824,Salesforce Administrator,Salesforce,Global_Standard,Management,2024
+S0460,C0825,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2025
+S0460,C0826,GitHub Foundations,GitHub,Global_Standard,Programming,2022
+S0460,C0827,SWAYAM Management Principles,SWAYAM,National,Management,2025
+S0460,C0828,Google Data Analytics,Google,Global_Standard,Data,2022
+S0461,C0829,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2025
+S0461,C0830,SWAYAM Management Principles,SWAYAM,National,Management,2024
+S0462,C0831,NPTEL Python,NPTEL,National,Programming,2022
+S0464,C0832,SWAYAM Web Development,SWAYAM,National,Web,2023
+S0466,C0833,NPTEL Data Science,NPTEL,National,Data,2023
+S0466,C0834,SWAYAM Management Principles,SWAYAM,National,Management,2024
+S0466,C0835,NPTEL Database Management,NPTEL,National,Data,2024
+S0466,C0836,Udemy SQL Bootcamp,Udemy,Local,Data,2025
+S0466,C0837,Meta Back-End Developer,Meta,Global_Standard,Web,2022
+S0466,C0838,TensorFlow Developer Certificate,Google,Global_Premium,AI_ML,2022
+S0466,C0839,AWS Machine Learning Specialty,AWS,Global_Premium,AI_ML,2022
+S0467,C0840,College Workshop on Data Analytics,College,Local,Data,2022
+S0467,C0841,Udemy React Complete Guide,Udemy,Local,Web,2024
+S0468,C0842,AWS Cloud Practitioner,AWS,Global_Premium,Cloud,2025
+S0468,C0843,Google Cloud Professional Data Engineer,Google,Global_Premium,Cloud,2024
+S0468,C0844,NPTEL Data Science,NPTEL,National,Data,2022
+S0469,C0845,Google Data Analytics,Google,Global_Standard,Data,2023
+S0469,C0846,NPTEL Machine Learning,NPTEL,National,AI_ML,2024
+S0469,C0847,Meta Front-End Developer,Meta,Global_Standard,Web,2024
+S0469,C0848,NPTEL Database Management,NPTEL,National,Data,2024
+S0471,C0849,Coursera Financial Markets,Coursera,Local,Management,2023
+S0472,C0850,College Workshop on AI,College,Local,AI_ML,2023
+S0472,C0851,College Workshop on Python,College,Local,Programming,2022
+S0473,C0852,Google Data Analytics,Google,Global_Standard,Data,2022
+S0473,C0853,College Workshop on AI,College,Local,AI_ML,2025
+S0473,C0854,NPTEL Deep Learning,NPTEL,National,AI_ML,2024
+S0474,C0855,NPTEL Deep Learning,NPTEL,National,AI_ML,2022
+S0475,C0856,SWAYAM Management Principles,SWAYAM,National,Management,2022
+S0475,C0857,SWAYAM IoT,SWAYAM,National,Programming,2022
+S0476,C0858,Google IT Support,Google,Global_Standard,Programming,2023
+S0476,C0859,Udemy React Complete Guide,Udemy,Local,Web,2025
+S0476,C0860,NPTEL Deep Learning,NPTEL,National,AI_ML,2024
+S0477,C0861,NPTEL Database Management,NPTEL,National,Data,2023
+S0477,C0862,Salesforce Administrator,Salesforce,Global_Standard,Management,2024
+S0479,C0863,College Workshop on Data Analytics,College,Local,Data,2023
+S0479,C0864,AWS Cloud Practitioner,AWS,Global_Premium,Cloud,2024
+S0479,C0865,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2024
+S0480,C0866,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2023
+S0480,C0867,Salesforce Administrator,Salesforce,Global_Standard,Management,2025
+S0481,C0868,Coursera Financial Markets,Coursera,Local,Management,2023
+S0481,C0869,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2023
+S0482,C0870,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0482,C0871,IBM Data Science,IBM,Global_Standard,Data,2022
+S0483,C0872,College Workshop on Python,College,Local,Programming,2025
+S0483,C0873,College Workshop on Web Dev,College,Local,Web,2025
+S0484,C0874,Meta Back-End Developer,Meta,Global_Standard,Web,2023
+S0484,C0875,AWS Solutions Architect,AWS,Global_Premium,Cloud,2023
+S0484,C0876,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2025
+S0486,C0877,College Workshop on Python,College,Local,Programming,2023
+S0487,C0878,NPTEL Data Science,NPTEL,National,Data,2022
+S0487,C0879,SWAYAM Management Principles,SWAYAM,National,Management,2022
+S0487,C0880,NPTEL Cloud Computing,NPTEL,National,Cloud,2023
+S0488,C0881,Coursera Python for Everybody,Coursera,Local,Programming,2023
+S0490,C0882,Azure Administrator,Microsoft,Global_Premium,Cloud,2022
+S0490,C0883,AWS Solutions Architect,AWS,Global_Premium,Cloud,2023
+S0490,C0884,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2022
+S0490,C0885,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2024
+S0491,C0886,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2024
+S0492,C0887,Google Data Analytics,Google,Global_Standard,Data,2024
+S0492,C0888,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2025
+S0492,C0889,Google Cloud Associate Cloud Engineer,Google,Global_Premium,Cloud,2025
+S0492,C0890,AWS Solutions Architect,AWS,Global_Premium,Cloud,2025
+S0492,C0891,Meta Front-End Developer,Meta,Global_Standard,Web,2023
+S0494,C0892,Coursera Web Development,Coursera,Local,Web,2024
+S0495,C0893,AWS Cloud Practitioner,AWS,Global_Premium,Cloud,2022
+S0496,C0894,Udemy SQL Bootcamp,Udemy,Local,Data,2025
+S0496,C0895,GitHub Foundations,GitHub,Global_Standard,Programming,2024
+S0496,C0896,NPTEL Deep Learning,NPTEL,National,AI_ML,2022
+S0496,C0897,NPTEL Programming in Java,NPTEL,National,Programming,2023
+S0497,C0898,Udemy React Complete Guide,Udemy,Local,Web,2025
+S0497,C0899,NPTEL Data Science,NPTEL,National,Data,2025
+S0498,C0900,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2022
+S0498,C0901,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2024
+S0498,C0902,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2023
+S0498,C0903,Salesforce Administrator,Salesforce,Global_Standard,Management,2022
+S0499,C0904,College Workshop on AI,College,Local,AI_ML,2024
+S0499,C0905,NPTEL Database Management,NPTEL,National,Data,2023
+S0500,C0906,NPTEL Data Science,NPTEL,National,Data,2025
+S0502,C0907,Udemy SQL Bootcamp,Udemy,Local,Data,2024
+S0502,C0908,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2025
+S0503,C0909,Coursera Python for Everybody,Coursera,Local,Programming,2022
+S0503,C0910,Coursera Financial Markets,Coursera,Local,Management,2023
+S0503,C0911,IBM Data Science,IBM,Global_Standard,Data,2023
+S0503,C0912,NPTEL Data Science,NPTEL,National,Data,2024
+S0504,C0913,SWAYAM IoT,SWAYAM,National,Programming,2024
+S0504,C0914,Google Data Analytics,Google,Global_Standard,Data,2025
+S0506,C0915,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2022
+S0506,C0916,Coursera Financial Markets,Coursera,Local,Management,2025
+S0506,C0917,Udemy SQL Bootcamp,Udemy,Local,Data,2023
+S0506,C0918,Coursera Web Development,Coursera,Local,Web,2023
+S0507,C0919,NPTEL Machine Learning,NPTEL,National,AI_ML,2022
+S0507,C0920,Udemy React Complete Guide,Udemy,Local,Web,2023
+S0508,C0921,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2022
+S0508,C0922,Meta Back-End Developer,Meta,Global_Standard,Web,2022
+S0509,C0923,NPTEL Data Science,NPTEL,National,Data,2024
+S0509,C0924,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2023
+S0509,C0925,College Workshop on Web Dev,College,Local,Web,2024
+S0509,C0926,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0511,C0927,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2025
+S0512,C0928,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2023
+S0513,C0929,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2025
+S0514,C0930,NPTEL Python,NPTEL,National,Programming,2024
+S0514,C0931,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2024
+S0514,C0932,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2022
+S0514,C0933,SWAYAM Web Development,SWAYAM,National,Web,2024
+S0515,C0934,SWAYAM Management Principles,SWAYAM,National,Management,2023
+S0515,C0935,Coursera Web Development,Coursera,Local,Web,2023
+S0516,C0936,College Workshop on Python,College,Local,Programming,2022
+S0517,C0937,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2023
+S0518,C0938,Google Cloud Professional Data Engineer,Google,Global_Premium,Cloud,2022
+S0518,C0939,College Workshop on AI,College,Local,AI_ML,2024
+S0518,C0940,AWS Machine Learning Specialty,AWS,Global_Premium,AI_ML,2025
+S0520,C0941,Salesforce Administrator,Salesforce,Global_Standard,Management,2022
+S0522,C0942,Udemy React Complete Guide,Udemy,Local,Web,2024
+S0522,C0943,College Workshop on Python,College,Local,Programming,2025
+S0523,C0944,Meta Front-End Developer,Meta,Global_Standard,Web,2025
+S0523,C0945,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2024
+S0525,C0946,AWS Cloud Practitioner,AWS,Global_Premium,Cloud,2022
+S0525,C0947,Udemy SQL Bootcamp,Udemy,Local,Data,2023
+S0525,C0948,Google Data Analytics,Google,Global_Standard,Data,2022
+S0525,C0949,NPTEL Database Management,NPTEL,National,Data,2025
+S0527,C0950,Udemy React Complete Guide,Udemy,Local,Web,2024
+S0527,C0951,NPTEL Cloud Computing,NPTEL,National,Cloud,2023
+S0527,C0952,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2023
+S0527,C0953,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0527,C0954,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2023
+S0527,C0955,Azure Administrator,Microsoft,Global_Premium,Cloud,2025
+S0528,C0956,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2022
+S0529,C0957,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2022
+S0529,C0958,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2022
+S0529,C0959,SWAYAM Web Development,SWAYAM,National,Web,2023
+S0529,C0960,College Workshop on Web Dev,College,Local,Web,2024
+S0529,C0961,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2025
+S0529,C0962,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2025
+S0529,C0963,Udemy React Complete Guide,Udemy,Local,Web,2025
+S0530,C0964,SWAYAM Management Principles,SWAYAM,National,Management,2024
+S0530,C0965,College Workshop on Data Analytics,College,Local,Data,2022
+S0530,C0966,NPTEL Data Science,NPTEL,National,Data,2022
+S0533,C0967,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2025
+S0534,C0968,Oracle Cloud Infrastructure Architect,Oracle,Global_Premium,Cloud,2023
+S0534,C0969,SWAYAM IoT,SWAYAM,National,Programming,2023
+S0534,C0970,NPTEL Programming in Java,NPTEL,National,Programming,2025
+S0534,C0971,Meta Front-End Developer,Meta,Global_Standard,Web,2025
+S0535,C0972,TensorFlow Developer Certificate,Google,Global_Premium,AI_ML,2022
+S0535,C0973,NPTEL Database Management,NPTEL,National,Data,2024
+S0535,C0974,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2023
+S0536,C0975,NPTEL Data Science,NPTEL,National,Data,2022
+S0536,C0976,NPTEL Database Management,NPTEL,National,Data,2022
+S0541,C0977,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2022
+S0542,C0978,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2022
+S0542,C0979,NPTEL Machine Learning,NPTEL,National,AI_ML,2023
+S0543,C0980,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2022
+S0543,C0981,Coursera Financial Markets,Coursera,Local,Management,2022
+S0545,C0982,Coursera Financial Markets,Coursera,Local,Management,2025
+S0548,C0983,NPTEL Machine Learning,NPTEL,National,AI_ML,2023
+S0548,C0984,GitHub Foundations,GitHub,Global_Standard,Programming,2022
+S0548,C0985,Coursera Web Development,Coursera,Local,Web,2022
+S0548,C0986,Salesforce Administrator,Salesforce,Global_Standard,Management,2022
+S0549,C0987,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0549,C0988,SWAYAM IoT,SWAYAM,National,Programming,2023
+S0549,C0989,Udemy SQL Bootcamp,Udemy,Local,Data,2023
+S0549,C0990,NPTEL Machine Learning,NPTEL,National,AI_ML,2025
+S0550,C0991,Udemy SQL Bootcamp,Udemy,Local,Data,2024
+S0550,C0992,NPTEL Database Management,NPTEL,National,Data,2022
+S0551,C0993,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2022
+S0551,C0994,AWS Solutions Architect,AWS,Global_Premium,Cloud,2023
+S0551,C0995,College Workshop on Web Dev,College,Local,Web,2022
+S0551,C0996,SWAYAM Web Development,SWAYAM,National,Web,2023
+S0553,C0997,NPTEL Machine Learning,NPTEL,National,AI_ML,2022
+S0553,C0998,NPTEL Python,NPTEL,National,Programming,2022
+S0553,C0999,SWAYAM Web Development,SWAYAM,National,Web,2024
+S0554,C1000,AWS Solutions Architect,AWS,Global_Premium,Cloud,2022
+S0554,C1001,TensorFlow Developer Certificate,Google,Global_Premium,AI_ML,2025
+S0554,C1002,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2024
+S0554,C1003,Udemy SQL Bootcamp,Udemy,Local,Data,2022
+S0556,C1004,AWS Cloud Practitioner,AWS,Global_Premium,Cloud,2025
+S0556,C1005,AWS Machine Learning Specialty,AWS,Global_Premium,AI_ML,2023
+S0556,C1006,NPTEL Machine Learning,NPTEL,National,AI_ML,2024
+S0556,C1007,NPTEL Python,NPTEL,National,Programming,2022
+S0557,C1008,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2025
+S0561,C1009,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2022
+S0561,C1010,NPTEL Cloud Computing,NPTEL,National,Cloud,2023
+S0561,C1011,Coursera Python for Everybody,Coursera,Local,Programming,2023
+S0561,C1012,Udemy SQL Bootcamp,Udemy,Local,Data,2024
+S0561,C1013,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2024
+S0563,C1014,Coursera Financial Markets,Coursera,Local,Management,2024
+S0563,C1015,NPTEL Database Management,NPTEL,National,Data,2022
+S0565,C1016,Coursera Financial Markets,Coursera,Local,Management,2025
+S0566,C1017,College Workshop on AI,College,Local,AI_ML,2024
+S0567,C1018,College Workshop on Python,College,Local,Programming,2022
+S0567,C1019,NPTEL Machine Learning,NPTEL,National,AI_ML,2022
+S0569,C1020,Coursera Financial Markets,Coursera,Local,Management,2025
+S0570,C1021,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0571,C1022,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2022
+S0571,C1023,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2024
+S0571,C1024,Google IT Support,Google,Global_Standard,Programming,2022
+S0571,C1025,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2023
+S0572,C1026,GitHub Foundations,GitHub,Global_Standard,Programming,2023
+S0572,C1027,Udemy React Complete Guide,Udemy,Local,Web,2024
+S0572,C1028,NPTEL Machine Learning,NPTEL,National,AI_ML,2023
+S0573,C1029,NPTEL Cloud Computing,NPTEL,National,Cloud,2023
+S0573,C1030,NPTEL Data Science,NPTEL,National,Data,2023
+S0575,C1031,Certified Kubernetes Administrator,CNCF,Global_Premium,Cloud,2023
+S0575,C1032,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2023
+S0575,C1033,Coursera Financial Markets,Coursera,Local,Management,2024
+S0575,C1034,NPTEL Machine Learning,NPTEL,National,AI_ML,2022
+S0576,C1035,Coursera Python for Everybody,Coursera,Local,Programming,2022
+S0576,C1036,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2022
+S0577,C1037,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0578,C1038,SWAYAM Management Principles,SWAYAM,National,Management,2023
+S0579,C1039,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2025
+S0580,C1040,College Workshop on Data Analytics,College,Local,Data,2022
+S0581,C1041,Oracle Cloud Infrastructure Architect,Oracle,Global_Premium,Cloud,2025
+S0581,C1042,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2022
+S0581,C1043,SWAYAM Web Development,SWAYAM,National,Web,2023
+S0583,C1044,Google IT Support,Google,Global_Standard,Programming,2025
+S0583,C1045,AWS Machine Learning Specialty,AWS,Global_Premium,AI_ML,2022
+S0583,C1046,College Workshop on AI,College,Local,AI_ML,2024
+S0583,C1047,GitHub Foundations,GitHub,Global_Standard,Programming,2024
+S0583,C1048,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2022
+S0583,C1049,Udemy React Complete Guide,Udemy,Local,Web,2024
+S0584,C1050,NPTEL Database Management,NPTEL,National,Data,2025
+S0584,C1051,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2024
+S0585,C1052,AWS Solutions Architect,AWS,Global_Premium,Cloud,2025
+S0586,C1053,IBM Data Science,IBM,Global_Standard,Data,2025
+S0586,C1054,NPTEL Machine Learning,NPTEL,National,AI_ML,2024
+S0586,C1055,Azure AI Fundamentals,Microsoft,Global_Premium,AI_ML,2022
+S0587,C1056,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0588,C1057,NPTEL Programming in Java,NPTEL,National,Programming,2024
+S0588,C1058,Udemy SQL Bootcamp,Udemy,Local,Data,2022
+S0588,C1059,Coursera Financial Markets,Coursera,Local,Management,2025
+S0588,C1060,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2025
+S0588,C1061,Meta Back-End Developer,Meta,Global_Standard,Web,2025
+S0590,C1062,NPTEL Programming in Java,NPTEL,National,Programming,2024
+S0591,C1063,Coursera Python for Everybody,Coursera,Local,Programming,2025
+S0592,C1064,Google IT Support,Google,Global_Standard,Programming,2025
+S0593,C1065,NPTEL Deep Learning,NPTEL,National,AI_ML,2023
+S0595,C1066,NPTEL Database Management,NPTEL,National,Data,2024
+S0595,C1067,Oracle Cloud Infrastructure Architect,Oracle,Global_Premium,Cloud,2023
+S0595,C1068,Udemy SQL Bootcamp,Udemy,Local,Data,2022
+S0595,C1069,NPTEL Data Science,NPTEL,National,Data,2022
+S0596,C1070,Meta Front-End Developer,Meta,Global_Standard,Web,2024
+S0596,C1071,NPTEL Machine Learning,NPTEL,National,AI_ML,2024
+S0596,C1072,GitHub Foundations,GitHub,Global_Standard,Programming,2024
+S0596,C1073,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2023
+S0597,C1074,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2022
+S0598,C1075,NPTEL Data Science,NPTEL,National,Data,2024
+S0598,C1076,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2022
+S0598,C1077,Coursera Financial Markets,Coursera,Local,Management,2022
+S0598,C1078,NPTEL Database Management,NPTEL,National,Data,2024
+S0598,C1079,Azure Administrator,Microsoft,Global_Premium,Cloud,2022
+S0599,C1080,AWS Machine Learning Specialty,AWS,Global_Premium,AI_ML,2023
+S0599,C1081,Coursera Web Development,Coursera,Local,Web,2023
+S0600,C1082,NPTEL Deep Learning,NPTEL,National,AI_ML,2024
+S0600,C1083,Udemy React Complete Guide,Udemy,Local,Web,2022
+S0601,C1084,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2025
+S0602,C1085,College Workshop on AI,College,Local,AI_ML,2023
+S0602,C1086,NPTEL Cloud Computing,NPTEL,National,Cloud,2023
+S0604,C1087,GitHub Foundations,GitHub,Global_Standard,Programming,2025
+S0604,C1088,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0604,C1089,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0604,C1090,Salesforce Administrator,Salesforce,Global_Standard,Management,2023
+S0605,C1091,GitHub Foundations,GitHub,Global_Standard,Programming,2025
+S0605,C1092,NPTEL Database Management,NPTEL,National,Data,2025
+S0605,C1093,Google Data Analytics,Google,Global_Standard,Data,2024
+S0606,C1094,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2024
+S0606,C1095,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0607,C1096,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0607,C1097,Coursera Web Development,Coursera,Local,Web,2024
+S0608,C1098,IBM Data Science,IBM,Global_Standard,Data,2022
+S0608,C1099,Azure AI Fundamentals,Microsoft,Global_Premium,AI_ML,2023
+S0608,C1100,Udemy React Complete Guide,Udemy,Local,Web,2024
+S0608,C1101,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2024
+S0609,C1102,NPTEL Cloud Computing,NPTEL,National,Cloud,2025
+S0610,C1103,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2025
+S0611,C1104,NPTEL Database Management,NPTEL,National,Data,2024
+S0611,C1105,NPTEL Python,NPTEL,National,Programming,2025
+S0611,C1106,Coursera Financial Markets,Coursera,Local,Management,2024
+S0612,C1107,Coursera Financial Markets,Coursera,Local,Management,2023
+S0612,C1108,NPTEL Cloud Computing,NPTEL,National,Cloud,2024
+S0613,C1109,College Workshop on Data Analytics,College,Local,Data,2025
+S0613,C1110,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2022
+S0614,C1111,College Workshop on Python,College,Local,Programming,2022
+S0614,C1112,Coursera Web Development,Coursera,Local,Web,2022
+S0615,C1113,Meta Front-End Developer,Meta,Global_Standard,Web,2024
+S0616,C1114,SWAYAM Web Development,SWAYAM,National,Web,2024
+S0616,C1115,SWAYAM IoT,SWAYAM,National,Programming,2023
+S0616,C1116,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2025
+S0617,C1117,College Workshop on Python,College,Local,Programming,2025
+S0618,C1118,Coursera Web Development,Coursera,Local,Web,2024
+S0618,C1119,NPTEL Python,NPTEL,National,Programming,2024
+S0619,C1120,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0620,C1121,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2025
+S0620,C1122,SWAYAM IoT,SWAYAM,National,Programming,2025
+S0620,C1123,SWAYAM Web Development,SWAYAM,National,Web,2023
+S0620,C1124,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2025
+S0621,C1125,Udemy SQL Bootcamp,Udemy,Local,Data,2023
+S0622,C1126,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2023
+S0622,C1127,College Workshop on AI,College,Local,AI_ML,2024
+S0622,C1128,IBM Data Science,IBM,Global_Standard,Data,2025
+S0622,C1129,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0622,C1130,Meta Front-End Developer,Meta,Global_Standard,Web,2023
+S0622,C1131,Coursera Financial Markets,Coursera,Local,Management,2025
+S0622,C1132,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2022
+S0623,C1133,SWAYAM IoT,SWAYAM,National,Programming,2025
+S0624,C1134,Meta Front-End Developer,Meta,Global_Standard,Web,2025
+S0624,C1135,SWAYAM Management Principles,SWAYAM,National,Management,2022
+S0625,C1136,Meta Back-End Developer,Meta,Global_Standard,Web,2023
+S0625,C1137,SWAYAM IoT,SWAYAM,National,Programming,2025
+S0626,C1138,Oracle Cloud Infrastructure Architect,Oracle,Global_Premium,Cloud,2023
+S0626,C1139,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2025
+S0626,C1140,College Workshop on Web Dev,College,Local,Web,2025
+S0627,C1141,College Workshop on Web Dev,College,Local,Web,2023
+S0627,C1142,Salesforce Administrator,Salesforce,Global_Standard,Management,2022
+S0629,C1143,NPTEL Cloud Computing,NPTEL,National,Cloud,2023
+S0629,C1144,Udemy SQL Bootcamp,Udemy,Local,Data,2024
+S0632,C1145,College Workshop on Web Dev,College,Local,Web,2023
+S0632,C1146,College Workshop on AI,College,Local,AI_ML,2024
+S0633,C1147,Meta Back-End Developer,Meta,Global_Standard,Web,2024
+S0633,C1148,Azure AI Fundamentals,Microsoft,Global_Premium,AI_ML,2025
+S0633,C1149,AWS Solutions Architect,AWS,Global_Premium,Cloud,2023
+S0633,C1150,Oracle Cloud Infrastructure Architect,Oracle,Global_Premium,Cloud,2024
+S0633,C1151,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2024
+S0633,C1152,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2022
+S0633,C1153,NPTEL Database Management,NPTEL,National,Data,2025
+S0635,C1154,NPTEL Database Management,NPTEL,National,Data,2023
+S0635,C1155,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2025
+S0637,C1156,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0638,C1157,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0638,C1158,Udemy React Complete Guide,Udemy,Local,Web,2022
+S0638,C1159,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2023
+S0638,C1160,SWAYAM Management Principles,SWAYAM,National,Management,2023
+S0638,C1161,NPTEL Cloud Computing,NPTEL,National,Cloud,2025
+S0638,C1162,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2024
+S0639,C1163,College Workshop on Python,College,Local,Programming,2023
+S0641,C1164,AWS Machine Learning Specialty,AWS,Global_Premium,AI_ML,2025
+S0641,C1165,College Workshop on Data Analytics,College,Local,Data,2022
+S0641,C1166,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2024
+S0646,C1167,NPTEL Machine Learning,NPTEL,National,AI_ML,2025
+S0647,C1168,SWAYAM Web Development,SWAYAM,National,Web,2023
+S0647,C1169,Salesforce Administrator,Salesforce,Global_Standard,Management,2024
+S0647,C1170,Coursera Web Development,Coursera,Local,Web,2024
+S0647,C1171,GitHub Foundations,GitHub,Global_Standard,Programming,2022
+S0649,C1172,Google IT Support,Google,Global_Standard,Programming,2023
+S0649,C1173,NPTEL Python,NPTEL,National,Programming,2025
+S0650,C1174,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0650,C1175,NPTEL Python,NPTEL,National,Programming,2025
+S0650,C1176,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2025
+S0650,C1177,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2022
+S0653,C1178,Coursera Web Development,Coursera,Local,Web,2024
+S0653,C1179,College Workshop on Web Dev,College,Local,Web,2022
+S0655,C1180,NPTEL Python,NPTEL,National,Programming,2024
+S0655,C1181,NPTEL Cloud Computing,NPTEL,National,Cloud,2023
+S0656,C1182,NPTEL Machine Learning,NPTEL,National,AI_ML,2023
+S0656,C1183,College Workshop on Python,College,Local,Programming,2023
+S0657,C1184,College Workshop on AI,College,Local,AI_ML,2025
+S0657,C1185,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2022
+S0657,C1186,Coursera Web Development,Coursera,Local,Web,2025
+S0657,C1187,SWAYAM Web Development,SWAYAM,National,Web,2022
+S0659,C1188,College Workshop on Data Analytics,College,Local,Data,2025
+S0659,C1189,NPTEL Python,NPTEL,National,Programming,2023
+S0660,C1190,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2024
+S0660,C1191,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2023
+S0660,C1192,NPTEL Python,NPTEL,National,Programming,2024
+S0660,C1193,IBM Data Science,IBM,Global_Standard,Data,2025
+S0663,C1194,NPTEL Data Science,NPTEL,National,Data,2025
+S0663,C1195,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0664,C1196,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0664,C1197,Udemy SQL Bootcamp,Udemy,Local,Data,2025
+S0666,C1198,NPTEL Database Management,NPTEL,National,Data,2024
+S0667,C1199,Certified Kubernetes Administrator,CNCF,Global_Premium,Cloud,2022
+S0668,C1200,NPTEL Data Science,NPTEL,National,Data,2023
+S0671,C1201,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2024
+S0671,C1202,IBM Data Science,IBM,Global_Standard,Data,2022
+S0671,C1203,NPTEL Programming in Java,NPTEL,National,Programming,2025
+S0675,C1204,IBM Data Science,IBM,Global_Standard,Data,2024
+S0675,C1205,SWAYAM Web Development,SWAYAM,National,Web,2024
+S0675,C1206,Google Cloud Professional Data Engineer,Google,Global_Premium,Cloud,2022
+S0675,C1207,College Workshop on Web Dev,College,Local,Web,2022
+S0676,C1208,College Workshop on Web Dev,College,Local,Web,2023
+S0676,C1209,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2025
+S0676,C1210,NPTEL Deep Learning,NPTEL,National,AI_ML,2022
+S0676,C1211,SWAYAM Management Principles,SWAYAM,National,Management,2024
+S0678,C1212,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2022
+S0678,C1213,NPTEL Database Management,NPTEL,National,Data,2022
+S0679,C1214,College Workshop on Data Analytics,College,Local,Data,2024
+S0680,C1215,Salesforce Administrator,Salesforce,Global_Standard,Management,2023
+S0680,C1216,SWAYAM Management Principles,SWAYAM,National,Management,2023
+S0680,C1217,Coursera Financial Markets,Coursera,Local,Management,2025
+S0683,C1218,Udemy SQL Bootcamp,Udemy,Local,Data,2023
+S0683,C1219,SWAYAM Management Principles,SWAYAM,National,Management,2022
+S0683,C1220,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2022
+S0683,C1221,College Workshop on Python,College,Local,Programming,2025
+S0683,C1222,NPTEL Cloud Computing,NPTEL,National,Cloud,2024
+S0683,C1223,NPTEL Deep Learning,NPTEL,National,AI_ML,2022
+S0684,C1224,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2023
+S0684,C1225,Google Data Analytics,Google,Global_Standard,Data,2025
+S0684,C1226,IBM Data Science,IBM,Global_Standard,Data,2025
+S0685,C1227,College Workshop on Web Dev,College,Local,Web,2023
+S0686,C1228,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0686,C1229,College Workshop on Data Analytics,College,Local,Data,2025
+S0687,C1230,NPTEL Python,NPTEL,National,Programming,2022
+S0687,C1231,Google Cloud Professional Data Engineer,Google,Global_Premium,Cloud,2023
+S0688,C1232,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2025
+S0688,C1233,IBM Data Science,IBM,Global_Standard,Data,2022
+S0688,C1234,SWAYAM Management Principles,SWAYAM,National,Management,2025
+S0688,C1235,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2025
+S0688,C1236,College Workshop on Data Analytics,College,Local,Data,2024
+S0688,C1237,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2025
+S0688,C1238,College Workshop on AI,College,Local,AI_ML,2023
+S0689,C1239,Udemy React Complete Guide,Udemy,Local,Web,2022
+S0691,C1240,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2025
+S0691,C1241,AWS Machine Learning Specialty,AWS,Global_Premium,AI_ML,2022
+S0691,C1242,Udemy SQL Bootcamp,Udemy,Local,Data,2023
+S0691,C1243,Certified Kubernetes Administrator,CNCF,Global_Premium,Cloud,2022
+S0691,C1244,College Workshop on Data Analytics,College,Local,Data,2022
+S0691,C1245,Meta Front-End Developer,Meta,Global_Standard,Web,2023
+S0691,C1246,NPTEL Programming in Java,NPTEL,National,Programming,2023
+S0692,C1247,Udemy SQL Bootcamp,Udemy,Local,Data,2024
+S0692,C1248,College Workshop on Data Analytics,College,Local,Data,2024
+S0693,C1249,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2022
+S0695,C1250,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2025
+S0696,C1251,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2025
+S0696,C1252,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2022
+S0698,C1253,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2022
+S0698,C1254,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2023
+S0698,C1255,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2024
+S0698,C1256,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2022
+S0699,C1257,Coursera Web Development,Coursera,Local,Web,2023
+S0699,C1258,Certified Kubernetes Administrator,CNCF,Global_Premium,Cloud,2023
+S0702,C1259,NPTEL Cloud Computing,NPTEL,National,Cloud,2022
+S0704,C1260,Google IT Support,Google,Global_Standard,Programming,2023
+S0704,C1261,NPTEL Programming in Java,NPTEL,National,Programming,2024
+S0706,C1262,SWAYAM IoT,SWAYAM,National,Programming,2023
+S0706,C1263,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2023
+S0707,C1264,AWS Cloud Practitioner,AWS,Global_Premium,Cloud,2025
+S0707,C1265,NPTEL Python,NPTEL,National,Programming,2025
+S0707,C1266,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0707,C1267,Google Professional Machine Learning Engineer,Google,Global_Premium,AI_ML,2024
+S0708,C1268,College Workshop on Web Dev,College,Local,Web,2022
+S0711,C1269,NPTEL Cloud Computing,NPTEL,National,Cloud,2024
+S0711,C1270,Coursera Financial Markets,Coursera,Local,Management,2023
+S0711,C1271,College Workshop on Web Dev,College,Local,Web,2022
+S0712,C1272,Google Cloud Professional Data Engineer,Google,Global_Premium,Cloud,2024
+S0712,C1273,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2024
+S0712,C1274,Salesforce Administrator,Salesforce,Global_Standard,Management,2024
+S0712,C1275,Udemy SQL Bootcamp,Udemy,Local,Data,2025
+S0712,C1276,College Workshop on Web Dev,College,Local,Web,2023
+S0712,C1277,Google IT Support,Google,Global_Standard,Programming,2025
+S0713,C1278,SWAYAM IoT,SWAYAM,National,Programming,2024
+S0713,C1279,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2025
+S0713,C1280,College Workshop on Data Analytics,College,Local,Data,2024
+S0713,C1281,Google Data Analytics,Google,Global_Standard,Data,2023
+S0715,C1282,NPTEL Programming in Java,NPTEL,National,Programming,2024
+S0715,C1283,Meta Front-End Developer,Meta,Global_Standard,Web,2024
+S0715,C1284,Udemy SQL Bootcamp,Udemy,Local,Data,2024
+S0715,C1285,NPTEL Data Science,NPTEL,National,Data,2023
+S0715,C1286,College Workshop on Data Analytics,College,Local,Data,2025
+S0715,C1287,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2023
+S0715,C1288,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2023
+S0716,C1289,NPTEL Programming in Java,NPTEL,National,Programming,2023
+S0718,C1290,AWS Cloud Practitioner,AWS,Global_Premium,Cloud,2024
+S0718,C1291,College Workshop on Python,College,Local,Programming,2022
+S0719,C1292,College Workshop on Web Dev,College,Local,Web,2025
+S0719,C1293,SWAYAM Management Principles,SWAYAM,National,Management,2023
+S0720,C1294,Udemy React Complete Guide,Udemy,Local,Web,2025
+S0720,C1295,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0723,C1296,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2025
+S0723,C1297,NPTEL Programming in Java,NPTEL,National,Programming,2025
+S0723,C1298,GitHub Foundations,GitHub,Global_Standard,Programming,2022
+S0723,C1299,Coursera Financial Markets,Coursera,Local,Management,2023
+S0724,C1300,Google Professional Machine Learning Engineer,Google,Global_Premium,AI_ML,2023
+S0724,C1301,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2022
+S0724,C1302,Azure AI Fundamentals,Microsoft,Global_Premium,AI_ML,2025
+S0724,C1303,Meta Back-End Developer,Meta,Global_Standard,Web,2023
+S0725,C1304,Azure Administrator,Microsoft,Global_Premium,Cloud,2024
+S0725,C1305,Udemy React Complete Guide,Udemy,Local,Web,2024
+S0725,C1306,SWAYAM Management Principles,SWAYAM,National,Management,2025
+S0725,C1307,College Workshop on AI,College,Local,AI_ML,2025
+S0726,C1308,NPTEL Python,NPTEL,National,Programming,2022
+S0726,C1309,College Workshop on Web Dev,College,Local,Web,2025
+S0728,C1310,SWAYAM IoT,SWAYAM,National,Programming,2025
+S0729,C1311,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2024
+S0731,C1312,Udemy React Complete Guide,Udemy,Local,Web,2023
+S0733,C1313,College Workshop on Data Analytics,College,Local,Data,2024
+S0733,C1314,College Workshop on Web Dev,College,Local,Web,2024
+S0734,C1315,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2023
+S0737,C1316,Azure Data Scientist Associate,Microsoft,Global_Premium,AI_ML,2025
+S0737,C1317,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2022
+S0738,C1318,SWAYAM IoT,SWAYAM,National,Programming,2023
+S0739,C1319,Udemy React Complete Guide,Udemy,Local,Web,2024
+S0739,C1320,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2025
+S0740,C1321,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2025
+S0740,C1322,SWAYAM IoT,SWAYAM,National,Programming,2025
+S0741,C1323,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2024
+S0743,C1324,IBM Data Science,IBM,Global_Standard,Data,2022
+S0743,C1325,NPTEL Data Science,NPTEL,National,Data,2023
+S0743,C1326,GitHub Foundations,GitHub,Global_Standard,Programming,2022
+S0743,C1327,College Workshop on AI,College,Local,AI_ML,2022
+S0744,C1328,Udemy React Complete Guide,Udemy,Local,Web,2023
+S0744,C1329,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2024
+S0744,C1330,Meta Back-End Developer,Meta,Global_Standard,Web,2023
+S0746,C1331,NPTEL Data Science,NPTEL,National,Data,2025
+S0746,C1332,NPTEL Database Management,NPTEL,National,Data,2023
+S0747,C1333,GitHub Foundations,GitHub,Global_Standard,Programming,2025
+S0747,C1334,College Workshop on Data Analytics,College,Local,Data,2022
+S0747,C1335,Coursera Financial Markets,Coursera,Local,Management,2025
+S0747,C1336,Azure AI Fundamentals,Microsoft,Global_Premium,AI_ML,2024
+S0748,C1337,SWAYAM Web Development,SWAYAM,National,Web,2024
+S0748,C1338,NPTEL Programming in Java,NPTEL,National,Programming,2023
+S0748,C1339,Udemy SQL Bootcamp,Udemy,Local,Data,2024
+S0748,C1340,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2022
+S0749,C1341,NPTEL Data Science,NPTEL,National,Data,2024
+S0750,C1342,NPTEL Programming in Java,NPTEL,National,Programming,2022
+S0751,C1343,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2023
+S0751,C1344,College Workshop on Python,College,Local,Programming,2024
+S0752,C1345,Udemy SQL Bootcamp,Udemy,Local,Data,2022
+S0752,C1346,Google Data Analytics,Google,Global_Standard,Data,2023
+S0753,C1347,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2025
+S0753,C1348,SWAYAM Management Principles,SWAYAM,National,Management,2025
+S0755,C1349,Coursera Python for Everybody,Coursera,Local,Programming,2024
+S0755,C1350,Oracle Cloud Infrastructure Architect,Oracle,Global_Premium,Cloud,2024
+S0755,C1351,SWAYAM AI Fundamentals,SWAYAM,National,AI_ML,2025
+S0755,C1352,NPTEL Python,NPTEL,National,Programming,2023
+S0756,C1353,Meta Front-End Developer,Meta,Global_Standard,Web,2023
+S0756,C1354,SWAYAM Web Development,SWAYAM,National,Web,2023
+S0756,C1355,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2025
+S0756,C1356,Coursera Python for Everybody,Coursera,Local,Programming,2022
+S0757,C1357,HashiCorp Terraform Associate,HashiCorp,Global_Standard,Cloud,2024
+S0757,C1358,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2023
+S0757,C1359,NPTEL Data Science,NPTEL,National,Data,2024
+S0760,C1360,NPTEL Data Science,NPTEL,National,Data,2025
+S0761,C1361,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2025
+S0761,C1362,SWAYAM IoT,SWAYAM,National,Programming,2022
+S0762,C1363,College Workshop on AI,College,Local,AI_ML,2023
+S0762,C1364,NPTEL Machine Learning,NPTEL,National,AI_ML,2023
+S0763,C1365,College Workshop on Web Dev,College,Local,Web,2025
+S0763,C1366,Cisco CCNA,Cisco,Global_Standard,Cybersecurity,2025
+S0763,C1367,SWAYAM Management Principles,SWAYAM,National,Management,2025
+S0763,C1368,SWAYAM IoT,SWAYAM,National,Programming,2024
+S0763,C1369,NPTEL Deep Learning,NPTEL,National,AI_ML,2025
+S0763,C1370,Udemy React Complete Guide,Udemy,Local,Web,2023
+S0764,C1371,Udemy React Complete Guide,Udemy,Local,Web,2022
+S0764,C1372,Udemy SQL Bootcamp,Udemy,Local,Data,2025
+S0765,C1373,Udemy SQL Bootcamp,Udemy,Local,Data,2023
+S0765,C1374,College Workshop on Web Dev,College,Local,Web,2023
+S0767,C1375,Salesforce Administrator,Salesforce,Global_Standard,Management,2025
+S0767,C1376,NPTEL Deep Learning,NPTEL,National,AI_ML,2023
+S0767,C1377,NPTEL Programming in Java,NPTEL,National,Programming,2024
+S0767,C1378,NPTEL Data Science,NPTEL,National,Data,2023
+S0768,C1379,NPTEL Programming in Java,NPTEL,National,Programming,2025
+S0769,C1380,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2022
+S0769,C1381,AWS Machine Learning Specialty,AWS,Global_Premium,AI_ML,2022
+S0770,C1382,NPTEL Cloud Computing,NPTEL,National,Cloud,2025
+S0770,C1383,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2023
+S0771,C1384,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2025
+S0772,C1385,NPTEL Python,NPTEL,National,Programming,2025
+S0772,C1386,NPTEL Machine Learning,NPTEL,National,AI_ML,2022
+S0773,C1387,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0773,C1388,College Workshop on Python,College,Local,Programming,2023
+S0773,C1389,Azure Administrator,Microsoft,Global_Premium,Cloud,2022
+S0774,C1390,Meta Front-End Developer,Meta,Global_Standard,Web,2024
+S0774,C1391,CompTIA Security+,CompTIA,Global_Standard,Cybersecurity,2022
+S0774,C1392,Salesforce Administrator,Salesforce,Global_Standard,Management,2022
+S0775,C1393,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2024
+S0775,C1394,Oracle Cloud Infrastructure Architect,Oracle,Global_Premium,Cloud,2024
+S0775,C1395,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2024
+S0775,C1396,Coursera Web Development,Coursera,Local,Web,2023
+S0776,C1397,NPTEL Python,NPTEL,National,Programming,2024
+S0776,C1398,NPTEL Machine Learning,NPTEL,National,AI_ML,2025
+S0776,C1399,SWAYAM Management Principles,SWAYAM,National,Management,2022
+S0780,C1400,Coursera Web Development,Coursera,Local,Web,2024
+S0780,C1401,GitHub Foundations,GitHub,Global_Standard,Programming,2023
+S0781,C1402,Udemy SQL Bootcamp,Udemy,Local,Data,2025
+S0781,C1403,Coursera Web Development,Coursera,Local,Web,2022
+S0781,C1404,IBM Data Science,IBM,Global_Standard,Data,2024
+S0781,C1405,Meta Back-End Developer,Meta,Global_Standard,Web,2024
+S0782,C1406,College Workshop on Data Analytics,College,Local,Data,2023
+S0782,C1407,College Workshop on AI,College,Local,AI_ML,2025
+S0783,C1408,College Workshop on AI,College,Local,AI_ML,2025
+S0783,C1409,Udemy Machine Learning A-Z,Udemy,Local,AI_ML,2023
+S0785,C1410,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2025
+S0785,C1411,College Workshop on Web Dev,College,Local,Web,2023
+S0785,C1412,Meta Front-End Developer,Meta,Global_Standard,Web,2025
+S0785,C1413,Udemy SQL Bootcamp,Udemy,Local,Data,2023
+S0786,C1414,Coursera Python for Everybody,Coursera,Local,Programming,2023
+S0787,C1415,Meta Back-End Developer,Meta,Global_Standard,Web,2023
+S0789,C1416,Oracle Java SE Programmer,Oracle,Global_Standard,Programming,2022
+S0789,C1417,Salesforce Administrator,Salesforce,Global_Standard,Management,2022
+S0789,C1418,Certified Kubernetes Administrator,CNCF,Global_Premium,Cloud,2022
+S0790,C1419,Udemy SQL Bootcamp,Udemy,Local,Data,2023
+S0790,C1420,NPTEL Data Science,NPTEL,National,Data,2024
+S0791,C1421,HubSpot Inbound Marketing,HubSpot,Global_Standard,Management,2022
+S0791,C1422,NPTEL Database Management,NPTEL,National,Data,2024
+S0791,C1423,Coursera Machine Learning Specialization,Coursera,Local,AI_ML,2025
+S0792,C1424,IBM Data Science,IBM,Global_Standard,Data,2025
+S0792,C1425,SWAYAM Management Principles,SWAYAM,National,Management,2025
+S0794,C1426,College Workshop on Web Dev,College,Local,Web,2024
+S0794,C1427,College Workshop on Python,College,Local,Programming,2023
+S0796,C1428,College Workshop on AI,College,Local,AI_ML,2022
+S0796,C1429,Udemy SQL Bootcamp,Udemy,Local,Data,2024
+S0797,C1430,NPTEL Machine Learning,NPTEL,National,AI_ML,2025
+S0797,C1431,Udemy React Complete Guide,Udemy,Local,Web,2025
+S0799,C1432,SWAYAM Management Principles,SWAYAM,National,Management,2023
+S0800,C1433,College Workshop on Data Analytics,College,Local,Data,2025
+S0800,C1434,Udemy Complete Python Bootcamp,Udemy,Local,Programming,2024
+S0800,C1435,Udemy SQL Bootcamp,Udemy,Local,Data,2022
+S0800,C1436,NPTEL Cybersecurity,NPTEL,National,Cybersecurity,2022

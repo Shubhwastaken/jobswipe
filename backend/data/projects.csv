@@ -1,0 +1,1634 @@
+student_id,project_id,project_title,domain,tech_stack,complexity,team_size,has_deployment,has_github,duration_weeks,year
+S0001,P0001,Invoice Management System,Finance,"R,Shiny,quantmod",Intermediate,4+,False,True,6,2025
+S0002,P0002,Job Portal with Matching,Web,"Angular,Spring Boot,MySQL",Advanced,3,True,False,9,2023
+S0002,P0003,Attendance Management System,Other,"Kotlin,Android Studio,Firebase",Basic,1,False,False,3,2022
+S0002,P0004,Smart Agriculture System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,1,False,False,10,2022
+S0003,P0005,Digital Lock System,Embedded,"C,PIC,Assembly",Basic,2,False,True,2,2023
+S0003,P0006,Autonomous Lane Detection,AI_ML,"Python,Scikit-learn,Pandas",Basic,4+,False,False,2,2025
+S0004,P0007,Password Manager,Other,"Java,Spring,MySQL",Basic,2,True,False,2,2024
+S0005,P0008,Speech Emotion Recognition,AI_ML,"Python,Scikit-learn,Pandas",Advanced,4+,False,True,9,2022
+S0005,P0009,Smart Agriculture System,IoT,"Arduino,Python,Firebase",Basic,4+,False,False,3,2024
+S0005,P0010,Student Information System,Web,"React,Node.js,MongoDB",Intermediate,4+,False,False,9,2023
+S0005,P0011,Stock Portfolio Tracker,Finance,"Python,Dash,Plotly",Advanced,3,True,True,15,2024
+S0006,P0012,Predictive Maintenance using ML,AI_ML,"Python,Keras,Streamlit",Intermediate,2,True,True,8,2025
+S0006,P0013,Loan Default Prediction,Finance,"Python,Dash,Plotly",Basic,3,False,False,6,2024
+S0008,P0014,Recommendation Engine for E-commerce,AI_ML,"Python,TensorFlow,Flask",Intermediate,4+,False,True,6,2025
+S0008,P0015,Healthcare Cost Analysis,Data,"R,ggplot2,dplyr",Basic,2,False,False,2,2023
+S0009,P0016,Loan Default Prediction,Finance,"Python,Dash,Plotly",Intermediate,4+,True,False,12,2022
+S0010,P0017,COVID-19 Data Analysis Dashboard,Data,"Python,Pandas,Seaborn",Intermediate,3,False,True,11,2022
+S0010,P0018,Personal Finance Manager,Finance,"R,Shiny,quantmod",Intermediate,4+,False,False,8,2024
+S0011,P0019,Sign Language Recognition System,AI_ML,"Python,NLTK,SpaCy",Advanced,3,False,False,19,2022
+S0012,P0020,Stock Portfolio Tracker,Finance,"Python,Dash,Plotly",Advanced,2,True,True,9,2024
+S0013,P0021,QR Code Generator,Other,"PHP,Laravel,MySQL",Advanced,4+,True,True,8,2025
+S0014,P0022,Smart Home Automation System,IoT,"Raspberry Pi,Python,MQTT",Basic,1,False,False,4,2024
+S0014,P0023,File Encryption Tool,Other,"C#,.NET,SQL Server",Intermediate,3,False,True,6,2024
+S0014,P0024,Healthcare Cost Analysis,Data,"Python,Power BI,Excel",Intermediate,2,False,True,10,2024
+S0015,P0025,Smart Agriculture System,IoT,"ESP32,MicroPython,ThingSpeak",Advanced,2,True,True,20,2024
+S0015,P0026,Drone Flight Controller,Embedded,"C,Arduino,PCB Design",Basic,3,False,False,6,2023
+S0015,P0027,Retail Demand Forecasting,Data,"Python,Databricks,Spark",Intermediate,2,False,True,10,2023
+S0016,P0028,Booking System for Hotels,Web,"React,Node.js,MongoDB",Intermediate,3,False,False,11,2023
+S0017,P0029,Cryptocurrency Price Predictor,Finance,"Python,NumPy,Matplotlib",Intermediate,2,True,False,12,2022
+S0018,P0030,Online Voting System,Web,"HTML,CSS,JavaScript",Advanced,2,True,False,16,2023
+S0018,P0031,Food Delivery App,Web,"HTML,CSS,JavaScript",Intermediate,3,False,False,11,2022
+S0019,P0032,Stock Portfolio Tracker,Finance,"Python,Pandas,yfinance",Basic,1,False,True,4,2025
+S0019,P0033,Personal Finance Manager,Finance,"Python,Dash,Plotly",Basic,2,False,False,5,2025
+S0019,P0034,Industrial IoT Dashboard,IoT,"NodeMCU,C,Blynk",Intermediate,1,False,False,5,2025
+S0020,P0035,Social Media Dashboard,Web,"React,Node.js,MongoDB",Advanced,3,True,True,10,2024
+S0021,P0036,QR Code Generator,Other,"Kotlin,Android Studio,Firebase",Basic,1,False,False,6,2023
+S0021,P0037,Personal Finance Manager,Finance,"Excel,VBA,SQL",Intermediate,3,False,True,9,2025
+S0022,P0038,Booking System for Hotels,Web,"React,Firebase,Tailwind",Basic,2,False,False,5,2022
+S0022,P0039,Loan Default Prediction,Finance,"R,Shiny,quantmod",Intermediate,4+,True,True,4,2024
+S0022,P0040,Music Player Application,Other,"Kotlin,Android Studio,Firebase",Intermediate,3,False,True,4,2025
+S0023,P0041,Handwritten Digit Recognition,AI_ML,"Python,PyTorch,FastAPI",Basic,4+,False,False,6,2025
+S0023,P0042,Wearable Health Monitor,IoT,"ESP32,MicroPython,ThingSpeak",Advanced,3,False,True,13,2025
+S0023,P0043,Hospital Management System,Web,"Django,Bootstrap,PostgreSQL",Intermediate,2,False,True,5,2023
+S0025,P0044,Smart Agriculture System,IoT,"NodeMCU,C,Blynk",Basic,1,False,False,3,2023
+S0025,P0045,File Encryption Tool,Other,"PHP,Laravel,MySQL",Basic,1,False,False,6,2023
+S0025,P0046,Industrial IoT Dashboard,IoT,"Arduino,C++,Sensors",Advanced,3,True,True,10,2024
+S0026,P0047,Pulse Oximeter Design,Embedded,"C,ARM,RTOS",Intermediate,2,False,True,7,2024
+S0026,P0048,Inventory Management System,Other,"Kotlin,Android Studio,Firebase",Intermediate,2,False,False,8,2024
+S0027,P0049,Cryptocurrency Price Predictor,Finance,"Python,Pandas,yfinance",Advanced,3,False,True,15,2022
+S0028,P0050,Pulse Oximeter Design,Embedded,"C,PIC,Assembly",Basic,2,False,False,4,2024
+S0028,P0051,E-Commerce Platform,Web,"React,Node.js,MongoDB",Intermediate,4+,False,True,8,2024
+S0028,P0052,Line Following Robot,Embedded,"C,PIC,Assembly",Basic,4+,False,False,6,2022
+S0029,P0053,Smart Home Automation System,IoT,"ESP32,MicroPython,ThingSpeak",Advanced,3,True,True,14,2025
+S0029,P0054,RFID-based Attendance System,Embedded,"C++,STM32,FreeRTOS",Basic,4+,False,True,4,2024
+S0030,P0055,Wearable Health Monitor,IoT,"Arduino,C++,Sensors",Basic,2,False,True,2,2024
+S0030,P0056,Loan Default Prediction,Finance,"Python,Pandas,yfinance",Advanced,3,True,False,14,2024
+S0030,P0057,Handwritten Digit Recognition,AI_ML,"Python,Keras,Streamlit",Intermediate,2,False,False,12,2022
+S0030,P0058,Chatbot using NLP and Transformers,AI_ML,"Python,TensorFlow,Flask",Intermediate,3,False,True,10,2024
+S0031,P0059,Digital Lock System,Embedded,"Verilog,FPGA,ModelSim",Basic,3,False,True,5,2025
+S0031,P0060,Personal Finance Manager,Finance,"Python,Dash,Plotly",Intermediate,1,True,True,7,2024
+S0031,P0061,Smart Energy Meter,IoT,"Raspberry Pi,Python,MQTT",Intermediate,1,False,True,5,2023
+S0032,P0062,Hospital Management System,Web,"Django,Bootstrap,PostgreSQL",Intermediate,3,False,True,10,2023
+S0032,P0063,Sign Language Recognition System,AI_ML,"Python,TensorFlow,Flask",Intermediate,2,True,False,7,2024
+S0032,P0064,Recommendation Engine for E-commerce,AI_ML,"Python,NLTK,SpaCy",Basic,1,False,True,4,2025
+S0032,P0065,Blog Platform with Auth,Web,"Next.js,Prisma,PostgreSQL",Intermediate,4+,False,True,9,2024
+S0033,P0066,Online Voting System,Web,"React,Express,PostgreSQL",Basic,4+,False,True,2,2023
+S0034,P0067,Personal Finance Manager,Finance,"Python,NumPy,Matplotlib",Basic,2,False,True,2,2024
+S0034,P0068,Healthcare Cost Analysis,Data,"Python,SQL,Tableau",Basic,2,False,False,4,2025
+S0035,P0069,Line Following Robot,Embedded,"C,PIC,Assembly",Advanced,3,False,True,9,2024
+S0035,P0070,Smart Energy Meter,IoT,"Raspberry Pi,Python,MQTT",Intermediate,1,True,False,6,2023
+S0035,P0071,Traffic Light Controller,Embedded,"C,PIC,Assembly",Intermediate,2,True,True,7,2025
+S0036,P0072,Water Quality Sensor Network,IoT,"Arduino,C++,Sensors",Advanced,3,False,True,20,2024
+S0036,P0073,Budget Planning Tool,Finance,"Python,Pandas,yfinance",Advanced,4+,True,True,19,2025
+S0037,P0074,Music Player Application,Other,"C#,.NET,SQL Server",Basic,1,False,False,2,2022
+S0037,P0075,Sales Forecasting Model,Data,"Python,Pandas,Matplotlib",Basic,3,False,False,3,2025
+S0037,P0076,Password Manager,Other,"Kotlin,Android Studio,Firebase",Basic,3,False,False,5,2025
+S0038,P0077,File Encryption Tool,Other,"Python,Flask,SQLite",Intermediate,2,False,False,6,2023
+S0038,P0078,QR Code Generator,Other,"C#,.NET,SQL Server",Intermediate,4+,False,False,5,2022
+S0039,P0079,Supply Chain Analytics,Data,"Python,PySpark,Hadoop",Intermediate,2,True,True,6,2024
+S0039,P0080,Fitness Tracking App,Other,"Java,Spring,MySQL",Basic,3,False,False,2,2025
+S0039,P0081,Line Following Robot,Embedded,"Verilog,FPGA,ModelSim",Advanced,3,False,False,18,2024
+S0039,P0082,Sign Language Recognition System,AI_ML,"Python,Keras,Streamlit",Advanced,2,True,True,10,2022
+S0040,P0083,Personal Finance Manager,Finance,"Python,NumPy,Matplotlib",Intermediate,1,True,True,12,2023
+S0041,P0084,Credit Risk Assessment,Finance,"Python,NumPy,Matplotlib",Advanced,3,False,True,13,2023
+S0042,P0085,File Encryption Tool,Other,"PHP,Laravel,MySQL",Advanced,1,True,False,15,2022
+S0042,P0086,Industrial IoT Dashboard,IoT,"Arduino,C++,Sensors",Advanced,3,True,True,9,2023
+S0043,P0087,Attendance Management System,Other,"C#,.NET,SQL Server",Basic,2,False,False,2,2024
+S0044,P0088,Sales Forecasting Model,Data,"R,ggplot2,dplyr",Intermediate,2,True,True,8,2023
+S0044,P0089,Pulse Oximeter Design,Embedded,"C++,STM32,FreeRTOS",Basic,2,False,False,2,2025
+S0045,P0090,Event Management Platform,Web,"Vue.js,Django,SQLite",Intermediate,2,False,True,12,2024
+S0046,P0091,Stock Market Trend Analysis,Data,"Python,Pandas,Seaborn",Basic,2,False,False,4,2024
+S0046,P0092,Recommendation Engine for E-commerce,AI_ML,"Python,Hugging Face,Transformers",Intermediate,2,False,False,5,2025
+S0047,P0093,Air Quality Monitoring System,IoT,"Arduino,Python,Firebase",Intermediate,3,False,True,10,2023
+S0047,P0094,Digital Lock System,Embedded,"C,ARM,RTOS",Intermediate,2,True,False,6,2023
+S0048,P0095,Fitness Tracking App,Other,"Java,Spring,MySQL",Intermediate,4+,False,True,9,2024
+S0048,P0096,Pulse Oximeter Design,Embedded,"C,PIC,Assembly",Basic,3,True,False,6,2024
+S0049,P0097,Drone Flight Controller,Embedded,"C,Arduino,PCB Design",Basic,1,False,False,3,2024
+S0050,P0098,Real-time Chat Application,Web,"Next.js,Prisma,PostgreSQL",Basic,2,False,True,3,2024
+S0050,P0099,Social Media Analytics,Data,"Python,Pandas,Matplotlib",Intermediate,2,False,True,11,2023
+S0050,P0100,Supply Chain Analytics,Data,"Python,SQL,Tableau",Intermediate,2,True,True,7,2025
+S0050,P0101,Online Voting System,Web,"Vue.js,Django,SQLite",Basic,1,False,False,4,2024
+S0051,P0102,Expense Tracker App,Web,"Angular,Spring Boot,MySQL",Basic,2,False,False,5,2022
+S0051,P0103,Speech Emotion Recognition,AI_ML,"Python,OpenCV,NumPy",Advanced,2,False,True,10,2023
+S0051,P0104,Sign Language Recognition System,AI_ML,"Python,NLTK,SpaCy",Basic,3,False,False,3,2022
+S0052,P0105,Image Classification using CNN,AI_ML,"Python,Scikit-learn,Pandas",Advanced,3,False,True,19,2023
+S0052,P0106,Digital Lock System,Embedded,"C,ARM,RTOS",Intermediate,3,True,False,6,2025
+S0052,P0107,Traffic Light Controller,Embedded,"C,PIC,Assembly",Basic,2,False,False,6,2024
+S0053,P0108,Wearable Health Monitor,IoT,"NodeMCU,C,Blynk",Intermediate,3,False,True,4,2023
+S0053,P0109,Student Information System,Web,"React,Express,PostgreSQL",Intermediate,1,False,True,9,2025
+S0053,P0110,Weather Pattern Analysis,Data,"Python,SQL,Tableau",Intermediate,1,False,True,10,2023
+S0054,P0111,Water Quality Sensor Network,IoT,"Raspberry Pi,Python,MQTT",Basic,1,False,False,4,2024
+S0054,P0112,Air Quality Monitoring System,IoT,"NodeMCU,C,Blynk",Basic,3,True,True,3,2025
+S0054,P0113,Industrial IoT Dashboard,IoT,"Arduino,C++,Sensors",Intermediate,2,False,True,5,2024
+S0055,P0114,Fake News Detection System,AI_ML,"Python,TensorFlow,Docker",Intermediate,2,True,True,12,2024
+S0055,P0115,Retail Demand Forecasting,Data,"R,ggplot2,dplyr",Advanced,4+,False,True,12,2023
+S0055,P0116,Sentiment Analysis on Product Reviews,AI_ML,"Python,Hugging Face,Transformers",Intermediate,2,False,False,4,2022
+S0056,P0117,Library Management System,Web,"Angular,Spring Boot,MySQL",Basic,4+,False,False,5,2024
+S0056,P0118,Motor Speed Controller,Embedded,"C++,STM32,FreeRTOS",Basic,2,False,False,4,2022
+S0057,P0119,Object Detection with YOLO,AI_ML,"Python,TensorFlow,Docker",Basic,2,False,False,5,2024
+S0058,P0120,Job Portal with Matching,Web,"Django,Bootstrap,PostgreSQL",Intermediate,1,False,True,10,2023
+S0059,P0121,Air Quality Monitoring System,IoT,"NodeMCU,C,Blynk",Intermediate,2,False,False,6,2023
+S0059,P0122,Smart Energy Meter,IoT,"Raspberry Pi,Python,MQTT",Basic,3,False,True,5,2025
+S0060,P0123,Budget Planning Tool,Finance,"Python,NumPy,Matplotlib",Basic,2,False,True,6,2023
+S0061,P0124,Food Delivery App,Web,"Django,Bootstrap,PostgreSQL",Intermediate,2,True,True,8,2025
+S0061,P0125,Education Data Mining,Data,"Python,Pandas,Seaborn",Basic,1,False,False,2,2023
+S0061,P0126,Social Media Analytics,Data,"Python,PySpark,Hadoop",Basic,2,False,False,2,2024
+S0062,P0127,Industrial IoT Dashboard,IoT,"NodeMCU,C,Blynk",Basic,3,False,False,4,2025
+S0062,P0128,Crime Data Visualization,Data,"Python,Pandas,Matplotlib",Basic,1,False,False,6,2025
+S0064,P0129,Password Manager,Other,"Python,Flask,SQLite",Intermediate,2,False,False,5,2023
+S0065,P0130,Industrial IoT Dashboard,IoT,"NodeMCU,C,Blynk",Intermediate,3,False,True,6,2025
+S0066,P0131,QR Code Generator,Other,"Kotlin,Android Studio,Firebase",Advanced,4+,False,True,9,2022
+S0067,P0132,Personal Finance Manager,Finance,"R,Shiny,quantmod",Intermediate,4+,False,False,4,2023
+S0068,P0133,Music Player Application,Other,"PHP,Laravel,MySQL",Basic,2,False,False,6,2025
+S0069,P0134,Drone Flight Controller,Embedded,"C++,STM32,FreeRTOS",Advanced,2,True,False,18,2025
+S0069,P0135,Credit Risk Assessment,Finance,"Python,NumPy,Matplotlib",Basic,1,False,False,3,2025
+S0069,P0136,Portfolio Website with CMS,Web,"Vue.js,Django,SQLite",Intermediate,2,False,False,4,2025
+S0070,P0137,Social Media Dashboard,Web,"HTML,CSS,JavaScript",Basic,2,False,True,5,2025
+S0071,P0138,Cryptocurrency Price Predictor,Finance,"Python,NumPy,Matplotlib",Intermediate,2,True,True,7,2024
+S0071,P0139,Loan Default Prediction,Finance,"Excel,VBA,SQL",Advanced,4+,False,True,13,2023
+S0071,P0140,AI-Powered Resume Screener,AI_ML,"Python,TensorFlow,Flask",Advanced,3,True,False,9,2024
+S0071,P0141,Attendance Management System,Other,"Kotlin,Android Studio,Firebase",Intermediate,2,False,False,6,2024
+S0072,P0142,Motor Speed Controller,Embedded,"C,PIC,Assembly",Basic,1,False,True,2,2023
+S0072,P0143,Industrial IoT Dashboard,IoT,"Arduino,C++,Sensors",Basic,3,False,False,2,2025
+S0073,P0144,Sales Forecasting Model,Data,"R,ggplot2,dplyr",Basic,3,False,True,3,2023
+S0073,P0145,QR Code Generator,Other,"PHP,Laravel,MySQL",Advanced,4+,False,False,17,2023
+S0074,P0146,Smart Home Automation System,IoT,"NodeMCU,C,Blynk",Basic,2,True,False,6,2024
+S0074,P0147,Line Following Robot,Embedded,"Verilog,FPGA,ModelSim",Intermediate,2,False,False,6,2024
+S0075,P0148,Budget Planning Tool,Finance,"Python,Dash,Plotly",Intermediate,3,False,False,4,2023
+S0075,P0149,Air Quality Monitoring System,IoT,"Arduino,C++,Sensors",Intermediate,4+,True,False,4,2025
+S0075,P0150,Industrial IoT Dashboard,IoT,"ESP32,MicroPython,ThingSpeak",Advanced,3,False,True,8,2023
+S0076,P0151,Healthcare Cost Analysis,Data,"R,ggplot2,dplyr",Intermediate,3,False,False,9,2025
+S0076,P0152,Autonomous Lane Detection,AI_ML,"Python,OpenCV,NumPy",Basic,2,False,False,6,2022
+S0077,P0153,Social Media Dashboard,Web,"React,Express,PostgreSQL",Basic,2,False,True,3,2025
+S0077,P0154,Smart Energy Meter,IoT,"ESP32,MicroPython,ThingSpeak",Basic,3,False,True,5,2023
+S0077,P0155,Smart Home Automation System,IoT,"ESP32,MicroPython,ThingSpeak",Basic,4+,False,False,4,2024
+S0077,P0156,Water Quality Sensor Network,IoT,"Arduino,C++,Sensors",Advanced,1,True,True,11,2022
+S0078,P0157,Handwritten Digit Recognition,AI_ML,"Python,TensorFlow,Docker",Basic,4+,False,False,5,2024
+S0078,P0158,Invoice Management System,Finance,"Python,NumPy,Matplotlib",Intermediate,3,False,True,10,2024
+S0078,P0159,Smart Parking System,IoT,"Raspberry Pi,Python,MQTT",Advanced,4+,True,True,10,2025
+S0078,P0160,Retail Demand Forecasting,Data,"Python,PySpark,Hadoop",Intermediate,3,True,True,9,2022
+S0079,P0161,Loan Default Prediction,Finance,"R,Shiny,quantmod",Basic,3,False,False,5,2024
+S0079,P0162,Sales Forecasting Model,Data,"Python,Pandas,Matplotlib",Basic,2,False,False,6,2023
+S0079,P0163,Customer Segmentation Analysis,Data,"Python,SQL,Tableau",Intermediate,1,False,False,9,2023
+S0080,P0164,Water Quality Sensor Network,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,3,False,False,11,2023
+S0080,P0165,Budget Planning Tool,Finance,"Python,Dash,Plotly",Intermediate,2,False,False,5,2025
+S0080,P0166,Personal Finance Manager,Finance,"R,Shiny,quantmod",Basic,2,False,True,2,2022
+S0081,P0167,Password Manager,Other,"Kotlin,Android Studio,Firebase",Basic,3,False,True,3,2024
+S0081,P0168,RFID-based Attendance System,Embedded,"C,Arduino,PCB Design",Advanced,3,False,False,15,2022
+S0082,P0169,Traffic Light Controller,Embedded,"Verilog,FPGA,ModelSim",Intermediate,1,False,False,10,2024
+S0082,P0170,Expense Tracker App,Web,"Angular,Spring Boot,MySQL",Basic,2,False,True,3,2024
+S0083,P0171,Budget Planning Tool,Finance,"Python,Dash,Plotly",Basic,1,False,False,4,2023
+S0083,P0172,Traffic Light Controller,Embedded,"C,ARM,RTOS",Basic,2,False,True,2,2023
+S0083,P0173,Expense Tracker App,Web,"Django,Bootstrap,PostgreSQL",Advanced,4+,True,False,18,2023
+S0083,P0174,Smart Parking System,IoT,"Arduino,Python,Firebase",Basic,3,False,False,4,2024
+S0084,P0175,Budget Planning Tool,Finance,"R,Shiny,quantmod",Intermediate,2,False,True,11,2023
+S0084,P0176,Speech Emotion Recognition,AI_ML,"Python,OpenCV,NumPy",Basic,3,False,False,5,2024
+S0084,P0177,Industrial IoT Dashboard,IoT,"Arduino,C++,Sensors",Basic,3,False,False,5,2022
+S0085,P0178,Smart Agriculture System,IoT,"Raspberry Pi,Python,MQTT",Advanced,2,True,True,8,2022
+S0085,P0179,RFID-based Attendance System,Embedded,"Verilog,FPGA,ModelSim",Basic,2,False,False,6,2022
+S0086,P0180,Digital Lock System,Embedded,"C++,STM32,FreeRTOS",Advanced,4+,True,True,19,2022
+S0086,P0181,Autonomous Lane Detection,AI_ML,"Python,Hugging Face,Transformers",Advanced,2,False,True,12,2022
+S0088,P0182,Handwritten Digit Recognition,AI_ML,"Python,PyTorch,FastAPI",Basic,3,False,False,3,2022
+S0089,P0183,Cryptocurrency Price Predictor,Finance,"Python,NumPy,Matplotlib",Basic,2,False,False,2,2024
+S0090,P0184,Expense Tracker App,Web,"Django,Bootstrap,PostgreSQL",Basic,3,True,False,2,2023
+S0090,P0185,COVID-19 Data Analysis Dashboard,Data,"Python,Pandas,Seaborn",Basic,3,False,False,5,2023
+S0091,P0186,Speech Emotion Recognition,AI_ML,"Python,OpenCV,NumPy",Intermediate,3,True,False,7,2025
+S0092,P0187,Smart Energy Meter,IoT,"Raspberry Pi,Python,MQTT",Intermediate,2,True,False,4,2023
+S0092,P0188,Smart Agriculture System,IoT,"Arduino,Python,Firebase",Basic,2,False,True,2,2023
+S0093,P0189,Fake News Detection System,AI_ML,"Python,TensorFlow,Docker",Advanced,1,False,True,18,2024
+S0094,P0190,Chatbot using NLP and Transformers,AI_ML,"Python,Keras,Streamlit",Intermediate,1,False,False,4,2025
+S0094,P0191,Student Information System,Web,"React,Node.js,MongoDB",Basic,4+,False,False,4,2022
+S0094,P0192,RFID-based Attendance System,Embedded,"C,Arduino,PCB Design",Basic,2,False,False,4,2024
+S0095,P0193,Stock Market Trend Analysis,Data,"Python,PySpark,Hadoop",Intermediate,2,False,True,8,2022
+S0096,P0194,Industrial IoT Dashboard,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,1,False,True,11,2024
+S0096,P0195,Social Media Dashboard,Web,"Next.js,Prisma,PostgreSQL",Advanced,1,True,True,18,2025
+S0097,P0196,Industrial IoT Dashboard,IoT,"Raspberry Pi,Python,MQTT",Intermediate,4+,True,True,7,2024
+S0098,P0197,Online Learning Management System,Web,"Angular,Spring Boot,MySQL",Intermediate,2,False,True,4,2023
+S0099,P0198,Drone Flight Controller,Embedded,"C,ARM,RTOS",Basic,3,False,False,2,2025
+S0100,P0199,Smart Agriculture System,IoT,"Arduino,C++,Sensors",Basic,4+,False,False,4,2023
+S0101,P0200,Booking System for Hotels,Web,"React,Firebase,Tailwind",Intermediate,2,True,True,5,2024
+S0101,P0201,File Encryption Tool,Other,"PHP,Laravel,MySQL",Intermediate,3,True,True,6,2023
+S0102,P0202,Weather Pattern Analysis,Data,"Python,SQL,Tableau",Intermediate,4+,False,True,4,2024
+S0102,P0203,E-Commerce Platform,Web,"Next.js,Prisma,PostgreSQL",Advanced,2,True,True,19,2025
+S0103,P0204,Inventory Management System,Other,"C#,.NET,SQL Server",Intermediate,4+,True,True,5,2024
+S0103,P0205,Budget Planning Tool,Finance,"Python,Dash,Plotly",Advanced,4+,True,True,12,2023
+S0104,P0206,Retail Demand Forecasting,Data,"Python,Databricks,Spark",Advanced,2,False,True,13,2024
+S0104,P0207,Smart Home Automation System,IoT,"Raspberry Pi,Python,MQTT",Basic,4+,False,True,2,2022
+S0104,P0208,Social Media Analytics,Data,"Python,PySpark,Hadoop",Intermediate,4+,False,True,9,2023
+S0104,P0209,Event Management Platform,Web,"Vue.js,Django,SQLite",Intermediate,3,False,True,10,2023
+S0105,P0210,Social Media Analytics,Data,"Python,Pandas,Seaborn",Advanced,4+,True,True,12,2023
+S0105,P0211,Employee Attrition Analysis,Data,"Python,Power BI,Excel",Intermediate,4+,False,True,8,2025
+S0105,P0212,Cryptocurrency Price Predictor,Finance,"Python,NumPy,Matplotlib",Intermediate,3,False,True,12,2025
+S0106,P0213,Credit Risk Assessment,Finance,"R,Shiny,quantmod",Advanced,1,True,True,18,2024
+S0106,P0214,Stock Portfolio Tracker,Finance,"Python,Dash,Plotly",Advanced,1,True,True,16,2025
+S0107,P0215,Stock Portfolio Tracker,Finance,"Python,Dash,Plotly",Basic,3,False,False,2,2025
+S0107,P0216,Stock Market Trend Analysis,Data,"SQL,Python,Airflow",Basic,4+,False,False,4,2025
+S0108,P0217,Credit Risk Assessment,Finance,"R,Shiny,quantmod",Basic,1,False,False,5,2025
+S0108,P0218,Budget Planning Tool,Finance,"Python,NumPy,Matplotlib",Intermediate,4+,False,False,8,2023
+S0109,P0219,Attendance Management System,Other,"Kotlin,Android Studio,Firebase",Basic,3,False,False,3,2025
+S0109,P0220,Social Media Dashboard,Web,"React,Firebase,Tailwind",Intermediate,2,False,False,7,2022
+S0110,P0221,File Encryption Tool,Other,"C#,.NET,SQL Server",Advanced,1,True,True,14,2025
+S0110,P0222,Industrial IoT Dashboard,IoT,"NodeMCU,C,Blynk",Intermediate,2,True,False,5,2022
+S0111,P0223,Cryptocurrency Price Predictor,Finance,"Excel,VBA,SQL",Intermediate,2,False,True,6,2025
+S0112,P0224,Smart Energy Meter,IoT,"Arduino,C++,Sensors",Advanced,1,False,True,18,2024
+S0112,P0225,Customer Churn Prediction,AI_ML,"Python,Scikit-learn,Pandas",Intermediate,3,True,False,11,2023
+S0113,P0226,Medical Image Segmentation,AI_ML,"Python,Keras,Streamlit",Advanced,4+,False,True,10,2025
+S0113,P0227,Smart Parking System,IoT,"Arduino,Python,Firebase",Advanced,3,True,True,10,2025
+S0113,P0228,File Encryption Tool,Other,"Python,Flask,SQLite",Intermediate,3,False,True,9,2023
+S0114,P0229,Invoice Management System,Finance,"R,Shiny,quantmod",Basic,1,False,False,6,2023
+S0114,P0230,Loan Default Prediction,Finance,"R,Shiny,quantmod",Basic,4+,False,False,3,2022
+S0114,P0231,Travel Planner Application,Other,"C#,.NET,SQL Server",Intermediate,4+,False,False,4,2025
+S0115,P0232,Portfolio Website with CMS,Web,"React,Node.js,MongoDB",Basic,3,False,False,3,2022
+S0115,P0233,Chatbot using NLP and Transformers,AI_ML,"Python,Keras,Streamlit",Advanced,2,False,True,8,2025
+S0116,P0234,Education Data Mining,Data,"Python,SQL,Tableau",Intermediate,2,False,True,12,2024
+S0116,P0235,Line Following Robot,Embedded,"C++,STM32,FreeRTOS",Basic,1,False,False,3,2024
+S0117,P0236,Social Media Analytics,Data,"R,ggplot2,dplyr",Advanced,3,True,True,12,2023
+S0117,P0237,QR Code Generator,Other,"PHP,Laravel,MySQL",Basic,4+,False,True,4,2024
+S0118,P0238,Motor Speed Controller,Embedded,"C,Arduino,PCB Design",Intermediate,3,False,True,12,2024
+S0119,P0239,Water Quality Sensor Network,IoT,"NodeMCU,C,Blynk",Intermediate,3,False,True,8,2022
+S0119,P0240,COVID-19 Data Analysis Dashboard,Data,"SQL,Python,Airflow",Basic,3,False,False,3,2023
+S0120,P0241,COVID-19 Data Analysis Dashboard,Data,"R,ggplot2,dplyr",Intermediate,2,False,False,6,2025
+S0121,P0242,Retail Demand Forecasting,Data,"Python,SQL,Tableau",Intermediate,2,False,False,8,2022
+S0121,P0243,Medical Image Segmentation,AI_ML,"Python,PyTorch,FastAPI",Intermediate,4+,False,False,11,2023
+S0121,P0244,Online Voting System,Web,"React,Node.js,MongoDB",Basic,2,False,False,2,2023
+S0121,P0245,Stock Portfolio Tracker,Finance,"Python,NumPy,Matplotlib",Basic,2,True,False,3,2022
+S0122,P0246,Personal Finance Manager,Finance,"Excel,VBA,SQL",Intermediate,3,True,True,6,2025
+S0122,P0247,Credit Risk Assessment,Finance,"Python,Pandas,yfinance",Intermediate,2,True,True,8,2025
+S0123,P0248,Invoice Management System,Finance,"Python,Pandas,yfinance",Intermediate,2,False,True,12,2024
+S0123,P0249,Sign Language Recognition System,AI_ML,"Python,OpenCV,NumPy",Intermediate,3,True,False,4,2023
+S0123,P0250,Air Quality Monitoring System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,4+,True,True,12,2025
+S0124,P0251,Travel Planner Application,Other,"Java,Spring,MySQL",Intermediate,1,False,False,7,2025
+S0124,P0252,Fitness Tracking App,Other,"Python,Flask,SQLite",Basic,2,False,False,6,2022
+S0125,P0253,File Encryption Tool,Other,"C#,.NET,SQL Server",Basic,3,False,False,2,2025
+S0125,P0254,Event Management Platform,Web,"HTML,CSS,JavaScript",Basic,2,False,True,6,2024
+S0125,P0255,Credit Risk Assessment,Finance,"Python,Dash,Plotly",Advanced,3,True,True,15,2025
+S0126,P0256,Cryptocurrency Price Predictor,Finance,"Python,Dash,Plotly",Basic,2,False,False,3,2024
+S0126,P0257,Student Information System,Web,"Next.js,Prisma,PostgreSQL",Basic,2,False,True,4,2023
+S0127,P0258,Expense Tracker App,Web,"Vue.js,Django,SQLite",Advanced,2,True,False,8,2024
+S0127,P0259,Hospital Management System,Web,"Django,Bootstrap,PostgreSQL",Advanced,3,True,False,15,2022
+S0128,P0260,Smart Energy Meter,IoT,"NodeMCU,C,Blynk",Basic,4+,False,False,3,2025
+S0129,P0261,Stock Market Trend Analysis,Data,"R,ggplot2,dplyr",Basic,1,False,False,5,2022
+S0129,P0262,Pulse Oximeter Design,Embedded,"C,PIC,Assembly",Intermediate,2,False,False,12,2025
+S0129,P0263,Smart Energy Meter,IoT,"Arduino,C++,Sensors",Advanced,2,True,True,17,2024
+S0129,P0264,Retail Demand Forecasting,Data,"R,ggplot2,dplyr",Intermediate,4+,False,False,6,2024
+S0131,P0265,Customer Segmentation Analysis,Data,"Python,Databricks,Spark",Advanced,1,False,True,14,2024
+S0132,P0266,Personal Finance Manager,Finance,"Python,NumPy,Matplotlib",Intermediate,1,False,True,5,2025
+S0132,P0267,Customer Segmentation Analysis,Data,"Python,Databricks,Spark",Basic,1,False,False,3,2024
+S0132,P0268,E-Commerce Platform,Web,"React,Firebase,Tailwind",Basic,1,False,True,2,2023
+S0132,P0269,Credit Risk Assessment,Finance,"R,Shiny,quantmod",Basic,4+,False,False,3,2024
+S0133,P0270,Smart Energy Meter,IoT,"ESP32,MicroPython,ThingSpeak",Basic,1,False,False,5,2024
+S0134,P0271,Employee Attrition Analysis,Data,"Python,SQL,Tableau",Basic,3,True,True,5,2023
+S0134,P0272,Handwritten Digit Recognition,AI_ML,"Python,TensorFlow,Docker",Basic,3,False,True,3,2023
+S0135,P0273,Sign Language Recognition System,AI_ML,"Python,PyTorch,FastAPI",Intermediate,3,False,True,10,2022
+S0135,P0274,Employee Attrition Analysis,Data,"Python,PySpark,Hadoop",Intermediate,2,True,False,10,2025
+S0135,P0275,Line Following Robot,Embedded,"C,PIC,Assembly",Basic,3,False,False,3,2025
+S0136,P0276,Digital Lock System,Embedded,"C,ARM,RTOS",Intermediate,3,True,False,5,2025
+S0138,P0277,Smart Energy Meter,IoT,"NodeMCU,C,Blynk",Basic,2,False,True,3,2024
+S0139,P0278,Motor Speed Controller,Embedded,"C,Arduino,PCB Design",Intermediate,2,False,True,9,2025
+S0139,P0279,Image Classification using CNN,AI_ML,"Python,NLTK,SpaCy",Intermediate,4+,True,True,9,2025
+S0140,P0280,QR Code Generator,Other,"Python,Flask,SQLite",Basic,3,False,True,3,2024
+S0141,P0281,Music Player Application,Other,"Kotlin,Android Studio,Firebase",Intermediate,4+,True,False,12,2024
+S0141,P0282,Sentiment Analysis on Product Reviews,AI_ML,"Python,OpenCV,NumPy",Basic,3,False,True,4,2025
+S0142,P0283,QR Code Generator,Other,"C#,.NET,SQL Server",Basic,2,False,True,6,2024
+S0142,P0284,Student Information System,Web,"React,Node.js,MongoDB",Intermediate,4+,False,False,8,2025
+S0142,P0285,Job Portal with Matching,Web,"Django,Bootstrap,PostgreSQL",Basic,2,False,False,4,2022
+S0142,P0286,Credit Risk Assessment,Finance,"Excel,VBA,SQL",Intermediate,2,False,True,10,2024
+S0143,P0287,Water Quality Sensor Network,IoT,"Arduino,Python,Firebase",Advanced,2,True,True,10,2025
+S0143,P0288,Food Delivery App,Web,"Angular,Spring Boot,MySQL",Basic,4+,False,True,3,2022
+S0144,P0289,Loan Default Prediction,Finance,"Excel,VBA,SQL",Advanced,1,True,True,12,2024
+S0145,P0290,Weather Pattern Analysis,Data,"Python,SQL,Tableau",Basic,2,False,True,5,2022
+S0145,P0291,Travel Planner Application,Other,"PHP,Laravel,MySQL",Intermediate,3,True,True,11,2024
+S0147,P0292,Music Player Application,Other,"PHP,Laravel,MySQL",Basic,2,False,True,3,2023
+S0148,P0293,Drone Flight Controller,Embedded,"C,PIC,Assembly",Basic,2,True,False,5,2024
+S0148,P0294,Supply Chain Analytics,Data,"Python,Pandas,Seaborn",Intermediate,2,False,False,9,2024
+S0148,P0295,Pulse Oximeter Design,Embedded,"C,Arduino,PCB Design",Advanced,3,True,True,11,2023
+S0148,P0296,Traffic Light Controller,Embedded,"C,ARM,RTOS",Intermediate,3,False,True,7,2023
+S0149,P0297,Cryptocurrency Price Predictor,Finance,"R,Shiny,quantmod",Basic,2,False,False,5,2024
+S0149,P0298,Blog Platform with Auth,Web,"React,Firebase,Tailwind",Basic,3,False,False,3,2025
+S0150,P0299,RFID-based Attendance System,Embedded,"Verilog,FPGA,ModelSim",Intermediate,2,False,False,12,2025
+S0150,P0300,Job Portal with Matching,Web,"Angular,Spring Boot,MySQL",Basic,2,False,False,4,2024
+S0151,P0301,Sentiment Analysis on Product Reviews,AI_ML,"Python,OpenCV,NumPy",Intermediate,3,True,True,9,2024
+S0151,P0302,Autonomous Lane Detection,AI_ML,"Python,Keras,Streamlit",Basic,2,False,True,6,2024
+S0152,P0303,Cryptocurrency Price Predictor,Finance,"Python,Pandas,yfinance",Basic,3,False,False,4,2024
+S0152,P0304,Smart Home Automation System,IoT,"NodeMCU,C,Blynk",Intermediate,3,False,False,5,2024
+S0153,P0305,Booking System for Hotels,Web,"HTML,CSS,JavaScript",Basic,3,False,False,4,2024
+S0154,P0306,Smart Energy Meter,IoT,"Arduino,C++,Sensors",Intermediate,1,False,True,11,2023
+S0154,P0307,Drone Flight Controller,Embedded,"C,Arduino,PCB Design",Basic,1,False,False,5,2022
+S0155,P0308,Smart Energy Meter,IoT,"Arduino,Python,Firebase",Basic,1,False,False,5,2022
+S0155,P0309,Password Manager,Other,"Kotlin,Android Studio,Firebase",Intermediate,1,False,True,9,2022
+S0155,P0310,Text Summarization using BERT,AI_ML,"Python,OpenCV,NumPy",Basic,3,False,False,5,2024
+S0156,P0311,Student Information System,Web,"Django,Bootstrap,PostgreSQL",Intermediate,1,False,False,5,2024
+S0156,P0312,Traffic Light Controller,Embedded,"C++,STM32,FreeRTOS",Basic,4+,False,False,3,2023
+S0156,P0313,Water Quality Sensor Network,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,4+,False,True,5,2022
+S0156,P0314,Wearable Health Monitor,IoT,"Arduino,C++,Sensors",Advanced,3,True,True,10,2023
+S0157,P0315,Industrial IoT Dashboard,IoT,"Arduino,C++,Sensors",Basic,2,False,True,3,2025
+S0157,P0316,Loan Default Prediction,Finance,"Excel,VBA,SQL",Intermediate,3,False,True,4,2023
+S0158,P0317,Supply Chain Analytics,Data,"Python,Pandas,Matplotlib",Intermediate,3,False,True,6,2024
+S0158,P0318,Social Media Dashboard,Web,"React,Firebase,Tailwind",Basic,1,False,True,2,2025
+S0158,P0319,Employee Attrition Analysis,Data,"SQL,Python,Airflow",Intermediate,1,False,True,8,2023
+S0158,P0320,Event Management Platform,Web,"Django,Bootstrap,PostgreSQL",Basic,3,False,False,4,2025
+S0159,P0321,Music Player Application,Other,"Kotlin,Android Studio,Firebase",Intermediate,3,False,True,4,2024
+S0159,P0322,Speech Emotion Recognition,AI_ML,"Python,Scikit-learn,Pandas",Advanced,2,False,True,19,2024
+S0159,P0323,E-Commerce Platform,Web,"React,Node.js,MongoDB",Basic,2,False,True,4,2024
+S0160,P0324,Healthcare Cost Analysis,Data,"Python,Power BI,Excel",Intermediate,1,True,False,6,2023
+S0160,P0325,Recommendation Engine for E-commerce,AI_ML,"Python,TensorFlow,Flask",Basic,4+,False,False,6,2025
+S0160,P0326,Travel Planner Application,Other,"Python,Flask,SQLite",Intermediate,2,False,True,5,2022
+S0161,P0327,Speech Emotion Recognition,AI_ML,"Python,TensorFlow,Docker",Basic,1,False,False,5,2022
+S0161,P0328,Password Manager,Other,"Python,Flask,SQLite",Advanced,3,False,True,10,2025
+S0161,P0329,Music Player Application,Other,"PHP,Laravel,MySQL",Basic,3,False,False,5,2022
+S0162,P0330,Smart Agriculture System,IoT,"NodeMCU,C,Blynk",Basic,3,False,False,4,2023
+S0162,P0331,Stock Market Trend Analysis,Data,"Python,Pandas,Matplotlib",Basic,3,False,False,4,2024
+S0163,P0332,Travel Planner Application,Other,"Python,Flask,SQLite",Advanced,2,True,True,10,2022
+S0163,P0333,Predictive Maintenance using ML,AI_ML,"Python,PyTorch,FastAPI",Advanced,3,False,True,18,2025
+S0164,P0334,Image Classification using CNN,AI_ML,"Python,TensorFlow,Flask",Advanced,3,True,True,13,2024
+S0164,P0335,RFID-based Attendance System,Embedded,"C,ARM,RTOS",Basic,3,False,False,2,2023
+S0165,P0336,Wearable Health Monitor,IoT,"Raspberry Pi,Python,MQTT",Advanced,2,False,False,18,2024
+S0166,P0337,Inventory Management System,Other,"Python,Flask,SQLite",Advanced,2,True,True,9,2022
+S0166,P0338,Music Player Application,Other,"PHP,Laravel,MySQL",Intermediate,4+,False,False,10,2022
+S0166,P0339,QR Code Generator,Other,"Java,Spring,MySQL",Advanced,2,True,True,19,2025
+S0167,P0340,Smart Energy Meter,IoT,"Arduino,Python,Firebase",Basic,4+,False,False,6,2024
+S0167,P0341,Sales Forecasting Model,Data,"Python,Databricks,Spark",Intermediate,2,False,True,5,2024
+S0167,P0342,Crime Data Visualization,Data,"SQL,Python,Airflow",Intermediate,2,False,False,9,2024
+S0168,P0343,Medical Image Segmentation,AI_ML,"Python,Hugging Face,Transformers",Basic,3,False,False,6,2024
+S0168,P0344,Water Quality Sensor Network,IoT,"NodeMCU,C,Blynk",Advanced,1,False,True,18,2025
+S0169,P0345,Social Media Dashboard,Web,"React,Node.js,MongoDB",Advanced,2,True,False,11,2023
+S0169,P0346,Traffic Light Controller,Embedded,"C++,STM32,FreeRTOS",Intermediate,3,False,False,5,2024
+S0170,P0347,Drone Flight Controller,Embedded,"C,Arduino,PCB Design",Basic,3,False,True,4,2024
+S0170,P0348,Retail Demand Forecasting,Data,"Python,SQL,Tableau",Intermediate,3,False,True,5,2024
+S0171,P0349,Stock Portfolio Tracker,Finance,"Python,NumPy,Matplotlib",Basic,3,False,False,2,2025
+S0171,P0350,Wearable Health Monitor,IoT,"Arduino,C++,Sensors",Intermediate,1,False,True,5,2025
+S0171,P0351,Expense Tracker App,Web,"React,Firebase,Tailwind",Basic,3,False,False,6,2024
+S0172,P0352,Social Media Analytics,Data,"Python,Databricks,Spark",Intermediate,3,False,False,5,2024
+S0172,P0353,Recommendation Engine for E-commerce,AI_ML,"Python,PyTorch,FastAPI",Intermediate,2,True,True,7,2023
+S0172,P0354,Travel Planner Application,Other,"Python,Flask,SQLite",Basic,2,False,False,5,2023
+S0173,P0355,Motor Speed Controller,Embedded,"C,ARM,RTOS",Basic,2,False,True,5,2024
+S0173,P0356,Personal Finance Manager,Finance,"Python,Dash,Plotly",Advanced,2,True,True,17,2024
+S0174,P0357,Stock Portfolio Tracker,Finance,"Excel,VBA,SQL",Intermediate,2,True,False,6,2024
+S0174,P0358,Expense Tracker App,Web,"Angular,Spring Boot,MySQL",Intermediate,3,False,False,11,2023
+S0174,P0359,Crime Data Visualization,Data,"Python,PySpark,Hadoop",Intermediate,3,False,False,11,2023
+S0175,P0360,Expense Tracker App,Web,"Django,Bootstrap,PostgreSQL",Intermediate,1,False,False,4,2024
+S0175,P0361,Text Summarization using BERT,AI_ML,"Python,PyTorch,FastAPI",Intermediate,4+,True,True,12,2022
+S0175,P0362,Inventory Management System,Other,"Kotlin,Android Studio,Firebase",Basic,4+,False,False,2,2025
+S0176,P0363,Text Summarization using BERT,AI_ML,"Python,Hugging Face,Transformers",Intermediate,3,False,True,12,2022
+S0176,P0364,Retail Demand Forecasting,Data,"Python,Databricks,Spark",Basic,2,False,False,6,2025
+S0176,P0365,Social Media Analytics,Data,"Python,Pandas,Matplotlib",Basic,4+,False,True,6,2023
+S0177,P0366,Sales Forecasting Model,Data,"SQL,Python,Airflow",Intermediate,2,True,True,11,2025
+S0178,P0367,Fitness Tracking App,Other,"Python,Flask,SQLite",Advanced,3,False,True,19,2024
+S0178,P0368,Traffic Light Controller,Embedded,"C++,STM32,FreeRTOS",Basic,3,False,False,5,2023
+S0178,P0369,Drone Flight Controller,Embedded,"C,Arduino,PCB Design",Advanced,1,False,True,13,2025
+S0179,P0370,Food Delivery App,Web,"Angular,Spring Boot,MySQL",Intermediate,1,False,True,9,2024
+S0180,P0371,Job Portal with Matching,Web,"Angular,Spring Boot,MySQL",Intermediate,1,False,True,4,2024
+S0180,P0372,Retail Demand Forecasting,Data,"Python,Power BI,Excel",Basic,3,False,False,4,2022
+S0181,P0373,Loan Default Prediction,Finance,"R,Shiny,quantmod",Basic,1,False,False,2,2024
+S0181,P0374,Education Data Mining,Data,"Python,Databricks,Spark",Intermediate,2,False,False,11,2024
+S0182,P0375,Booking System for Hotels,Web,"HTML,CSS,JavaScript",Intermediate,2,False,False,10,2024
+S0183,P0376,Predictive Maintenance using ML,AI_ML,"Python,Hugging Face,Transformers",Basic,1,False,True,5,2024
+S0183,P0377,Sales Forecasting Model,Data,"Python,Databricks,Spark",Intermediate,2,False,False,11,2025
+S0184,P0378,Loan Default Prediction,Finance,"R,Shiny,quantmod",Basic,3,False,False,3,2024
+S0184,P0379,Real-time Chat Application,Web,"Angular,Spring Boot,MySQL",Intermediate,1,False,True,8,2024
+S0185,P0380,Air Quality Monitoring System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,3,False,False,7,2024
+S0185,P0381,Crime Data Visualization,Data,"SQL,Python,Airflow",Intermediate,2,True,True,4,2024
+S0185,P0382,Travel Planner Application,Other,"PHP,Laravel,MySQL",Intermediate,2,True,False,8,2025
+S0186,P0383,Social Media Dashboard,Web,"Django,Bootstrap,PostgreSQL",Intermediate,2,True,True,9,2025
+S0187,P0384,Image Classification using CNN,AI_ML,"Python,TensorFlow,Flask",Basic,3,False,False,4,2024
+S0187,P0385,AI-Powered Resume Screener,AI_ML,"Python,TensorFlow,Flask",Basic,2,False,False,6,2025
+S0188,P0386,Cryptocurrency Price Predictor,Finance,"Excel,VBA,SQL",Advanced,3,True,True,10,2025
+S0189,P0387,Autonomous Lane Detection,AI_ML,"Python,PyTorch,FastAPI",Advanced,2,False,True,18,2024
+S0190,P0388,Weather Pattern Analysis,Data,"Python,SQL,Tableau",Intermediate,2,False,False,8,2022
+S0190,P0389,Password Manager,Other,"Java,Spring,MySQL",Basic,2,False,False,6,2022
+S0190,P0390,Medical Image Segmentation,AI_ML,"Python,Hugging Face,Transformers",Intermediate,2,False,False,7,2023
+S0191,P0391,Sentiment Analysis on Product Reviews,AI_ML,"Python,TensorFlow,Flask",Basic,3,False,False,6,2024
+S0192,P0392,Autonomous Lane Detection,AI_ML,"Python,TensorFlow,Flask",Basic,1,False,False,2,2024
+S0192,P0393,Line Following Robot,Embedded,"C++,STM32,FreeRTOS",Basic,4+,False,True,6,2023
+S0192,P0394,Sign Language Recognition System,AI_ML,"Python,Scikit-learn,Pandas",Basic,2,False,False,4,2024
+S0193,P0395,Recommendation Engine for E-commerce,AI_ML,"Python,NLTK,SpaCy",Intermediate,1,False,True,12,2025
+S0193,P0396,Student Information System,Web,"Angular,Spring Boot,MySQL",Basic,1,False,False,5,2024
+S0194,P0397,Fitness Tracking App,Other,"Java,Spring,MySQL",Basic,2,False,False,2,2024
+S0194,P0398,Credit Risk Assessment,Finance,"Python,Dash,Plotly",Intermediate,4+,False,False,5,2025
+S0196,P0399,Loan Default Prediction,Finance,"Python,Dash,Plotly",Basic,2,False,True,3,2025
+S0196,P0400,Blog Platform with Auth,Web,"React,Firebase,Tailwind",Basic,2,False,True,3,2023
+S0198,P0401,Motor Speed Controller,Embedded,"Verilog,FPGA,ModelSim",Intermediate,2,True,False,12,2023
+S0198,P0402,Expense Tracker App,Web,"Angular,Spring Boot,MySQL",Intermediate,1,False,True,4,2022
+S0198,P0403,Customer Segmentation Analysis,Data,"Python,Databricks,Spark",Advanced,3,True,True,15,2022
+S0199,P0404,Education Data Mining,Data,"Python,Databricks,Spark",Intermediate,3,False,True,7,2022
+S0199,P0405,Stock Market Trend Analysis,Data,"Python,Power BI,Excel",Intermediate,2,False,True,6,2024
+S0201,P0406,Air Quality Monitoring System,IoT,"Raspberry Pi,Python,MQTT",Basic,3,False,True,4,2024
+S0201,P0407,Credit Risk Assessment,Finance,"Python,Pandas,yfinance",Advanced,1,True,True,11,2022
+S0201,P0408,Social Media Dashboard,Web,"Vue.js,Django,SQLite",Intermediate,2,False,True,7,2022
+S0202,P0409,Retail Demand Forecasting,Data,"SQL,Python,Airflow",Intermediate,4+,False,True,6,2025
+S0202,P0410,AI-Powered Resume Screener,AI_ML,"Python,OpenCV,NumPy",Basic,2,False,True,2,2023
+S0203,P0411,Expense Tracker App,Web,"Angular,Spring Boot,MySQL",Intermediate,3,False,True,9,2025
+S0203,P0412,Personal Finance Manager,Finance,"Python,Pandas,yfinance",Intermediate,2,False,False,6,2025
+S0203,P0413,Stock Portfolio Tracker,Finance,"Excel,VBA,SQL",Intermediate,2,False,False,12,2024
+S0204,P0414,Fake News Detection System,AI_ML,"Python,OpenCV,NumPy",Intermediate,1,False,False,11,2024
+S0204,P0415,Chatbot using NLP and Transformers,AI_ML,"Python,PyTorch,FastAPI",Basic,1,False,False,6,2024
+S0205,P0416,Industrial IoT Dashboard,IoT,"Arduino,Python,Firebase",Intermediate,1,False,False,9,2023
+S0205,P0417,Image Classification using CNN,AI_ML,"Python,OpenCV,NumPy",Basic,4+,False,False,5,2024
+S0205,P0418,Travel Planner Application,Other,"C#,.NET,SQL Server",Basic,2,False,False,6,2025
+S0206,P0419,Budget Planning Tool,Finance,"R,Shiny,quantmod",Basic,1,False,False,6,2024
+S0206,P0420,Crime Data Visualization,Data,"Python,SQL,Tableau",Intermediate,3,False,False,12,2025
+S0206,P0421,Personal Finance Manager,Finance,"Python,Dash,Plotly",Intermediate,3,True,False,5,2023
+S0207,P0422,Stock Portfolio Tracker,Finance,"Python,Dash,Plotly",Basic,3,False,True,5,2025
+S0208,P0423,Smart Parking System,IoT,"NodeMCU,C,Blynk",Intermediate,2,False,True,7,2022
+S0208,P0424,Loan Default Prediction,Finance,"Excel,VBA,SQL",Intermediate,3,True,True,10,2025
+S0208,P0425,Line Following Robot,Embedded,"Verilog,FPGA,ModelSim",Advanced,4+,True,True,11,2024
+S0209,P0426,Water Quality Sensor Network,IoT,"Raspberry Pi,Python,MQTT",Intermediate,2,False,False,11,2023
+S0209,P0427,Drone Flight Controller,Embedded,"C,Arduino,PCB Design",Intermediate,1,False,False,4,2023
+S0209,P0428,Wearable Health Monitor,IoT,"Raspberry Pi,Python,MQTT",Intermediate,2,False,False,4,2024
+S0209,P0429,Pulse Oximeter Design,Embedded,"Verilog,FPGA,ModelSim",Basic,1,True,False,4,2024
+S0210,P0430,Speech Emotion Recognition,AI_ML,"Python,Scikit-learn,Pandas",Basic,2,False,True,5,2024
+S0210,P0431,Customer Churn Prediction,AI_ML,"Python,TensorFlow,Flask",Intermediate,2,True,False,7,2022
+S0210,P0432,Job Portal with Matching,Web,"React,Express,PostgreSQL",Basic,2,False,False,5,2023
+S0211,P0433,Water Quality Sensor Network,IoT,"Raspberry Pi,Python,MQTT",Intermediate,4+,False,True,7,2025
+S0211,P0434,Real-time Chat Application,Web,"Django,Bootstrap,PostgreSQL",Basic,4+,False,True,4,2024
+S0211,P0435,Wearable Health Monitor,IoT,"NodeMCU,C,Blynk",Intermediate,2,False,True,10,2025
+S0211,P0436,Stock Portfolio Tracker,Finance,"Excel,VBA,SQL",Basic,3,False,True,5,2025
+S0212,P0437,Loan Default Prediction,Finance,"Excel,VBA,SQL",Advanced,2,True,True,11,2022
+S0212,P0438,Real-time Chat Application,Web,"React,Express,PostgreSQL",Basic,1,False,False,2,2023
+S0213,P0439,Stock Market Trend Analysis,Data,"R,ggplot2,dplyr",Basic,1,False,True,5,2025
+S0213,P0440,Invoice Management System,Finance,"Excel,VBA,SQL",Advanced,3,False,True,19,2023
+S0214,P0441,Smart Home Automation System,IoT,"Arduino,Python,Firebase",Basic,3,False,False,2,2025
+S0215,P0442,Weather Pattern Analysis,Data,"R,ggplot2,dplyr",Intermediate,3,False,False,11,2023
+S0215,P0443,Inventory Management System,Other,"C#,.NET,SQL Server",Intermediate,2,True,True,11,2023
+S0216,P0444,Smart Agriculture System,IoT,"NodeMCU,C,Blynk",Intermediate,3,False,True,12,2024
+S0216,P0445,Stock Market Trend Analysis,Data,"Python,SQL,Tableau",Intermediate,2,False,True,11,2022
+S0216,P0446,Inventory Management System,Other,"PHP,Laravel,MySQL",Intermediate,2,True,False,12,2023
+S0217,P0447,Sentiment Analysis on Product Reviews,AI_ML,"Python,Scikit-learn,Pandas",Basic,3,False,False,4,2024
+S0217,P0448,Smart Energy Meter,IoT,"Arduino,Python,Firebase",Basic,2,False,False,4,2023
+S0217,P0449,Object Detection with YOLO,AI_ML,"Python,PyTorch,FastAPI",Basic,2,False,False,6,2023
+S0218,P0450,Handwritten Digit Recognition,AI_ML,"Python,Keras,Streamlit",Intermediate,1,True,True,6,2025
+S0218,P0451,Smart Energy Meter,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,2,False,False,7,2024
+S0219,P0452,Inventory Management System,Other,"Kotlin,Android Studio,Firebase",Intermediate,3,False,True,4,2024
+S0219,P0453,Credit Risk Assessment,Finance,"Python,NumPy,Matplotlib",Advanced,4+,False,True,15,2024
+S0220,P0454,Healthcare Cost Analysis,Data,"Python,Databricks,Spark",Intermediate,2,False,True,4,2023
+S0221,P0455,Chatbot using NLP and Transformers,AI_ML,"Python,Hugging Face,Transformers",Advanced,2,True,False,12,2025
+S0221,P0456,Attendance Management System,Other,"C#,.NET,SQL Server",Intermediate,2,False,True,8,2025
+S0222,P0457,Student Information System,Web,"HTML,CSS,JavaScript",Advanced,3,True,True,10,2024
+S0222,P0458,Portfolio Website with CMS,Web,"React,Firebase,Tailwind",Advanced,3,False,True,15,2022
+S0222,P0459,Industrial IoT Dashboard,IoT,"Arduino,C++,Sensors",Intermediate,4+,False,False,5,2025
+S0224,P0460,Motor Speed Controller,Embedded,"Verilog,FPGA,ModelSim",Advanced,3,True,False,17,2024
+S0224,P0461,Pulse Oximeter Design,Embedded,"C,PIC,Assembly",Basic,2,False,False,3,2024
+S0225,P0462,Line Following Robot,Embedded,"C++,STM32,FreeRTOS",Intermediate,2,True,True,12,2024
+S0225,P0463,Smart Agriculture System,IoT,"Arduino,Python,Firebase",Intermediate,1,True,True,12,2025
+S0226,P0464,RFID-based Attendance System,Embedded,"C,Arduino,PCB Design",Basic,2,False,False,4,2025
+S0226,P0465,Digital Lock System,Embedded,"C,PIC,Assembly",Advanced,2,True,False,9,2023
+S0228,P0466,COVID-19 Data Analysis Dashboard,Data,"Python,PySpark,Hadoop",Basic,2,False,False,2,2023
+S0228,P0467,Smart Parking System,IoT,"ESP32,MicroPython,ThingSpeak",Basic,3,False,True,3,2025
+S0231,P0468,File Encryption Tool,Other,"C#,.NET,SQL Server",Intermediate,3,False,True,9,2025
+S0231,P0469,Pulse Oximeter Design,Embedded,"C,ARM,RTOS",Basic,3,False,True,2,2022
+S0234,P0470,Sentiment Analysis on Product Reviews,AI_ML,"Python,PyTorch,FastAPI",Intermediate,1,False,False,8,2022
+S0235,P0471,Medical Image Segmentation,AI_ML,"Python,NLTK,SpaCy",Intermediate,1,False,True,8,2025
+S0236,P0472,Password Manager,Other,"Java,Spring,MySQL",Intermediate,2,False,True,8,2024
+S0236,P0473,Pulse Oximeter Design,Embedded,"C++,STM32,FreeRTOS",Advanced,2,False,True,14,2025
+S0237,P0474,Air Quality Monitoring System,IoT,"Arduino,C++,Sensors",Advanced,4+,True,True,11,2024
+S0238,P0475,Pulse Oximeter Design,Embedded,"C,Arduino,PCB Design",Advanced,2,True,True,9,2024
+S0238,P0476,Inventory Management System,Other,"Kotlin,Android Studio,Firebase",Intermediate,3,True,True,8,2022
+S0238,P0477,Online Learning Management System,Web,"React,Node.js,MongoDB",Basic,2,False,True,5,2024
+S0238,P0478,Password Manager,Other,"Python,Flask,SQLite",Advanced,4+,True,True,14,2025
+S0239,P0479,RFID-based Attendance System,Embedded,"Verilog,FPGA,ModelSim",Intermediate,4+,True,False,7,2024
+S0239,P0480,Digital Lock System,Embedded,"C,ARM,RTOS",Basic,2,False,True,2,2024
+S0239,P0481,Education Data Mining,Data,"Python,Pandas,Seaborn",Intermediate,2,True,True,11,2025
+S0239,P0482,Crime Data Visualization,Data,"Python,PySpark,Hadoop",Basic,4+,False,False,3,2023
+S0240,P0483,Real-time Chat Application,Web,"Angular,Spring Boot,MySQL",Basic,3,False,False,3,2025
+S0240,P0484,Fitness Tracking App,Other,"Kotlin,Android Studio,Firebase",Basic,4+,False,False,3,2023
+S0240,P0485,Stock Portfolio Tracker,Finance,"Python,Pandas,yfinance",Basic,2,True,False,6,2022
+S0242,P0486,Invoice Management System,Finance,"Python,Dash,Plotly",Basic,3,False,True,3,2023
+S0242,P0487,Motor Speed Controller,Embedded,"C++,STM32,FreeRTOS",Advanced,2,False,True,13,2024
+S0243,P0488,Sentiment Analysis on Product Reviews,AI_ML,"Python,OpenCV,NumPy",Basic,3,False,True,2,2022
+S0243,P0489,Student Information System,Web,"React,Firebase,Tailwind",Intermediate,2,True,True,5,2023
+S0244,P0490,Healthcare Cost Analysis,Data,"Python,Power BI,Excel",Intermediate,1,False,True,5,2023
+S0244,P0491,Blog Platform with Auth,Web,"Next.js,Prisma,PostgreSQL",Basic,4+,False,True,5,2023
+S0244,P0492,Line Following Robot,Embedded,"C++,STM32,FreeRTOS",Basic,4+,True,True,6,2024
+S0244,P0493,Password Manager,Other,"Python,Flask,SQLite",Basic,2,False,False,3,2024
+S0245,P0494,RFID-based Attendance System,Embedded,"C,ARM,RTOS",Intermediate,4+,False,True,8,2024
+S0245,P0495,Travel Planner Application,Other,"PHP,Laravel,MySQL",Intermediate,3,True,False,4,2024
+S0245,P0496,Pulse Oximeter Design,Embedded,"C,ARM,RTOS",Basic,2,False,False,3,2024
+S0246,P0497,Travel Planner Application,Other,"Java,Spring,MySQL",Intermediate,3,False,True,5,2024
+S0246,P0498,Event Management Platform,Web,"Next.js,Prisma,PostgreSQL",Basic,2,False,True,5,2024
+S0246,P0499,Portfolio Website with CMS,Web,"Angular,Spring Boot,MySQL",Basic,4+,False,True,6,2024
+S0247,P0500,Attendance Management System,Other,"Java,Spring,MySQL",Basic,2,False,True,2,2022
+S0247,P0501,Weather Pattern Analysis,Data,"Python,SQL,Tableau",Intermediate,2,False,False,8,2023
+S0248,P0502,Digital Lock System,Embedded,"C,Arduino,PCB Design",Advanced,3,True,True,19,2023
+S0248,P0503,Smart Agriculture System,IoT,"Raspberry Pi,Python,MQTT",Basic,2,False,True,6,2024
+S0249,P0504,Portfolio Website with CMS,Web,"Django,Bootstrap,PostgreSQL",Intermediate,4+,False,False,5,2022
+S0249,P0505,Image Classification using CNN,AI_ML,"Python,Keras,Streamlit",Intermediate,3,True,True,12,2025
+S0249,P0506,Traffic Light Controller,Embedded,"C,Arduino,PCB Design",Basic,2,False,False,5,2023
+S0249,P0507,Smart Parking System,IoT,"Arduino,C++,Sensors",Advanced,4+,False,True,17,2024
+S0250,P0508,Cryptocurrency Price Predictor,Finance,"R,Shiny,quantmod",Advanced,2,False,True,8,2022
+S0250,P0509,Weather Pattern Analysis,Data,"Python,Pandas,Seaborn",Intermediate,3,False,True,11,2023
+S0252,P0510,Smart Parking System,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,2,True,False,11,2022
+S0252,P0511,Digital Lock System,Embedded,"C,PIC,Assembly",Basic,1,False,False,2,2024
+S0253,P0512,Travel Planner Application,Other,"PHP,Laravel,MySQL",Advanced,3,True,True,11,2022
+S0253,P0513,Pulse Oximeter Design,Embedded,"C,PIC,Assembly",Basic,3,False,False,6,2024
+S0253,P0514,Smart Parking System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,3,False,False,9,2023
+S0253,P0515,Recommendation Engine for E-commerce,AI_ML,"Python,PyTorch,FastAPI",Advanced,1,False,False,8,2022
+S0254,P0516,Budget Planning Tool,Finance,"Python,Pandas,yfinance",Basic,1,False,False,2,2023
+S0255,P0517,Digital Lock System,Embedded,"C,PIC,Assembly",Advanced,2,False,True,17,2024
+S0256,P0518,Sentiment Analysis on Product Reviews,AI_ML,"Python,TensorFlow,Docker",Basic,1,False,False,6,2024
+S0256,P0519,Student Information System,Web,"React,Node.js,MongoDB",Intermediate,1,False,False,4,2024
+S0257,P0520,E-Commerce Platform,Web,"Vue.js,Django,SQLite",Basic,2,False,False,3,2023
+S0258,P0521,Student Information System,Web,"React,Node.js,MongoDB",Intermediate,1,False,True,11,2025
+S0259,P0522,Air Quality Monitoring System,IoT,"NodeMCU,C,Blynk",Basic,3,False,False,3,2022
+S0260,P0523,Image Classification using CNN,AI_ML,"Python,NLTK,SpaCy",Basic,3,False,False,3,2023
+S0260,P0524,Drone Flight Controller,Embedded,"C++,STM32,FreeRTOS",Intermediate,2,False,False,12,2025
+S0260,P0525,Stock Portfolio Tracker,Finance,"Python,Dash,Plotly",Basic,3,False,False,3,2024
+S0261,P0526,Event Management Platform,Web,"Django,Bootstrap,PostgreSQL",Intermediate,4+,False,True,6,2023
+S0261,P0527,Sales Forecasting Model,Data,"Python,Power BI,Excel",Basic,3,False,False,2,2025
+S0262,P0528,Industrial IoT Dashboard,IoT,"NodeMCU,C,Blynk",Basic,2,False,True,6,2023
+S0262,P0529,Expense Tracker App,Web,"Angular,Spring Boot,MySQL",Basic,4+,False,True,5,2023
+S0263,P0530,Sales Forecasting Model,Data,"Python,Pandas,Seaborn",Advanced,2,True,True,17,2024
+S0263,P0531,Loan Default Prediction,Finance,"Python,Pandas,yfinance",Advanced,1,True,True,13,2023
+S0263,P0532,Stock Market Trend Analysis,Data,"Python,PySpark,Hadoop",Advanced,3,False,False,12,2024
+S0264,P0533,Customer Segmentation Analysis,Data,"Python,SQL,Tableau",Basic,1,False,True,3,2024
+S0265,P0534,Weather Pattern Analysis,Data,"Python,Pandas,Matplotlib",Advanced,3,True,True,15,2025
+S0265,P0535,Hospital Management System,Web,"React,Express,PostgreSQL",Basic,2,False,False,3,2023
+S0266,P0536,Smart Home Automation System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,1,False,False,12,2024
+S0266,P0537,QR Code Generator,Other,"Kotlin,Android Studio,Firebase",Basic,3,False,False,2,2023
+S0267,P0538,Budget Planning Tool,Finance,"Excel,VBA,SQL",Basic,1,False,False,3,2025
+S0268,P0539,Password Manager,Other,"Kotlin,Android Studio,Firebase",Advanced,1,False,False,19,2025
+S0269,P0540,Credit Risk Assessment,Finance,"Python,Pandas,yfinance",Intermediate,3,False,True,6,2023
+S0269,P0541,RFID-based Attendance System,Embedded,"C,Arduino,PCB Design",Intermediate,4+,False,True,4,2023
+S0269,P0542,Budget Planning Tool,Finance,"Python,NumPy,Matplotlib",Basic,4+,False,False,6,2023
+S0270,P0543,Crime Data Visualization,Data,"Python,Pandas,Seaborn",Intermediate,3,False,False,12,2025
+S0270,P0544,Portfolio Website with CMS,Web,"React,Express,PostgreSQL",Intermediate,3,True,False,5,2025
+S0271,P0545,Wearable Health Monitor,IoT,"Arduino,Python,Firebase",Basic,4+,False,False,6,2023
+S0271,P0546,Traffic Light Controller,Embedded,"Verilog,FPGA,ModelSim",Intermediate,1,False,True,9,2023
+S0271,P0547,Attendance Management System,Other,"Java,Spring,MySQL",Intermediate,2,False,True,7,2023
+S0271,P0548,Object Detection with YOLO,AI_ML,"Python,Hugging Face,Transformers",Intermediate,2,True,False,9,2023
+S0272,P0549,Text Summarization using BERT,AI_ML,"Python,PyTorch,FastAPI",Intermediate,1,False,False,5,2025
+S0272,P0550,Expense Tracker App,Web,"Angular,Spring Boot,MySQL",Advanced,1,True,True,8,2025
+S0272,P0551,Hospital Management System,Web,"Vue.js,Django,SQLite",Basic,4+,False,False,4,2022
+S0273,P0552,Motor Speed Controller,Embedded,"C,Arduino,PCB Design",Intermediate,3,False,False,11,2024
+S0274,P0553,Loan Default Prediction,Finance,"Python,Pandas,yfinance",Basic,4+,False,True,5,2024
+S0275,P0554,Smart Parking System,IoT,"Arduino,Python,Firebase",Basic,2,False,False,6,2024
+S0275,P0555,Stock Portfolio Tracker,Finance,"Python,Pandas,yfinance",Advanced,4+,True,False,11,2023
+S0277,P0556,Online Voting System,Web,"Django,Bootstrap,PostgreSQL",Advanced,2,True,True,18,2024
+S0277,P0557,Portfolio Website with CMS,Web,"Next.js,Prisma,PostgreSQL",Intermediate,1,False,True,5,2023
+S0279,P0558,Line Following Robot,Embedded,"C++,STM32,FreeRTOS",Intermediate,1,False,True,7,2022
+S0280,P0559,Smart Agriculture System,IoT,"NodeMCU,C,Blynk",Advanced,2,True,True,15,2022
+S0280,P0560,Online Learning Management System,Web,"Next.js,Prisma,PostgreSQL",Advanced,3,True,True,11,2022
+S0281,P0561,Digital Lock System,Embedded,"C,ARM,RTOS",Basic,2,False,True,3,2024
+S0282,P0562,QR Code Generator,Other,"C#,.NET,SQL Server",Basic,3,False,False,4,2022
+S0282,P0563,RFID-based Attendance System,Embedded,"C,PIC,Assembly",Basic,1,False,True,5,2025
+S0284,P0564,Smart Agriculture System,IoT,"Arduino,Python,Firebase",Intermediate,4+,False,True,9,2025
+S0284,P0565,Sign Language Recognition System,AI_ML,"Python,Keras,Streamlit",Basic,2,False,False,2,2023
+S0284,P0566,Motor Speed Controller,Embedded,"C++,STM32,FreeRTOS",Basic,1,False,False,5,2023
+S0285,P0567,Fitness Tracking App,Other,"Java,Spring,MySQL",Basic,3,False,True,4,2025
+S0285,P0568,Travel Planner Application,Other,"Python,Flask,SQLite",Basic,2,False,True,6,2024
+S0286,P0569,RFID-based Attendance System,Embedded,"Verilog,FPGA,ModelSim",Basic,2,False,False,6,2023
+S0286,P0570,Wearable Health Monitor,IoT,"Arduino,Python,Firebase",Intermediate,3,True,True,7,2024
+S0287,P0571,Sign Language Recognition System,AI_ML,"Python,Scikit-learn,Pandas",Intermediate,2,False,False,5,2024
+S0288,P0572,Fitness Tracking App,Other,"C#,.NET,SQL Server",Advanced,1,True,True,20,2023
+S0289,P0573,Loan Default Prediction,Finance,"Python,NumPy,Matplotlib",Intermediate,3,False,False,7,2023
+S0289,P0574,Sign Language Recognition System,AI_ML,"Python,Hugging Face,Transformers",Basic,4+,False,False,4,2024
+S0289,P0575,Stock Portfolio Tracker,Finance,"Excel,VBA,SQL",Intermediate,1,True,True,11,2025
+S0290,P0576,Smart Agriculture System,IoT,"Arduino,C++,Sensors",Basic,1,False,True,6,2024
+S0290,P0577,Image Classification using CNN,AI_ML,"Python,OpenCV,NumPy",Intermediate,2,False,False,7,2023
+S0290,P0578,Crime Data Visualization,Data,"Python,Power BI,Excel",Intermediate,4+,True,True,8,2024
+S0291,P0579,Attendance Management System,Other,"Java,Spring,MySQL",Intermediate,3,True,False,5,2024
+S0292,P0580,Digital Lock System,Embedded,"C,ARM,RTOS",Basic,2,False,False,2,2025
+S0293,P0581,Sales Forecasting Model,Data,"SQL,Python,Airflow",Basic,4+,False,False,3,2024
+S0293,P0582,Traffic Light Controller,Embedded,"Verilog,FPGA,ModelSim",Basic,1,False,False,2,2022
+S0294,P0583,Smart Home Automation System,IoT,"Raspberry Pi,Python,MQTT",Advanced,2,True,True,12,2022
+S0294,P0584,Stock Market Trend Analysis,Data,"Python,Pandas,Seaborn",Advanced,2,True,True,19,2022
+S0294,P0585,Air Quality Monitoring System,IoT,"Arduino,Python,Firebase",Intermediate,2,False,True,11,2024
+S0295,P0586,Customer Churn Prediction,AI_ML,"Python,TensorFlow,Flask",Intermediate,1,True,True,5,2025
+S0295,P0587,Smart Energy Meter,IoT,"Raspberry Pi,Python,MQTT",Advanced,2,True,True,15,2024
+S0296,P0588,Customer Segmentation Analysis,Data,"Python,PySpark,Hadoop",Basic,3,False,False,5,2022
+S0296,P0589,Smart Home Automation System,IoT,"Arduino,Python,Firebase",Basic,4+,False,False,2,2025
+S0297,P0590,Fake News Detection System,AI_ML,"Python,TensorFlow,Flask",Advanced,3,False,True,15,2024
+S0297,P0591,Expense Tracker App,Web,"HTML,CSS,JavaScript",Advanced,1,False,True,18,2024
+S0297,P0592,Line Following Robot,Embedded,"C++,STM32,FreeRTOS",Advanced,4+,False,True,11,2024
+S0299,P0593,Inventory Management System,Other,"C#,.NET,SQL Server",Basic,3,False,True,5,2024
+S0299,P0594,Attendance Management System,Other,"C#,.NET,SQL Server",Basic,3,False,False,3,2025
+S0300,P0595,Event Management Platform,Web,"React,Firebase,Tailwind",Advanced,3,True,False,13,2023
+S0301,P0596,Crime Data Visualization,Data,"Python,Databricks,Spark",Basic,3,False,False,3,2022
+S0302,P0597,Personal Finance Manager,Finance,"R,Shiny,quantmod",Basic,3,False,False,5,2022
+S0302,P0598,Job Portal with Matching,Web,"Vue.js,Django,SQLite",Advanced,4+,False,True,19,2025
+S0303,P0599,Industrial IoT Dashboard,IoT,"NodeMCU,C,Blynk",Basic,2,False,True,3,2025
+S0304,P0600,Object Detection with YOLO,AI_ML,"Python,Scikit-learn,Pandas",Basic,1,False,True,4,2022
+S0305,P0601,Budget Planning Tool,Finance,"Python,NumPy,Matplotlib",Basic,4+,False,False,6,2024
+S0305,P0602,Stock Portfolio Tracker,Finance,"Excel,VBA,SQL",Basic,3,False,False,2,2022
+S0305,P0603,File Encryption Tool,Other,"Python,Flask,SQLite",Intermediate,1,False,False,12,2025
+S0305,P0604,Credit Risk Assessment,Finance,"Python,Pandas,yfinance",Intermediate,1,False,False,9,2024
+S0306,P0605,Cryptocurrency Price Predictor,Finance,"Excel,VBA,SQL",Advanced,2,False,True,20,2024
+S0306,P0606,File Encryption Tool,Other,"C#,.NET,SQL Server",Intermediate,2,True,True,6,2025
+S0306,P0607,Social Media Analytics,Data,"R,ggplot2,dplyr",Basic,3,True,False,3,2022
+S0306,P0608,Food Delivery App,Web,"Angular,Spring Boot,MySQL",Intermediate,2,False,True,12,2024
+S0307,P0609,Credit Risk Assessment,Finance,"Python,Pandas,yfinance",Basic,2,False,True,4,2022
+S0307,P0610,Attendance Management System,Other,"Python,Flask,SQLite",Intermediate,3,True,True,7,2025
+S0307,P0611,Personal Finance Manager,Finance,"Python,Pandas,yfinance",Basic,2,False,False,6,2023
+S0308,P0612,File Encryption Tool,Other,"C#,.NET,SQL Server",Intermediate,4+,True,True,7,2024
+S0308,P0613,Air Quality Monitoring System,IoT,"Arduino,Python,Firebase",Advanced,1,False,True,11,2024
+S0309,P0614,Retail Demand Forecasting,Data,"Python,PySpark,Hadoop",Advanced,2,True,False,19,2022
+S0309,P0615,Water Quality Sensor Network,IoT,"NodeMCU,C,Blynk",Advanced,1,False,True,19,2022
+S0309,P0616,Budget Planning Tool,Finance,"Excel,VBA,SQL",Advanced,2,True,False,19,2023
+S0310,P0617,Digital Lock System,Embedded,"C++,STM32,FreeRTOS",Basic,2,False,False,4,2022
+S0310,P0618,Image Classification using CNN,AI_ML,"Python,NLTK,SpaCy",Intermediate,4+,True,True,12,2024
+S0310,P0619,Travel Planner Application,Other,"Kotlin,Android Studio,Firebase",Basic,4+,False,False,6,2023
+S0310,P0620,Education Data Mining,Data,"Python,Power BI,Excel",Advanced,3,False,False,11,2022
+S0311,P0621,Weather Pattern Analysis,Data,"Python,Pandas,Matplotlib",Intermediate,3,True,False,11,2024
+S0311,P0622,Smart Parking System,IoT,"Arduino,Python,Firebase",Basic,1,False,False,2,2025
+S0312,P0623,Smart Parking System,IoT,"Arduino,Python,Firebase",Basic,3,False,False,3,2025
+S0312,P0624,AI-Powered Resume Screener,AI_ML,"Python,OpenCV,NumPy",Basic,1,False,False,4,2023
+S0313,P0625,Expense Tracker App,Web,"Django,Bootstrap,PostgreSQL",Basic,2,True,False,4,2025
+S0313,P0626,Invoice Management System,Finance,"Python,NumPy,Matplotlib",Basic,4+,False,False,2,2024
+S0314,P0627,Handwritten Digit Recognition,AI_ML,"Python,TensorFlow,Flask",Intermediate,3,True,True,10,2025
+S0315,P0628,COVID-19 Data Analysis Dashboard,Data,"Python,PySpark,Hadoop",Intermediate,2,False,True,9,2023
+S0315,P0629,Traffic Light Controller,Embedded,"C,Arduino,PCB Design",Basic,1,False,False,2,2025
+S0315,P0630,Digital Lock System,Embedded,"C,PIC,Assembly",Intermediate,2,False,False,12,2023
+S0316,P0631,Budget Planning Tool,Finance,"Python,Pandas,yfinance",Intermediate,2,False,False,7,2023
+S0316,P0632,Credit Risk Assessment,Finance,"Python,NumPy,Matplotlib",Intermediate,3,False,False,6,2025
+S0316,P0633,Password Manager,Other,"Java,Spring,MySQL",Advanced,4+,False,True,19,2025
+S0317,P0634,Travel Planner Application,Other,"Kotlin,Android Studio,Firebase",Intermediate,2,True,False,7,2025
+S0317,P0635,Cryptocurrency Price Predictor,Finance,"Python,NumPy,Matplotlib",Advanced,3,False,True,20,2022
+S0317,P0636,Invoice Management System,Finance,"Excel,VBA,SQL",Intermediate,1,False,True,5,2025
+S0318,P0637,Drone Flight Controller,Embedded,"C++,STM32,FreeRTOS",Advanced,3,False,False,14,2023
+S0318,P0638,Traffic Light Controller,Embedded,"C,ARM,RTOS",Basic,3,False,False,4,2025
+S0319,P0639,Air Quality Monitoring System,IoT,"Arduino,C++,Sensors",Basic,2,False,True,6,2024
+S0320,P0640,Drone Flight Controller,Embedded,"C,PIC,Assembly",Advanced,2,True,False,11,2024
+S0321,P0641,QR Code Generator,Other,"Kotlin,Android Studio,Firebase",Intermediate,2,True,True,11,2022
+S0321,P0642,Air Quality Monitoring System,IoT,"Arduino,C++,Sensors",Intermediate,3,False,False,5,2024
+S0322,P0643,Employee Attrition Analysis,Data,"Python,Pandas,Matplotlib",Advanced,1,False,True,8,2024
+S0322,P0644,Motor Speed Controller,Embedded,"C,Arduino,PCB Design",Basic,4+,False,True,5,2024
+S0322,P0645,Real-time Chat Application,Web,"React,Node.js,MongoDB",Intermediate,3,False,True,7,2025
+S0323,P0646,Recommendation Engine for E-commerce,AI_ML,"Python,NLTK,SpaCy",Intermediate,4+,True,False,7,2023
+S0323,P0647,Credit Risk Assessment,Finance,"Excel,VBA,SQL",Intermediate,1,False,True,11,2023
+S0324,P0648,Music Player Application,Other,"C#,.NET,SQL Server",Advanced,2,True,True,16,2025
+S0324,P0649,QR Code Generator,Other,"C#,.NET,SQL Server",Intermediate,1,False,False,12,2025
+S0325,P0650,COVID-19 Data Analysis Dashboard,Data,"Python,PySpark,Hadoop",Intermediate,2,True,True,4,2024
+S0325,P0651,Budget Planning Tool,Finance,"Excel,VBA,SQL",Basic,3,False,False,2,2023
+S0326,P0652,Pulse Oximeter Design,Embedded,"C,PIC,Assembly",Intermediate,1,False,False,7,2022
+S0327,P0653,File Encryption Tool,Other,"Kotlin,Android Studio,Firebase",Basic,2,False,False,6,2024
+S0327,P0654,Stock Portfolio Tracker,Finance,"Python,NumPy,Matplotlib",Intermediate,4+,False,True,8,2022
+S0328,P0655,Drone Flight Controller,Embedded,"C++,STM32,FreeRTOS",Basic,3,False,True,2,2024
+S0329,P0656,Invoice Management System,Finance,"Python,Pandas,yfinance",Intermediate,4+,False,False,9,2024
+S0329,P0657,Motor Speed Controller,Embedded,"Verilog,FPGA,ModelSim",Basic,1,False,False,2,2024
+S0330,P0658,QR Code Generator,Other,"Kotlin,Android Studio,Firebase",Basic,2,False,True,5,2022
+S0330,P0659,Motor Speed Controller,Embedded,"C,ARM,RTOS",Advanced,2,True,True,9,2025
+S0330,P0660,Blog Platform with Auth,Web,"Django,Bootstrap,PostgreSQL",Basic,2,False,True,4,2024
+S0331,P0661,Music Player Application,Other,"Java,Spring,MySQL",Advanced,3,False,False,8,2025
+S0331,P0662,Text Summarization using BERT,AI_ML,"Python,Keras,Streamlit",Intermediate,2,True,True,10,2025
+S0331,P0663,QR Code Generator,Other,"Kotlin,Android Studio,Firebase",Basic,2,False,False,3,2025
+S0332,P0664,Stock Portfolio Tracker,Finance,"Python,Pandas,yfinance",Intermediate,2,True,True,7,2023
+S0332,P0665,Wearable Health Monitor,IoT,"Raspberry Pi,Python,MQTT",Advanced,2,False,False,10,2023
+S0333,P0666,Water Quality Sensor Network,IoT,"Raspberry Pi,Python,MQTT",Basic,4+,False,True,2,2023
+S0333,P0667,Online Voting System,Web,"HTML,CSS,JavaScript",Advanced,1,True,True,12,2025
+S0334,P0668,Customer Churn Prediction,AI_ML,"Python,OpenCV,NumPy",Advanced,4+,True,True,17,2025
+S0335,P0669,Air Quality Monitoring System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,3,True,False,10,2024
+S0335,P0670,Handwritten Digit Recognition,AI_ML,"Python,Keras,Streamlit",Advanced,4+,True,True,9,2024
+S0336,P0671,Loan Default Prediction,Finance,"Python,NumPy,Matplotlib",Intermediate,3,False,False,5,2025
+S0336,P0672,Invoice Management System,Finance,"Python,Pandas,yfinance",Basic,3,False,False,4,2024
+S0337,P0673,Motor Speed Controller,Embedded,"Verilog,FPGA,ModelSim",Basic,2,False,False,5,2023
+S0337,P0674,Image Classification using CNN,AI_ML,"Python,OpenCV,NumPy",Intermediate,3,False,True,8,2024
+S0337,P0675,Expense Tracker App,Web,"Django,Bootstrap,PostgreSQL",Intermediate,2,True,False,9,2023
+S0338,P0676,Password Manager,Other,"Java,Spring,MySQL",Basic,3,False,False,2,2025
+S0338,P0677,Event Management Platform,Web,"Django,Bootstrap,PostgreSQL",Intermediate,1,True,True,4,2022
+S0339,P0678,File Encryption Tool,Other,"Java,Spring,MySQL",Basic,2,False,True,3,2024
+S0339,P0679,Budget Planning Tool,Finance,"Excel,VBA,SQL",Advanced,3,True,True,16,2023
+S0340,P0680,Employee Attrition Analysis,Data,"Python,SQL,Tableau",Intermediate,2,False,True,5,2023
+S0341,P0681,Social Media Analytics,Data,"Python,Pandas,Seaborn",Basic,2,False,False,6,2024
+S0341,P0682,Smart Home Automation System,IoT,"NodeMCU,C,Blynk",Advanced,1,False,True,15,2022
+S0343,P0683,Employee Attrition Analysis,Data,"SQL,Python,Airflow",Basic,1,False,False,6,2024
+S0343,P0684,Chatbot using NLP and Transformers,AI_ML,"Python,PyTorch,FastAPI",Basic,3,False,True,5,2025
+S0343,P0685,Recommendation Engine for E-commerce,AI_ML,"Python,TensorFlow,Docker",Basic,3,False,True,3,2023
+S0343,P0686,Speech Emotion Recognition,AI_ML,"Python,TensorFlow,Flask",Basic,1,False,False,6,2024
+S0344,P0687,Traffic Light Controller,Embedded,"C,ARM,RTOS",Intermediate,4+,False,True,11,2025
+S0344,P0688,Online Voting System,Web,"React,Firebase,Tailwind",Basic,3,True,False,3,2022
+S0344,P0689,Water Quality Sensor Network,IoT,"Raspberry Pi,Python,MQTT",Intermediate,1,False,False,12,2023
+S0345,P0690,Predictive Maintenance using ML,AI_ML,"Python,OpenCV,NumPy",Intermediate,4+,False,False,5,2024
+S0345,P0691,Retail Demand Forecasting,Data,"Python,Databricks,Spark",Advanced,1,False,True,10,2025
+S0345,P0692,Social Media Analytics,Data,"Python,Power BI,Excel",Intermediate,3,False,False,9,2025
+S0346,P0693,Music Player Application,Other,"PHP,Laravel,MySQL",Basic,3,False,True,5,2023
+S0346,P0694,QR Code Generator,Other,"PHP,Laravel,MySQL",Advanced,3,True,True,18,2025
+S0347,P0695,Fitness Tracking App,Other,"C#,.NET,SQL Server",Intermediate,3,True,True,5,2022
+S0347,P0696,Text Summarization using BERT,AI_ML,"Python,TensorFlow,Flask",Basic,2,False,False,4,2025
+S0347,P0697,Invoice Management System,Finance,"Python,Dash,Plotly",Basic,1,False,False,5,2024
+S0347,P0698,Motor Speed Controller,Embedded,"C++,STM32,FreeRTOS",Advanced,2,True,False,8,2024
+S0348,P0699,Expense Tracker App,Web,"HTML,CSS,JavaScript",Basic,2,False,True,2,2024
+S0349,P0700,Air Quality Monitoring System,IoT,"NodeMCU,C,Blynk",Basic,2,False,False,3,2023
+S0349,P0701,Pulse Oximeter Design,Embedded,"C++,STM32,FreeRTOS",Intermediate,3,False,False,6,2024
+S0350,P0702,Student Information System,Web,"React,Firebase,Tailwind",Intermediate,3,True,False,11,2024
+S0351,P0703,Music Player Application,Other,"Python,Flask,SQLite",Basic,2,False,False,6,2024
+S0351,P0704,RFID-based Attendance System,Embedded,"C,PIC,Assembly",Intermediate,3,False,True,10,2023
+S0352,P0705,QR Code Generator,Other,"Kotlin,Android Studio,Firebase",Basic,1,False,False,6,2025
+S0353,P0706,Personal Finance Manager,Finance,"Excel,VBA,SQL",Advanced,2,True,False,18,2025
+S0353,P0707,Digital Lock System,Embedded,"C++,STM32,FreeRTOS",Basic,1,False,False,6,2022
+S0354,P0708,Customer Churn Prediction,AI_ML,"Python,OpenCV,NumPy",Advanced,2,True,True,9,2024
+S0354,P0709,Smart Home Automation System,IoT,"Arduino,Python,Firebase",Basic,2,False,False,4,2024
+S0354,P0710,Water Quality Sensor Network,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,2,False,True,8,2025
+S0355,P0711,RFID-based Attendance System,Embedded,"Verilog,FPGA,ModelSim",Basic,2,False,False,6,2024
+S0355,P0712,File Encryption Tool,Other,"PHP,Laravel,MySQL",Basic,3,False,False,4,2023
+S0356,P0713,Traffic Light Controller,Embedded,"Verilog,FPGA,ModelSim",Intermediate,3,False,False,9,2023
+S0357,P0714,Retail Demand Forecasting,Data,"Python,PySpark,Hadoop",Intermediate,4+,False,False,7,2024
+S0357,P0715,Drone Flight Controller,Embedded,"C++,STM32,FreeRTOS",Basic,2,False,False,5,2024
+S0357,P0716,Fake News Detection System,AI_ML,"Python,Keras,Streamlit",Basic,2,False,False,2,2024
+S0358,P0717,Text Summarization using BERT,AI_ML,"Python,NLTK,SpaCy",Intermediate,3,True,True,5,2025
+S0358,P0718,Industrial IoT Dashboard,IoT,"Raspberry Pi,Python,MQTT",Basic,2,False,False,5,2024
+S0358,P0719,Personal Finance Manager,Finance,"Python,NumPy,Matplotlib",Intermediate,3,True,False,5,2023
+S0359,P0720,COVID-19 Data Analysis Dashboard,Data,"Python,PySpark,Hadoop",Basic,2,False,False,6,2023
+S0359,P0721,Smart Home Automation System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,4+,False,False,5,2024
+S0360,P0722,E-Commerce Platform,Web,"React,Firebase,Tailwind",Basic,2,False,False,4,2024
+S0360,P0723,Drone Flight Controller,Embedded,"C,PIC,Assembly",Intermediate,1,False,False,6,2022
+S0362,P0724,Personal Finance Manager,Finance,"Python,NumPy,Matplotlib",Intermediate,3,False,False,9,2022
+S0362,P0725,Smart Agriculture System,IoT,"NodeMCU,C,Blynk",Intermediate,3,False,True,10,2024
+S0363,P0726,Handwritten Digit Recognition,AI_ML,"Python,TensorFlow,Flask",Intermediate,2,False,False,8,2022
+S0363,P0727,Traffic Light Controller,Embedded,"C,Arduino,PCB Design",Basic,2,True,False,3,2024
+S0363,P0728,Stock Market Trend Analysis,Data,"R,ggplot2,dplyr",Advanced,4+,False,True,13,2022
+S0364,P0729,Stock Portfolio Tracker,Finance,"Python,NumPy,Matplotlib",Advanced,3,True,True,9,2023
+S0364,P0730,Inventory Management System,Other,"Python,Flask,SQLite",Advanced,4+,True,True,13,2025
+S0364,P0731,Industrial IoT Dashboard,IoT,"NodeMCU,C,Blynk",Intermediate,1,False,True,6,2024
+S0364,P0732,Education Data Mining,Data,"Python,Pandas,Matplotlib",Basic,2,False,False,4,2023
+S0365,P0733,Air Quality Monitoring System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,3,False,False,7,2024
+S0365,P0734,COVID-19 Data Analysis Dashboard,Data,"Python,Databricks,Spark",Basic,3,False,True,3,2022
+S0365,P0735,Credit Risk Assessment,Finance,"Excel,VBA,SQL",Intermediate,4+,False,True,8,2024
+S0366,P0736,Travel Planner Application,Other,"PHP,Laravel,MySQL",Basic,3,False,True,4,2023
+S0366,P0737,Digital Lock System,Embedded,"C,Arduino,PCB Design",Intermediate,3,True,False,8,2023
+S0366,P0738,Cryptocurrency Price Predictor,Finance,"Python,Pandas,yfinance",Intermediate,3,True,True,6,2022
+S0367,P0739,RFID-based Attendance System,Embedded,"C++,STM32,FreeRTOS",Basic,4+,False,False,3,2025
+S0367,P0740,Inventory Management System,Other,"C#,.NET,SQL Server",Intermediate,3,False,True,12,2024
+S0367,P0741,Smart Parking System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,1,False,False,9,2024
+S0368,P0742,QR Code Generator,Other,"Python,Flask,SQLite",Intermediate,1,False,True,5,2025
+S0368,P0743,Air Quality Monitoring System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,2,False,True,6,2025
+S0369,P0744,Digital Lock System,Embedded,"C,Arduino,PCB Design",Basic,1,False,False,4,2023
+S0370,P0745,Sales Forecasting Model,Data,"Python,SQL,Tableau",Basic,2,False,True,5,2024
+S0370,P0746,Password Manager,Other,"Python,Flask,SQLite",Intermediate,3,False,False,5,2023
+S0370,P0747,Wearable Health Monitor,IoT,"Arduino,C++,Sensors",Basic,2,False,False,4,2023
+S0371,P0748,Travel Planner Application,Other,"Java,Spring,MySQL",Basic,4+,False,False,2,2022
+S0371,P0749,Invoice Management System,Finance,"Python,NumPy,Matplotlib",Basic,2,False,False,6,2025
+S0372,P0750,AI-Powered Resume Screener,AI_ML,"Python,Scikit-learn,Pandas",Basic,3,False,False,4,2024
+S0373,P0751,Budget Planning Tool,Finance,"Python,Dash,Plotly",Intermediate,3,False,False,9,2022
+S0373,P0752,Online Voting System,Web,"Vue.js,Django,SQLite",Intermediate,2,False,True,7,2025
+S0373,P0753,Food Delivery App,Web,"HTML,CSS,JavaScript",Basic,2,True,False,2,2023
+S0374,P0754,Online Learning Management System,Web,"Django,Bootstrap,PostgreSQL",Intermediate,1,False,True,4,2023
+S0374,P0755,Loan Default Prediction,Finance,"Excel,VBA,SQL",Basic,4+,False,True,6,2022
+S0374,P0756,Hospital Management System,Web,"Vue.js,Django,SQLite",Basic,3,False,False,4,2025
+S0374,P0757,Sign Language Recognition System,AI_ML,"Python,TensorFlow,Flask",Advanced,2,True,True,15,2023
+S0375,P0758,Healthcare Cost Analysis,Data,"Python,Pandas,Matplotlib",Basic,3,False,False,2,2023
+S0376,P0759,Weather Pattern Analysis,Data,"Python,SQL,Tableau",Basic,1,False,False,2,2024
+S0376,P0760,Air Quality Monitoring System,IoT,"Arduino,C++,Sensors",Intermediate,2,False,True,5,2024
+S0376,P0761,Smart Energy Meter,IoT,"Arduino,C++,Sensors",Basic,2,False,False,3,2023
+S0377,P0762,Crime Data Visualization,Data,"SQL,Python,Airflow",Basic,2,False,True,6,2023
+S0378,P0763,Digital Lock System,Embedded,"C,Arduino,PCB Design",Basic,3,False,True,5,2024
+S0378,P0764,Motor Speed Controller,Embedded,"Verilog,FPGA,ModelSim",Basic,2,False,False,2,2025
+S0378,P0765,Pulse Oximeter Design,Embedded,"Verilog,FPGA,ModelSim",Basic,3,False,False,3,2025
+S0378,P0766,RFID-based Attendance System,Embedded,"Verilog,FPGA,ModelSim",Basic,2,False,False,2,2022
+S0379,P0767,Smart Energy Meter,IoT,"Arduino,C++,Sensors",Intermediate,2,True,False,10,2022
+S0380,P0768,Handwritten Digit Recognition,AI_ML,"Python,PyTorch,FastAPI",Intermediate,3,False,True,7,2022
+S0380,P0769,RFID-based Attendance System,Embedded,"C,PIC,Assembly",Intermediate,4+,False,False,5,2024
+S0381,P0770,Water Quality Sensor Network,IoT,"NodeMCU,C,Blynk",Advanced,2,True,True,15,2024
+S0381,P0771,Travel Planner Application,Other,"Python,Flask,SQLite",Intermediate,2,False,True,4,2024
+S0381,P0772,Password Manager,Other,"C#,.NET,SQL Server",Basic,2,False,False,4,2022
+S0381,P0773,Credit Risk Assessment,Finance,"Python,Dash,Plotly",Basic,3,False,False,5,2024
+S0382,P0774,Expense Tracker App,Web,"HTML,CSS,JavaScript",Basic,2,False,True,6,2025
+S0383,P0775,Line Following Robot,Embedded,"C,ARM,RTOS",Intermediate,3,False,False,5,2024
+S0383,P0776,Drone Flight Controller,Embedded,"C++,STM32,FreeRTOS",Basic,1,True,True,2,2024
+S0383,P0777,RFID-based Attendance System,Embedded,"Verilog,FPGA,ModelSim",Basic,1,False,False,2,2025
+S0384,P0778,Social Media Analytics,Data,"Python,Pandas,Seaborn",Advanced,1,False,True,12,2022
+S0384,P0779,Autonomous Lane Detection,AI_ML,"Python,TensorFlow,Docker",Intermediate,1,False,True,4,2023
+S0385,P0780,Drone Flight Controller,Embedded,"C,PIC,Assembly",Intermediate,3,False,True,12,2025
+S0385,P0781,Cryptocurrency Price Predictor,Finance,"R,Shiny,quantmod",Advanced,4+,True,True,15,2022
+S0385,P0782,Budget Planning Tool,Finance,"Python,Pandas,yfinance",Basic,3,False,False,5,2024
+S0385,P0783,Motor Speed Controller,Embedded,"C,Arduino,PCB Design",Intermediate,2,False,True,5,2023
+S0386,P0784,Budget Planning Tool,Finance,"Excel,VBA,SQL",Basic,2,False,False,4,2025
+S0386,P0785,Booking System for Hotels,Web,"Angular,Spring Boot,MySQL",Basic,3,False,False,6,2025
+S0387,P0786,Line Following Robot,Embedded,"C,PIC,Assembly",Advanced,2,False,False,15,2024
+S0387,P0787,Employee Attrition Analysis,Data,"Python,Databricks,Spark",Basic,4+,False,False,4,2025
+S0388,P0788,Customer Segmentation Analysis,Data,"Python,SQL,Tableau",Intermediate,2,False,False,7,2022
+S0388,P0789,COVID-19 Data Analysis Dashboard,Data,"Python,PySpark,Hadoop",Intermediate,1,False,True,9,2023
+S0389,P0790,Recommendation Engine for E-commerce,AI_ML,"Python,Hugging Face,Transformers",Advanced,1,False,True,15,2025
+S0390,P0791,AI-Powered Resume Screener,AI_ML,"Python,OpenCV,NumPy",Intermediate,1,True,False,9,2023
+S0392,P0792,Blog Platform with Auth,Web,"Next.js,Prisma,PostgreSQL",Intermediate,2,True,False,6,2025
+S0392,P0793,Smart Home Automation System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,2,True,True,10,2024
+S0393,P0794,Attendance Management System,Other,"PHP,Laravel,MySQL",Basic,2,False,False,3,2023
+S0393,P0795,Online Learning Management System,Web,"Angular,Spring Boot,MySQL",Advanced,1,False,False,17,2025
+S0394,P0796,QR Code Generator,Other,"Java,Spring,MySQL",Advanced,4+,True,True,13,2024
+S0395,P0797,Inventory Management System,Other,"PHP,Laravel,MySQL",Advanced,3,True,False,15,2024
+S0395,P0798,Industrial IoT Dashboard,IoT,"Raspberry Pi,Python,MQTT",Basic,2,False,False,5,2025
+S0395,P0799,RFID-based Attendance System,Embedded,"C++,STM32,FreeRTOS",Intermediate,3,False,False,11,2025
+S0396,P0800,Object Detection with YOLO,AI_ML,"Python,OpenCV,NumPy",Intermediate,2,True,True,11,2023
+S0396,P0801,Travel Planner Application,Other,"Java,Spring,MySQL",Intermediate,2,True,False,5,2024
+S0396,P0802,Chatbot using NLP and Transformers,AI_ML,"Python,Scikit-learn,Pandas",Basic,3,False,False,4,2023
+S0397,P0803,Line Following Robot,Embedded,"C++,STM32,FreeRTOS",Intermediate,2,True,True,12,2024
+S0397,P0804,Digital Lock System,Embedded,"C,Arduino,PCB Design",Basic,4+,False,True,4,2023
+S0398,P0805,Retail Demand Forecasting,Data,"Python,Pandas,Matplotlib",Intermediate,2,False,True,9,2022
+S0399,P0806,Line Following Robot,Embedded,"C,ARM,RTOS",Intermediate,3,True,False,6,2025
+S0399,P0807,Chatbot using NLP and Transformers,AI_ML,"Python,Scikit-learn,Pandas",Intermediate,4+,True,False,5,2025
+S0399,P0808,Object Detection with YOLO,AI_ML,"Python,TensorFlow,Docker",Basic,3,False,True,6,2024
+S0399,P0809,Fitness Tracking App,Other,"Java,Spring,MySQL",Intermediate,3,False,True,4,2023
+S0400,P0810,Fitness Tracking App,Other,"PHP,Laravel,MySQL",Intermediate,2,False,True,8,2023
+S0400,P0811,E-Commerce Platform,Web,"Django,Bootstrap,PostgreSQL",Advanced,1,False,True,9,2024
+S0400,P0812,Online Voting System,Web,"React,Express,PostgreSQL",Basic,2,False,False,3,2022
+S0401,P0813,Fake News Detection System,AI_ML,"Python,Keras,Streamlit",Intermediate,2,False,True,4,2023
+S0402,P0814,Healthcare Cost Analysis,Data,"Python,Databricks,Spark",Advanced,2,False,True,11,2025
+S0402,P0815,Real-time Chat Application,Web,"Vue.js,Django,SQLite",Advanced,2,True,True,19,2024
+S0402,P0816,Drone Flight Controller,Embedded,"C,PIC,Assembly",Intermediate,2,True,True,4,2024
+S0403,P0817,Stock Market Trend Analysis,Data,"R,ggplot2,dplyr",Advanced,3,True,True,12,2023
+S0404,P0818,Smart Home Automation System,IoT,"NodeMCU,C,Blynk",Advanced,2,False,True,13,2025
+S0404,P0819,Stock Portfolio Tracker,Finance,"Python,Pandas,yfinance",Intermediate,2,False,False,10,2022
+S0404,P0820,AI-Powered Resume Screener,AI_ML,"Python,TensorFlow,Docker",Basic,2,False,True,2,2024
+S0404,P0821,Travel Planner Application,Other,"Kotlin,Android Studio,Firebase",Advanced,2,True,True,15,2024
+S0405,P0822,Education Data Mining,Data,"Python,Pandas,Seaborn",Basic,3,False,False,6,2023
+S0405,P0823,Pulse Oximeter Design,Embedded,"Verilog,FPGA,ModelSim",Advanced,3,False,True,14,2022
+S0405,P0824,Social Media Dashboard,Web,"Django,Bootstrap,PostgreSQL",Basic,1,False,True,2,2024
+S0406,P0825,Cryptocurrency Price Predictor,Finance,"R,Shiny,quantmod",Intermediate,3,False,False,7,2024
+S0406,P0826,Smart Parking System,IoT,"NodeMCU,C,Blynk",Advanced,1,True,False,8,2025
+S0407,P0827,Air Quality Monitoring System,IoT,"Arduino,Python,Firebase",Basic,4+,False,False,3,2024
+S0407,P0828,Inventory Management System,Other,"Kotlin,Android Studio,Firebase",Intermediate,2,False,True,9,2025
+S0408,P0829,Music Player Application,Other,"Kotlin,Android Studio,Firebase",Basic,3,False,False,6,2025
+S0408,P0830,Credit Risk Assessment,Finance,"Python,Dash,Plotly",Intermediate,1,False,False,8,2025
+S0408,P0831,Personal Finance Manager,Finance,"Excel,VBA,SQL",Advanced,2,True,True,16,2024
+S0408,P0832,Chatbot using NLP and Transformers,AI_ML,"Python,OpenCV,NumPy",Intermediate,3,False,True,4,2025
+S0409,P0833,Library Management System,Web,"React,Firebase,Tailwind",Intermediate,3,False,True,7,2025
+S0409,P0834,Budget Planning Tool,Finance,"Python,Pandas,yfinance",Basic,2,False,True,6,2023
+S0409,P0835,Online Learning Management System,Web,"Angular,Spring Boot,MySQL",Basic,1,False,False,3,2024
+S0410,P0836,Line Following Robot,Embedded,"C,Arduino,PCB Design",Basic,2,False,False,4,2025
+S0411,P0837,File Encryption Tool,Other,"Python,Flask,SQLite",Advanced,3,True,True,17,2023
+S0411,P0838,Budget Planning Tool,Finance,"R,Shiny,quantmod",Intermediate,1,True,False,9,2025
+S0411,P0839,Cryptocurrency Price Predictor,Finance,"R,Shiny,quantmod",Advanced,3,True,True,15,2024
+S0413,P0840,Credit Risk Assessment,Finance,"Python,NumPy,Matplotlib",Basic,1,False,False,2,2024
+S0413,P0841,Smart Agriculture System,IoT,"NodeMCU,C,Blynk",Advanced,4+,True,True,9,2023
+S0414,P0842,Credit Risk Assessment,Finance,"Excel,VBA,SQL",Intermediate,1,False,True,8,2022
+S0414,P0843,Smart Agriculture System,IoT,"Arduino,C++,Sensors",Intermediate,3,False,False,4,2023
+S0415,P0844,Travel Planner Application,Other,"PHP,Laravel,MySQL",Basic,1,False,False,3,2023
+S0416,P0845,Booking System for Hotels,Web,"Next.js,Prisma,PostgreSQL",Basic,2,False,False,6,2025
+S0417,P0846,Sales Forecasting Model,Data,"R,ggplot2,dplyr",Basic,3,True,False,6,2025
+S0417,P0847,Industrial IoT Dashboard,IoT,"NodeMCU,C,Blynk",Basic,4+,True,True,4,2023
+S0418,P0848,Smart Home Automation System,IoT,"Raspberry Pi,Python,MQTT",Basic,3,True,False,6,2024
+S0419,P0849,Drone Flight Controller,Embedded,"C,Arduino,PCB Design",Basic,3,False,False,4,2024
+S0420,P0850,E-Commerce Platform,Web,"HTML,CSS,JavaScript",Basic,1,False,False,3,2022
+S0420,P0851,Crime Data Visualization,Data,"SQL,Python,Airflow",Basic,3,False,True,3,2023
+S0421,P0852,Food Delivery App,Web,"Django,Bootstrap,PostgreSQL",Advanced,2,True,False,9,2023
+S0421,P0853,RFID-based Attendance System,Embedded,"C,Arduino,PCB Design",Basic,3,True,True,5,2025
+S0421,P0854,Object Detection with YOLO,AI_ML,"Python,Keras,Streamlit",Basic,3,False,False,3,2023
+S0422,P0855,Social Media Dashboard,Web,"Next.js,Prisma,PostgreSQL",Intermediate,1,False,True,5,2023
+S0422,P0856,Line Following Robot,Embedded,"Verilog,FPGA,ModelSim",Basic,3,True,False,2,2024
+S0422,P0857,Supply Chain Analytics,Data,"Python,PySpark,Hadoop",Intermediate,2,False,True,6,2022
+S0423,P0858,Traffic Light Controller,Embedded,"C,ARM,RTOS",Advanced,1,True,True,8,2022
+S0423,P0859,Customer Churn Prediction,AI_ML,"Python,Hugging Face,Transformers",Intermediate,4+,False,False,12,2024
+S0424,P0860,Smart Home Automation System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,3,False,False,10,2023
+S0424,P0861,QR Code Generator,Other,"Java,Spring,MySQL",Basic,2,True,False,5,2024
+S0424,P0862,File Encryption Tool,Other,"Java,Spring,MySQL",Basic,3,False,True,2,2023
+S0425,P0863,Stock Portfolio Tracker,Finance,"Python,Dash,Plotly",Basic,3,False,False,3,2023
+S0425,P0864,Social Media Dashboard,Web,"React,Firebase,Tailwind",Basic,2,False,False,4,2022
+S0426,P0865,Blog Platform with Auth,Web,"React,Node.js,MongoDB",Basic,2,False,False,6,2022
+S0427,P0866,Personal Finance Manager,Finance,"Python,NumPy,Matplotlib",Basic,2,False,False,2,2025
+S0427,P0867,Invoice Management System,Finance,"Python,Dash,Plotly",Basic,3,False,True,3,2025
+S0427,P0868,Object Detection with YOLO,AI_ML,"Python,TensorFlow,Docker",Intermediate,2,False,True,11,2022
+S0428,P0869,Booking System for Hotels,Web,"React,Express,PostgreSQL",Intermediate,1,False,True,11,2022
+S0428,P0870,Weather Pattern Analysis,Data,"Python,Databricks,Spark",Advanced,4+,False,True,20,2025
+S0428,P0871,Loan Default Prediction,Finance,"Python,Pandas,yfinance",Intermediate,4+,False,True,7,2025
+S0429,P0872,Budget Planning Tool,Finance,"Excel,VBA,SQL",Basic,1,False,False,5,2024
+S0429,P0873,Blog Platform with Auth,Web,"React,Node.js,MongoDB",Intermediate,3,False,False,9,2024
+S0430,P0874,Travel Planner Application,Other,"Java,Spring,MySQL",Intermediate,3,False,True,6,2025
+S0430,P0875,Stock Portfolio Tracker,Finance,"Python,Pandas,yfinance",Basic,3,False,True,3,2022
+S0430,P0876,Smart Home Automation System,IoT,"Arduino,C++,Sensors",Advanced,4+,True,True,11,2024
+S0430,P0877,Credit Risk Assessment,Finance,"Python,Dash,Plotly",Advanced,1,False,True,13,2023
+S0431,P0878,Traffic Light Controller,Embedded,"C,Arduino,PCB Design",Intermediate,3,False,False,11,2025
+S0431,P0879,File Encryption Tool,Other,"Kotlin,Android Studio,Firebase",Advanced,3,False,True,15,2024
+S0432,P0880,Sales Forecasting Model,Data,"Python,PySpark,Hadoop",Intermediate,1,False,False,8,2024
+S0433,P0881,Object Detection with YOLO,AI_ML,"Python,TensorFlow,Docker",Intermediate,3,True,True,10,2025
+S0433,P0882,Motor Speed Controller,Embedded,"Verilog,FPGA,ModelSim",Basic,2,False,False,4,2025
+S0434,P0883,Smart Agriculture System,IoT,"NodeMCU,C,Blynk",Intermediate,4+,False,True,7,2022
+S0434,P0884,Password Manager,Other,"Java,Spring,MySQL",Intermediate,3,False,False,7,2024
+S0435,P0885,Hospital Management System,Web,"React,Express,PostgreSQL",Basic,2,False,False,3,2024
+S0435,P0886,Event Management Platform,Web,"Next.js,Prisma,PostgreSQL",Intermediate,3,True,True,5,2022
+S0436,P0887,Industrial IoT Dashboard,IoT,"NodeMCU,C,Blynk",Basic,2,False,False,5,2022
+S0437,P0888,Personal Finance Manager,Finance,"Python,Pandas,yfinance",Basic,2,False,True,3,2024
+S0437,P0889,Smart Home Automation System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,4+,False,False,4,2023
+S0437,P0890,Blog Platform with Auth,Web,"Next.js,Prisma,PostgreSQL",Intermediate,1,False,False,4,2025
+S0438,P0891,File Encryption Tool,Other,"C#,.NET,SQL Server",Advanced,2,True,True,16,2025
+S0438,P0892,Smart Home Automation System,IoT,"NodeMCU,C,Blynk",Basic,3,False,True,3,2023
+S0439,P0893,Loan Default Prediction,Finance,"Python,Dash,Plotly",Intermediate,2,False,False,8,2024
+S0439,P0894,Line Following Robot,Embedded,"C,Arduino,PCB Design",Intermediate,4+,False,True,10,2024
+S0440,P0895,Smart Parking System,IoT,"Arduino,Python,Firebase",Intermediate,2,False,False,5,2022
+S0440,P0896,Library Management System,Web,"HTML,CSS,JavaScript",Basic,3,False,True,3,2023
+S0441,P0897,Music Player Application,Other,"Python,Flask,SQLite",Basic,2,True,True,4,2025
+S0442,P0898,E-Commerce Platform,Web,"HTML,CSS,JavaScript",Advanced,4+,False,False,18,2022
+S0442,P0899,Stock Market Trend Analysis,Data,"Python,Pandas,Matplotlib",Advanced,1,True,True,20,2023
+S0442,P0900,Hospital Management System,Web,"Next.js,Prisma,PostgreSQL",Advanced,4+,True,True,10,2024
+S0442,P0901,Digital Lock System,Embedded,"C,ARM,RTOS",Intermediate,1,True,False,12,2023
+S0443,P0902,Water Quality Sensor Network,IoT,"Arduino,C++,Sensors",Advanced,3,True,True,8,2023
+S0443,P0903,Retail Demand Forecasting,Data,"Python,Pandas,Seaborn",Intermediate,4+,False,True,11,2023
+S0443,P0904,QR Code Generator,Other,"PHP,Laravel,MySQL",Intermediate,2,False,False,5,2022
+S0444,P0905,Fitness Tracking App,Other,"Python,Flask,SQLite",Advanced,1,True,True,14,2022
+S0444,P0906,Cryptocurrency Price Predictor,Finance,"R,Shiny,quantmod",Intermediate,3,True,False,7,2024
+S0445,P0907,Air Quality Monitoring System,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,3,True,False,5,2025
+S0445,P0908,Stock Portfolio Tracker,Finance,"R,Shiny,quantmod",Intermediate,3,False,False,12,2023
+S0445,P0909,COVID-19 Data Analysis Dashboard,Data,"Python,Pandas,Seaborn",Intermediate,1,False,True,6,2024
+S0446,P0910,Smart Energy Meter,IoT,"Arduino,Python,Firebase",Intermediate,4+,False,True,12,2025
+S0446,P0911,Portfolio Website with CMS,Web,"Vue.js,Django,SQLite",Basic,3,False,False,6,2024
+S0446,P0912,Wearable Health Monitor,IoT,"ESP32,MicroPython,ThingSpeak",Advanced,3,False,True,9,2024
+S0446,P0913,Travel Planner Application,Other,"Python,Flask,SQLite",Advanced,1,False,True,18,2024
+S0447,P0914,Portfolio Website with CMS,Web,"React,Firebase,Tailwind",Basic,2,False,True,6,2025
+S0448,P0915,Sign Language Recognition System,AI_ML,"Python,Hugging Face,Transformers",Basic,3,False,True,4,2023
+S0448,P0916,Customer Segmentation Analysis,Data,"R,ggplot2,dplyr",Intermediate,1,False,False,7,2023
+S0448,P0917,Object Detection with YOLO,AI_ML,"Python,TensorFlow,Flask",Advanced,4+,True,True,12,2024
+S0449,P0918,Text Summarization using BERT,AI_ML,"Python,Keras,Streamlit",Intermediate,3,False,True,12,2023
+S0449,P0919,Sales Forecasting Model,Data,"R,ggplot2,dplyr",Intermediate,3,True,False,7,2024
+S0449,P0920,Employee Attrition Analysis,Data,"Python,Power BI,Excel",Basic,1,False,False,4,2024
+S0450,P0921,Line Following Robot,Embedded,"C++,STM32,FreeRTOS",Intermediate,2,False,False,6,2023
+S0450,P0922,Digital Lock System,Embedded,"C++,STM32,FreeRTOS",Basic,3,False,False,2,2025
+S0451,P0923,Booking System for Hotels,Web,"HTML,CSS,JavaScript",Basic,2,False,False,2,2024
+S0451,P0924,Cryptocurrency Price Predictor,Finance,"R,Shiny,quantmod",Intermediate,2,True,True,9,2025
+S0452,P0925,Expense Tracker App,Web,"HTML,CSS,JavaScript",Advanced,1,False,True,12,2024
+S0452,P0926,Budget Planning Tool,Finance,"Python,NumPy,Matplotlib",Advanced,4+,True,True,11,2025
+S0452,P0927,RFID-based Attendance System,Embedded,"Verilog,FPGA,ModelSim",Advanced,1,True,True,9,2024
+S0453,P0928,File Encryption Tool,Other,"Python,Flask,SQLite",Basic,2,False,False,5,2025
+S0453,P0929,Supply Chain Analytics,Data,"Python,Power BI,Excel",Basic,2,True,False,5,2024
+S0454,P0930,Smart Home Automation System,IoT,"NodeMCU,C,Blynk",Basic,2,False,False,4,2024
+S0454,P0931,Expense Tracker App,Web,"React,Node.js,MongoDB",Intermediate,3,True,False,8,2024
+S0455,P0932,E-Commerce Platform,Web,"React,Firebase,Tailwind",Intermediate,4+,False,True,4,2024
+S0456,P0933,Loan Default Prediction,Finance,"Excel,VBA,SQL",Basic,3,False,True,5,2024
+S0457,P0934,Water Quality Sensor Network,IoT,"Arduino,C++,Sensors",Intermediate,2,False,True,6,2023
+S0457,P0935,Inventory Management System,Other,"C#,.NET,SQL Server",Basic,2,False,True,5,2024
+S0458,P0936,Predictive Maintenance using ML,AI_ML,"Python,PyTorch,FastAPI",Basic,2,True,True,6,2024
+S0458,P0937,Online Learning Management System,Web,"Vue.js,Django,SQLite",Intermediate,1,False,False,12,2024
+S0458,P0938,Attendance Management System,Other,"Kotlin,Android Studio,Firebase",Advanced,3,True,True,8,2022
+S0458,P0939,Expense Tracker App,Web,"React,Node.js,MongoDB",Intermediate,3,False,True,10,2023
+S0459,P0940,Smart Agriculture System,IoT,"Arduino,Python,Firebase",Basic,1,False,True,4,2022
+S0459,P0941,Supply Chain Analytics,Data,"R,ggplot2,dplyr",Basic,3,False,True,2,2022
+S0460,P0942,Online Voting System,Web,"React,Express,PostgreSQL",Basic,3,False,False,2,2025
+S0460,P0943,Credit Risk Assessment,Finance,"Python,Dash,Plotly",Basic,2,True,True,6,2023
+S0461,P0944,Loan Default Prediction,Finance,"Python,Pandas,yfinance",Intermediate,1,True,False,6,2024
+S0461,P0945,QR Code Generator,Other,"Kotlin,Android Studio,Firebase",Intermediate,2,True,True,9,2022
+S0461,P0946,Music Player Application,Other,"Kotlin,Android Studio,Firebase",Basic,3,False,False,6,2024
+S0462,P0947,Pulse Oximeter Design,Embedded,"C,PIC,Assembly",Advanced,3,False,True,10,2024
+S0464,P0948,Smart Agriculture System,IoT,"ESP32,MicroPython,ThingSpeak",Basic,3,False,False,3,2023
+S0464,P0949,Industrial IoT Dashboard,IoT,"Arduino,C++,Sensors",Basic,1,False,False,5,2023
+S0464,P0950,Sign Language Recognition System,AI_ML,"Python,Hugging Face,Transformers",Intermediate,3,True,True,11,2023
+S0466,P0951,Digital Lock System,Embedded,"C,ARM,RTOS",Intermediate,1,False,True,10,2025
+S0466,P0952,File Encryption Tool,Other,"Python,Flask,SQLite",Advanced,4+,True,True,17,2022
+S0466,P0953,Credit Risk Assessment,Finance,"Python,Dash,Plotly",Intermediate,4+,False,True,5,2024
+S0467,P0954,Real-time Chat Application,Web,"HTML,CSS,JavaScript",Intermediate,2,False,True,10,2025
+S0467,P0955,Loan Default Prediction,Finance,"Python,Dash,Plotly",Intermediate,2,True,True,7,2022
+S0467,P0956,Traffic Light Controller,Embedded,"C,ARM,RTOS",Intermediate,2,False,False,8,2024
+S0468,P0957,Credit Risk Assessment,Finance,"Excel,VBA,SQL",Intermediate,2,False,True,7,2025
+S0468,P0958,Stock Portfolio Tracker,Finance,"R,Shiny,quantmod",Advanced,2,True,True,14,2023
+S0469,P0959,Water Quality Sensor Network,IoT,"Arduino,C++,Sensors",Intermediate,3,False,False,8,2024
+S0470,P0960,Sales Forecasting Model,Data,"Python,PySpark,Hadoop",Intermediate,1,True,True,7,2023
+S0471,P0961,Air Quality Monitoring System,IoT,"Arduino,Python,Firebase",Basic,4+,False,False,2,2024
+S0471,P0962,Invoice Management System,Finance,"Python,Dash,Plotly",Intermediate,2,False,True,10,2024
+S0472,P0963,QR Code Generator,Other,"Java,Spring,MySQL",Intermediate,3,False,False,4,2022
+S0472,P0964,Portfolio Website with CMS,Web,"React,Express,PostgreSQL",Advanced,4+,True,True,10,2024
+S0472,P0965,Invoice Management System,Finance,"Python,NumPy,Matplotlib",Basic,3,False,False,2,2023
+S0473,P0966,Sign Language Recognition System,AI_ML,"Python,PyTorch,FastAPI",Basic,1,False,False,4,2022
+S0474,P0967,Water Quality Sensor Network,IoT,"Raspberry Pi,Python,MQTT",Intermediate,2,False,True,6,2025
+S0474,P0968,QR Code Generator,Other,"PHP,Laravel,MySQL",Intermediate,2,True,False,9,2024
+S0474,P0969,Wearable Health Monitor,IoT,"NodeMCU,C,Blynk",Basic,3,False,False,4,2023
+S0474,P0970,Speech Emotion Recognition,AI_ML,"Python,Keras,Streamlit",Basic,4+,False,False,2,2024
+S0475,P0971,File Encryption Tool,Other,"C#,.NET,SQL Server",Intermediate,3,False,False,10,2024
+S0477,P0972,Fake News Detection System,AI_ML,"Python,TensorFlow,Flask",Advanced,3,True,False,11,2025
+S0479,P0973,File Encryption Tool,Other,"Python,Flask,SQLite",Advanced,3,True,True,18,2022
+S0479,P0974,Pulse Oximeter Design,Embedded,"C,Arduino,PCB Design",Basic,2,False,False,2,2025
+S0480,P0975,Image Classification using CNN,AI_ML,"Python,PyTorch,FastAPI",Basic,3,False,True,4,2025
+S0480,P0976,Wearable Health Monitor,IoT,"NodeMCU,C,Blynk",Advanced,1,False,False,19,2023
+S0481,P0977,Retail Demand Forecasting,Data,"Python,Pandas,Matplotlib",Basic,4+,False,False,6,2022
+S0481,P0978,Cryptocurrency Price Predictor,Finance,"Python,Dash,Plotly",Basic,1,False,False,3,2024
+S0482,P0979,Inventory Management System,Other,"Kotlin,Android Studio,Firebase",Intermediate,1,False,False,7,2022
+S0483,P0980,Inventory Management System,Other,"Java,Spring,MySQL",Intermediate,1,True,False,5,2023
+S0483,P0981,Smart Parking System,IoT,"NodeMCU,C,Blynk",Basic,4+,False,False,4,2024
+S0483,P0982,File Encryption Tool,Other,"Kotlin,Android Studio,Firebase",Advanced,1,False,True,9,2025
+S0484,P0983,RFID-based Attendance System,Embedded,"Verilog,FPGA,ModelSim",Intermediate,3,False,True,5,2023
+S0484,P0984,Pulse Oximeter Design,Embedded,"C,ARM,RTOS",Advanced,4+,True,True,19,2024
+S0485,P0985,Industrial IoT Dashboard,IoT,"Arduino,C++,Sensors",Basic,3,False,False,5,2025
+S0485,P0986,Travel Planner Application,Other,"PHP,Laravel,MySQL",Intermediate,2,False,True,10,2023
+S0486,P0987,Travel Planner Application,Other,"Kotlin,Android Studio,Firebase",Intermediate,3,False,True,7,2024
+S0486,P0988,Food Delivery App,Web,"Django,Bootstrap,PostgreSQL",Basic,2,False,False,6,2023
+S0487,P0989,Library Management System,Web,"Vue.js,Django,SQLite",Intermediate,2,True,False,12,2023
+S0488,P0990,Sales Forecasting Model,Data,"R,ggplot2,dplyr",Intermediate,1,False,True,7,2024
+S0489,P0991,Stock Portfolio Tracker,Finance,"Excel,VBA,SQL",Advanced,1,False,True,19,2023
+S0490,P0992,E-Commerce Platform,Web,"Vue.js,Django,SQLite",Advanced,3,False,True,13,2025
+S0491,P0993,Job Portal with Matching,Web,"Vue.js,Django,SQLite",Basic,2,False,False,3,2024
+S0491,P0994,Drone Flight Controller,Embedded,"C++,STM32,FreeRTOS",Intermediate,4+,False,False,9,2023
+S0491,P0995,Inventory Management System,Other,"Kotlin,Android Studio,Firebase",Intermediate,4+,True,True,6,2025
+S0491,P0996,Industrial IoT Dashboard,IoT,"Arduino,Python,Firebase",Advanced,3,True,True,17,2023
+S0492,P0997,Credit Risk Assessment,Finance,"Python,Pandas,yfinance",Basic,2,False,False,5,2025
+S0493,P0998,QR Code Generator,Other,"Java,Spring,MySQL",Intermediate,2,False,True,4,2024
+S0494,P0999,Inventory Management System,Other,"PHP,Laravel,MySQL",Advanced,1,True,True,15,2024
+S0494,P1000,Medical Image Segmentation,AI_ML,"Python,Scikit-learn,Pandas",Basic,1,False,False,4,2022
+S0494,P1001,Fake News Detection System,AI_ML,"Python,Keras,Streamlit",Intermediate,2,True,True,4,2024
+S0495,P1002,Sales Forecasting Model,Data,"SQL,Python,Airflow",Advanced,3,True,True,20,2025
+S0495,P1003,Drone Flight Controller,Embedded,"C,PIC,Assembly",Advanced,4+,True,False,9,2023
+S0496,P1004,Predictive Maintenance using ML,AI_ML,"Python,TensorFlow,Docker",Intermediate,1,True,False,4,2025
+S0496,P1005,Air Quality Monitoring System,IoT,"NodeMCU,C,Blynk",Intermediate,2,False,True,9,2025
+S0497,P1006,Social Media Analytics,Data,"Python,Pandas,Matplotlib",Intermediate,4+,False,False,9,2023
+S0498,P1007,Fitness Tracking App,Other,"C#,.NET,SQL Server",Basic,3,False,False,4,2023
+S0498,P1008,Loan Default Prediction,Finance,"R,Shiny,quantmod",Intermediate,1,False,True,5,2023
+S0499,P1009,Personal Finance Manager,Finance,"Python,NumPy,Matplotlib",Basic,3,False,True,4,2023
+S0500,P1010,Student Information System,Web,"React,Express,PostgreSQL",Advanced,2,False,True,11,2024
+S0501,P1011,Digital Lock System,Embedded,"C,Arduino,PCB Design",Intermediate,2,True,False,4,2022
+S0501,P1012,Loan Default Prediction,Finance,"Python,Dash,Plotly",Advanced,1,True,True,15,2024
+S0502,P1013,Water Quality Sensor Network,IoT,"Raspberry Pi,Python,MQTT",Basic,2,False,False,2,2024
+S0502,P1014,Loan Default Prediction,Finance,"R,Shiny,quantmod",Intermediate,1,False,True,12,2023
+S0502,P1015,Image Classification using CNN,AI_ML,"Python,OpenCV,NumPy",Advanced,2,True,True,16,2023
+S0502,P1016,Air Quality Monitoring System,IoT,"ESP32,MicroPython,ThingSpeak",Advanced,3,True,True,8,2023
+S0503,P1017,Real-time Chat Application,Web,"React,Node.js,MongoDB",Basic,3,True,False,6,2024
+S0503,P1018,File Encryption Tool,Other,"Python,Flask,SQLite",Intermediate,4+,False,False,7,2024
+S0503,P1019,Motor Speed Controller,Embedded,"C,ARM,RTOS",Basic,2,True,True,5,2024
+S0504,P1020,Pulse Oximeter Design,Embedded,"C,Arduino,PCB Design",Intermediate,2,False,True,10,2023
+S0504,P1021,Travel Planner Application,Other,"PHP,Laravel,MySQL",Intermediate,1,False,True,12,2024
+S0505,P1022,Predictive Maintenance using ML,AI_ML,"Python,Scikit-learn,Pandas",Intermediate,3,False,False,6,2022
+S0505,P1023,Education Data Mining,Data,"Python,Databricks,Spark",Basic,3,False,False,6,2024
+S0505,P1024,Library Management System,Web,"Vue.js,Django,SQLite",Intermediate,2,False,True,5,2024
+S0506,P1025,Online Learning Management System,Web,"Angular,Spring Boot,MySQL",Intermediate,1,True,True,10,2024
+S0507,P1026,Invoice Management System,Finance,"Python,Dash,Plotly",Advanced,2,True,True,14,2024
+S0507,P1027,Fitness Tracking App,Other,"Kotlin,Android Studio,Firebase",Basic,2,False,False,5,2023
+S0508,P1028,Library Management System,Web,"Angular,Spring Boot,MySQL",Basic,2,False,False,4,2024
+S0508,P1029,Fitness Tracking App,Other,"Kotlin,Android Studio,Firebase",Advanced,4+,False,True,14,2025
+S0508,P1030,Traffic Light Controller,Embedded,"C,PIC,Assembly",Basic,3,False,False,3,2024
+S0508,P1031,Music Player Application,Other,"C#,.NET,SQL Server",Basic,3,False,False,3,2024
+S0509,P1032,Drone Flight Controller,Embedded,"Verilog,FPGA,ModelSim",Basic,2,False,False,6,2025
+S0509,P1033,Air Quality Monitoring System,IoT,"Arduino,Python,Firebase",Basic,4+,False,True,2,2024
+S0510,P1034,Line Following Robot,Embedded,"Verilog,FPGA,ModelSim",Intermediate,1,False,True,6,2023
+S0510,P1035,Attendance Management System,Other,"C#,.NET,SQL Server",Intermediate,3,False,True,11,2024
+S0510,P1036,Industrial IoT Dashboard,IoT,"Arduino,Python,Firebase",Intermediate,1,False,False,7,2025
+S0510,P1037,Social Media Analytics,Data,"Python,Power BI,Excel",Basic,4+,False,True,3,2022
+S0511,P1038,Password Manager,Other,"C#,.NET,SQL Server",Intermediate,2,True,True,12,2024
+S0511,P1039,Industrial IoT Dashboard,IoT,"Arduino,Python,Firebase",Intermediate,1,False,False,5,2025
+S0512,P1040,AI-Powered Resume Screener,AI_ML,"Python,OpenCV,NumPy",Intermediate,2,False,False,4,2024
+S0512,P1041,Handwritten Digit Recognition,AI_ML,"Python,TensorFlow,Docker",Basic,4+,False,False,4,2025
+S0512,P1042,Text Summarization using BERT,AI_ML,"Python,Hugging Face,Transformers",Basic,1,False,False,4,2025
+S0514,P1043,Autonomous Lane Detection,AI_ML,"Python,Keras,Streamlit",Basic,3,True,False,5,2025
+S0515,P1044,Healthcare Cost Analysis,Data,"SQL,Python,Airflow",Intermediate,3,True,False,11,2022
+S0515,P1045,Cryptocurrency Price Predictor,Finance,"R,Shiny,quantmod",Basic,1,True,False,3,2025
+S0516,P1046,Medical Image Segmentation,AI_ML,"Python,PyTorch,FastAPI",Intermediate,1,True,True,5,2023
+S0516,P1047,Industrial IoT Dashboard,IoT,"Arduino,C++,Sensors",Advanced,3,True,True,18,2022
+S0516,P1048,Booking System for Hotels,Web,"React,Node.js,MongoDB",Intermediate,3,True,False,6,2023
+S0517,P1049,Music Player Application,Other,"C#,.NET,SQL Server",Basic,2,False,False,6,2025
+S0517,P1050,Wearable Health Monitor,IoT,"Raspberry Pi,Python,MQTT",Intermediate,2,True,True,10,2024
+S0517,P1051,Customer Segmentation Analysis,Data,"Python,Databricks,Spark",Basic,3,False,False,4,2022
+S0518,P1052,Personal Finance Manager,Finance,"R,Shiny,quantmod",Advanced,3,True,True,16,2024
+S0519,P1053,Drone Flight Controller,Embedded,"C,PIC,Assembly",Basic,2,False,False,3,2024
+S0520,P1054,Smart Energy Meter,IoT,"Arduino,C++,Sensors",Basic,2,False,False,5,2022
+S0521,P1055,Personal Finance Manager,Finance,"R,Shiny,quantmod",Basic,4+,False,False,2,2025
+S0522,P1056,Inventory Management System,Other,"Java,Spring,MySQL",Intermediate,3,False,True,5,2024
+S0522,P1057,Fitness Tracking App,Other,"Python,Flask,SQLite",Intermediate,2,False,True,6,2023
+S0522,P1058,Digital Lock System,Embedded,"Verilog,FPGA,ModelSim",Basic,2,False,False,5,2025
+S0523,P1059,Air Quality Monitoring System,IoT,"NodeMCU,C,Blynk",Basic,3,False,False,4,2024
+S0523,P1060,Blog Platform with Auth,Web,"Angular,Spring Boot,MySQL",Basic,3,False,False,4,2024
+S0524,P1061,Healthcare Cost Analysis,Data,"SQL,Python,Airflow",Intermediate,2,True,False,4,2025
+S0524,P1062,Food Delivery App,Web,"Angular,Spring Boot,MySQL",Advanced,2,False,True,11,2024
+S0524,P1063,Smart Agriculture System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,3,False,False,5,2024
+S0525,P1064,Customer Segmentation Analysis,Data,"Python,SQL,Tableau",Basic,3,False,False,4,2025
+S0525,P1065,QR Code Generator,Other,"C#,.NET,SQL Server",Advanced,2,True,False,8,2023
+S0525,P1066,Traffic Light Controller,Embedded,"Verilog,FPGA,ModelSim",Intermediate,2,False,False,6,2022
+S0526,P1067,Password Manager,Other,"Kotlin,Android Studio,Firebase",Intermediate,4+,False,False,11,2025
+S0526,P1068,Social Media Dashboard,Web,"Angular,Spring Boot,MySQL",Basic,2,False,True,5,2025
+S0526,P1069,Traffic Light Controller,Embedded,"C,ARM,RTOS",Basic,2,False,False,6,2025
+S0527,P1070,Line Following Robot,Embedded,"Verilog,FPGA,ModelSim",Basic,2,False,False,4,2022
+S0527,P1071,Job Portal with Matching,Web,"React,Node.js,MongoDB",Basic,2,False,True,3,2024
+S0528,P1072,Customer Segmentation Analysis,Data,"Python,PySpark,Hadoop",Advanced,2,True,True,10,2025
+S0528,P1073,Air Quality Monitoring System,IoT,"Arduino,C++,Sensors",Basic,3,False,False,3,2024
+S0528,P1074,Retail Demand Forecasting,Data,"SQL,Python,Airflow",Basic,3,False,False,5,2025
+S0529,P1075,Cryptocurrency Price Predictor,Finance,"Python,Dash,Plotly",Intermediate,3,True,True,11,2025
+S0529,P1076,Retail Demand Forecasting,Data,"SQL,Python,Airflow",Basic,1,False,False,4,2024
+S0529,P1077,Hospital Management System,Web,"Next.js,Prisma,PostgreSQL",Basic,2,False,False,6,2023
+S0529,P1078,Traffic Light Controller,Embedded,"C,Arduino,PCB Design",Advanced,3,True,True,20,2023
+S0530,P1079,Hospital Management System,Web,"React,Express,PostgreSQL",Advanced,2,True,False,13,2023
+S0531,P1080,QR Code Generator,Other,"Python,Flask,SQLite",Basic,1,False,True,5,2023
+S0532,P1081,Object Detection with YOLO,AI_ML,"Python,TensorFlow,Docker",Basic,3,False,False,2,2024
+S0532,P1082,Water Quality Sensor Network,IoT,"Arduino,Python,Firebase",Intermediate,3,False,True,12,2022
+S0532,P1083,Stock Portfolio Tracker,Finance,"Python,NumPy,Matplotlib",Intermediate,1,False,True,7,2024
+S0533,P1084,Real-time Chat Application,Web,"HTML,CSS,JavaScript",Basic,3,False,True,3,2025
+S0534,P1085,Hospital Management System,Web,"HTML,CSS,JavaScript",Basic,3,False,False,4,2024
+S0534,P1086,Pulse Oximeter Design,Embedded,"Verilog,FPGA,ModelSim",Intermediate,2,False,True,7,2024
+S0534,P1087,Credit Risk Assessment,Finance,"Excel,VBA,SQL",Intermediate,2,True,True,6,2022
+S0535,P1088,Password Manager,Other,"C#,.NET,SQL Server",Intermediate,1,False,False,8,2023
+S0535,P1089,Employee Attrition Analysis,Data,"Python,Pandas,Matplotlib",Intermediate,2,True,True,5,2024
+S0535,P1090,QR Code Generator,Other,"PHP,Laravel,MySQL",Intermediate,2,False,True,12,2022
+S0536,P1091,Travel Planner Application,Other,"C#,.NET,SQL Server",Intermediate,3,False,True,7,2023
+S0537,P1092,Autonomous Lane Detection,AI_ML,"Python,NLTK,SpaCy",Basic,2,False,True,4,2023
+S0537,P1093,Invoice Management System,Finance,"Python,Dash,Plotly",Basic,3,False,False,3,2025
+S0538,P1094,Fake News Detection System,AI_ML,"Python,TensorFlow,Flask",Advanced,2,True,True,20,2025
+S0538,P1095,Traffic Light Controller,Embedded,"C,PIC,Assembly",Intermediate,2,False,True,4,2024
+S0538,P1096,Smart Agriculture System,IoT,"Raspberry Pi,Python,MQTT",Basic,2,False,False,5,2023
+S0539,P1097,Stock Portfolio Tracker,Finance,"Python,Dash,Plotly",Basic,3,False,False,6,2023
+S0539,P1098,Autonomous Lane Detection,AI_ML,"Python,Keras,Streamlit",Basic,3,False,False,3,2024
+S0539,P1099,Motor Speed Controller,Embedded,"Verilog,FPGA,ModelSim",Basic,4+,False,False,5,2022
+S0540,P1100,Wearable Health Monitor,IoT,"NodeMCU,C,Blynk",Basic,3,False,True,3,2022
+S0541,P1101,Industrial IoT Dashboard,IoT,"Arduino,C++,Sensors",Intermediate,2,False,False,12,2023
+S0541,P1102,Sign Language Recognition System,AI_ML,"Python,Scikit-learn,Pandas",Intermediate,1,False,False,11,2024
+S0542,P1103,Line Following Robot,Embedded,"C,Arduino,PCB Design",Basic,3,False,False,5,2023
+S0542,P1104,Travel Planner Application,Other,"Kotlin,Android Studio,Firebase",Advanced,4+,True,True,15,2024
+S0543,P1105,QR Code Generator,Other,"PHP,Laravel,MySQL",Basic,2,False,True,3,2025
+S0543,P1106,Password Manager,Other,"Java,Spring,MySQL",Intermediate,3,True,True,11,2025
+S0543,P1107,Stock Market Trend Analysis,Data,"Python,Pandas,Seaborn",Basic,2,True,True,6,2025
+S0543,P1108,Credit Risk Assessment,Finance,"Python,Dash,Plotly",Intermediate,1,False,True,11,2025
+S0544,P1109,Employee Attrition Analysis,Data,"Python,Pandas,Matplotlib",Intermediate,4+,False,True,8,2023
+S0544,P1110,Stock Market Trend Analysis,Data,"SQL,Python,Airflow",Basic,4+,False,False,4,2024
+S0545,P1111,Password Manager,Other,"PHP,Laravel,MySQL",Advanced,3,True,True,8,2024
+S0546,P1112,Invoice Management System,Finance,"Python,Dash,Plotly",Intermediate,2,True,True,9,2022
+S0547,P1113,Motor Speed Controller,Embedded,"C,PIC,Assembly",Advanced,1,True,True,9,2024
+S0548,P1114,Inventory Management System,Other,"Kotlin,Android Studio,Firebase",Intermediate,2,False,True,6,2024
+S0548,P1115,Stock Portfolio Tracker,Finance,"Python,NumPy,Matplotlib",Basic,2,False,False,4,2025
+S0549,P1116,Attendance Management System,Other,"Kotlin,Android Studio,Firebase",Intermediate,4+,True,False,8,2025
+S0549,P1117,Traffic Light Controller,Embedded,"C,PIC,Assembly",Intermediate,1,False,False,6,2024
+S0550,P1118,Pulse Oximeter Design,Embedded,"C++,STM32,FreeRTOS",Intermediate,2,True,True,10,2022
+S0550,P1119,RFID-based Attendance System,Embedded,"C++,STM32,FreeRTOS",Intermediate,1,True,True,8,2025
+S0551,P1120,Portfolio Website with CMS,Web,"HTML,CSS,JavaScript",Basic,2,False,True,5,2022
+S0552,P1121,Invoice Management System,Finance,"Python,Dash,Plotly",Intermediate,2,True,True,7,2024
+S0552,P1122,Water Quality Sensor Network,IoT,"NodeMCU,C,Blynk",Basic,3,False,False,6,2023
+S0553,P1123,Smart Home Automation System,IoT,"Raspberry Pi,Python,MQTT",Advanced,3,True,True,13,2023
+S0554,P1124,Air Quality Monitoring System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,1,False,True,7,2025
+S0554,P1125,Travel Planner Application,Other,"PHP,Laravel,MySQL",Intermediate,2,True,True,5,2024
+S0555,P1126,Invoice Management System,Finance,"Excel,VBA,SQL",Basic,3,False,False,6,2025
+S0557,P1127,Budget Planning Tool,Finance,"Excel,VBA,SQL",Intermediate,3,False,True,9,2022
+S0558,P1128,Smart Energy Meter,IoT,"ESP32,MicroPython,ThingSpeak",Basic,3,False,False,5,2022
+S0558,P1129,Autonomous Lane Detection,AI_ML,"Python,Keras,Streamlit",Basic,2,False,True,2,2022
+S0558,P1130,Online Learning Management System,Web,"React,Express,PostgreSQL",Advanced,1,False,True,17,2023
+S0558,P1131,Motor Speed Controller,Embedded,"C++,STM32,FreeRTOS",Basic,4+,False,True,5,2022
+S0559,P1132,Job Portal with Matching,Web,"Next.js,Prisma,PostgreSQL",Intermediate,1,True,True,8,2024
+S0559,P1133,Smart Agriculture System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,3,False,True,10,2023
+S0560,P1134,Real-time Chat Application,Web,"Next.js,Prisma,PostgreSQL",Intermediate,4+,False,False,4,2023
+S0561,P1135,Employee Attrition Analysis,Data,"Python,Power BI,Excel",Intermediate,2,False,False,4,2025
+S0561,P1136,Social Media Analytics,Data,"R,ggplot2,dplyr",Intermediate,3,False,True,6,2024
+S0562,P1137,Smart Parking System,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,2,False,False,5,2024
+S0563,P1138,Personal Finance Manager,Finance,"Python,Pandas,yfinance",Intermediate,1,True,True,5,2025
+S0564,P1139,Smart Agriculture System,IoT,"NodeMCU,C,Blynk",Advanced,3,True,False,9,2022
+S0564,P1140,Smart Energy Meter,IoT,"Arduino,Python,Firebase",Basic,3,False,False,2,2022
+S0565,P1141,Food Delivery App,Web,"React,Express,PostgreSQL",Intermediate,4+,False,True,7,2023
+S0565,P1142,Library Management System,Web,"Vue.js,Django,SQLite",Intermediate,1,False,True,4,2022
+S0565,P1143,Sentiment Analysis on Product Reviews,AI_ML,"Python,Scikit-learn,Pandas",Basic,2,False,False,5,2024
+S0566,P1144,Social Media Dashboard,Web,"Django,Bootstrap,PostgreSQL",Basic,4+,False,False,6,2024
+S0566,P1145,Education Data Mining,Data,"Python,PySpark,Hadoop",Basic,2,False,False,2,2024
+S0567,P1146,Attendance Management System,Other,"C#,.NET,SQL Server",Basic,4+,False,False,5,2024
+S0567,P1147,Medical Image Segmentation,AI_ML,"Python,TensorFlow,Docker",Basic,1,False,False,5,2024
+S0567,P1148,Drone Flight Controller,Embedded,"C,Arduino,PCB Design",Intermediate,1,False,True,9,2023
+S0567,P1149,Social Media Dashboard,Web,"React,Firebase,Tailwind",Intermediate,3,False,False,7,2025
+S0568,P1150,Handwritten Digit Recognition,AI_ML,"Python,TensorFlow,Docker",Basic,2,False,False,2,2025
+S0569,P1151,Password Manager,Other,"Kotlin,Android Studio,Firebase",Basic,1,True,True,3,2024
+S0569,P1152,Smart Agriculture System,IoT,"Arduino,Python,Firebase",Basic,4+,True,False,2,2022
+S0570,P1153,COVID-19 Data Analysis Dashboard,Data,"Python,Databricks,Spark",Basic,2,False,True,3,2024
+S0570,P1154,Booking System for Hotels,Web,"Angular,Spring Boot,MySQL",Basic,4+,False,False,6,2023
+S0571,P1155,RFID-based Attendance System,Embedded,"Verilog,FPGA,ModelSim",Basic,3,True,True,6,2023
+S0571,P1156,Inventory Management System,Other,"PHP,Laravel,MySQL",Basic,2,False,False,2,2024
+S0572,P1157,Expense Tracker App,Web,"Vue.js,Django,SQLite",Intermediate,3,True,True,9,2024
+S0572,P1158,Job Portal with Matching,Web,"Next.js,Prisma,PostgreSQL",Intermediate,2,True,True,12,2025
+S0572,P1159,Pulse Oximeter Design,Embedded,"C,PIC,Assembly",Basic,3,False,True,5,2025
+S0572,P1160,Stock Portfolio Tracker,Finance,"Python,Pandas,yfinance",Basic,4+,False,False,2,2022
+S0573,P1161,Password Manager,Other,"C#,.NET,SQL Server",Intermediate,2,False,False,10,2022
+S0573,P1162,Digital Lock System,Embedded,"C,PIC,Assembly",Basic,2,False,True,5,2025
+S0574,P1163,Customer Segmentation Analysis,Data,"Python,Pandas,Seaborn",Intermediate,1,False,True,5,2024
+S0575,P1164,Employee Attrition Analysis,Data,"R,ggplot2,dplyr",Intermediate,2,False,True,8,2024
+S0575,P1165,Smart Agriculture System,IoT,"Raspberry Pi,Python,MQTT",Basic,1,False,False,2,2025
+S0576,P1166,RFID-based Attendance System,Embedded,"C,Arduino,PCB Design",Advanced,4+,False,True,11,2025
+S0576,P1167,Inventory Management System,Other,"Python,Flask,SQLite",Basic,3,True,False,5,2024
+S0576,P1168,Smart Parking System,IoT,"Arduino,C++,Sensors",Intermediate,2,False,False,6,2025
+S0576,P1169,Stock Portfolio Tracker,Finance,"Excel,VBA,SQL",Basic,3,False,False,5,2022
+S0577,P1170,Pulse Oximeter Design,Embedded,"C,ARM,RTOS",Intermediate,2,False,True,10,2023
+S0577,P1171,Cryptocurrency Price Predictor,Finance,"Python,Dash,Plotly",Intermediate,2,True,True,12,2024
+S0578,P1172,Stock Portfolio Tracker,Finance,"Python,NumPy,Matplotlib",Basic,3,True,False,3,2023
+S0578,P1173,Budget Planning Tool,Finance,"Python,NumPy,Matplotlib",Basic,3,False,False,6,2025
+S0579,P1174,Smart Home Automation System,IoT,"Arduino,C++,Sensors",Basic,1,False,True,6,2023
+S0579,P1175,Handwritten Digit Recognition,AI_ML,"Python,OpenCV,NumPy",Basic,2,False,True,6,2024
+S0579,P1176,Digital Lock System,Embedded,"C,PIC,Assembly",Intermediate,1,False,True,4,2024
+S0580,P1177,RFID-based Attendance System,Embedded,"Verilog,FPGA,ModelSim",Intermediate,1,False,True,4,2024
+S0581,P1178,Text Summarization using BERT,AI_ML,"Python,TensorFlow,Flask",Intermediate,3,False,True,6,2023
+S0581,P1179,Budget Planning Tool,Finance,"Excel,VBA,SQL",Basic,1,False,False,3,2022
+S0581,P1180,Music Player Application,Other,"Java,Spring,MySQL",Basic,2,False,False,6,2024
+S0581,P1181,File Encryption Tool,Other,"Python,Flask,SQLite",Basic,1,False,False,2,2024
+S0582,P1182,Drone Flight Controller,Embedded,"C++,STM32,FreeRTOS",Advanced,2,True,True,18,2025
+S0582,P1183,Image Classification using CNN,AI_ML,"Python,TensorFlow,Docker",Basic,3,False,True,4,2023
+S0582,P1184,QR Code Generator,Other,"PHP,Laravel,MySQL",Intermediate,2,True,True,9,2024
+S0582,P1185,Smart Energy Meter,IoT,"ESP32,MicroPython,ThingSpeak",Basic,1,False,True,4,2023
+S0583,P1186,AI-Powered Resume Screener,AI_ML,"Python,Scikit-learn,Pandas",Basic,1,True,True,4,2022
+S0583,P1187,Stock Market Trend Analysis,Data,"Python,Pandas,Matplotlib",Advanced,3,True,True,8,2022
+S0584,P1188,Credit Risk Assessment,Finance,"Python,NumPy,Matplotlib",Intermediate,3,True,False,12,2023
+S0584,P1189,E-Commerce Platform,Web,"Vue.js,Django,SQLite",Basic,4+,False,False,2,2023
+S0585,P1190,Air Quality Monitoring System,IoT,"Arduino,C++,Sensors",Intermediate,4+,True,True,7,2025
+S0585,P1191,Booking System for Hotels,Web,"Angular,Spring Boot,MySQL",Advanced,2,True,True,18,2023
+S0585,P1192,Fitness Tracking App,Other,"Python,Flask,SQLite",Intermediate,3,False,False,10,2022
+S0585,P1193,Password Manager,Other,"PHP,Laravel,MySQL",Advanced,4+,True,True,8,2023
+S0586,P1194,Stock Market Trend Analysis,Data,"Python,PySpark,Hadoop",Intermediate,1,True,True,5,2022
+S0586,P1195,Chatbot using NLP and Transformers,AI_ML,"Python,Keras,Streamlit",Basic,4+,False,False,4,2025
+S0586,P1196,Smart Home Automation System,IoT,"NodeMCU,C,Blynk",Intermediate,2,True,True,7,2025
+S0588,P1197,Traffic Light Controller,Embedded,"C,Arduino,PCB Design",Basic,3,False,True,2,2022
+S0589,P1198,Retail Demand Forecasting,Data,"R,ggplot2,dplyr",Basic,3,True,False,5,2023
+S0589,P1199,Smart Energy Meter,IoT,"Raspberry Pi,Python,MQTT",Intermediate,2,False,True,11,2025
+S0589,P1200,Smart Parking System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,2,True,False,8,2022
+S0589,P1201,Music Player Application,Other,"Python,Flask,SQLite",Intermediate,3,False,True,12,2025
+S0590,P1202,Industrial IoT Dashboard,IoT,"ESP32,MicroPython,ThingSpeak",Advanced,2,False,True,12,2024
+S0590,P1203,Crime Data Visualization,Data,"R,ggplot2,dplyr",Advanced,3,False,True,8,2023
+S0590,P1204,Wearable Health Monitor,IoT,"NodeMCU,C,Blynk",Intermediate,3,False,False,8,2025
+S0590,P1205,Smart Home Automation System,IoT,"NodeMCU,C,Blynk",Basic,1,False,True,4,2024
+S0591,P1206,File Encryption Tool,Other,"Kotlin,Android Studio,Firebase",Basic,2,False,False,5,2022
+S0591,P1207,Water Quality Sensor Network,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,2,False,True,6,2024
+S0592,P1208,Traffic Light Controller,Embedded,"C,ARM,RTOS",Basic,3,True,False,6,2025
+S0593,P1209,Smart Agriculture System,IoT,"NodeMCU,C,Blynk",Basic,1,False,False,5,2024
+S0593,P1210,Drone Flight Controller,Embedded,"C++,STM32,FreeRTOS",Basic,2,False,True,6,2025
+S0594,P1211,Inventory Management System,Other,"C#,.NET,SQL Server",Basic,1,False,True,4,2025
+S0594,P1212,Travel Planner Application,Other,"Java,Spring,MySQL",Intermediate,1,False,False,10,2022
+S0595,P1213,Budget Planning Tool,Finance,"R,Shiny,quantmod",Advanced,3,True,True,20,2023
+S0595,P1214,Cryptocurrency Price Predictor,Finance,"Python,Pandas,yfinance",Basic,2,False,False,5,2024
+S0596,P1215,Fitness Tracking App,Other,"Python,Flask,SQLite",Advanced,4+,False,True,17,2023
+S0596,P1216,Smart Agriculture System,IoT,"Arduino,C++,Sensors",Basic,3,False,True,2,2024
+S0597,P1217,Pulse Oximeter Design,Embedded,"Verilog,FPGA,ModelSim",Basic,1,False,True,3,2025
+S0597,P1218,Recommendation Engine for E-commerce,AI_ML,"Python,PyTorch,FastAPI",Advanced,2,False,False,16,2024
+S0597,P1219,RFID-based Attendance System,Embedded,"C++,STM32,FreeRTOS",Advanced,2,True,True,12,2022
+S0598,P1220,Blog Platform with Auth,Web,"React,Node.js,MongoDB",Intermediate,3,False,True,4,2023
+S0598,P1221,Event Management Platform,Web,"React,Express,PostgreSQL",Basic,3,False,False,6,2024
+S0598,P1222,Job Portal with Matching,Web,"React,Node.js,MongoDB",Basic,3,False,False,4,2024
+S0599,P1223,Image Classification using CNN,AI_ML,"Python,Hugging Face,Transformers",Intermediate,1,False,True,10,2023
+S0600,P1224,Fitness Tracking App,Other,"PHP,Laravel,MySQL",Intermediate,1,False,True,5,2022
+S0600,P1225,Password Manager,Other,"Python,Flask,SQLite",Advanced,3,False,True,8,2023
+S0601,P1226,Portfolio Website with CMS,Web,"React,Firebase,Tailwind",Intermediate,3,False,True,6,2023
+S0602,P1227,Handwritten Digit Recognition,AI_ML,"Python,Hugging Face,Transformers",Advanced,3,True,True,18,2025
+S0603,P1228,Digital Lock System,Embedded,"C,ARM,RTOS",Basic,2,False,True,6,2025
+S0603,P1229,Recommendation Engine for E-commerce,AI_ML,"Python,NLTK,SpaCy",Basic,1,False,True,2,2024
+S0604,P1230,Line Following Robot,Embedded,"C,ARM,RTOS",Basic,3,False,False,4,2024
+S0604,P1231,Motor Speed Controller,Embedded,"C++,STM32,FreeRTOS",Intermediate,2,True,True,5,2022
+S0605,P1232,RFID-based Attendance System,Embedded,"C,ARM,RTOS",Intermediate,3,False,True,10,2024
+S0606,P1233,Loan Default Prediction,Finance,"Python,Pandas,yfinance",Basic,2,False,False,2,2023
+S0607,P1234,Personal Finance Manager,Finance,"Python,NumPy,Matplotlib",Intermediate,2,True,True,8,2023
+S0607,P1235,Water Quality Sensor Network,IoT,"Arduino,C++,Sensors",Basic,2,False,False,3,2022
+S0607,P1236,Inventory Management System,Other,"Java,Spring,MySQL",Basic,2,False,False,6,2024
+S0607,P1237,Pulse Oximeter Design,Embedded,"C,Arduino,PCB Design",Intermediate,1,False,True,6,2023
+S0608,P1238,Booking System for Hotels,Web,"Vue.js,Django,SQLite",Basic,2,False,False,6,2022
+S0608,P1239,Smart Parking System,IoT,"ESP32,MicroPython,ThingSpeak",Basic,2,False,False,6,2023
+S0609,P1240,Cryptocurrency Price Predictor,Finance,"Excel,VBA,SQL",Advanced,2,True,True,15,2024
+S0609,P1241,Credit Risk Assessment,Finance,"Python,Pandas,yfinance",Advanced,2,True,True,18,2023
+S0610,P1242,Fake News Detection System,AI_ML,"Python,Hugging Face,Transformers",Intermediate,4+,False,True,6,2024
+S0610,P1243,Digital Lock System,Embedded,"C,Arduino,PCB Design",Intermediate,2,True,False,5,2023
+S0611,P1244,Sentiment Analysis on Product Reviews,AI_ML,"Python,OpenCV,NumPy",Intermediate,3,True,False,11,2024
+S0612,P1245,Fitness Tracking App,Other,"Kotlin,Android Studio,Firebase",Intermediate,4+,False,False,4,2025
+S0613,P1246,Loan Default Prediction,Finance,"Excel,VBA,SQL",Advanced,2,False,True,16,2024
+S0613,P1247,Text Summarization using BERT,AI_ML,"Python,NLTK,SpaCy",Basic,3,True,False,3,2025
+S0613,P1248,Music Player Application,Other,"Python,Flask,SQLite",Intermediate,2,True,False,10,2024
+S0614,P1249,Smart Home Automation System,IoT,"ESP32,MicroPython,ThingSpeak",Basic,3,False,False,2,2024
+S0615,P1250,Credit Risk Assessment,Finance,"Python,NumPy,Matplotlib",Basic,3,False,True,4,2024
+S0615,P1251,Attendance Management System,Other,"Kotlin,Android Studio,Firebase",Intermediate,2,False,True,4,2025
+S0616,P1252,Drone Flight Controller,Embedded,"Verilog,FPGA,ModelSim",Intermediate,2,True,True,11,2024
+S0616,P1253,Traffic Light Controller,Embedded,"Verilog,FPGA,ModelSim",Intermediate,1,False,True,4,2025
+S0617,P1254,Stock Portfolio Tracker,Finance,"Python,Dash,Plotly",Advanced,2,False,True,18,2023
+S0617,P1255,Event Management Platform,Web,"Next.js,Prisma,PostgreSQL",Basic,1,False,True,5,2023
+S0618,P1256,Wearable Health Monitor,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,3,False,False,6,2022
+S0618,P1257,Food Delivery App,Web,"Django,Bootstrap,PostgreSQL",Basic,2,False,False,4,2025
+S0619,P1258,Motor Speed Controller,Embedded,"Verilog,FPGA,ModelSim",Intermediate,1,False,True,11,2025
+S0619,P1259,Wearable Health Monitor,IoT,"Arduino,C++,Sensors",Advanced,3,False,True,15,2022
+S0620,P1260,Air Quality Monitoring System,IoT,"ESP32,MicroPython,ThingSpeak",Advanced,1,False,True,16,2023
+S0622,P1261,Drone Flight Controller,Embedded,"Verilog,FPGA,ModelSim",Intermediate,1,True,False,8,2024
+S0622,P1262,Crime Data Visualization,Data,"Python,SQL,Tableau",Intermediate,1,False,False,9,2023
+S0622,P1263,Loan Default Prediction,Finance,"Python,Dash,Plotly",Intermediate,1,False,True,4,2025
+S0622,P1264,Cryptocurrency Price Predictor,Finance,"Python,Pandas,yfinance",Advanced,2,False,True,15,2025
+S0623,P1265,Social Media Analytics,Data,"Python,Pandas,Seaborn",Intermediate,2,False,False,7,2023
+S0623,P1266,Social Media Dashboard,Web,"HTML,CSS,JavaScript",Basic,4+,False,False,5,2023
+S0623,P1267,Line Following Robot,Embedded,"C,Arduino,PCB Design",Basic,2,False,False,6,2023
+S0624,P1268,Invoice Management System,Finance,"R,Shiny,quantmod",Basic,1,False,False,5,2023
+S0624,P1269,Pulse Oximeter Design,Embedded,"Verilog,FPGA,ModelSim",Intermediate,2,False,True,8,2022
+S0624,P1270,Object Detection with YOLO,AI_ML,"Python,TensorFlow,Docker",Intermediate,3,True,True,6,2024
+S0625,P1271,AI-Powered Resume Screener,AI_ML,"Python,PyTorch,FastAPI",Intermediate,2,True,True,6,2024
+S0625,P1272,File Encryption Tool,Other,"PHP,Laravel,MySQL",Basic,2,False,False,2,2023
+S0626,P1273,Budget Planning Tool,Finance,"Excel,VBA,SQL",Advanced,2,False,True,13,2023
+S0627,P1274,Smart Energy Meter,IoT,"NodeMCU,C,Blynk",Intermediate,2,True,True,6,2025
+S0628,P1275,Inventory Management System,Other,"Kotlin,Android Studio,Firebase",Intermediate,2,False,False,5,2024
+S0628,P1276,Cryptocurrency Price Predictor,Finance,"Python,Pandas,yfinance",Basic,1,False,False,6,2023
+S0628,P1277,E-Commerce Platform,Web,"React,Firebase,Tailwind",Basic,4+,False,False,4,2022
+S0629,P1278,Handwritten Digit Recognition,AI_ML,"Python,Hugging Face,Transformers",Advanced,4+,True,True,12,2023
+S0629,P1279,Text Summarization using BERT,AI_ML,"Python,TensorFlow,Docker",Basic,2,False,False,4,2025
+S0629,P1280,Social Media Analytics,Data,"Python,Databricks,Spark",Advanced,2,False,True,17,2023
+S0629,P1281,Stock Market Trend Analysis,Data,"Python,Pandas,Seaborn",Basic,2,False,True,3,2024
+S0630,P1282,Social Media Dashboard,Web,"Vue.js,Django,SQLite",Advanced,2,True,True,9,2023
+S0630,P1283,Industrial IoT Dashboard,IoT,"Arduino,Python,Firebase",Basic,3,False,False,3,2024
+S0630,P1284,Pulse Oximeter Design,Embedded,"C,Arduino,PCB Design",Intermediate,2,False,True,12,2025
+S0631,P1285,QR Code Generator,Other,"PHP,Laravel,MySQL",Intermediate,2,True,True,6,2025
+S0631,P1286,Digital Lock System,Embedded,"Verilog,FPGA,ModelSim",Intermediate,3,True,True,8,2023
+S0631,P1287,Pulse Oximeter Design,Embedded,"C,Arduino,PCB Design",Basic,3,False,True,4,2023
+S0633,P1288,Industrial IoT Dashboard,IoT,"NodeMCU,C,Blynk",Intermediate,2,False,True,10,2025
+S0633,P1289,Air Quality Monitoring System,IoT,"Arduino,C++,Sensors",Basic,2,False,False,2,2024
+S0634,P1290,Student Information System,Web,"Next.js,Prisma,PostgreSQL",Advanced,4+,True,True,20,2023
+S0635,P1291,Social Media Analytics,Data,"SQL,Python,Airflow",Basic,2,False,False,2,2024
+S0635,P1292,Online Voting System,Web,"Vue.js,Django,SQLite",Intermediate,2,False,True,10,2025
+S0636,P1293,Fitness Tracking App,Other,"Python,Flask,SQLite",Intermediate,2,True,True,4,2024
+S0636,P1294,Social Media Dashboard,Web,"Angular,Spring Boot,MySQL",Advanced,2,True,True,12,2024
+S0637,P1295,Portfolio Website with CMS,Web,"Django,Bootstrap,PostgreSQL",Basic,2,False,False,3,2023
+S0637,P1296,Drone Flight Controller,Embedded,"Verilog,FPGA,ModelSim",Intermediate,2,False,False,7,2024
+S0637,P1297,Stock Market Trend Analysis,Data,"Python,SQL,Tableau",Basic,3,False,True,3,2025
+S0638,P1298,Hospital Management System,Web,"HTML,CSS,JavaScript",Intermediate,2,False,False,8,2024
+S0638,P1299,Drone Flight Controller,Embedded,"C++,STM32,FreeRTOS",Advanced,2,True,True,17,2023
+S0639,P1300,Smart Parking System,IoT,"Arduino,Python,Firebase",Intermediate,4+,False,False,6,2023
+S0639,P1301,Weather Pattern Analysis,Data,"Python,Pandas,Matplotlib",Intermediate,1,True,False,9,2025
+S0639,P1302,Hospital Management System,Web,"Vue.js,Django,SQLite",Intermediate,2,False,True,4,2025
+S0639,P1303,File Encryption Tool,Other,"C#,.NET,SQL Server",Intermediate,4+,False,False,12,2024
+S0640,P1304,Autonomous Lane Detection,AI_ML,"Python,TensorFlow,Flask",Basic,3,False,False,4,2025
+S0641,P1305,Healthcare Cost Analysis,Data,"Python,Power BI,Excel",Basic,1,False,False,5,2025
+S0642,P1306,File Encryption Tool,Other,"Kotlin,Android Studio,Firebase",Advanced,2,True,False,14,2025
+S0642,P1307,Password Manager,Other,"Kotlin,Android Studio,Firebase",Advanced,4+,True,True,15,2024
+S0643,P1308,Smart Parking System,IoT,"NodeMCU,C,Blynk",Intermediate,1,True,False,6,2024
+S0643,P1309,Autonomous Lane Detection,AI_ML,"Python,TensorFlow,Flask",Basic,4+,True,True,6,2024
+S0643,P1310,Education Data Mining,Data,"SQL,Python,Airflow",Intermediate,3,False,True,12,2025
+S0643,P1311,Job Portal with Matching,Web,"Angular,Spring Boot,MySQL",Basic,3,True,False,2,2024
+S0644,P1312,File Encryption Tool,Other,"C#,.NET,SQL Server",Advanced,4+,True,True,20,2024
+S0644,P1313,Stock Portfolio Tracker,Finance,"R,Shiny,quantmod",Basic,2,False,False,4,2024
+S0645,P1314,Cryptocurrency Price Predictor,Finance,"Python,NumPy,Matplotlib",Basic,3,False,False,5,2025
+S0645,P1315,Sales Forecasting Model,Data,"SQL,Python,Airflow",Intermediate,4+,False,True,9,2024
+S0646,P1316,AI-Powered Resume Screener,AI_ML,"Python,NLTK,SpaCy",Basic,4+,False,False,6,2023
+S0647,P1317,Loan Default Prediction,Finance,"R,Shiny,quantmod",Advanced,4+,True,False,14,2022
+S0647,P1318,Digital Lock System,Embedded,"Verilog,FPGA,ModelSim",Intermediate,2,False,True,8,2024
+S0648,P1319,Customer Segmentation Analysis,Data,"SQL,Python,Airflow",Advanced,3,True,True,8,2023
+S0648,P1320,RFID-based Attendance System,Embedded,"C,ARM,RTOS",Intermediate,1,False,True,9,2023
+S0649,P1321,Personal Finance Manager,Finance,"Python,Dash,Plotly",Basic,3,False,False,5,2023
+S0650,P1322,Digital Lock System,Embedded,"C,Arduino,PCB Design",Basic,3,True,False,5,2024
+S0650,P1323,E-Commerce Platform,Web,"React,Node.js,MongoDB",Intermediate,1,False,False,7,2023
+S0651,P1324,Supply Chain Analytics,Data,"SQL,Python,Airflow",Advanced,2,True,True,10,2024
+S0651,P1325,Smart Home Automation System,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,1,False,True,9,2022
+S0652,P1326,Fitness Tracking App,Other,"Python,Flask,SQLite",Basic,2,False,False,4,2024
+S0652,P1327,Pulse Oximeter Design,Embedded,"C,PIC,Assembly",Basic,4+,False,False,6,2025
+S0653,P1328,Portfolio Website with CMS,Web,"Vue.js,Django,SQLite",Intermediate,2,False,False,9,2023
+S0654,P1329,Loan Default Prediction,Finance,"Python,Pandas,yfinance",Advanced,1,True,True,18,2023
+S0654,P1330,AI-Powered Resume Screener,AI_ML,"Python,OpenCV,NumPy",Intermediate,4+,True,True,7,2022
+S0654,P1331,Stock Portfolio Tracker,Finance,"R,Shiny,quantmod",Intermediate,4+,False,True,8,2022
+S0657,P1332,Student Information System,Web,"Vue.js,Django,SQLite",Basic,4+,False,False,4,2025
+S0657,P1333,Healthcare Cost Analysis,Data,"Python,Databricks,Spark",Basic,2,False,False,4,2024
+S0657,P1334,Autonomous Lane Detection,AI_ML,"Python,OpenCV,NumPy",Basic,2,True,False,5,2022
+S0657,P1335,Text Summarization using BERT,AI_ML,"Python,TensorFlow,Flask",Basic,3,False,False,3,2023
+S0658,P1336,Stock Market Trend Analysis,Data,"Python,Databricks,Spark",Advanced,1,False,True,8,2022
+S0659,P1337,Personal Finance Manager,Finance,"Python,Dash,Plotly",Advanced,4+,False,True,17,2025
+S0659,P1338,Cryptocurrency Price Predictor,Finance,"Python,NumPy,Matplotlib",Intermediate,2,True,True,8,2022
+S0660,P1339,Job Portal with Matching,Web,"Angular,Spring Boot,MySQL",Intermediate,3,False,True,5,2025
+S0660,P1340,Cryptocurrency Price Predictor,Finance,"Python,Pandas,yfinance",Advanced,1,True,True,11,2023
+S0661,P1341,Traffic Light Controller,Embedded,"Verilog,FPGA,ModelSim",Basic,3,False,True,5,2024
+S0661,P1342,Crime Data Visualization,Data,"R,ggplot2,dplyr",Advanced,3,False,True,15,2023
+S0661,P1343,Customer Segmentation Analysis,Data,"Python,SQL,Tableau",Intermediate,2,True,True,11,2024
+S0662,P1344,Motor Speed Controller,Embedded,"C,Arduino,PCB Design",Intermediate,1,True,False,12,2025
+S0663,P1345,File Encryption Tool,Other,"C#,.NET,SQL Server",Intermediate,2,False,True,6,2022
+S0663,P1346,Music Player Application,Other,"Kotlin,Android Studio,Firebase",Advanced,1,False,True,19,2024
+S0664,P1347,Chatbot using NLP and Transformers,AI_ML,"Python,TensorFlow,Docker",Intermediate,2,False,True,6,2024
+S0664,P1348,Line Following Robot,Embedded,"C,ARM,RTOS",Intermediate,4+,True,True,7,2025
+S0664,P1349,File Encryption Tool,Other,"Java,Spring,MySQL",Basic,3,False,True,6,2024
+S0665,P1350,Crime Data Visualization,Data,"Python,Databricks,Spark",Intermediate,3,False,True,12,2023
+S0665,P1351,Stock Portfolio Tracker,Finance,"R,Shiny,quantmod",Intermediate,3,False,False,6,2022
+S0665,P1352,Personal Finance Manager,Finance,"Excel,VBA,SQL",Intermediate,1,True,True,8,2023
+S0665,P1353,Travel Planner Application,Other,"Kotlin,Android Studio,Firebase",Intermediate,4+,False,True,8,2024
+S0666,P1354,Sales Forecasting Model,Data,"SQL,Python,Airflow",Advanced,3,False,True,13,2025
+S0667,P1355,Library Management System,Web,"React,Firebase,Tailwind",Basic,1,False,True,4,2024
+S0667,P1356,Wearable Health Monitor,IoT,"Raspberry Pi,Python,MQTT",Basic,1,False,False,6,2024
+S0668,P1357,Budget Planning Tool,Finance,"Python,Dash,Plotly",Basic,1,False,True,2,2025
+S0668,P1358,Social Media Dashboard,Web,"React,Express,PostgreSQL",Intermediate,2,False,True,8,2025
+S0669,P1359,Traffic Light Controller,Embedded,"Verilog,FPGA,ModelSim",Basic,3,False,False,5,2023
+S0669,P1360,Sentiment Analysis on Product Reviews,AI_ML,"Python,Hugging Face,Transformers",Intermediate,2,False,True,4,2024
+S0670,P1361,Stock Market Trend Analysis,Data,"Python,Pandas,Matplotlib",Intermediate,3,False,True,6,2022
+S0672,P1362,Smart Parking System,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,2,True,True,12,2025
+S0672,P1363,Attendance Management System,Other,"Python,Flask,SQLite",Basic,3,False,False,4,2022
+S0673,P1364,Autonomous Lane Detection,AI_ML,"Python,Scikit-learn,Pandas",Intermediate,2,True,False,6,2023
+S0673,P1365,Loan Default Prediction,Finance,"Excel,VBA,SQL",Basic,1,False,False,6,2024
+S0673,P1366,Smart Energy Meter,IoT,"ESP32,MicroPython,ThingSpeak",Basic,4+,True,False,3,2025
+S0673,P1367,COVID-19 Data Analysis Dashboard,Data,"Python,SQL,Tableau",Basic,2,False,True,5,2025
+S0674,P1368,Autonomous Lane Detection,AI_ML,"Python,Hugging Face,Transformers",Intermediate,3,False,True,12,2024
+S0674,P1369,Event Management Platform,Web,"HTML,CSS,JavaScript",Basic,3,False,False,2,2023
+S0675,P1370,Pulse Oximeter Design,Embedded,"C,Arduino,PCB Design",Intermediate,4+,False,True,11,2024
+S0675,P1371,Smart Home Automation System,IoT,"ESP32,MicroPython,ThingSpeak",Advanced,2,True,True,14,2022
+S0676,P1372,Social Media Analytics,Data,"Python,PySpark,Hadoop",Basic,4+,False,False,3,2023
+S0676,P1373,Industrial IoT Dashboard,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,3,False,False,6,2025
+S0677,P1374,Student Information System,Web,"HTML,CSS,JavaScript",Intermediate,1,False,True,12,2025
+S0678,P1375,Traffic Light Controller,Embedded,"C,ARM,RTOS",Intermediate,3,False,True,6,2024
+S0678,P1376,Line Following Robot,Embedded,"C,Arduino,PCB Design",Basic,3,False,True,4,2024
+S0679,P1377,File Encryption Tool,Other,"Python,Flask,SQLite",Advanced,2,True,False,11,2022
+S0679,P1378,Smart Energy Meter,IoT,"NodeMCU,C,Blynk",Basic,3,True,True,2,2024
+S0679,P1379,Booking System for Hotels,Web,"Angular,Spring Boot,MySQL",Intermediate,2,False,False,11,2025
+S0680,P1380,Personal Finance Manager,Finance,"Python,Dash,Plotly",Intermediate,2,False,False,12,2023
+S0680,P1381,Wearable Health Monitor,IoT,"Arduino,C++,Sensors",Intermediate,3,False,False,6,2023
+S0681,P1382,Traffic Light Controller,Embedded,"C,Arduino,PCB Design",Advanced,4+,True,False,18,2025
+S0681,P1383,Smart Energy Meter,IoT,"NodeMCU,C,Blynk",Basic,2,False,True,4,2025
+S0683,P1384,Air Quality Monitoring System,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,2,False,True,9,2023
+S0683,P1385,Online Learning Management System,Web,"React,Firebase,Tailwind",Basic,4+,False,False,5,2025
+S0684,P1386,Handwritten Digit Recognition,AI_ML,"Python,TensorFlow,Docker",Basic,2,True,False,4,2024
+S0685,P1387,Line Following Robot,Embedded,"C,ARM,RTOS",Basic,2,False,False,4,2025
+S0685,P1388,Predictive Maintenance using ML,AI_ML,"Python,PyTorch,FastAPI",Basic,3,False,False,5,2023
+S0685,P1389,Industrial IoT Dashboard,IoT,"Raspberry Pi,Python,MQTT",Basic,2,False,False,3,2022
+S0686,P1390,Event Management Platform,Web,"React,Express,PostgreSQL",Basic,1,False,False,2,2024
+S0686,P1391,Cryptocurrency Price Predictor,Finance,"Python,NumPy,Matplotlib",Intermediate,3,True,True,8,2025
+S0687,P1392,Budget Planning Tool,Finance,"Python,Pandas,yfinance",Basic,4+,False,False,3,2022
+S0688,P1393,Food Delivery App,Web,"React,Express,PostgreSQL",Advanced,4+,False,True,12,2023
+S0688,P1394,Loan Default Prediction,Finance,"Python,Dash,Plotly",Advanced,4+,True,True,9,2025
+S0689,P1395,Industrial IoT Dashboard,IoT,"NodeMCU,C,Blynk",Advanced,4+,True,True,19,2024
+S0689,P1396,Expense Tracker App,Web,"Django,Bootstrap,PostgreSQL",Intermediate,1,False,True,11,2023
+S0690,P1397,File Encryption Tool,Other,"C#,.NET,SQL Server",Basic,2,True,False,4,2025
+S0690,P1398,Travel Planner Application,Other,"Java,Spring,MySQL",Basic,3,False,True,3,2024
+S0690,P1399,Stock Market Trend Analysis,Data,"SQL,Python,Airflow",Basic,4+,False,False,2,2023
+S0691,P1400,Event Management Platform,Web,"Django,Bootstrap,PostgreSQL",Basic,1,False,False,4,2024
+S0691,P1401,Employee Attrition Analysis,Data,"SQL,Python,Airflow",Basic,3,True,False,3,2025
+S0691,P1402,Traffic Light Controller,Embedded,"C++,STM32,FreeRTOS",Advanced,2,True,True,18,2025
+S0692,P1403,Water Quality Sensor Network,IoT,"Raspberry Pi,Python,MQTT",Intermediate,4+,True,True,8,2023
+S0693,P1404,Sentiment Analysis on Product Reviews,AI_ML,"Python,TensorFlow,Flask",Advanced,1,True,True,10,2023
+S0693,P1405,Drone Flight Controller,Embedded,"Verilog,FPGA,ModelSim",Basic,2,True,False,5,2023
+S0694,P1406,Smart Parking System,IoT,"Raspberry Pi,Python,MQTT",Intermediate,1,False,False,6,2025
+S0695,P1407,Invoice Management System,Finance,"Excel,VBA,SQL",Advanced,2,False,True,13,2024
+S0696,P1408,Smart Parking System,IoT,"ESP32,MicroPython,ThingSpeak",Basic,2,False,False,5,2022
+S0696,P1409,QR Code Generator,Other,"Java,Spring,MySQL",Basic,3,False,False,2,2025
+S0696,P1410,Budget Planning Tool,Finance,"R,Shiny,quantmod",Basic,3,True,False,6,2022
+S0697,P1411,Personal Finance Manager,Finance,"R,Shiny,quantmod",Intermediate,1,True,True,8,2024
+S0697,P1412,Stock Market Trend Analysis,Data,"R,ggplot2,dplyr",Basic,2,False,False,3,2024
+S0698,P1413,Loan Default Prediction,Finance,"R,Shiny,quantmod",Basic,4+,False,False,4,2023
+S0698,P1414,Inventory Management System,Other,"C#,.NET,SQL Server",Basic,2,False,True,6,2025
+S0699,P1415,Food Delivery App,Web,"React,Express,PostgreSQL",Basic,4+,False,True,2,2024
+S0699,P1416,Sales Forecasting Model,Data,"Python,Power BI,Excel",Basic,3,False,False,3,2024
+S0700,P1417,Motor Speed Controller,Embedded,"C,ARM,RTOS",Basic,3,False,False,3,2023
+S0700,P1418,Personal Finance Manager,Finance,"Python,Pandas,yfinance",Intermediate,3,False,True,12,2022
+S0700,P1419,Line Following Robot,Embedded,"C,Arduino,PCB Design",Advanced,1,True,False,14,2023
+S0701,P1420,COVID-19 Data Analysis Dashboard,Data,"R,ggplot2,dplyr",Advanced,2,False,True,17,2023
+S0702,P1421,Object Detection with YOLO,AI_ML,"Python,OpenCV,NumPy",Basic,4+,False,True,5,2025
+S0702,P1422,Loan Default Prediction,Finance,"R,Shiny,quantmod",Intermediate,3,False,False,8,2023
+S0703,P1423,Budget Planning Tool,Finance,"Python,Pandas,yfinance",Intermediate,3,True,True,11,2024
+S0704,P1424,Travel Planner Application,Other,"C#,.NET,SQL Server",Intermediate,1,True,True,6,2023
+S0704,P1425,COVID-19 Data Analysis Dashboard,Data,"R,ggplot2,dplyr",Basic,4+,False,False,2,2023
+S0704,P1426,Air Quality Monitoring System,IoT,"Arduino,Python,Firebase",Basic,2,False,True,2,2025
+S0705,P1427,Text Summarization using BERT,AI_ML,"Python,PyTorch,FastAPI",Advanced,2,True,True,14,2025
+S0705,P1428,Supply Chain Analytics,Data,"Python,PySpark,Hadoop",Advanced,1,True,True,10,2022
+S0705,P1429,Motor Speed Controller,Embedded,"C,ARM,RTOS",Advanced,3,True,True,15,2025
+S0706,P1430,Stock Portfolio Tracker,Finance,"Python,NumPy,Matplotlib",Basic,3,False,True,6,2024
+S0707,P1431,Real-time Chat Application,Web,"React,Express,PostgreSQL",Intermediate,1,True,True,6,2025
+S0707,P1432,Credit Risk Assessment,Finance,"R,Shiny,quantmod",Intermediate,3,False,False,5,2022
+S0707,P1433,Air Quality Monitoring System,IoT,"Arduino,Python,Firebase",Basic,2,False,True,3,2023
+S0708,P1434,Fitness Tracking App,Other,"Kotlin,Android Studio,Firebase",Basic,3,False,False,2,2023
+S0708,P1435,Weather Pattern Analysis,Data,"R,ggplot2,dplyr",Intermediate,2,True,True,5,2025
+S0709,P1436,Crime Data Visualization,Data,"Python,Pandas,Seaborn",Intermediate,3,True,True,4,2023
+S0710,P1437,Fitness Tracking App,Other,"Java,Spring,MySQL",Advanced,3,False,True,12,2024
+S0710,P1438,Air Quality Monitoring System,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,2,False,True,12,2024
+S0711,P1439,File Encryption Tool,Other,"Java,Spring,MySQL",Intermediate,1,False,True,6,2025
+S0712,P1440,Attendance Management System,Other,"Kotlin,Android Studio,Firebase",Intermediate,1,False,False,9,2023
+S0713,P1441,Portfolio Website with CMS,Web,"React,Express,PostgreSQL",Basic,4+,False,True,4,2023
+S0715,P1442,Loan Default Prediction,Finance,"Excel,VBA,SQL",Advanced,3,True,True,17,2024
+S0715,P1443,Healthcare Cost Analysis,Data,"Python,Databricks,Spark",Intermediate,2,False,False,8,2025
+S0715,P1444,Expense Tracker App,Web,"React,Firebase,Tailwind",Intermediate,3,False,True,8,2022
+S0716,P1445,Weather Pattern Analysis,Data,"R,ggplot2,dplyr",Intermediate,2,False,True,12,2024
+S0716,P1446,Drone Flight Controller,Embedded,"C,PIC,Assembly",Basic,3,False,False,3,2023
+S0717,P1447,Expense Tracker App,Web,"Next.js,Prisma,PostgreSQL",Basic,3,False,True,3,2025
+S0718,P1448,E-Commerce Platform,Web,"React,Node.js,MongoDB",Intermediate,2,True,False,8,2022
+S0718,P1449,Text Summarization using BERT,AI_ML,"Python,Hugging Face,Transformers",Intermediate,2,False,True,4,2025
+S0719,P1450,Autonomous Lane Detection,AI_ML,"Python,PyTorch,FastAPI",Basic,3,False,False,4,2022
+S0719,P1451,Supply Chain Analytics,Data,"Python,Power BI,Excel",Advanced,3,True,True,9,2023
+S0719,P1452,Music Player Application,Other,"PHP,Laravel,MySQL",Basic,3,False,False,6,2023
+S0720,P1453,Loan Default Prediction,Finance,"Excel,VBA,SQL",Advanced,2,True,True,10,2023
+S0720,P1454,Real-time Chat Application,Web,"Next.js,Prisma,PostgreSQL",Advanced,2,True,True,20,2023
+S0721,P1455,Personal Finance Manager,Finance,"Python,Pandas,yfinance",Intermediate,1,True,True,7,2024
+S0721,P1456,Drone Flight Controller,Embedded,"C++,STM32,FreeRTOS",Basic,1,False,False,2,2025
+S0722,P1457,Smart Energy Meter,IoT,"NodeMCU,C,Blynk",Intermediate,2,False,False,8,2025
+S0722,P1458,COVID-19 Data Analysis Dashboard,Data,"Python,Power BI,Excel",Advanced,2,True,True,9,2025
+S0722,P1459,Job Portal with Matching,Web,"Django,Bootstrap,PostgreSQL",Basic,1,False,False,4,2024
+S0723,P1460,Pulse Oximeter Design,Embedded,"Verilog,FPGA,ModelSim",Intermediate,3,True,False,12,2025
+S0723,P1461,Wearable Health Monitor,IoT,"Arduino,Python,Firebase",Basic,2,False,False,5,2024
+S0723,P1462,Travel Planner Application,Other,"C#,.NET,SQL Server",Intermediate,1,False,True,10,2023
+S0723,P1463,QR Code Generator,Other,"Kotlin,Android Studio,Firebase",Intermediate,3,False,True,12,2025
+S0724,P1464,Blog Platform with Auth,Web,"Next.js,Prisma,PostgreSQL",Intermediate,2,False,True,9,2023
+S0724,P1465,Student Information System,Web,"React,Express,PostgreSQL",Basic,2,False,True,4,2024
+S0725,P1466,Smart Parking System,IoT,"ESP32,MicroPython,ThingSpeak",Basic,2,False,True,4,2023
+S0726,P1467,RFID-based Attendance System,Embedded,"C,PIC,Assembly",Intermediate,3,False,True,4,2023
+S0726,P1468,Supply Chain Analytics,Data,"Python,Power BI,Excel",Basic,1,False,False,2,2023
+S0727,P1469,Water Quality Sensor Network,IoT,"Arduino,C++,Sensors",Intermediate,2,False,True,7,2025
+S0727,P1470,Smart Parking System,IoT,"NodeMCU,C,Blynk",Basic,1,True,True,6,2023
+S0728,P1471,Budget Planning Tool,Finance,"Python,Dash,Plotly",Advanced,1,False,True,20,2024
+S0729,P1472,Drone Flight Controller,Embedded,"C,PIC,Assembly",Basic,3,False,False,6,2023
+S0729,P1473,Travel Planner Application,Other,"PHP,Laravel,MySQL",Basic,2,False,False,6,2023
+S0729,P1474,Music Player Application,Other,"Java,Spring,MySQL",Basic,4+,False,True,2,2023
+S0730,P1475,Smart Home Automation System,IoT,"Raspberry Pi,Python,MQTT",Basic,3,False,True,3,2023
+S0730,P1476,Cryptocurrency Price Predictor,Finance,"R,Shiny,quantmod",Intermediate,2,False,True,4,2022
+S0731,P1477,Stock Portfolio Tracker,Finance,"Excel,VBA,SQL",Intermediate,3,True,True,8,2024
+S0731,P1478,Autonomous Lane Detection,AI_ML,"Python,TensorFlow,Flask",Advanced,4+,False,False,14,2024
+S0731,P1479,Cryptocurrency Price Predictor,Finance,"Excel,VBA,SQL",Intermediate,2,False,False,11,2025
+S0732,P1480,Invoice Management System,Finance,"R,Shiny,quantmod",Intermediate,1,False,False,11,2025
+S0734,P1481,Portfolio Website with CMS,Web,"Next.js,Prisma,PostgreSQL",Intermediate,2,False,True,5,2025
+S0734,P1482,Cryptocurrency Price Predictor,Finance,"Python,NumPy,Matplotlib",Intermediate,3,False,False,4,2024
+S0735,P1483,Text Summarization using BERT,AI_ML,"Python,PyTorch,FastAPI",Intermediate,4+,False,True,7,2024
+S0735,P1484,Pulse Oximeter Design,Embedded,"Verilog,FPGA,ModelSim",Intermediate,2,False,False,4,2023
+S0736,P1485,Blog Platform with Auth,Web,"React,Node.js,MongoDB",Intermediate,3,False,False,10,2023
+S0736,P1486,Handwritten Digit Recognition,AI_ML,"Python,Hugging Face,Transformers",Advanced,4+,False,True,16,2025
+S0736,P1487,Real-time Chat Application,Web,"React,Firebase,Tailwind",Intermediate,2,True,False,8,2024
+S0736,P1488,Fake News Detection System,AI_ML,"Python,OpenCV,NumPy",Advanced,3,False,True,8,2025
+S0737,P1489,COVID-19 Data Analysis Dashboard,Data,"SQL,Python,Airflow",Advanced,2,False,True,10,2024
+S0737,P1490,Personal Finance Manager,Finance,"R,Shiny,quantmod",Advanced,2,True,True,14,2023
+S0738,P1491,Motor Speed Controller,Embedded,"C,Arduino,PCB Design",Basic,4+,True,False,5,2024
+S0738,P1492,Pulse Oximeter Design,Embedded,"C,ARM,RTOS",Advanced,2,True,True,19,2025
+S0739,P1493,Retail Demand Forecasting,Data,"Python,SQL,Tableau",Intermediate,3,False,False,9,2022
+S0739,P1494,Music Player Application,Other,"PHP,Laravel,MySQL",Basic,2,False,False,4,2025
+S0739,P1495,COVID-19 Data Analysis Dashboard,Data,"Python,Pandas,Matplotlib",Basic,1,False,True,6,2024
+S0740,P1496,Education Data Mining,Data,"R,ggplot2,dplyr",Intermediate,3,True,False,12,2023
+S0740,P1497,Smart Energy Meter,IoT,"ESP32,MicroPython,ThingSpeak",Basic,2,False,True,2,2025
+S0740,P1498,Cryptocurrency Price Predictor,Finance,"R,Shiny,quantmod",Advanced,4+,True,True,15,2024
+S0740,P1499,Motor Speed Controller,Embedded,"Verilog,FPGA,ModelSim",Basic,4+,False,True,4,2022
+S0741,P1500,Smart Home Automation System,IoT,"NodeMCU,C,Blynk",Basic,1,False,False,6,2022
+S0741,P1501,Library Management System,Web,"React,Express,PostgreSQL",Basic,2,False,False,5,2023
+S0742,P1502,QR Code Generator,Other,"C#,.NET,SQL Server",Advanced,2,False,True,11,2022
+S0742,P1503,Healthcare Cost Analysis,Data,"Python,PySpark,Hadoop",Advanced,2,False,True,14,2022
+S0742,P1504,Digital Lock System,Embedded,"C++,STM32,FreeRTOS",Intermediate,3,False,True,8,2024
+S0742,P1505,Autonomous Lane Detection,AI_ML,"Python,Hugging Face,Transformers",Basic,2,False,True,3,2024
+S0743,P1506,Music Player Application,Other,"C#,.NET,SQL Server",Basic,3,False,True,2,2025
+S0743,P1507,Industrial IoT Dashboard,IoT,"NodeMCU,C,Blynk",Basic,2,False,True,4,2025
+S0743,P1508,Social Media Dashboard,Web,"React,Express,PostgreSQL",Advanced,2,True,True,16,2025
+S0744,P1509,Digital Lock System,Embedded,"C,ARM,RTOS",Intermediate,3,False,False,11,2024
+S0744,P1510,Motor Speed Controller,Embedded,"Verilog,FPGA,ModelSim",Intermediate,4+,False,True,8,2023
+S0744,P1511,Online Learning Management System,Web,"Angular,Spring Boot,MySQL",Basic,2,False,False,4,2022
+S0745,P1512,Drone Flight Controller,Embedded,"C++,STM32,FreeRTOS",Basic,2,False,True,2,2025
+S0745,P1513,Stock Portfolio Tracker,Finance,"Python,Pandas,yfinance",Basic,3,False,False,2,2025
+S0746,P1514,Cryptocurrency Price Predictor,Finance,"Python,Dash,Plotly",Basic,2,False,False,6,2022
+S0746,P1515,Music Player Application,Other,"Kotlin,Android Studio,Firebase",Intermediate,2,True,True,5,2023
+S0746,P1516,Smart Energy Meter,IoT,"Raspberry Pi,Python,MQTT",Advanced,3,True,True,13,2024
+S0746,P1517,Wearable Health Monitor,IoT,"Raspberry Pi,Python,MQTT",Intermediate,4+,False,True,11,2023
+S0747,P1518,Real-time Chat Application,Web,"Next.js,Prisma,PostgreSQL",Basic,2,False,False,4,2023
+S0747,P1519,Food Delivery App,Web,"Next.js,Prisma,PostgreSQL",Intermediate,1,False,True,4,2022
+S0747,P1520,Weather Pattern Analysis,Data,"Python,Pandas,Matplotlib",Intermediate,3,False,False,4,2025
+S0747,P1521,AI-Powered Resume Screener,AI_ML,"Python,TensorFlow,Docker",Intermediate,3,True,True,11,2025
+S0748,P1522,COVID-19 Data Analysis Dashboard,Data,"Python,PySpark,Hadoop",Advanced,3,False,True,8,2025
+S0748,P1523,Sentiment Analysis on Product Reviews,AI_ML,"Python,Scikit-learn,Pandas",Advanced,4+,True,False,18,2024
+S0749,P1524,Line Following Robot,Embedded,"Verilog,FPGA,ModelSim",Advanced,3,True,True,20,2023
+S0749,P1525,Handwritten Digit Recognition,AI_ML,"Python,TensorFlow,Docker",Intermediate,4+,False,True,7,2022
+S0749,P1526,Chatbot using NLP and Transformers,AI_ML,"Python,NLTK,SpaCy",Basic,2,True,True,6,2022
+S0750,P1527,Object Detection with YOLO,AI_ML,"Python,NLTK,SpaCy",Basic,4+,False,True,4,2025
+S0750,P1528,Sentiment Analysis on Product Reviews,AI_ML,"Python,NLTK,SpaCy",Intermediate,1,False,False,10,2025
+S0750,P1529,Smart Parking System,IoT,"Arduino,Python,Firebase",Intermediate,3,True,True,9,2024
+S0750,P1530,Online Learning Management System,Web,"Angular,Spring Boot,MySQL",Advanced,1,False,True,11,2024
+S0751,P1531,Password Manager,Other,"Kotlin,Android Studio,Firebase",Advanced,2,True,True,8,2024
+S0752,P1532,Motor Speed Controller,Embedded,"C++,STM32,FreeRTOS",Intermediate,1,False,False,11,2023
+S0752,P1533,Healthcare Cost Analysis,Data,"Python,Power BI,Excel",Basic,1,False,True,6,2023
+S0752,P1534,Social Media Analytics,Data,"Python,Power BI,Excel",Basic,4+,False,False,3,2025
+S0753,P1535,Inventory Management System,Other,"Kotlin,Android Studio,Firebase",Basic,3,False,False,6,2022
+S0753,P1536,Medical Image Segmentation,AI_ML,"Python,Keras,Streamlit",Basic,2,False,False,4,2025
+S0753,P1537,Stock Market Trend Analysis,Data,"Python,Pandas,Seaborn",Basic,4+,False,True,6,2023
+S0754,P1538,Smart Energy Meter,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,2,False,False,10,2024
+S0755,P1539,AI-Powered Resume Screener,AI_ML,"Python,Scikit-learn,Pandas",Basic,1,False,False,2,2023
+S0755,P1540,Attendance Management System,Other,"Kotlin,Android Studio,Firebase",Basic,2,False,False,5,2025
+S0756,P1541,Personal Finance Manager,Finance,"Python,NumPy,Matplotlib",Advanced,3,True,True,19,2025
+S0756,P1542,Text Summarization using BERT,AI_ML,"Python,Hugging Face,Transformers",Basic,2,False,True,5,2024
+S0757,P1543,Smart Home Automation System,IoT,"ESP32,MicroPython,ThingSpeak",Basic,3,False,False,2,2024
+S0758,P1544,Wearable Health Monitor,IoT,"Raspberry Pi,Python,MQTT",Intermediate,4+,False,True,5,2024
+S0758,P1545,Smart Agriculture System,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,2,True,True,5,2022
+S0758,P1546,Chatbot using NLP and Transformers,AI_ML,"Python,OpenCV,NumPy",Intermediate,3,False,True,9,2023
+S0758,P1547,Object Detection with YOLO,AI_ML,"Python,Scikit-learn,Pandas",Advanced,2,True,True,10,2022
+S0759,P1548,Traffic Light Controller,Embedded,"C,ARM,RTOS",Intermediate,3,False,False,4,2024
+S0759,P1549,Pulse Oximeter Design,Embedded,"Verilog,FPGA,ModelSim",Basic,3,False,False,5,2025
+S0759,P1550,Speech Emotion Recognition,AI_ML,"Python,TensorFlow,Docker",Intermediate,3,False,False,4,2024
+S0760,P1551,Text Summarization using BERT,AI_ML,"Python,TensorFlow,Flask",Intermediate,3,False,True,4,2023
+S0760,P1552,File Encryption Tool,Other,"Java,Spring,MySQL",Intermediate,3,False,False,8,2024
+S0760,P1553,Fake News Detection System,AI_ML,"Python,OpenCV,NumPy",Advanced,1,True,False,20,2024
+S0760,P1554,Stock Market Trend Analysis,Data,"Python,Pandas,Matplotlib",Intermediate,1,True,True,7,2025
+S0761,P1555,Education Data Mining,Data,"Python,Pandas,Matplotlib",Basic,4+,False,False,4,2025
+S0762,P1556,Sales Forecasting Model,Data,"Python,Power BI,Excel",Intermediate,2,False,True,12,2025
+S0762,P1557,Industrial IoT Dashboard,IoT,"Arduino,C++,Sensors",Intermediate,2,False,True,6,2023
+S0762,P1558,Real-time Chat Application,Web,"Angular,Spring Boot,MySQL",Advanced,3,False,True,17,2025
+S0763,P1559,Attendance Management System,Other,"Python,Flask,SQLite",Intermediate,2,False,False,8,2024
+S0763,P1560,Employee Attrition Analysis,Data,"Python,Databricks,Spark",Intermediate,2,False,True,4,2025
+S0763,P1561,Water Quality Sensor Network,IoT,"Arduino,C++,Sensors",Intermediate,2,False,False,9,2024
+S0764,P1562,Stock Market Trend Analysis,Data,"Python,SQL,Tableau",Advanced,3,False,True,19,2025
+S0765,P1563,Budget Planning Tool,Finance,"Python,Pandas,yfinance",Basic,3,False,False,3,2022
+S0765,P1564,Crime Data Visualization,Data,"Python,Pandas,Matplotlib",Intermediate,2,False,False,4,2023
+S0766,P1565,Online Voting System,Web,"Django,Bootstrap,PostgreSQL",Advanced,4+,False,False,19,2025
+S0766,P1566,COVID-19 Data Analysis Dashboard,Data,"Python,PySpark,Hadoop",Intermediate,2,False,False,7,2022
+S0766,P1567,Portfolio Website with CMS,Web,"Next.js,Prisma,PostgreSQL",Intermediate,2,False,False,12,2025
+S0767,P1568,Drone Flight Controller,Embedded,"C++,STM32,FreeRTOS",Intermediate,1,False,True,10,2025
+S0767,P1569,Social Media Analytics,Data,"Python,PySpark,Hadoop",Basic,3,False,False,6,2023
+S0768,P1570,Object Detection with YOLO,AI_ML,"Python,NLTK,SpaCy",Basic,3,False,False,3,2024
+S0769,P1571,Event Management Platform,Web,"Next.js,Prisma,PostgreSQL",Basic,2,False,False,5,2023
+S0769,P1572,Fitness Tracking App,Other,"Java,Spring,MySQL",Basic,2,False,True,2,2022
+S0769,P1573,Sign Language Recognition System,AI_ML,"Python,OpenCV,NumPy",Basic,3,False,False,3,2024
+S0769,P1574,Fake News Detection System,AI_ML,"Python,OpenCV,NumPy",Intermediate,2,False,True,10,2023
+S0770,P1575,Line Following Robot,Embedded,"Verilog,FPGA,ModelSim",Basic,2,False,False,2,2023
+S0770,P1576,Smart Home Automation System,IoT,"NodeMCU,C,Blynk",Basic,2,False,False,4,2025
+S0771,P1577,Employee Attrition Analysis,Data,"Python,Databricks,Spark",Advanced,4+,False,False,11,2025
+S0771,P1578,Retail Demand Forecasting,Data,"Python,SQL,Tableau",Basic,2,True,False,6,2024
+S0772,P1579,Smart Home Automation System,IoT,"Arduino,Python,Firebase",Basic,4+,False,False,2,2024
+S0772,P1580,Music Player Application,Other,"C#,.NET,SQL Server",Intermediate,1,False,True,7,2025
+S0773,P1581,Sales Forecasting Model,Data,"SQL,Python,Airflow",Basic,1,False,True,6,2024
+S0773,P1582,Inventory Management System,Other,"Python,Flask,SQLite",Advanced,1,False,True,13,2025
+S0774,P1583,Sign Language Recognition System,AI_ML,"Python,Scikit-learn,Pandas",Intermediate,2,False,True,11,2022
+S0774,P1584,Customer Churn Prediction,AI_ML,"Python,NLTK,SpaCy",Basic,1,False,False,6,2024
+S0775,P1585,Sales Forecasting Model,Data,"Python,Databricks,Spark",Intermediate,1,False,False,8,2023
+S0775,P1586,Password Manager,Other,"Python,Flask,SQLite",Basic,3,False,True,2,2024
+S0777,P1587,Sign Language Recognition System,AI_ML,"Python,TensorFlow,Flask",Advanced,1,False,True,19,2024
+S0777,P1588,Weather Pattern Analysis,Data,"R,ggplot2,dplyr",Basic,3,True,True,2,2025
+S0777,P1589,Healthcare Cost Analysis,Data,"Python,Databricks,Spark",Basic,3,False,False,2,2025
+S0778,P1590,Industrial IoT Dashboard,IoT,"ESP32,MicroPython,ThingSpeak",Intermediate,2,False,False,10,2023
+S0779,P1591,Music Player Application,Other,"C#,.NET,SQL Server",Intermediate,2,False,False,5,2023
+S0780,P1592,Student Information System,Web,"HTML,CSS,JavaScript",Intermediate,4+,True,False,8,2022
+S0780,P1593,Wearable Health Monitor,IoT,"Arduino,Python,Firebase",Basic,1,True,False,2,2024
+S0780,P1594,Smart Energy Meter,IoT,"Raspberry Pi,Python,MQTT",Basic,2,False,True,6,2023
+S0780,P1595,Sales Forecasting Model,Data,"Python,Databricks,Spark",Intermediate,2,False,False,10,2023
+S0781,P1596,Social Media Dashboard,Web,"Angular,Spring Boot,MySQL",Intermediate,3,False,False,12,2025
+S0781,P1597,Digital Lock System,Embedded,"C,Arduino,PCB Design",Intermediate,3,True,False,5,2024
+S0781,P1598,Job Portal with Matching,Web,"Django,Bootstrap,PostgreSQL",Advanced,2,False,True,16,2024
+S0781,P1599,Wearable Health Monitor,IoT,"Arduino,C++,Sensors",Intermediate,1,False,False,9,2023
+S0782,P1600,Inventory Management System,Other,"Python,Flask,SQLite",Intermediate,1,False,False,10,2025
+S0783,P1601,Handwritten Digit Recognition,AI_ML,"Python,Hugging Face,Transformers",Intermediate,3,False,False,11,2025
+S0785,P1602,Personal Finance Manager,Finance,"Python,Pandas,yfinance",Intermediate,4+,True,False,10,2023
+S0786,P1603,QR Code Generator,Other,"PHP,Laravel,MySQL",Intermediate,3,True,True,4,2024
+S0787,P1604,Employee Attrition Analysis,Data,"R,ggplot2,dplyr",Intermediate,2,True,False,7,2024
+S0788,P1605,Travel Planner Application,Other,"Kotlin,Android Studio,Firebase",Intermediate,3,True,True,10,2024
+S0789,P1606,Cryptocurrency Price Predictor,Finance,"Python,NumPy,Matplotlib",Intermediate,2,True,False,11,2025
+S0789,P1607,Medical Image Segmentation,AI_ML,"Python,Hugging Face,Transformers",Basic,1,False,False,6,2025
+S0790,P1608,Stock Market Trend Analysis,Data,"Python,Power BI,Excel",Intermediate,4+,False,True,7,2023
+S0790,P1609,Image Classification using CNN,AI_ML,"Python,NLTK,SpaCy",Advanced,4+,True,True,18,2022
+S0790,P1610,Portfolio Website with CMS,Web,"Django,Bootstrap,PostgreSQL",Intermediate,3,True,False,11,2025
+S0790,P1611,Customer Segmentation Analysis,Data,"Python,Pandas,Seaborn",Advanced,3,True,True,9,2025
+S0791,P1612,Digital Lock System,Embedded,"C++,STM32,FreeRTOS",Advanced,3,False,False,20,2023
+S0791,P1613,COVID-19 Data Analysis Dashboard,Data,"Python,Pandas,Seaborn",Basic,2,False,False,3,2025
+S0792,P1614,Loan Default Prediction,Finance,"Python,Dash,Plotly",Intermediate,2,False,True,6,2024
+S0793,P1615,Real-time Chat Application,Web,"Next.js,Prisma,PostgreSQL",Intermediate,2,True,False,8,2024
+S0793,P1616,Customer Churn Prediction,AI_ML,"Python,Keras,Streamlit",Intermediate,2,False,True,9,2025
+S0793,P1617,Image Classification using CNN,AI_ML,"Python,Hugging Face,Transformers",Basic,4+,False,False,4,2022
+S0793,P1618,Travel Planner Application,Other,"Java,Spring,MySQL",Intermediate,3,False,True,4,2025
+S0794,P1619,AI-Powered Resume Screener,AI_ML,"Python,Scikit-learn,Pandas",Intermediate,1,False,False,11,2022
+S0795,P1620,Password Manager,Other,"C#,.NET,SQL Server",Advanced,2,True,True,9,2023
+S0795,P1621,Music Player Application,Other,"C#,.NET,SQL Server",Advanced,2,False,False,20,2025
+S0796,P1622,Healthcare Cost Analysis,Data,"SQL,Python,Airflow",Intermediate,2,False,True,11,2024
+S0796,P1623,Air Quality Monitoring System,IoT,"ESP32,MicroPython,ThingSpeak",Basic,2,False,False,3,2025
+S0797,P1624,Inventory Management System,Other,"Kotlin,Android Studio,Firebase",Basic,2,False,False,3,2024
+S0797,P1625,Supply Chain Analytics,Data,"Python,Power BI,Excel",Intermediate,2,True,False,12,2024
+S0797,P1626,Wearable Health Monitor,IoT,"Arduino,Python,Firebase",Intermediate,2,False,False,6,2024
+S0798,P1627,Music Player Application,Other,"Python,Flask,SQLite",Advanced,2,True,True,17,2024
+S0799,P1628,Pulse Oximeter Design,Embedded,"C,Arduino,PCB Design",Intermediate,2,False,False,7,2023
+S0799,P1629,Credit Risk Assessment,Finance,"R,Shiny,quantmod",Basic,1,False,False,2,2022
+S0800,P1630,Social Media Dashboard,Web,"Angular,Spring Boot,MySQL",Basic,2,False,True,5,2023
+S0800,P1631,Music Player Application,Other,"Python,Flask,SQLite",Advanced,3,True,True,16,2025
+S0800,P1632,RFID-based Attendance System,Embedded,"C++,STM32,FreeRTOS",Intermediate,3,False,True,4,2024
+S0800,P1633,File Encryption Tool,Other,"Python,Flask,SQLite",Intermediate,3,False,False,8,2022

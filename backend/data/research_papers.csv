@@ -1,0 +1,222 @@
+student_id,paper_id,title,publication_venue,tier,domain,year_published,is_first_author,co_authors_count
+S0016,RP0001,Industrial IoT Predictive Maintenance,Conference,Conference,IoT,2024,True,5
+S0021,RP0002,Progressive Web Application Performance,Preprint,Non-indexed,Web,2023,True,2
+S0022,RP0003,Compiler Optimization Techniques,Conference,Non-indexed,Programming,2024,False,3
+S0023,RP0004,Web Accessibility Standards Compliance,Preprint,Conference,Web,2024,False,5
+S0023,RP0005,Zero Trust Architecture Implementation,Conference,Q3,Cybersecurity,2023,False,5
+S0026,RP0006,Microservices Architecture Patterns,Preprint,Non-indexed,Web,2025,True,4
+S0028,RP0007,Software Testing Automation Framework,Other,Conference,Programming,2022,False,5
+S0033,RP0008,Malware Detection using Deep Learning,IEEE,Conference,Cybersecurity,2024,True,3
+S0034,RP0009,Vulnerability Assessment Automation,Preprint,Non-indexed,Cybersecurity,2025,False,5
+S0045,RP0010,Progressive Web Application Performance,Preprint,Conference,Web,2022,True,5
+S0046,RP0011,Multi-Cloud Deployment Strategies,Conference,Conference,Cloud,2024,True,3
+S0058,RP0012,Code Quality Metrics Analysis,Preprint,Non-indexed,Programming,2023,False,4
+S0061,RP0013,Real-time Operating System Scheduling,Springer,Conference,Embedded,2023,True,5
+S0066,RP0014,Digital Transformation Strategies,Conference,Conference,Management,2025,True,1
+S0066,RP0015,Serverless Computing Performance Analysis,IEEE,Q2,Cloud,2024,True,4
+S0072,RP0016,Digital Transformation Strategies,Preprint,Conference,Management,2024,False,2
+S0074,RP0017,Zero Trust Architecture Implementation,Conference,Non-indexed,Cybersecurity,2024,False,2
+S0080,RP0018,Wearable Health Device Data Analysis,UGC,Conference,IoT,2023,True,5
+S0080,RP0019,Vulnerability Assessment Automation,IEEE,Non-indexed,Cybersecurity,2022,True,1
+S0081,RP0020,Generative Adversarial Networks for Data Augmentation,UGC,Conference,AI_ML,2025,True,1
+S0096,RP0021,Low-Power Embedded System Design,Scopus,Q2,Embedded,2024,False,2
+S0102,RP0022,Digital Transformation Strategies,IEEE,Non-indexed,Management,2025,False,3
+S0110,RP0023,Neural Architecture Search: A Survey,Preprint,Non-indexed,AI_ML,2025,True,5
+S0116,RP0024,Agile Methodology in Software Development,Other,Conference,Management,2024,True,2
+S0116,RP0025,Microservices Architecture Patterns,Other,Non-indexed,Web,2025,True,2
+S0119,RP0026,Wearable Health Device Data Analysis,Springer,Q2,IoT,2025,False,5
+S0119,RP0027,Big Data Analytics in Smart Cities,Springer,Conference,Data,2024,False,5
+S0119,RP0028,Code Quality Metrics Analysis,Other,Non-indexed,Programming,2024,False,1
+S0122,RP0029,Real-time Operating System Scheduling,Preprint,Conference,Embedded,2024,False,1
+S0127,RP0030,Federated Learning for Privacy-Preserving AI,IEEE,Q2,AI_ML,2025,False,5
+S0138,RP0031,Smart Agriculture Monitoring Systems,Scopus,Conference,IoT,2024,True,4
+S0141,RP0032,FPGA-Based Signal Processing,Conference,Conference,Embedded,2025,False,3
+S0162,RP0033,Zero Trust Architecture Implementation,Springer,Q2,Cybersecurity,2023,False,1
+S0163,RP0034,Wearable Health Device Data Analysis,Conference,Non-indexed,IoT,2024,False,3
+S0172,RP0035,Progressive Web Application Performance,Preprint,Non-indexed,Web,2023,True,3
+S0173,RP0036,FPGA-Based Signal Processing,Preprint,Non-indexed,Embedded,2024,True,1
+S0180,RP0037,IoT Sensor Network Optimization,IEEE,Q2,IoT,2024,False,4
+S0183,RP0038,Software Testing Automation Framework,Preprint,Conference,Programming,2024,False,2
+S0193,RP0039,Attention Mechanisms in Computer Vision,Other,Non-indexed,AI_ML,2024,True,5
+S0193,RP0040,Single Page Application Optimization,Scopus,Q1,Web,2024,True,1
+S0194,RP0041,Industrial IoT Predictive Maintenance,Other,Non-indexed,IoT,2024,False,5
+S0196,RP0042,Anomaly Detection in Time Series Data,Preprint,Non-indexed,Data,2024,True,2
+S0205,RP0043,Serverless Computing Performance Analysis,Conference,Non-indexed,Cloud,2024,False,1
+S0206,RP0044,Real-time Stream Processing with Apache Kafka,Conference,Non-indexed,Data,2024,True,5
+S0206,RP0045,Vulnerability Assessment Automation,Springer,Q1,Cybersecurity,2025,False,1
+S0207,RP0046,Code Quality Metrics Analysis,Conference,Q3,Programming,2024,True,1
+S0217,RP0047,Project Risk Assessment Framework,Conference,Non-indexed,Management,2025,True,2
+S0225,RP0048,Intrusion Detection using Machine Learning,Other,Non-indexed,Cybersecurity,2024,False,2
+S0225,RP0049,Digital Transformation Strategies,IEEE,Non-indexed,Management,2023,False,1
+S0229,RP0050,Compiler Optimization Techniques,Other,Q3,Programming,2024,True,2
+S0229,RP0051,Software Testing Automation Framework,Scopus,Non-indexed,Programming,2025,True,5
+S0230,RP0052,Malware Detection using Deep Learning,Conference,Non-indexed,Cybersecurity,2025,False,3
+S0230,RP0053,Bias Detection and Mitigation in ML Models,Preprint,Conference,AI_ML,2025,False,5
+S0230,RP0054,Zero Trust Architecture Implementation,UGC,Conference,Cybersecurity,2024,True,3
+S0230,RP0055,Code Quality Metrics Analysis,Springer,Conference,Programming,2024,False,5
+S0232,RP0056,Code Quality Metrics Analysis,Scopus,Non-indexed,Programming,2025,False,3
+S0233,RP0057,Malware Detection using Deep Learning,Other,Conference,Cybersecurity,2024,True,4
+S0239,RP0058,FPGA-Based Signal Processing,Preprint,Conference,Embedded,2024,True,2
+S0244,RP0059,Blockchain for Secure Data Sharing,Other,Non-indexed,Cybersecurity,2022,False,2
+S0254,RP0060,Agile Methodology in Software Development,Preprint,Conference,Management,2023,True,2
+S0257,RP0061,Web Accessibility Standards Compliance,Other,Conference,Web,2022,False,5
+S0258,RP0062,Real-time Operating System Scheduling,IEEE,Conference,Embedded,2025,True,5
+S0259,RP0063,Microservices Architecture Patterns,Conference,Conference,Web,2025,True,4
+S0268,RP0064,Wearable Health Device Data Analysis,Conference,Non-indexed,IoT,2024,False,2
+S0276,RP0065,Project Risk Assessment Framework,Other,Conference,Management,2023,True,4
+S0276,RP0066,Code Quality Metrics Analysis,Springer,Q1,Programming,2024,False,5
+S0280,RP0067,Real-time Operating System Scheduling,UGC,Non-indexed,Embedded,2024,False,4
+S0281,RP0068,Microservices Architecture Patterns,IEEE,Non-indexed,Web,2022,False,3
+S0281,RP0069,Bias Detection and Mitigation in ML Models,Springer,Non-indexed,AI_ML,2024,True,3
+S0284,RP0070,Low-Power Embedded System Design,UGC,Conference,Embedded,2023,True,5
+S0288,RP0071,FPGA-Based Signal Processing,Scopus,Conference,Embedded,2023,True,5
+S0289,RP0072,Blockchain for Secure Data Sharing,Other,Non-indexed,Cybersecurity,2023,False,2
+S0289,RP0073,Digital Transformation Strategies,Other,Q3,Management,2025,True,3
+S0289,RP0074,Compiler Optimization Techniques,Preprint,Q3,Programming,2025,True,2
+S0289,RP0075,Wearable Health Device Data Analysis,Scopus,Q1,IoT,2025,False,2
+S0292,RP0076,Data Warehouse Optimization Techniques,Preprint,Conference,Data,2025,True,3
+S0294,RP0077,Code Quality Metrics Analysis,Preprint,Conference,Programming,2024,True,2
+S0294,RP0078,Malware Detection using Deep Learning,Springer,Non-indexed,Cybersecurity,2025,True,3
+S0299,RP0079,Code Quality Metrics Analysis,Conference,Conference,Programming,2025,True,4
+S0299,RP0080,FPGA-Based Signal Processing,IEEE,Non-indexed,Embedded,2024,True,5
+S0305,RP0081,Transfer Learning for Low-Resource Languages,Preprint,Non-indexed,AI_ML,2023,True,1
+S0305,RP0082,Zero Trust Architecture Implementation,Preprint,Q3,Cybersecurity,2023,False,5
+S0306,RP0083,Multi-Cloud Deployment Strategies,Conference,Conference,Cloud,2023,True,1
+S0306,RP0084,Data Warehouse Optimization Techniques,Scopus,Conference,Data,2024,False,2
+S0307,RP0085,Serverless Computing Performance Analysis,Conference,Non-indexed,Cloud,2024,True,3
+S0307,RP0086,Edge Computing for IoT Applications,Scopus,Conference,Cloud,2024,True,3
+S0311,RP0087,Malware Detection using Deep Learning,Conference,Non-indexed,Cybersecurity,2024,True,2
+S0312,RP0088,Industrial IoT Predictive Maintenance,Other,Conference,IoT,2022,True,5
+S0342,RP0089,Agile Methodology in Software Development,Conference,Non-indexed,Management,2023,False,1
+S0350,RP0090,FPGA-Based Signal Processing,Preprint,Conference,Embedded,2024,False,2
+S0350,RP0091,Low-Power Embedded System Design,Other,Q3,Embedded,2025,False,4
+S0361,RP0092,Attention Mechanisms in Computer Vision,Preprint,Q3,AI_ML,2024,True,3
+S0368,RP0093,Software Testing Automation Framework,UGC,Q3,Programming,2023,False,2
+S0373,RP0094,Intrusion Detection using Machine Learning,Preprint,Q3,Cybersecurity,2024,True,1
+S0375,RP0095,Attention Mechanisms in Computer Vision,Conference,Conference,AI_ML,2023,True,1
+S0381,RP0096,IoT Sensor Network Optimization,Conference,Non-indexed,IoT,2025,True,3
+S0381,RP0097,Cloud Security Framework Design,Conference,Non-indexed,Cloud,2024,False,1
+S0383,RP0098,IoT Sensor Network Optimization,Conference,Non-indexed,IoT,2025,True,1
+S0387,RP0099,Bias Detection and Mitigation in ML Models,Conference,Non-indexed,AI_ML,2023,False,4
+S0406,RP0100,Intrusion Detection using Machine Learning,Conference,Non-indexed,Cybersecurity,2023,True,5
+S0412,RP0101,Project Risk Assessment Framework,Conference,Conference,Management,2025,True,2
+S0426,RP0102,Cloud Security Framework Design,Scopus,Conference,Cloud,2024,False,4
+S0427,RP0103,Digital Transformation Strategies,IEEE,Q2,Management,2023,True,1
+S0427,RP0104,Vulnerability Assessment Automation,Other,Non-indexed,Cybersecurity,2025,True,4
+S0435,RP0105,Vulnerability Assessment Automation,Conference,Q3,Cybersecurity,2024,True,1
+S0443,RP0106,FPGA-Based Signal Processing,IEEE,Conference,Embedded,2023,False,2
+S0445,RP0107,Edge Computing for IoT Applications,Scopus,Non-indexed,Cloud,2025,False,5
+S0445,RP0108,Graph Analytics for Social Network Analysis,Scopus,Conference,Data,2022,True,1
+S0447,RP0109,Intrusion Detection using Machine Learning,IEEE,Conference,Cybersecurity,2025,False,5
+S0452,RP0110,Real-time Operating System Scheduling,Conference,Conference,Embedded,2025,True,5
+S0452,RP0111,Serverless Computing Performance Analysis,Scopus,Q2,Cloud,2025,True,4
+S0452,RP0112,Code Quality Metrics Analysis,Scopus,Q3,Programming,2025,True,2
+S0452,RP0113,Zero Trust Architecture Implementation,Conference,Non-indexed,Cybersecurity,2024,False,4
+S0454,RP0114,Intrusion Detection using Machine Learning,Conference,Conference,Cybersecurity,2024,True,4
+S0457,RP0115,Low-Power Embedded System Design,Conference,Non-indexed,Embedded,2024,True,5
+S0463,RP0116,Edge Computing for IoT Applications,Scopus,Q3,Cloud,2025,False,4
+S0464,RP0117,Wearable Health Device Data Analysis,IEEE,Conference,IoT,2024,True,1
+S0481,RP0118,Explainable AI for Healthcare Diagnostics,Conference,Q3,AI_ML,2024,True,3
+S0484,RP0119,Microservices Architecture Patterns,UGC,Conference,Web,2024,True,2
+S0484,RP0120,FPGA-Based Signal Processing,Springer,Q2,Embedded,2024,False,1
+S0489,RP0121,Multi-Cloud Deployment Strategies,Conference,Conference,Cloud,2024,True,1
+S0489,RP0122,Neural Architecture Search: A Survey,Scopus,Non-indexed,AI_ML,2025,False,3
+S0495,RP0123,Agile Methodology in Software Development,Scopus,Conference,Management,2023,True,1
+S0497,RP0124,Project Risk Assessment Framework,Conference,Non-indexed,Management,2023,True,1
+S0510,RP0125,Web Accessibility Standards Compliance,Conference,Non-indexed,Web,2023,False,4
+S0511,RP0126,Smart Agriculture Monitoring Systems,IEEE,Non-indexed,IoT,2024,False,4
+S0520,RP0127,Intrusion Detection using Machine Learning,IEEE,Q3,Cybersecurity,2025,True,1
+S0521,RP0128,Blockchain for Secure Data Sharing,Conference,Non-indexed,Cybersecurity,2024,False,3
+S0528,RP0129,Generative Adversarial Networks for Data Augmentation,Other,Non-indexed,AI_ML,2024,False,1
+S0528,RP0130,Compiler Optimization Techniques,Conference,Conference,Programming,2024,True,1
+S0528,RP0131,Transformer-Based Models for Text Classification,Springer,Conference,AI_ML,2024,True,1
+S0533,RP0132,Attention Mechanisms in Computer Vision,Other,Conference,AI_ML,2023,False,1
+S0538,RP0133,Industrial IoT Predictive Maintenance,Preprint,Conference,IoT,2024,False,2
+S0539,RP0134,Agile Methodology in Software Development,UGC,Non-indexed,Management,2024,False,1
+S0539,RP0135,Progressive Web Application Performance,IEEE,Non-indexed,Web,2025,True,5
+S0540,RP0136,Agile Methodology in Software Development,IEEE,Non-indexed,Management,2025,True,3
+S0540,RP0137,Progressive Web Application Performance,Other,Q3,Web,2023,False,5
+S0555,RP0138,Zero Trust Architecture Implementation,Conference,Non-indexed,Cybersecurity,2022,True,1
+S0561,RP0139,Digital Transformation Strategies,Conference,Q3,Management,2022,True,3
+S0561,RP0140,Project Risk Assessment Framework,Conference,Non-indexed,Management,2022,True,3
+S0561,RP0141,Zero Trust Architecture Implementation,Scopus,Q2,Cybersecurity,2023,False,5
+S0561,RP0142,Web Accessibility Standards Compliance,Springer,Q2,Web,2024,True,4
+S0562,RP0143,Industrial IoT Predictive Maintenance,Scopus,Non-indexed,IoT,2025,False,4
+S0562,RP0144,Real-time Stream Processing with Apache Kafka,IEEE,Non-indexed,Data,2025,False,2
+S0569,RP0145,Deep Learning Approaches for Medical Image Analysis,Preprint,Non-indexed,AI_ML,2022,True,2
+S0571,RP0146,Container Orchestration Best Practices,Conference,Non-indexed,Cloud,2023,False,5
+S0571,RP0147,Anomaly Detection in Time Series Data,Scopus,Non-indexed,Data,2025,True,5
+S0574,RP0148,Wearable Health Device Data Analysis,Other,Non-indexed,IoT,2023,True,2
+S0574,RP0149,Blockchain for Secure Data Sharing,Scopus,Q2,Cybersecurity,2024,True,2
+S0580,RP0150,Wearable Health Device Data Analysis,Preprint,Conference,IoT,2023,False,2
+S0584,RP0151,Project Risk Assessment Framework,Preprint,Q3,Management,2025,True,4
+S0585,RP0152,Blockchain for Secure Data Sharing,Conference,Non-indexed,Cybersecurity,2024,True,1
+S0587,RP0153,Agile Methodology in Software Development,Conference,Non-indexed,Management,2025,True,5
+S0595,RP0154,Smart Agriculture Monitoring Systems,Springer,Q1,IoT,2024,False,2
+S0596,RP0155,Cloud Security Framework Design,Conference,Non-indexed,Cloud,2025,False,3
+S0598,RP0156,Wearable Health Device Data Analysis,Scopus,Non-indexed,IoT,2023,False,4
+S0598,RP0157,Vulnerability Assessment Automation,Preprint,Conference,Cybersecurity,2022,False,4
+S0602,RP0158,FPGA-Based Signal Processing,Conference,Q3,Embedded,2023,True,5
+S0605,RP0159,Wearable Health Device Data Analysis,Preprint,Q3,IoT,2025,False,4
+S0605,RP0160,Malware Detection using Deep Learning,Other,Conference,Cybersecurity,2025,False,5
+S0605,RP0161,Agile Methodology in Software Development,Springer,Q2,Management,2024,False,5
+S0612,RP0162,Generative Adversarial Networks for Data Augmentation,Conference,Conference,AI_ML,2025,False,3
+S0617,RP0163,Predictive Analytics for Customer Retention,Other,Non-indexed,Data,2023,True,4
+S0619,RP0164,Cloud Security Framework Design,Preprint,Conference,Cloud,2022,True,5
+S0619,RP0165,Web Accessibility Standards Compliance,IEEE,Q1,Web,2023,False,4
+S0619,RP0166,Edge Computing for IoT Applications,Springer,Non-indexed,Cloud,2025,False,5
+S0630,RP0167,Transformer-Based Models for Text Classification,Preprint,Non-indexed,AI_ML,2023,True,5
+S0637,RP0168,Multi-Cloud Deployment Strategies,IEEE,Q2,Cloud,2022,False,1
+S0637,RP0169,Smart Agriculture Monitoring Systems,Scopus,Q1,IoT,2025,True,1
+S0638,RP0170,Progressive Web Application Performance,Conference,Conference,Web,2024,False,4
+S0638,RP0171,Predictive Analytics for Customer Retention,Scopus,Q1,Data,2025,True,3
+S0640,RP0172,Project Risk Assessment Framework,Preprint,Conference,Management,2024,True,2
+S0649,RP0173,Real-time Operating System Scheduling,Conference,Non-indexed,Embedded,2024,False,3
+S0651,RP0174,Wearable Health Device Data Analysis,Conference,Q3,IoT,2023,True,3
+S0654,RP0175,Container Orchestration Best Practices,Conference,Conference,Cloud,2022,False,1
+S0657,RP0176,Digital Transformation Strategies,UGC,Conference,Management,2023,False,2
+S0661,RP0177,Container Orchestration Best Practices,Conference,Q3,Cloud,2024,True,2
+S0664,RP0178,Wearable Health Device Data Analysis,Preprint,Q3,IoT,2025,True,2
+S0668,RP0179,Container Orchestration Best Practices,Conference,Q3,Cloud,2023,False,2
+S0677,RP0180,Deep Learning Approaches for Medical Image Analysis,UGC,Non-indexed,AI_ML,2025,True,4
+S0680,RP0181,Blockchain for Secure Data Sharing,UGC,Non-indexed,Cybersecurity,2023,True,5
+S0683,RP0182,Project Risk Assessment Framework,Conference,Non-indexed,Management,2022,False,1
+S0684,RP0183,Zero Trust Architecture Implementation,Conference,Non-indexed,Cybersecurity,2023,True,1
+S0686,RP0184,Wearable Health Device Data Analysis,Other,Non-indexed,IoT,2023,False,4
+S0695,RP0185,Single Page Application Optimization,UGC,Conference,Web,2024,True,1
+S0695,RP0186,Data Warehouse Optimization Techniques,Scopus,Q3,Data,2024,True,5
+S0699,RP0187,Low-Power Embedded System Design,IEEE,Conference,Embedded,2025,False,2
+S0703,RP0188,Malware Detection using Deep Learning,Other,Non-indexed,Cybersecurity,2025,False,2
+S0703,RP0189,Project Risk Assessment Framework,IEEE,Non-indexed,Management,2025,True,5
+S0703,RP0190,Bias Detection and Mitigation in ML Models,Springer,Q1,AI_ML,2025,False,1
+S0712,RP0191,Project Risk Assessment Framework,Scopus,Non-indexed,Management,2025,False,4
+S0717,RP0192,Software Testing Automation Framework,Preprint,Non-indexed,Programming,2023,True,4
+S0717,RP0193,Serverless Computing Performance Analysis,Other,Non-indexed,Cloud,2024,True,1
+S0717,RP0194,Neural Architecture Search: A Survey,Springer,Q2,AI_ML,2022,False,3
+S0721,RP0195,Intrusion Detection using Machine Learning,Conference,Non-indexed,Cybersecurity,2025,False,5
+S0721,RP0196,Malware Detection using Deep Learning,Conference,Q3,Cybersecurity,2024,True,5
+S0723,RP0197,Low-Power Embedded System Design,Conference,Non-indexed,Embedded,2024,False,4
+S0723,RP0198,Multi-Cloud Deployment Strategies,Scopus,Q2,Cloud,2023,True,4
+S0723,RP0199,Predictive Analytics for Customer Retention,IEEE,Q1,Data,2023,True,3
+S0723,RP0200,IoT Sensor Network Optimization,Springer,Conference,IoT,2023,False,1
+S0736,RP0201,Compiler Optimization Techniques,Preprint,Q3,Programming,2025,False,2
+S0736,RP0202,Vulnerability Assessment Automation,Scopus,Q3,Cybersecurity,2025,True,2
+S0737,RP0203,Microservices Architecture Patterns,Other,Non-indexed,Web,2022,True,3
+S0744,RP0204,Malware Detection using Deep Learning,Conference,Non-indexed,Cybersecurity,2024,True,1
+S0744,RP0205,Predictive Analytics for Customer Retention,IEEE,Q1,Data,2025,True,3
+S0746,RP0206,Code Quality Metrics Analysis,Conference,Conference,Programming,2023,False,1
+S0747,RP0207,Deep Learning Approaches for Medical Image Analysis,Springer,Conference,AI_ML,2025,False,5
+S0748,RP0208,Blockchain for Secure Data Sharing,Springer,Q3,Cybersecurity,2024,True,4
+S0767,RP0209,Project Risk Assessment Framework,IEEE,Q2,Management,2022,True,3
+S0773,RP0210,IoT Sensor Network Optimization,Other,Non-indexed,IoT,2025,True,1
+S0773,RP0211,Data Warehouse Optimization Techniques,Springer,Conference,Data,2022,True,4
+S0779,RP0212,IoT Sensor Network Optimization,Preprint,Non-indexed,IoT,2024,True,1
+S0780,RP0213,Serverless Computing Performance Analysis,Conference,Non-indexed,Cloud,2022,True,1
+S0782,RP0214,Industrial IoT Predictive Maintenance,Conference,Conference,IoT,2022,True,3
+S0784,RP0215,Multi-Cloud Deployment Strategies,Conference,Conference,Cloud,2024,True,3
+S0784,RP0216,Container Orchestration Best Practices,IEEE,Q3,Cloud,2023,True,2
+S0784,RP0217,Web Accessibility Standards Compliance,Scopus,Q2,Web,2024,True,1
+S0784,RP0218,Real-time Operating System Scheduling,Preprint,Non-indexed,Embedded,2025,True,2
+S0788,RP0219,Bias Detection and Mitigation in ML Models,Conference,Conference,AI_ML,2025,False,5
+S0796,RP0220,Single Page Application Optimization,IEEE,Conference,Web,2023,False,3
+S0798,RP0221,Blockchain for Secure Data Sharing,Other,Non-indexed,Cybersecurity,2024,False,5
