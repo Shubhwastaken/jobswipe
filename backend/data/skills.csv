@@ -1,0 +1,3055 @@
+student_id,skill_name,proficiency,verified
+S0001,OpenCV,Advanced,True
+S0001,Deep Learning,Intermediate,False
+S0001,C,Advanced,True
+S0001,R,Intermediate,False
+S0002,Computer Vision,Intermediate,True
+S0002,MS Office,Beginner,False
+S0002,Keras,Beginner,False
+S0002,C,Advanced,True
+S0002,GCP,Intermediate,False
+S0003,PHP,Intermediate,False
+S0003,NLTK,Beginner,False
+S0003,CI/CD,Advanced,True
+S0004,OpenCV,Intermediate,True
+S0004,C,Beginner,False
+S0004,GCP,Intermediate,True
+S0005,C,Beginner,False
+S0005,RTOS,Beginner,True
+S0005,PCB Design,Advanced,True
+S0005,Arduino,Intermediate,True
+S0005,Embedded C,Beginner,False
+S0006,TypeScript,Intermediate,False
+S0006,AWS,Beginner,False
+S0006,Ethical Hacking,Intermediate,False
+S0007,Next.js,Intermediate,False
+S0007,TypeScript,Intermediate,False
+S0007,C++,Advanced,True
+S0008,Computer Vision,Beginner,False
+S0008,Docker,Advanced,True
+S0008,Go,Advanced,True
+S0009,Rust,Intermediate,False
+S0009,Swift,Intermediate,False
+S0009,GraphQL,Beginner,False
+S0009,Flask,Beginner,False
+S0010,MS Office,Intermediate,False
+S0010,Python,Intermediate,False
+S0010,Jenkins,Intermediate,True
+S0011,C++,Intermediate,True
+S0011,Leadership,Beginner,False
+S0011,Arduino,Advanced,True
+S0011,RTOS,Intermediate,True
+S0012,Ethical Hacking,Advanced,True
+S0012,GCP,Intermediate,True
+S0012,Leadership,Beginner,False
+S0013,Vue.js,Advanced,True
+S0013,Embedded C,Advanced,False
+S0013,NLP,Beginner,False
+S0014,Git,Intermediate,False
+S0014,Hadoop,Intermediate,True
+S0014,VHDL,Beginner,False
+S0015,JavaScript,Advanced,True
+S0015,NLP,Intermediate,True
+S0015,NLTK,Advanced,True
+S0015,Docker,Advanced,True
+S0016,JIRA,Intermediate,True
+S0016,Verilog,Intermediate,True
+S0016,Jenkins,Beginner,False
+S0017,HTML/CSS,Intermediate,True
+S0017,Scikit-learn,Beginner,False
+S0017,Keras,Beginner,False
+S0017,Hadoop,Beginner,False
+S0018,NLP,Intermediate,True
+S0018,Scrum,Beginner,False
+S0018,Penetration Testing,Advanced,True
+S0018,C++,Beginner,False
+S0019,Azure,Beginner,False
+S0019,AWS,Beginner,False
+S0019,Scikit-learn,Intermediate,True
+S0019,Hadoop,Advanced,False
+S0019,Scala,Beginner,False
+S0019,TypeScript,Intermediate,False
+S0019,GCP,Beginner,False
+S0020,C++,Intermediate,True
+S0020,Next.js,Advanced,True
+S0021,Ethical Hacking,Intermediate,False
+S0021,Go,Beginner,False
+S0021,JIRA,Intermediate,True
+S0021,Hugging Face,Intermediate,False
+S0022,Linux,Advanced,True
+S0022,React,Intermediate,True
+S0022,TypeScript,Beginner,False
+S0022,Node.js,Advanced,False
+S0023,Next.js,Advanced,False
+S0023,C++,Advanced,True
+S0023,Vue.js,Intermediate,False
+S0024,Kotlin,Beginner,False
+S0024,MATLAB,Intermediate,False
+S0024,Verilog,Advanced,False
+S0024,PyTorch,Intermediate,True
+S0024,Rust,Intermediate,True
+S0025,REST APIs,Advanced,True
+S0025,Docker,Intermediate,False
+S0025,Tableau,Advanced,True
+S0025,MongoDB,Advanced,True
+S0026,C++,Advanced,False
+S0026,PHP,Intermediate,True
+S0026,Kubernetes,Beginner,False
+S0027,HTML/CSS,Intermediate,True
+S0027,PHP,Beginner,False
+S0027,Ruby,Beginner,False
+S0027,C++,Advanced,True
+S0028,GitHub Actions,Advanced,True
+S0028,Angular,Advanced,False
+S0028,AWS,Beginner,False
+S0028,Communication,Advanced,True
+S0028,TypeScript,Beginner,False
+S0028,R,Beginner,False
+S0028,JavaScript,Intermediate,True
+S0029,Bootstrap,Intermediate,False
+S0029,Java,Intermediate,False
+S0029,Kubernetes,Intermediate,False
+S0029,JIRA,Advanced,True
+S0030,C++,Intermediate,True
+S0030,Keras,Beginner,False
+S0030,Git,Advanced,True
+S0031,Scala,Intermediate,True
+S0031,Computer Vision,Intermediate,True
+S0031,GCP,Beginner,False
+S0031,Git,Advanced,True
+S0031,Deep Learning,Beginner,False
+S0032,SIEM,Beginner,False
+S0032,MLflow,Beginner,False
+S0032,Embedded C,Advanced,True
+S0033,SIEM,Intermediate,True
+S0033,Django,Intermediate,False
+S0033,SQL,Advanced,True
+S0033,Next.js,Beginner,True
+S0033,Redis,Intermediate,False
+S0034,MLflow,Intermediate,True
+S0034,PCB Design,Advanced,True
+S0034,Embedded C,Intermediate,False
+S0034,MySQL,Advanced,True
+S0035,PHP,Beginner,False
+S0035,Tableau,Advanced,False
+S0035,Kotlin,Beginner,False
+S0035,OpenCV,Intermediate,True
+S0036,Django,Advanced,False
+S0036,PCB Design,Intermediate,True
+S0037,Vue.js,Intermediate,False
+S0037,Kubernetes,Intermediate,True
+S0037,JavaScript,Intermediate,False
+S0037,PostgreSQL,Intermediate,True
+S0038,Git,Advanced,False
+S0039,Cryptography,Advanced,False
+S0039,Hadoop,Advanced,False
+S0039,GitHub Actions,Intermediate,True
+S0039,PyTorch,Intermediate,False
+S0039,Jenkins,Advanced,True
+S0040,PCB Design,Intermediate,False
+S0040,SIEM,Intermediate,False
+S0040,Kotlin,Advanced,True
+S0040,Network Security,Beginner,False
+S0041,Linux,Advanced,True
+S0041,Go,Advanced,True
+S0041,Azure,Advanced,True
+S0041,REST APIs,Intermediate,False
+S0042,RTOS,Intermediate,True
+S0042,Penetration Testing,Intermediate,False
+S0042,Arduino,Intermediate,False
+S0042,VHDL,Intermediate,False
+S0043,VHDL,Intermediate,False
+S0043,Communication,Intermediate,False
+S0043,Raspberry Pi,Advanced,True
+S0043,Verilog,Advanced,True
+S0043,Java,Beginner,True
+S0044,Apache Spark,Beginner,False
+S0044,Pandas,Advanced,False
+S0044,MLflow,Beginner,False
+S0044,Embedded C,Intermediate,True
+S0044,Kotlin,Beginner,False
+S0044,Tableau,Beginner,False
+S0044,Excel,Intermediate,False
+S0045,TensorFlow,Intermediate,False
+S0045,Vue.js,Beginner,False
+S0046,SIEM,Beginner,True
+S0047,Network Security,Advanced,True
+S0047,Raspberry Pi,Beginner,False
+S0048,GCP,Advanced,True
+S0048,Arduino,Advanced,True
+S0048,Scala,Beginner,False
+S0048,Go,Intermediate,False
+S0049,OpenCV,Beginner,False
+S0049,MySQL,Intermediate,True
+S0049,Deep Learning,Advanced,True
+S0049,Redis,Beginner,True
+S0049,GitHub Actions,Beginner,False
+S0050,MLflow,Advanced,False
+S0050,NLTK,Intermediate,False
+S0050,Jenkins,Advanced,False
+S0050,Keras,Beginner,False
+S0051,Tableau,Advanced,False
+S0052,R,Intermediate,False
+S0052,Elasticsearch,Beginner,False
+S0052,RTOS,Intermediate,True
+S0053,Docker,Advanced,False
+S0053,PostgreSQL,Advanced,False
+S0053,Go,Intermediate,False
+S0054,Scikit-learn,Advanced,True
+S0054,SpaCy,Intermediate,True
+S0054,Terraform,Advanced,True
+S0054,Git,Intermediate,False
+S0054,Linux,Intermediate,False
+S0055,MongoDB,Intermediate,True
+S0055,Scala,Intermediate,False
+S0055,PyTorch,Beginner,False
+S0055,Java,Intermediate,True
+S0056,Git,Advanced,False
+S0056,Swift,Advanced,False
+S0056,Penetration Testing,Beginner,False
+S0056,Redis,Intermediate,True
+S0056,Express,Beginner,True
+S0057,Agile,Advanced,True
+S0057,Swift,Intermediate,False
+S0057,Leadership,Intermediate,True
+S0057,Embedded C,Beginner,False
+S0057,Scala,Advanced,False
+S0057,Communication,Intermediate,True
+S0058,HTML/CSS,Beginner,True
+S0058,Elasticsearch,Intermediate,True
+S0058,Network Security,Beginner,False
+S0058,TypeScript,Intermediate,True
+S0059,Linux,Intermediate,True
+S0059,VHDL,Intermediate,False
+S0059,C++,Advanced,True
+S0059,Azure,Advanced,False
+S0059,RTOS,Advanced,False
+S0060,Terraform,Intermediate,False
+S0060,C,Intermediate,False
+S0060,Network Security,Intermediate,False
+S0060,NLTK,Advanced,True
+S0061,Verilog,Advanced,False
+S0061,Raspberry Pi,Beginner,True
+S0061,Terraform,Advanced,True
+S0061,Kubernetes,Intermediate,False
+S0061,AWS,Beginner,False
+S0062,R,Intermediate,True
+S0062,PCB Design,Beginner,False
+S0062,Tableau,Intermediate,False
+S0063,Power BI,Beginner,True
+S0063,Azure,Advanced,True
+S0064,Penetration Testing,Intermediate,False
+S0064,React,Beginner,False
+S0064,Kotlin,Intermediate,True
+S0065,Agile,Intermediate,False
+S0065,OpenCV,Advanced,True
+S0065,SQL,Intermediate,False
+S0065,Project Management,Advanced,True
+S0066,Project Management,Beginner,True
+S0066,Agile,Intermediate,False
+S0066,JavaScript,Intermediate,True
+S0066,Go,Beginner,False
+S0067,C,Advanced,True
+S0067,Swift,Intermediate,False
+S0067,Penetration Testing,Intermediate,False
+S0068,Scrum,Intermediate,True
+S0068,PHP,Intermediate,False
+S0068,Agile,Intermediate,False
+S0068,Raspberry Pi,Beginner,False
+S0069,Spring Boot,Intermediate,False
+S0069,Next.js,Intermediate,False
+S0070,PHP,Intermediate,True
+S0070,Terraform,Intermediate,False
+S0070,Docker,Beginner,False
+S0070,Linux,Advanced,True
+S0071,Cryptography,Beginner,False
+S0071,Elasticsearch,Beginner,False
+S0071,Ruby,Beginner,False
+S0072,MATLAB,Beginner,False
+S0072,C++,Intermediate,False
+S0072,PyTorch,Intermediate,True
+S0073,Embedded C,Advanced,True
+S0073,Express,Advanced,True
+S0073,Project Management,Beginner,False
+S0073,VHDL,Beginner,False
+S0073,MS Office,Beginner,False
+S0074,Pandas,Beginner,False
+S0075,Linux,Advanced,False
+S0076,Java,Advanced,True
+S0076,Hadoop,Beginner,False
+S0076,JIRA,Intermediate,False
+S0077,RTOS,Intermediate,False
+S0077,Arduino,Intermediate,False
+S0077,Raspberry Pi,Intermediate,True
+S0077,MATLAB,Advanced,False
+S0078,R,Beginner,False
+S0078,Arduino,Beginner,False
+S0078,Azure,Advanced,True
+S0079,SQL,Advanced,True
+S0079,Terraform,Intermediate,False
+S0079,GitHub Actions,Beginner,False
+S0079,PyTorch,Beginner,False
+S0080,Java,Intermediate,True
+S0080,Power BI,Intermediate,True
+S0080,Redis,Advanced,True
+S0081,Verilog,Beginner,False
+S0081,VHDL,Intermediate,False
+S0081,Kotlin,Intermediate,False
+S0082,MongoDB,Intermediate,True
+S0082,Git,Beginner,False
+S0082,R,Advanced,True
+S0082,Terraform,Intermediate,True
+S0082,Azure,Beginner,False
+S0083,NumPy,Advanced,True
+S0084,RTOS,Intermediate,False
+S0084,SpaCy,Intermediate,True
+S0084,Bootstrap,Advanced,True
+S0085,MLflow,Beginner,False
+S0085,Deep Learning,Advanced,True
+S0086,Ethical Hacking,Intermediate,False
+S0086,RTOS,Beginner,False
+S0086,Python,Intermediate,False
+S0087,Scrum,Beginner,True
+S0087,Elasticsearch,Beginner,True
+S0087,Python,Advanced,True
+S0088,VHDL,Advanced,False
+S0088,Embedded C,Intermediate,True
+S0089,Tableau,Beginner,False
+S0089,Apache Spark,Beginner,False
+S0089,C,Beginner,False
+S0089,GCP,Intermediate,False
+S0089,Excel,Advanced,True
+S0090,NumPy,Beginner,False
+S0090,Keras,Advanced,True
+S0090,Redis,Advanced,True
+S0091,Computer Vision,Intermediate,True
+S0091,MLflow,Intermediate,False
+S0091,Excel,Advanced,True
+S0091,Project Management,Beginner,False
+S0092,Computer Vision,Beginner,False
+S0092,REST APIs,Intermediate,True
+S0092,PCB Design,Beginner,False
+S0092,AWS,Intermediate,False
+S0093,SQL,Intermediate,False
+S0093,Next.js,Beginner,False
+S0094,Raspberry Pi,Advanced,True
+S0094,Java,Intermediate,False
+S0094,Firewall Management,Advanced,True
+S0095,Firewall Management,Beginner,False
+S0095,C++,Intermediate,False
+S0096,Redis,Beginner,False
+S0096,Kubernetes,Advanced,True
+S0096,Keras,Beginner,False
+S0096,TypeScript,Advanced,True
+S0097,Docker,Intermediate,True
+S0097,Swift,Intermediate,False
+S0098,Ruby,Beginner,False
+S0098,React,Intermediate,True
+S0098,Jenkins,Intermediate,False
+S0098,Azure,Advanced,True
+S0098,Verilog,Intermediate,True
+S0098,Vue.js,Beginner,True
+S0098,Git,Intermediate,False
+S0099,Kotlin,Intermediate,False
+S0099,Arduino,Intermediate,True
+S0099,Linux,Beginner,False
+S0100,JIRA,Advanced,False
+S0100,C++,Intermediate,True
+S0100,MongoDB,Intermediate,False
+S0101,Git,Beginner,False
+S0101,Vue.js,Beginner,False
+S0101,MLflow,Advanced,True
+S0101,Azure,Intermediate,False
+S0102,MySQL,Intermediate,False
+S0102,Raspberry Pi,Intermediate,True
+S0103,Leadership,Beginner,True
+S0103,MS Office,Advanced,False
+S0104,Scrum,Intermediate,False
+S0104,JIRA,Intermediate,True
+S0104,GCP,Advanced,True
+S0105,Next.js,Beginner,True
+S0105,Flask,Intermediate,False
+S0105,Keras,Intermediate,True
+S0105,GraphQL,Advanced,False
+S0106,Spring Boot,Intermediate,True
+S0106,AWS,Intermediate,True
+S0106,Raspberry Pi,Beginner,False
+S0106,Embedded C,Beginner,True
+S0106,Go,Intermediate,False
+S0106,RTOS,Intermediate,False
+S0107,PCB Design,Advanced,True
+S0107,GitHub Actions,Advanced,True
+S0107,Jenkins,Advanced,True
+S0107,PostgreSQL,Intermediate,False
+S0107,C++,Beginner,False
+S0107,Redis,Intermediate,False
+S0108,AWS,Beginner,True
+S0108,SIEM,Intermediate,False
+S0108,Azure,Intermediate,False
+S0109,Go,Intermediate,False
+S0109,Azure,Beginner,True
+S0109,GCP,Beginner,False
+S0110,Leadership,Advanced,True
+S0110,Arduino,Beginner,False
+S0110,MS Office,Beginner,False
+S0111,Node.js,Beginner,False
+S0111,Docker,Beginner,False
+S0111,Computer Vision,Intermediate,True
+S0111,NumPy,Advanced,True
+S0111,CI/CD,Beginner,False
+S0111,Embedded C,Advanced,False
+S0112,Ruby,Intermediate,True
+S0112,PostgreSQL,Intermediate,True
+S0112,PCB Design,Advanced,True
+S0112,Rust,Beginner,False
+S0113,SpaCy,Intermediate,False
+S0113,Hadoop,Intermediate,True
+S0113,Elasticsearch,Advanced,True
+S0113,MLflow,Intermediate,False
+S0114,TypeScript,Beginner,False
+S0115,Jenkins,Intermediate,False
+S0115,HTML/CSS,Beginner,False
+S0115,Java,Intermediate,False
+S0115,Keras,Beginner,False
+S0115,Vue.js,Advanced,True
+S0115,Communication,Advanced,False
+S0116,Jenkins,Intermediate,False
+S0116,Communication,Intermediate,False
+S0116,JIRA,Intermediate,False
+S0116,Docker,Intermediate,True
+S0116,Kotlin,Intermediate,False
+S0116,C,Intermediate,True
+S0117,Network Security,Intermediate,True
+S0117,PCB Design,Advanced,True
+S0117,Penetration Testing,Advanced,True
+S0117,C,Advanced,True
+S0118,PCB Design,Intermediate,True
+S0118,JIRA,Intermediate,True
+S0118,Embedded C,Beginner,False
+S0118,JavaScript,Intermediate,False
+S0118,Scrum,Advanced,True
+S0118,Next.js,Advanced,True
+S0119,PHP,Beginner,False
+S0119,Excel,Intermediate,False
+S0119,MLflow,Beginner,True
+S0119,Scala,Advanced,True
+S0120,PHP,Intermediate,False
+S0120,C++,Beginner,False
+S0120,RTOS,Intermediate,True
+S0120,Raspberry Pi,Beginner,False
+S0121,SQL,Beginner,False
+S0122,Docker,Intermediate,False
+S0123,Network Security,Intermediate,False
+S0123,GCP,Advanced,True
+S0123,SQL,Beginner,True
+S0123,Penetration Testing,Beginner,False
+S0124,Project Management,Beginner,False
+S0124,JavaScript,Beginner,True
+S0124,Java,Intermediate,True
+S0124,C,Intermediate,False
+S0125,AWS,Beginner,False
+S0125,Linux,Intermediate,False
+S0125,Spring Boot,Advanced,False
+S0126,JIRA,Beginner,False
+S0126,SQL,Beginner,False
+S0126,Go,Beginner,False
+S0127,MS Office,Beginner,False
+S0128,TypeScript,Beginner,False
+S0128,SQL,Advanced,False
+S0128,Penetration Testing,Beginner,False
+S0128,PyTorch,Intermediate,True
+S0128,Tableau,Advanced,False
+S0128,Java,Intermediate,False
+S0128,SpaCy,Advanced,True
+S0129,HTML/CSS,Beginner,False
+S0129,REST APIs,Intermediate,True
+S0129,Kotlin,Advanced,True
+S0129,AWS,Intermediate,True
+S0129,GCP,Advanced,True
+S0130,Project Management,Advanced,True
+S0131,Excel,Intermediate,False
+S0131,Hugging Face,Advanced,True
+S0131,Cryptography,Intermediate,False
+S0132,NumPy,Intermediate,True
+S0132,TensorFlow,Beginner,False
+S0132,NLTK,Beginner,False
+S0132,Elasticsearch,Beginner,False
+S0133,Go,Advanced,False
+S0133,Docker,Intermediate,True
+S0133,PyTorch,Advanced,True
+S0133,GCP,Advanced,False
+S0134,RTOS,Advanced,True
+S0134,Firewall Management,Advanced,True
+S0134,Ruby,Beginner,False
+S0135,Scikit-learn,Advanced,True
+S0135,Azure,Intermediate,False
+S0135,PostgreSQL,Advanced,True
+S0136,PHP,Beginner,True
+S0137,Computer Vision,Intermediate,False
+S0137,MongoDB,Beginner,False
+S0137,PHP,Advanced,False
+S0138,MySQL,Intermediate,False
+S0138,GCP,Intermediate,False
+S0139,GitHub Actions,Intermediate,False
+S0139,Ethical Hacking,Intermediate,False
+S0139,NumPy,Intermediate,False
+S0139,MS Office,Intermediate,False
+S0139,PCB Design,Advanced,True
+S0140,Scala,Intermediate,True
+S0140,Raspberry Pi,Advanced,True
+S0140,Keras,Intermediate,True
+S0141,AWS,Advanced,True
+S0141,GitHub Actions,Advanced,True
+S0141,Elasticsearch,Intermediate,True
+S0141,Docker,Beginner,False
+S0142,Scrum,Beginner,False
+S0142,Leadership,Beginner,False
+S0142,Arduino,Intermediate,True
+S0143,Elasticsearch,Beginner,False
+S0143,JavaScript,Intermediate,False
+S0143,MySQL,Beginner,False
+S0143,Hadoop,Advanced,True
+S0144,Scikit-learn,Beginner,False
+S0144,REST APIs,Intermediate,False
+S0144,Node.js,Intermediate,False
+S0144,Tableau,Advanced,True
+S0144,Angular,Intermediate,False
+S0145,JavaScript,Intermediate,True
+S0145,Embedded C,Intermediate,False
+S0145,Verilog,Intermediate,False
+S0145,C,Intermediate,True
+S0145,Jenkins,Beginner,False
+S0146,Scrum,Advanced,True
+S0146,Kotlin,Beginner,False
+S0146,Git,Beginner,False
+S0146,Python,Beginner,False
+S0146,SQL,Intermediate,True
+S0147,NLP,Advanced,False
+S0147,JIRA,Intermediate,False
+S0147,Deep Learning,Beginner,False
+S0147,Apache Spark,Intermediate,True
+S0147,MLflow,Intermediate,False
+S0147,SQL,Advanced,True
+S0148,AWS,Intermediate,False
+S0149,Firewall Management,Intermediate,False
+S0149,GraphQL,Intermediate,True
+S0149,PCB Design,Advanced,True
+S0149,Cryptography,Advanced,True
+S0150,Docker,Advanced,True
+S0150,Kotlin,Advanced,False
+S0150,Azure,Intermediate,False
+S0150,Verilog,Intermediate,True
+S0151,Power BI,Intermediate,False
+S0151,Kotlin,Advanced,False
+S0151,SIEM,Intermediate,False
+S0151,MATLAB,Intermediate,True
+S0151,MySQL,Advanced,True
+S0152,TypeScript,Beginner,False
+S0152,C++,Beginner,False
+S0153,R,Beginner,False
+S0153,Docker,Intermediate,True
+S0153,Linux,Intermediate,False
+S0154,JavaScript,Beginner,False
+S0154,PCB Design,Beginner,False
+S0154,MATLAB,Intermediate,True
+S0154,Verilog,Advanced,True
+S0155,PCB Design,Intermediate,True
+S0155,JIRA,Intermediate,True
+S0155,R,Intermediate,False
+S0156,Apache Spark,Intermediate,False
+S0156,PCB Design,Intermediate,False
+S0156,Raspberry Pi,Intermediate,True
+S0157,Kotlin,Intermediate,True
+S0157,VHDL,Beginner,False
+S0157,Cryptography,Advanced,False
+S0157,Raspberry Pi,Intermediate,False
+S0157,SQL,Beginner,False
+S0158,Scrum,Beginner,False
+S0158,Apache Spark,Intermediate,False
+S0158,Kotlin,Beginner,True
+S0158,MS Office,Intermediate,False
+S0158,JIRA,Beginner,False
+S0158,C,Intermediate,False
+S0158,HTML/CSS,Beginner,False
+S0159,PostgreSQL,Beginner,False
+S0159,Redis,Intermediate,False
+S0159,Docker,Intermediate,False
+S0159,Flask,Intermediate,False
+S0159,NumPy,Advanced,True
+S0160,Terraform,Intermediate,True
+S0160,CI/CD,Intermediate,True
+S0160,C,Intermediate,True
+S0160,PCB Design,Intermediate,True
+S0160,Excel,Advanced,True
+S0161,Jenkins,Intermediate,True
+S0161,MySQL,Advanced,True
+S0161,TypeScript,Beginner,False
+S0161,Spring Boot,Intermediate,True
+S0162,GitHub Actions,Beginner,True
+S0162,Linux,Beginner,False
+S0162,C++,Intermediate,True
+S0162,Kubernetes,Advanced,True
+S0162,PHP,Advanced,False
+S0162,R,Beginner,False
+S0162,Embedded C,Beginner,False
+S0163,C,Beginner,False
+S0163,GitHub Actions,Advanced,False
+S0163,SIEM,Intermediate,True
+S0164,SpaCy,Intermediate,True
+S0164,CI/CD,Intermediate,False
+S0164,React,Intermediate,False
+S0165,PyTorch,Beginner,False
+S0165,GCP,Advanced,True
+S0165,Docker,Intermediate,True
+S0165,Apache Spark,Intermediate,False
+S0166,Rust,Intermediate,False
+S0167,Spring Boot,Advanced,False
+S0167,JavaScript,Advanced,True
+S0167,CI/CD,Intermediate,False
+S0167,C++,Intermediate,False
+S0167,Go,Beginner,True
+S0168,Penetration Testing,Beginner,False
+S0168,C,Intermediate,True
+S0169,MySQL,Intermediate,True
+S0169,Apache Spark,Advanced,False
+S0169,Redis,Beginner,False
+S0169,Swift,Beginner,False
+S0170,CI/CD,Intermediate,True
+S0170,PHP,Intermediate,False
+S0170,C,Advanced,True
+S0170,JavaScript,Intermediate,False
+S0170,Verilog,Beginner,False
+S0171,Keras,Intermediate,True
+S0171,GitHub Actions,Intermediate,False
+S0171,GCP,Advanced,True
+S0171,Scikit-learn,Beginner,False
+S0171,Deep Learning,Intermediate,False
+S0172,Scrum,Intermediate,False
+S0172,Agile,Advanced,True
+S0172,Excel,Intermediate,False
+S0172,Ruby,Intermediate,False
+S0172,Scala,Beginner,False
+S0173,Elasticsearch,Intermediate,False
+S0173,Excel,Intermediate,True
+S0173,Raspberry Pi,Intermediate,True
+S0173,Jenkins,Advanced,True
+S0173,C,Advanced,True
+S0173,Kubernetes,Advanced,False
+S0173,Leadership,Beginner,False
+S0174,JIRA,Advanced,True
+S0174,Java,Advanced,True
+S0174,GitHub Actions,Beginner,False
+S0175,Kotlin,Intermediate,True
+S0175,Arduino,Advanced,True
+S0175,VHDL,Intermediate,False
+S0175,Swift,Advanced,True
+S0176,Computer Vision,Beginner,False
+S0176,Spring Boot,Beginner,False
+S0176,Jenkins,Beginner,False
+S0176,Kotlin,Intermediate,True
+S0176,Rust,Advanced,True
+S0177,JIRA,Beginner,False
+S0177,Verilog,Advanced,True
+S0177,Project Management,Intermediate,False
+S0177,Scrum,Intermediate,False
+S0178,Arduino,Advanced,False
+S0178,AWS,Beginner,True
+S0178,Azure,Beginner,True
+S0178,CI/CD,Beginner,False
+S0178,Agile,Beginner,True
+S0179,NLTK,Beginner,False
+S0179,RTOS,Beginner,False
+S0179,TensorFlow,Intermediate,False
+S0179,Java,Advanced,True
+S0180,Power BI,Intermediate,False
+S0180,Express,Intermediate,False
+S0180,Kubernetes,Beginner,False
+S0181,Computer Vision,Advanced,False
+S0181,MongoDB,Intermediate,False
+S0181,Django,Intermediate,True
+S0181,Rust,Intermediate,True
+S0181,Redis,Beginner,False
+S0182,Scala,Beginner,False
+S0182,PyTorch,Advanced,True
+S0182,Ethical Hacking,Beginner,False
+S0182,Scikit-learn,Beginner,False
+S0182,Swift,Beginner,True
+S0183,Scrum,Beginner,False
+S0183,Raspberry Pi,Beginner,False
+S0183,Arduino,Beginner,False
+S0184,Cryptography,Intermediate,False
+S0184,Redis,Advanced,False
+S0184,Hadoop,Intermediate,True
+S0184,TensorFlow,Advanced,True
+S0185,Hugging Face,Advanced,True
+S0185,HTML/CSS,Beginner,False
+S0185,TensorFlow,Advanced,True
+S0185,Power BI,Advanced,False
+S0185,Java,Advanced,True
+S0185,SIEM,Advanced,True
+S0186,RTOS,Intermediate,False
+S0186,GraphQL,Intermediate,False
+S0186,Kubernetes,Intermediate,False
+S0186,Embedded C,Beginner,False
+S0186,Bootstrap,Advanced,False
+S0186,Arduino,Advanced,True
+S0187,Vue.js,Intermediate,True
+S0187,React,Beginner,False
+S0187,MATLAB,Intermediate,True
+S0188,NumPy,Advanced,True
+S0188,GraphQL,Intermediate,False
+S0188,MLflow,Intermediate,True
+S0188,Jenkins,Intermediate,True
+S0188,Bootstrap,Beginner,True
+S0188,Apache Spark,Advanced,True
+S0189,PostgreSQL,Intermediate,True
+S0189,MS Office,Advanced,False
+S0189,Tableau,Intermediate,True
+S0189,Communication,Intermediate,True
+S0190,RTOS,Intermediate,False
+S0190,JIRA,Intermediate,False
+S0190,Raspberry Pi,Intermediate,False
+S0191,JIRA,Intermediate,False
+S0191,Arduino,Intermediate,False
+S0191,Keras,Intermediate,False
+S0192,Git,Intermediate,False
+S0192,Excel,Intermediate,False
+S0192,NumPy,Intermediate,False
+S0193,SIEM,Beginner,False
+S0193,Apache Spark,Intermediate,True
+S0194,OpenCV,Advanced,False
+S0194,Terraform,Beginner,False
+S0194,Penetration Testing,Intermediate,True
+S0194,Power BI,Intermediate,False
+S0194,Keras,Advanced,True
+S0195,Swift,Intermediate,False
+S0195,PyTorch,Intermediate,False
+S0196,Terraform,Intermediate,True
+S0196,PHP,Advanced,True
+S0197,JIRA,Beginner,False
+S0197,MS Office,Advanced,True
+S0198,MySQL,Intermediate,False
+S0198,Python,Beginner,False
+S0198,Django,Intermediate,False
+S0198,Deep Learning,Intermediate,False
+S0198,SIEM,Advanced,False
+S0198,Swift,Advanced,True
+S0199,Java,Intermediate,True
+S0199,Tableau,Intermediate,False
+S0199,TypeScript,Advanced,True
+S0200,Git,Advanced,True
+S0200,Jenkins,Beginner,False
+S0200,VHDL,Intermediate,False
+S0200,PyTorch,Intermediate,False
+S0200,Scala,Beginner,True
+S0200,RTOS,Beginner,True
+S0201,Keras,Intermediate,False
+S0201,NLP,Advanced,True
+S0201,Linux,Intermediate,True
+S0201,JIRA,Intermediate,True
+S0202,Spring Boot,Intermediate,False
+S0202,Firewall Management,Beginner,False
+S0202,NLP,Beginner,False
+S0202,Jenkins,Advanced,True
+S0203,Next.js,Intermediate,False
+S0203,Azure,Beginner,False
+S0203,MS Office,Beginner,False
+S0203,GCP,Intermediate,True
+S0204,Excel,Intermediate,False
+S0204,Firewall Management,Intermediate,False
+S0204,Power BI,Intermediate,True
+S0205,Azure,Intermediate,False
+S0205,Express,Intermediate,False
+S0206,PyTorch,Intermediate,False
+S0206,Pandas,Advanced,True
+S0206,Scikit-learn,Intermediate,False
+S0207,JIRA,Intermediate,False
+S0207,Rust,Intermediate,False
+S0207,MLflow,Beginner,False
+S0207,Kubernetes,Advanced,True
+S0208,Azure,Beginner,False
+S0208,Raspberry Pi,Advanced,True
+S0208,PHP,Intermediate,False
+S0208,Power BI,Beginner,False
+S0209,Linux,Intermediate,True
+S0209,NumPy,Beginner,True
+S0210,NumPy,Beginner,False
+S0210,SQL,Intermediate,True
+S0210,Scikit-learn,Advanced,True
+S0210,Agile,Intermediate,True
+S0211,GitHub Actions,Intermediate,True
+S0211,Embedded C,Beginner,False
+S0211,Terraform,Intermediate,False
+S0211,MLflow,Beginner,False
+S0211,PHP,Advanced,True
+S0212,Python,Advanced,False
+S0212,Elasticsearch,Beginner,False
+S0212,TensorFlow,Intermediate,True
+S0212,Leadership,Intermediate,True
+S0212,R,Intermediate,False
+S0213,Ruby,Advanced,True
+S0213,Git,Intermediate,False
+S0213,Terraform,Beginner,False
+S0213,TensorFlow,Intermediate,False
+S0214,React,Advanced,True
+S0214,C++,Intermediate,True
+S0214,Hugging Face,Intermediate,True
+S0214,Apache Spark,Intermediate,False
+S0215,OpenCV,Intermediate,True
+S0216,Apache Spark,Advanced,True
+S0216,Linux,Intermediate,False
+S0216,Java,Advanced,True
+S0216,Jenkins,Intermediate,True
+S0216,TypeScript,Beginner,False
+S0217,React,Beginner,False
+S0217,NumPy,Beginner,False
+S0217,PCB Design,Intermediate,True
+S0218,PHP,Beginner,False
+S0218,TypeScript,Intermediate,False
+S0218,Firewall Management,Beginner,False
+S0218,React,Advanced,False
+S0219,Hugging Face,Intermediate,False
+S0219,Penetration Testing,Advanced,True
+S0219,Power BI,Intermediate,False
+S0219,JavaScript,Beginner,False
+S0220,Agile,Beginner,False
+S0220,C,Intermediate,False
+S0221,Git,Beginner,False
+S0221,Pandas,Intermediate,True
+S0221,PyTorch,Intermediate,False
+S0221,Docker,Beginner,False
+S0222,R,Advanced,True
+S0222,Scrum,Intermediate,True
+S0222,Jenkins,Intermediate,False
+S0223,Node.js,Intermediate,False
+S0223,GCP,Intermediate,False
+S0224,MySQL,Intermediate,True
+S0224,Angular,Beginner,False
+S0225,MongoDB,Beginner,False
+S0225,C++,Beginner,True
+S0226,Arduino,Advanced,True
+S0227,Scala,Intermediate,False
+S0227,Django,Intermediate,True
+S0227,Jenkins,Intermediate,False
+S0227,GCP,Intermediate,True
+S0227,MLflow,Intermediate,True
+S0227,React,Advanced,True
+S0228,Hadoop,Intermediate,False
+S0228,MS Office,Intermediate,True
+S0229,PostgreSQL,Beginner,False
+S0229,Git,Beginner,False
+S0229,Kotlin,Intermediate,False
+S0230,JavaScript,Beginner,False
+S0230,AWS,Beginner,False
+S0230,PyTorch,Intermediate,False
+S0230,Hugging Face,Intermediate,True
+S0230,Excel,Advanced,True
+S0231,MS Office,Advanced,False
+S0231,Agile,Advanced,False
+S0231,Kotlin,Intermediate,True
+S0231,Scrum,Intermediate,True
+S0231,Python,Advanced,False
+S0232,Linux,Advanced,True
+S0233,PostgreSQL,Intermediate,True
+S0234,Linux,Beginner,False
+S0234,Django,Advanced,True
+S0234,Kubernetes,Intermediate,False
+S0235,NumPy,Advanced,False
+S0235,PyTorch,Beginner,True
+S0236,Scikit-learn,Intermediate,False
+S0236,Linux,Advanced,True
+S0236,NLP,Advanced,True
+S0236,Kotlin,Intermediate,False
+S0236,SIEM,Advanced,False
+S0237,PostgreSQL,Beginner,False
+S0237,Python,Intermediate,False
+S0238,Scala,Advanced,False
+S0238,VHDL,Beginner,False
+S0238,MATLAB,Intermediate,False
+S0238,Verilog,Beginner,False
+S0238,C++,Beginner,False
+S0239,Deep Learning,Intermediate,True
+S0239,Excel,Intermediate,True
+S0239,Firewall Management,Intermediate,False
+S0239,NumPy,Advanced,True
+S0239,TypeScript,Beginner,False
+S0239,OpenCV,Intermediate,False
+S0240,Elasticsearch,Intermediate,True
+S0240,Scrum,Intermediate,False
+S0240,Python,Intermediate,True
+S0240,SQL,Beginner,False
+S0240,MongoDB,Intermediate,False
+S0241,AWS,Intermediate,False
+S0241,Scikit-learn,Intermediate,True
+S0241,C++,Intermediate,False
+S0242,Raspberry Pi,Beginner,True
+S0242,Verilog,Beginner,False
+S0242,Scikit-learn,Intermediate,False
+S0242,Kubernetes,Intermediate,True
+S0242,Go,Advanced,True
+S0242,RTOS,Intermediate,False
+S0242,CI/CD,Intermediate,False
+S0243,PHP,Advanced,True
+S0243,Hugging Face,Intermediate,True
+S0243,PostgreSQL,Intermediate,False
+S0244,Azure,Advanced,True
+S0244,REST APIs,Advanced,True
+S0244,GitHub Actions,Intermediate,False
+S0244,Linux,Beginner,False
+S0245,GitHub Actions,Intermediate,False
+S0245,Python,Intermediate,False
+S0245,Verilog,Beginner,False
+S0246,Azure,Beginner,True
+S0246,Django,Beginner,False
+S0247,C++,Intermediate,False
+S0247,SQL,Beginner,False
+S0247,NLP,Advanced,True
+S0248,Docker,Intermediate,False
+S0248,Scikit-learn,Advanced,True
+S0248,Scala,Beginner,True
+S0249,SpaCy,Beginner,True
+S0249,CI/CD,Intermediate,False
+S0249,Git,Intermediate,True
+S0249,MongoDB,Advanced,True
+S0249,Go,Intermediate,False
+S0250,JavaScript,Intermediate,False
+S0250,Pandas,Intermediate,True
+S0250,MS Office,Intermediate,False
+S0250,Java,Beginner,True
+S0251,MATLAB,Intermediate,True
+S0251,Ruby,Intermediate,False
+S0252,Go,Advanced,True
+S0252,Leadership,Intermediate,True
+S0252,Agile,Beginner,False
+S0252,Ruby,Beginner,True
+S0253,SQL,Intermediate,True
+S0253,Go,Intermediate,True
+S0253,Arduino,Intermediate,False
+S0253,Python,Beginner,False
+S0253,TypeScript,Advanced,True
+S0253,Verilog,Beginner,False
+S0254,Arduino,Beginner,False
+S0254,GitHub Actions,Intermediate,True
+S0254,AWS,Beginner,False
+S0255,VHDL,Advanced,True
+S0255,Arduino,Advanced,True
+S0255,Verilog,Advanced,True
+S0256,TypeScript,Intermediate,False
+S0256,Swift,Advanced,True
+S0256,Kubernetes,Advanced,False
+S0256,Hadoop,Intermediate,False
+S0257,Tableau,Intermediate,True
+S0257,Pandas,Intermediate,False
+S0258,NLP,Intermediate,True
+S0258,NLTK,Beginner,False
+S0258,JavaScript,Intermediate,False
+S0258,C++,Intermediate,False
+S0259,Embedded C,Intermediate,False
+S0259,RTOS,Intermediate,True
+S0259,Next.js,Beginner,True
+S0259,VHDL,Beginner,False
+S0259,Arduino,Intermediate,False
+S0260,Bootstrap,Intermediate,False
+S0260,Rust,Intermediate,False
+S0260,Embedded C,Beginner,False
+S0260,Pandas,Advanced,True
+S0261,MS Office,Beginner,False
+S0261,SQL,Beginner,False
+S0261,AWS,Intermediate,False
+S0261,Arduino,Intermediate,False
+S0261,PCB Design,Advanced,True
+S0262,R,Advanced,True
+S0262,C,Intermediate,False
+S0262,Verilog,Intermediate,False
+S0262,Raspberry Pi,Advanced,True
+S0262,RTOS,Beginner,False
+S0262,Ruby,Advanced,False
+S0263,Project Management,Intermediate,False
+S0263,Python,Intermediate,False
+S0263,Agile,Beginner,True
+S0264,NLP,Intermediate,False
+S0264,JIRA,Beginner,False
+S0264,GraphQL,Intermediate,False
+S0265,GCP,Advanced,True
+S0265,SpaCy,Intermediate,True
+S0265,JavaScript,Intermediate,False
+S0265,Go,Advanced,True
+S0266,PCB Design,Intermediate,False
+S0266,JavaScript,Intermediate,True
+S0266,PHP,Intermediate,False
+S0266,MS Office,Beginner,True
+S0267,Linux,Beginner,False
+S0267,C++,Advanced,True
+S0267,Go,Beginner,False
+S0267,Network Security,Intermediate,True
+S0267,Raspberry Pi,Beginner,False
+S0267,Tableau,Intermediate,False
+S0268,RTOS,Advanced,True
+S0268,CI/CD,Intermediate,False
+S0268,Docker,Intermediate,False
+S0269,Hadoop,Advanced,False
+S0269,Ruby,Advanced,True
+S0269,MS Office,Advanced,True
+S0269,VHDL,Beginner,False
+S0269,Leadership,Intermediate,False
+S0269,PostgreSQL,Beginner,False
+S0270,MySQL,Intermediate,False
+S0270,Scrum,Beginner,False
+S0270,JIRA,Beginner,False
+S0270,C++,Intermediate,True
+S0271,JavaScript,Intermediate,True
+S0271,Scala,Beginner,False
+S0271,Computer Vision,Advanced,False
+S0271,Raspberry Pi,Intermediate,True
+S0272,Java,Intermediate,True
+S0272,PostgreSQL,Intermediate,False
+S0272,MS Office,Beginner,False
+S0273,Go,Intermediate,True
+S0273,TypeScript,Intermediate,True
+S0273,Rust,Intermediate,False
+S0274,Ruby,Advanced,True
+S0274,Python,Beginner,False
+S0274,GitHub Actions,Intermediate,True
+S0274,Leadership,Advanced,False
+S0275,SQL,Intermediate,True
+S0276,PCB Design,Intermediate,False
+S0276,Scala,Beginner,False
+S0276,MATLAB,Beginner,False
+S0276,Ruby,Intermediate,True
+S0277,Arduino,Advanced,False
+S0277,Verilog,Beginner,False
+S0277,R,Intermediate,False
+S0277,PCB Design,Intermediate,True
+S0278,PostgreSQL,Beginner,False
+S0278,R,Intermediate,False
+S0278,GitHub Actions,Beginner,True
+S0279,Power BI,Beginner,False
+S0279,MATLAB,Advanced,True
+S0279,Swift,Beginner,False
+S0279,REST APIs,Beginner,False
+S0280,Leadership,Advanced,False
+S0280,Express,Intermediate,False
+S0280,Project Management,Advanced,False
+S0281,TypeScript,Intermediate,False
+S0281,SQL,Beginner,False
+S0281,Agile,Intermediate,False
+S0281,MS Office,Intermediate,False
+S0282,SpaCy,Advanced,True
+S0282,Deep Learning,Advanced,True
+S0282,Flask,Intermediate,False
+S0282,PyTorch,Intermediate,False
+S0282,PostgreSQL,Intermediate,False
+S0282,JavaScript,Intermediate,False
+S0283,Java,Beginner,False
+S0283,Arduino,Intermediate,True
+S0283,Network Security,Advanced,False
+S0283,Terraform,Intermediate,True
+S0284,Leadership,Intermediate,True
+S0284,Python,Beginner,False
+S0284,SQL,Advanced,False
+S0285,C++,Beginner,False
+S0285,Swift,Intermediate,True
+S0285,R,Advanced,True
+S0286,GCP,Advanced,True
+S0286,Ruby,Beginner,False
+S0286,Git,Intermediate,True
+S0286,Tableau,Intermediate,True
+S0286,Go,Intermediate,False
+S0286,Terraform,Advanced,False
+S0286,GitHub Actions,Beginner,False
+S0287,Docker,Intermediate,True
+S0287,Next.js,Intermediate,True
+S0287,SQL,Intermediate,True
+S0287,Hugging Face,Intermediate,False
+S0287,Node.js,Intermediate,False
+S0287,R,Intermediate,False
+S0287,Git,Intermediate,False
+S0288,Azure,Beginner,False
+S0288,Kotlin,Beginner,False
+S0288,Scala,Intermediate,False
+S0289,Django,Beginner,False
+S0289,Bootstrap,Intermediate,False
+S0289,Kubernetes,Beginner,False
+S0289,MySQL,Intermediate,True
+S0289,Raspberry Pi,Intermediate,False
+S0289,GitHub Actions,Advanced,False
+S0290,Deep Learning,Intermediate,False
+S0290,GCP,Advanced,False
+S0290,Node.js,Intermediate,False
+S0290,Scikit-learn,Intermediate,False
+S0290,SIEM,Intermediate,False
+S0290,Scala,Advanced,True
+S0291,Communication,Beginner,False
+S0291,Embedded C,Beginner,False
+S0291,Apache Spark,Intermediate,True
+S0291,MS Office,Beginner,False
+S0291,SQL,Advanced,False
+S0291,SIEM,Beginner,True
+S0291,Project Management,Intermediate,False
+S0292,TensorFlow,Advanced,True
+S0292,Elasticsearch,Beginner,False
+S0292,PostgreSQL,Intermediate,True
+S0292,C++,Beginner,False
+S0292,Leadership,Advanced,True
+S0293,MySQL,Intermediate,False
+S0293,NumPy,Advanced,True
+S0293,Go,Intermediate,False
+S0293,PHP,Beginner,True
+S0294,C,Beginner,True
+S0294,Apache Spark,Intermediate,False
+S0295,Pandas,Intermediate,False
+S0295,Deep Learning,Intermediate,False
+S0295,MLflow,Beginner,True
+S0296,Bootstrap,Intermediate,False
+S0296,Node.js,Advanced,True
+S0296,Ruby,Intermediate,False
+S0296,Excel,Beginner,False
+S0296,Kubernetes,Intermediate,True
+S0296,Arduino,Intermediate,False
+S0297,SQL,Advanced,True
+S0297,Deep Learning,Intermediate,True
+S0297,CI/CD,Intermediate,False
+S0297,MongoDB,Advanced,True
+S0298,Power BI,Intermediate,True
+S0298,C++,Intermediate,True
+S0298,Communication,Intermediate,False
+S0299,Azure,Intermediate,False
+S0299,C++,Beginner,False
+S0299,GitHub Actions,Beginner,False
+S0299,Keras,Advanced,False
+S0300,Hadoop,Beginner,True
+S0300,Embedded C,Intermediate,False
+S0300,GitHub Actions,Beginner,False
+S0301,Pandas,Beginner,True
+S0301,Elasticsearch,Beginner,False
+S0301,Tableau,Beginner,False
+S0301,OpenCV,Intermediate,False
+S0302,Express,Beginner,True
+S0302,Java,Beginner,True
+S0302,JavaScript,Intermediate,False
+S0302,PyTorch,Intermediate,False
+S0303,Go,Intermediate,False
+S0303,Java,Advanced,True
+S0303,Tableau,Intermediate,True
+S0303,Docker,Intermediate,True
+S0304,JavaScript,Intermediate,True
+S0304,Flask,Beginner,False
+S0304,Vue.js,Beginner,False
+S0304,MLflow,Advanced,True
+S0305,Terraform,Intermediate,False
+S0305,Redis,Beginner,False
+S0305,MS Office,Beginner,True
+S0305,PostgreSQL,Advanced,True
+S0305,TypeScript,Intermediate,False
+S0306,GCP,Intermediate,True
+S0306,Computer Vision,Advanced,False
+S0307,PHP,Advanced,True
+S0307,Arduino,Advanced,True
+S0307,MATLAB,Beginner,True
+S0307,GCP,Intermediate,False
+S0307,VHDL,Intermediate,False
+S0307,RTOS,Beginner,False
+S0308,MATLAB,Intermediate,False
+S0308,VHDL,Intermediate,True
+S0308,Linux,Advanced,True
+S0308,Azure,Intermediate,False
+S0308,Verilog,Intermediate,False
+S0308,CI/CD,Beginner,False
+S0309,R,Intermediate,False
+S0309,CI/CD,Beginner,False
+S0309,Docker,Beginner,False
+S0309,Kubernetes,Intermediate,False
+S0309,Python,Advanced,True
+S0309,Linux,Intermediate,False
+S0309,Express,Intermediate,False
+S0310,Kotlin,Advanced,True
+S0310,Jenkins,Advanced,True
+S0310,Terraform,Advanced,False
+S0310,Git,Beginner,False
+S0310,TensorFlow,Beginner,False
+S0310,SQL,Intermediate,False
+S0311,SIEM,Beginner,True
+S0311,MATLAB,Advanced,True
+S0311,Spring Boot,Beginner,True
+S0311,MongoDB,Beginner,False
+S0311,Arduino,Beginner,False
+S0311,GraphQL,Intermediate,False
+S0311,REST APIs,Intermediate,False
+S0312,Ruby,Advanced,True
+S0312,VHDL,Beginner,False
+S0312,RTOS,Intermediate,False
+S0312,Agile,Beginner,False
+S0312,Project Management,Intermediate,False
+S0312,GCP,Beginner,False
+S0313,MLflow,Intermediate,True
+S0313,OpenCV,Beginner,False
+S0313,Java,Intermediate,False
+S0314,PCB Design,Beginner,True
+S0314,Leadership,Beginner,False
+S0314,Communication,Intermediate,False
+S0314,Rust,Advanced,False
+S0315,Bootstrap,Intermediate,False
+S0315,Redis,Beginner,False
+S0315,Tableau,Intermediate,False
+S0315,Leadership,Intermediate,False
+S0316,Jenkins,Advanced,False
+S0316,GCP,Beginner,False
+S0316,Kubernetes,Intermediate,False
+S0316,Angular,Intermediate,False
+S0316,GitHub Actions,Beginner,False
+S0316,NumPy,Intermediate,True
+S0317,Azure,Beginner,True
+S0317,Terraform,Beginner,False
+S0317,SpaCy,Intermediate,True
+S0317,Scrum,Advanced,True
+S0317,MS Office,Advanced,True
+S0318,Scala,Intermediate,False
+S0318,PHP,Intermediate,True
+S0318,Hugging Face,Intermediate,False
+S0318,Linux,Beginner,False
+S0318,Excel,Intermediate,False
+S0318,GCP,Intermediate,False
+S0318,Kotlin,Intermediate,False
+S0319,PostgreSQL,Advanced,True
+S0319,Tableau,Intermediate,False
+S0319,GCP,Intermediate,False
+S0319,C,Beginner,False
+S0319,Kubernetes,Intermediate,False
+S0320,Scrum,Advanced,True
+S0320,Redis,Intermediate,False
+S0320,Express,Advanced,False
+S0321,REST APIs,Intermediate,False
+S0321,Python,Intermediate,False
+S0322,Project Management,Intermediate,False
+S0322,MATLAB,Intermediate,False
+S0322,Cryptography,Advanced,True
+S0323,Apache Spark,Advanced,True
+S0323,Deep Learning,Intermediate,False
+S0323,Arduino,Intermediate,False
+S0323,MATLAB,Intermediate,False
+S0323,C,Intermediate,True
+S0324,GCP,Intermediate,True
+S0324,PHP,Intermediate,False
+S0324,VHDL,Beginner,True
+S0325,Git,Beginner,True
+S0325,AWS,Beginner,False
+S0325,Verilog,Intermediate,False
+S0326,C++,Beginner,False
+S0326,Raspberry Pi,Beginner,True
+S0326,Project Management,Beginner,False
+S0326,Scala,Intermediate,True
+S0327,Leadership,Beginner,False
+S0327,VHDL,Advanced,False
+S0327,Verilog,Intermediate,True
+S0328,Ruby,Beginner,False
+S0328,Java,Intermediate,False
+S0328,Kotlin,Advanced,True
+S0328,TypeScript,Intermediate,True
+S0328,Docker,Intermediate,True
+S0328,Go,Intermediate,True
+S0329,NLP,Intermediate,True
+S0329,Kotlin,Beginner,False
+S0329,NumPy,Beginner,True
+S0330,Docker,Intermediate,True
+S0330,Verilog,Intermediate,False
+S0330,PHP,Intermediate,False
+S0330,Jenkins,Beginner,False
+S0330,MLflow,Intermediate,False
+S0331,Docker,Advanced,False
+S0331,Scikit-learn,Advanced,True
+S0331,JavaScript,Advanced,True
+S0331,Agile,Advanced,True
+S0331,Jenkins,Beginner,False
+S0332,Spring Boot,Intermediate,False
+S0332,MySQL,Intermediate,False
+S0332,Communication,Intermediate,False
+S0332,Agile,Intermediate,False
+S0333,Project Management,Intermediate,False
+S0333,C,Intermediate,True
+S0333,MongoDB,Beginner,False
+S0333,JIRA,Intermediate,False
+S0333,Agile,Intermediate,False
+S0334,Apache Spark,Intermediate,False
+S0334,Docker,Beginner,False
+S0334,GitHub Actions,Intermediate,False
+S0335,Kubernetes,Advanced,True
+S0335,Excel,Intermediate,True
+S0335,Flask,Advanced,False
+S0335,Redis,Intermediate,True
+S0335,JavaScript,Beginner,False
+S0336,Redis,Intermediate,True
+S0336,Angular,Beginner,True
+S0336,MATLAB,Advanced,False
+S0336,JavaScript,Beginner,False
+S0337,Scala,Intermediate,False
+S0337,JIRA,Intermediate,True
+S0338,R,Advanced,True
+S0338,Cryptography,Advanced,True
+S0338,JavaScript,Intermediate,False
+S0339,R,Intermediate,True
+S0339,NumPy,Advanced,True
+S0339,Flask,Intermediate,False
+S0340,Rust,Intermediate,True
+S0340,PHP,Beginner,False
+S0340,Hadoop,Intermediate,True
+S0340,Penetration Testing,Intermediate,False
+S0340,Go,Advanced,True
+S0341,MS Office,Beginner,True
+S0341,Leadership,Intermediate,False
+S0341,Scrum,Intermediate,False
+S0341,React,Intermediate,False
+S0342,Ruby,Intermediate,True
+S0342,JIRA,Beginner,False
+S0342,OpenCV,Intermediate,False
+S0342,Deep Learning,Intermediate,False
+S0342,Tableau,Beginner,False
+S0343,Rust,Intermediate,True
+S0343,Keras,Intermediate,False
+S0343,VHDL,Intermediate,True
+S0343,RTOS,Intermediate,True
+S0343,Embedded C,Advanced,False
+S0344,Apache Spark,Advanced,True
+S0344,MS Office,Advanced,False
+S0344,Agile,Beginner,True
+S0345,Vue.js,Intermediate,False
+S0345,RTOS,Advanced,True
+S0345,PHP,Beginner,False
+S0345,VHDL,Advanced,True
+S0345,R,Intermediate,True
+S0346,R,Advanced,True
+S0346,TypeScript,Advanced,True
+S0346,Go,Intermediate,False
+S0347,Hadoop,Intermediate,False
+S0347,Deep Learning,Beginner,False
+S0347,Kotlin,Advanced,True
+S0347,Java,Intermediate,False
+S0348,Leadership,Intermediate,False
+S0348,JavaScript,Beginner,True
+S0348,Docker,Advanced,True
+S0348,Bootstrap,Advanced,False
+S0348,HTML/CSS,Beginner,False
+S0348,Next.js,Intermediate,True
+S0349,Scala,Intermediate,False
+S0349,MongoDB,Beginner,False
+S0350,Arduino,Advanced,True
+S0350,MATLAB,Beginner,False
+S0350,Pandas,Intermediate,True
+S0350,Elasticsearch,Intermediate,False
+S0350,GCP,Beginner,True
+S0350,JIRA,Beginner,False
+S0351,AWS,Beginner,False
+S0351,Docker,Advanced,False
+S0351,Deep Learning,Intermediate,True
+S0351,CI/CD,Intermediate,True
+S0352,RTOS,Intermediate,False
+S0353,Scala,Intermediate,False
+S0353,JavaScript,Intermediate,False
+S0353,Java,Intermediate,False
+S0354,Django,Intermediate,True
+S0354,Elasticsearch,Advanced,True
+S0354,Node.js,Intermediate,True
+S0355,Arduino,Advanced,True
+S0355,MongoDB,Intermediate,False
+S0355,Embedded C,Beginner,False
+S0355,Raspberry Pi,Advanced,True
+S0356,React,Advanced,True
+S0357,Ethical Hacking,Advanced,False
+S0357,Firewall Management,Intermediate,False
+S0357,Kotlin,Intermediate,False
+S0357,Scrum,Intermediate,False
+S0358,Docker,Advanced,True
+S0358,GitHub Actions,Intermediate,True
+S0358,Elasticsearch,Advanced,True
+S0359,Excel,Beginner,False
+S0359,SpaCy,Advanced,True
+S0360,RTOS,Intermediate,True
+S0360,Embedded C,Advanced,False
+S0360,Kotlin,Intermediate,False
+S0361,MS Office,Beginner,False
+S0361,Tailwind,Beginner,False
+S0361,Terraform,Intermediate,False
+S0361,Node.js,Advanced,True
+S0361,Scrum,Intermediate,False
+S0361,Kubernetes,Intermediate,True
+S0362,R,Advanced,False
+S0362,NLP,Beginner,True
+S0362,Linux,Intermediate,True
+S0362,GitHub Actions,Intermediate,True
+S0362,Kubernetes,Beginner,False
+S0363,RTOS,Intermediate,False
+S0363,JIRA,Advanced,True
+S0363,Hugging Face,Intermediate,True
+S0363,Communication,Intermediate,True
+S0364,Java,Beginner,True
+S0364,TensorFlow,Beginner,False
+S0364,Angular,Beginner,False
+S0364,Tableau,Intermediate,False
+S0365,GitHub Actions,Intermediate,False
+S0365,Python,Intermediate,False
+S0365,Pandas,Intermediate,True
+S0366,OpenCV,Intermediate,False
+S0366,Tailwind,Beginner,False
+S0366,PyTorch,Beginner,True
+S0366,Leadership,Advanced,True
+S0367,Swift,Intermediate,True
+S0367,Tableau,Beginner,False
+S0367,PHP,Advanced,False
+S0368,Spring Boot,Intermediate,False
+S0368,Computer Vision,Beginner,False
+S0368,NLTK,Intermediate,True
+S0369,Hugging Face,Beginner,False
+S0369,GCP,Beginner,False
+S0369,AWS,Advanced,False
+S0369,OpenCV,Advanced,True
+S0369,Docker,Intermediate,False
+S0370,Kotlin,Intermediate,False
+S0370,RTOS,Beginner,False
+S0370,Git,Beginner,False
+S0370,Embedded C,Advanced,True
+S0370,PCB Design,Intermediate,True
+S0371,REST APIs,Intermediate,False
+S0371,Bootstrap,Advanced,False
+S0371,Vue.js,Intermediate,False
+S0371,Embedded C,Beginner,False
+S0371,Java,Intermediate,False
+S0371,MongoDB,Intermediate,False
+S0371,C,Intermediate,True
+S0372,Keras,Beginner,False
+S0372,Hadoop,Advanced,True
+S0373,Git,Beginner,False
+S0373,Arduino,Advanced,False
+S0373,Pandas,Beginner,False
+S0373,CI/CD,Beginner,False
+S0374,NumPy,Beginner,False
+S0374,Jenkins,Intermediate,False
+S0374,Node.js,Intermediate,False
+S0374,HTML/CSS,Advanced,True
+S0374,Apache Spark,Intermediate,False
+S0374,MATLAB,Beginner,True
+S0375,NumPy,Beginner,False
+S0375,Django,Advanced,True
+S0376,Communication,Advanced,True
+S0376,JIRA,Advanced,True
+S0376,MySQL,Advanced,False
+S0377,Communication,Intermediate,True
+S0377,Penetration Testing,Beginner,False
+S0377,Redis,Intermediate,False
+S0377,Git,Intermediate,False
+S0377,PHP,Intermediate,False
+S0377,Tableau,Intermediate,True
+S0378,JavaScript,Intermediate,True
+S0378,MySQL,Intermediate,False
+S0378,CI/CD,Advanced,False
+S0378,GitHub Actions,Advanced,True
+S0379,Excel,Advanced,True
+S0379,Ruby,Beginner,True
+S0379,C,Intermediate,False
+S0379,Kubernetes,Intermediate,True
+S0379,Rust,Beginner,False
+S0379,Scikit-learn,Intermediate,True
+S0380,Hugging Face,Intermediate,False
+S0380,Elasticsearch,Beginner,False
+S0380,AWS,Intermediate,False
+S0380,Rust,Intermediate,False
+S0380,RTOS,Intermediate,False
+S0380,Swift,Intermediate,True
+S0381,Raspberry Pi,Intermediate,False
+S0381,Linux,Beginner,False
+S0381,TypeScript,Intermediate,False
+S0381,Express,Intermediate,False
+S0382,Swift,Intermediate,False
+S0382,Leadership,Advanced,True
+S0382,Ethical Hacking,Intermediate,True
+S0382,TypeScript,Beginner,False
+S0382,Raspberry Pi,Intermediate,True
+S0383,JIRA,Intermediate,False
+S0383,Raspberry Pi,Intermediate,False
+S0383,PCB Design,Advanced,True
+S0383,MATLAB,Intermediate,False
+S0384,Tableau,Intermediate,False
+S0384,TypeScript,Intermediate,False
+S0384,Scala,Beginner,False
+S0384,R,Beginner,False
+S0384,Pandas,Advanced,False
+S0384,Redis,Intermediate,False
+S0384,REST APIs,Advanced,True
+S0385,OpenCV,Intermediate,True
+S0385,Excel,Advanced,True
+S0385,AWS,Beginner,False
+S0385,MATLAB,Intermediate,False
+S0386,TypeScript,Intermediate,True
+S0386,JIRA,Beginner,False
+S0386,OpenCV,Intermediate,False
+S0387,Excel,Intermediate,False
+S0387,VHDL,Intermediate,False
+S0387,Cryptography,Intermediate,False
+S0388,Angular,Intermediate,True
+S0388,Go,Advanced,False
+S0388,Elasticsearch,Advanced,True
+S0388,Swift,Beginner,False
+S0389,OpenCV,Advanced,True
+S0389,Kotlin,Beginner,False
+S0389,Agile,Intermediate,False
+S0389,Communication,Advanced,True
+S0390,Python,Beginner,False
+S0390,Raspberry Pi,Intermediate,True
+S0390,Embedded C,Beginner,False
+S0390,Verilog,Beginner,False
+S0390,VHDL,Beginner,False
+S0391,Docker,Advanced,True
+S0391,Java,Intermediate,True
+S0391,MongoDB,Advanced,False
+S0391,Hadoop,Intermediate,True
+S0391,Next.js,Intermediate,False
+S0391,VHDL,Intermediate,False
+S0392,MySQL,Intermediate,True
+S0392,Verilog,Intermediate,True
+S0392,Arduino,Beginner,False
+S0393,Communication,Intermediate,True
+S0393,Arduino,Advanced,True
+S0393,MS Office,Beginner,False
+S0394,Hadoop,Intermediate,False
+S0394,Power BI,Intermediate,False
+S0394,NLTK,Beginner,False
+S0395,SpaCy,Advanced,True
+S0395,Bootstrap,Intermediate,True
+S0395,Excel,Intermediate,False
+S0395,GraphQL,Beginner,False
+S0396,NLP,Intermediate,True
+S0396,TypeScript,Intermediate,False
+S0396,RTOS,Intermediate,True
+S0397,Python,Intermediate,False
+S0397,Raspberry Pi,Advanced,False
+S0397,Ruby,Beginner,False
+S0397,Arduino,Advanced,False
+S0398,Docker,Beginner,False
+S0398,SQL,Advanced,True
+S0398,Python,Beginner,False
+S0398,Git,Beginner,False
+S0399,C++,Beginner,False
+S0399,RTOS,Intermediate,True
+S0399,R,Intermediate,True
+S0399,PHP,Beginner,False
+S0400,CI/CD,Intermediate,True
+S0400,C,Beginner,False
+S0400,GitHub Actions,Beginner,False
+S0401,GCP,Intermediate,False
+S0401,Kotlin,Beginner,False
+S0401,SpaCy,Beginner,False
+S0401,Deep Learning,Intermediate,False
+S0401,Jenkins,Intermediate,False
+S0401,SQL,Beginner,True
+S0401,PyTorch,Intermediate,True
+S0402,VHDL,Intermediate,True
+S0402,Verilog,Intermediate,False
+S0402,TypeScript,Intermediate,False
+S0402,GCP,Intermediate,False
+S0403,Docker,Advanced,False
+S0403,Linux,Beginner,False
+S0403,Rust,Advanced,False
+S0404,Git,Beginner,False
+S0404,Rust,Intermediate,True
+S0404,CI/CD,Intermediate,False
+S0404,Jenkins,Beginner,False
+S0404,SQL,Advanced,True
+S0404,Hugging Face,Intermediate,True
+S0405,Kotlin,Beginner,True
+S0405,MS Office,Beginner,False
+S0405,TypeScript,Advanced,True
+S0405,Verilog,Intermediate,False
+S0406,MongoDB,Beginner,False
+S0406,Scikit-learn,Intermediate,False
+S0406,MATLAB,Advanced,False
+S0406,CI/CD,Beginner,False
+S0407,Docker,Advanced,True
+S0407,Git,Intermediate,False
+S0407,Node.js,Advanced,True
+S0407,Firewall Management,Beginner,False
+S0407,Angular,Beginner,False
+S0408,Leadership,Intermediate,False
+S0408,C++,Intermediate,True
+S0408,Java,Advanced,True
+S0408,PyTorch,Advanced,False
+S0408,Go,Beginner,True
+S0408,Azure,Beginner,False
+S0409,Raspberry Pi,Beginner,True
+S0409,Power BI,Beginner,False
+S0409,Java,Intermediate,True
+S0409,Ruby,Intermediate,False
+S0409,Terraform,Advanced,True
+S0410,Node.js,Advanced,True
+S0410,Tailwind,Advanced,True
+S0410,Power BI,Intermediate,True
+S0410,Flask,Beginner,False
+S0411,Scikit-learn,Beginner,False
+S0411,GCP,Advanced,True
+S0411,Tailwind,Advanced,False
+S0411,MongoDB,Beginner,True
+S0411,Power BI,Advanced,True
+S0411,Angular,Beginner,False
+S0412,Jenkins,Beginner,False
+S0412,Elasticsearch,Intermediate,False
+S0412,Express,Intermediate,True
+S0412,GitHub Actions,Intermediate,False
+S0412,Hadoop,Advanced,True
+S0413,Swift,Beginner,False
+S0413,Computer Vision,Advanced,False
+S0413,SQL,Beginner,False
+S0414,Terraform,Intermediate,True
+S0414,Kotlin,Intermediate,False
+S0414,Power BI,Beginner,False
+S0415,Raspberry Pi,Beginner,False
+S0415,Django,Beginner,False
+S0416,Network Security,Intermediate,False
+S0416,Elasticsearch,Intermediate,False
+S0416,Python,Beginner,False
+S0416,CI/CD,Advanced,False
+S0417,Deep Learning,Beginner,False
+S0417,MongoDB,Intermediate,False
+S0417,PHP,Beginner,False
+S0417,Computer Vision,Advanced,True
+S0417,Communication,Intermediate,False
+S0417,Azure,Advanced,True
+S0418,Linux,Advanced,False
+S0418,Go,Advanced,True
+S0419,Git,Advanced,False
+S0419,C++,Advanced,True
+S0419,Power BI,Intermediate,False
+S0419,Azure,Beginner,False
+S0419,Penetration Testing,Beginner,False
+S0419,Terraform,Intermediate,True
+S0420,Excel,Beginner,False
+S0420,NLP,Intermediate,True
+S0420,GitHub Actions,Intermediate,False
+S0420,Docker,Advanced,False
+S0421,Apache Spark,Beginner,False
+S0421,Computer Vision,Intermediate,False
+S0422,PHP,Intermediate,True
+S0422,Ruby,Intermediate,True
+S0422,Python,Beginner,False
+S0422,React,Intermediate,False
+S0423,Power BI,Beginner,False
+S0423,Git,Intermediate,True
+S0424,Java,Beginner,False
+S0424,Ruby,Advanced,False
+S0424,Embedded C,Advanced,True
+S0424,Communication,Intermediate,False
+S0424,GCP,Intermediate,True
+S0425,Hugging Face,Beginner,False
+S0425,Firewall Management,Beginner,False
+S0425,Docker,Advanced,True
+S0426,Linux,Advanced,True
+S0426,Vue.js,Advanced,True
+S0427,RTOS,Advanced,True
+S0427,PHP,Beginner,False
+S0427,C++,Advanced,False
+S0427,Python,Intermediate,False
+S0428,Flask,Beginner,False
+S0428,PHP,Beginner,False
+S0428,Leadership,Beginner,False
+S0428,Hugging Face,Advanced,True
+S0429,Jenkins,Intermediate,False
+S0430,Arduino,Advanced,False
+S0430,Go,Intermediate,False
+S0431,Apache Spark,Beginner,False
+S0431,OpenCV,Beginner,False
+S0432,Node.js,Intermediate,False
+S0432,TypeScript,Advanced,False
+S0432,PostgreSQL,Advanced,False
+S0432,Azure,Beginner,False
+S0433,REST APIs,Beginner,False
+S0434,HTML/CSS,Intermediate,True
+S0434,GCP,Beginner,False
+S0434,NumPy,Beginner,False
+S0434,Linux,Advanced,True
+S0434,Azure,Intermediate,False
+S0435,GCP,Beginner,False
+S0435,Raspberry Pi,Intermediate,True
+S0435,MySQL,Beginner,False
+S0435,Java,Beginner,True
+S0435,RTOS,Intermediate,True
+S0435,VHDL,Intermediate,True
+S0435,MS Office,Intermediate,True
+S0436,JavaScript,Intermediate,False
+S0436,VHDL,Intermediate,False
+S0436,Elasticsearch,Intermediate,False
+S0436,Scrum,Intermediate,False
+S0436,OpenCV,Intermediate,False
+S0437,Git,Intermediate,True
+S0437,PyTorch,Intermediate,False
+S0437,Kotlin,Beginner,False
+S0437,NLP,Advanced,True
+S0437,SIEM,Advanced,False
+S0437,Swift,Beginner,False
+S0438,Kubernetes,Beginner,False
+S0438,TypeScript,Intermediate,False
+S0438,C,Intermediate,True
+S0439,Scrum,Beginner,False
+S0439,VHDL,Beginner,False
+S0439,Next.js,Intermediate,False
+S0440,SpaCy,Advanced,True
+S0440,C++,Advanced,True
+S0441,Hugging Face,Advanced,False
+S0441,NLTK,Beginner,False
+S0441,Penetration Testing,Intermediate,True
+S0442,Arduino,Advanced,False
+S0442,PostgreSQL,Beginner,False
+S0442,Kubernetes,Advanced,False
+S0442,Leadership,Advanced,True
+S0443,C++,Beginner,False
+S0443,VHDL,Intermediate,True
+S0443,JIRA,Intermediate,False
+S0444,Leadership,Advanced,False
+S0444,NumPy,Advanced,True
+S0444,SQL,Beginner,False
+S0445,NLTK,Intermediate,True
+S0445,C,Intermediate,False
+S0445,TensorFlow,Intermediate,True
+S0445,C++,Intermediate,False
+S0446,TensorFlow,Intermediate,False
+S0446,Power BI,Intermediate,False
+S0447,SQL,Advanced,False
+S0447,Apache Spark,Beginner,False
+S0447,Firewall Management,Intermediate,False
+S0447,R,Intermediate,True
+S0448,RTOS,Advanced,False
+S0448,TypeScript,Advanced,False
+S0448,C++,Advanced,False
+S0448,Java,Beginner,False
+S0448,Arduino,Beginner,False
+S0449,Elasticsearch,Advanced,False
+S0449,Ruby,Advanced,True
+S0449,Linux,Intermediate,False
+S0449,MySQL,Advanced,True
+S0450,Firewall Management,Intermediate,False
+S0450,Keras,Intermediate,False
+S0450,Ethical Hacking,Intermediate,False
+S0450,AWS,Beginner,False
+S0450,Kotlin,Advanced,False
+S0450,Swift,Beginner,False
+S0451,TypeScript,Advanced,False
+S0451,JIRA,Beginner,True
+S0451,Jenkins,Intermediate,True
+S0451,C++,Intermediate,False
+S0451,Next.js,Advanced,False
+S0451,MySQL,Intermediate,True
+S0452,Swift,Beginner,False
+S0452,Java,Intermediate,True
+S0452,Python,Intermediate,False
+S0452,Raspberry Pi,Beginner,False
+S0453,Linux,Beginner,False
+S0453,Docker,Advanced,True
+S0453,GitHub Actions,Advanced,True
+S0453,Express,Beginner,False
+S0454,Tailwind,Beginner,False
+S0454,Scrum,Intermediate,True
+S0454,MATLAB,Intermediate,True
+S0455,Rust,Beginner,False
+S0455,Project Management,Advanced,True
+S0455,Scrum,Advanced,True
+S0455,Arduino,Beginner,False
+S0455,Computer Vision,Beginner,False
+S0455,Verilog,Advanced,False
+S0455,RTOS,Advanced,True
+S0456,Agile,Advanced,True
+S0456,Pandas,Advanced,True
+S0456,MongoDB,Intermediate,False
+S0457,MATLAB,Intermediate,False
+S0457,C++,Intermediate,False
+S0457,GitHub Actions,Intermediate,True
+S0457,Linux,Intermediate,True
+S0458,Scrum,Advanced,True
+S0458,Leadership,Intermediate,False
+S0458,Network Security,Advanced,True
+S0458,Project Management,Advanced,True
+S0458,Swift,Intermediate,False
+S0458,MongoDB,Beginner,False
+S0459,MLflow,Beginner,False
+S0459,PHP,Intermediate,False
+S0459,PyTorch,Intermediate,True
+S0459,Keras,Intermediate,False
+S0459,Azure,Intermediate,True
+S0460,Scikit-learn,Advanced,True
+S0460,NLTK,Intermediate,False
+S0460,Docker,Intermediate,False
+S0460,SQL,Beginner,False
+S0461,NumPy,Beginner,False
+S0461,SpaCy,Intermediate,False
+S0461,NLTK,Beginner,True
+S0461,NLP,Beginner,False
+S0462,Hugging Face,Beginner,True
+S0462,Scikit-learn,Beginner,False
+S0462,Linux,Intermediate,True
+S0462,MS Office,Advanced,False
+S0463,Power BI,Beginner,False
+S0463,SQL,Intermediate,False
+S0463,Scrum,Advanced,True
+S0463,TypeScript,Advanced,True
+S0463,JIRA,Advanced,True
+S0463,NLP,Intermediate,False
+S0464,Project Management,Intermediate,False
+S0464,Kotlin,Advanced,False
+S0464,Scrum,Advanced,True
+S0464,VHDL,Intermediate,True
+S0464,MS Office,Beginner,False
+S0465,Power BI,Beginner,False
+S0465,Ruby,Intermediate,False
+S0465,Hadoop,Intermediate,False
+S0465,SQL,Beginner,False
+S0466,AWS,Beginner,False
+S0466,Apache Spark,Intermediate,False
+S0466,Pandas,Advanced,False
+S0466,Arduino,Beginner,False
+S0466,Excel,Intermediate,True
+S0467,Verilog,Beginner,False
+S0467,TypeScript,Intermediate,False
+S0467,Kotlin,Advanced,True
+S0467,RTOS,Intermediate,False
+S0467,Jenkins,Advanced,False
+S0467,Arduino,Advanced,True
+S0467,Agile,Beginner,False
+S0468,TensorFlow,Intermediate,True
+S0468,PHP,Beginner,False
+S0468,C,Advanced,True
+S0468,Django,Intermediate,True
+S0468,Swift,Advanced,True
+S0468,Arduino,Beginner,False
+S0469,Cryptography,Beginner,False
+S0469,Excel,Intermediate,False
+S0469,Go,Beginner,False
+S0469,VHDL,Intermediate,True
+S0470,Git,Intermediate,False
+S0470,Linux,Advanced,True
+S0470,Azure,Beginner,False
+S0471,MS Office,Intermediate,True
+S0471,HTML/CSS,Advanced,True
+S0471,MATLAB,Intermediate,True
+S0471,PyTorch,Beginner,False
+S0472,Raspberry Pi,Beginner,False
+S0472,Vue.js,Advanced,True
+S0473,Java,Intermediate,True
+S0473,VHDL,Advanced,True
+S0473,Leadership,Intermediate,False
+S0473,Computer Vision,Advanced,True
+S0473,MATLAB,Intermediate,False
+S0474,Agile,Advanced,True
+S0474,Embedded C,Advanced,True
+S0474,R,Intermediate,True
+S0474,JIRA,Advanced,True
+S0475,Ethical Hacking,Advanced,False
+S0475,NumPy,Beginner,False
+S0475,VHDL,Beginner,False
+S0475,Swift,Beginner,False
+S0476,Verilog,Intermediate,False
+S0476,Kotlin,Intermediate,False
+S0476,VHDL,Intermediate,False
+S0476,Project Management,Beginner,False
+S0476,Communication,Intermediate,False
+S0477,Tailwind,Advanced,False
+S0477,Rust,Beginner,True
+S0477,Azure,Advanced,True
+S0477,Verilog,Intermediate,False
+S0478,Django,Beginner,False
+S0478,RTOS,Beginner,False
+S0478,Express,Beginner,False
+S0478,MongoDB,Intermediate,True
+S0479,Linux,Intermediate,True
+S0480,Power BI,Advanced,True
+S0480,C,Advanced,False
+S0481,Raspberry Pi,Intermediate,False
+S0481,SpaCy,Beginner,False
+S0481,Java,Advanced,False
+S0482,AWS,Intermediate,True
+S0482,Embedded C,Advanced,True
+S0482,Apache Spark,Intermediate,False
+S0482,C,Advanced,True
+S0483,JIRA,Intermediate,False
+S0483,Rust,Intermediate,True
+S0483,Spring Boot,Beginner,True
+S0484,JIRA,Beginner,False
+S0484,MATLAB,Intermediate,False
+S0485,GitHub Actions,Beginner,False
+S0485,TensorFlow,Beginner,False
+S0485,AWS,Advanced,False
+S0486,Arduino,Advanced,False
+S0486,Kubernetes,Intermediate,True
+S0486,Docker,Advanced,False
+S0487,Kubernetes,Beginner,False
+S0487,Express,Beginner,False
+S0487,Power BI,Intermediate,True
+S0487,Ruby,Advanced,True
+S0488,Flask,Intermediate,False
+S0488,Go,Intermediate,True
+S0488,Scala,Intermediate,True
+S0488,Swift,Intermediate,True
+S0489,Tableau,Intermediate,True
+S0490,Cryptography,Advanced,True
+S0490,Kubernetes,Beginner,False
+S0490,OpenCV,Beginner,False
+S0490,NLTK,Intermediate,True
+S0490,Keras,Beginner,False
+S0490,Kotlin,Intermediate,False
+S0490,R,Advanced,False
+S0491,RTOS,Intermediate,True
+S0491,Python,Intermediate,False
+S0491,MS Office,Beginner,True
+S0492,JavaScript,Advanced,True
+S0492,Apache Spark,Beginner,False
+S0492,Excel,Advanced,True
+S0493,Docker,Beginner,False
+S0493,GitHub Actions,Advanced,False
+S0493,Jenkins,Advanced,False
+S0493,VHDL,Beginner,False
+S0494,Redis,Advanced,True
+S0494,Scrum,Intermediate,False
+S0494,Next.js,Advanced,True
+S0494,OpenCV,Advanced,False
+S0495,Communication,Intermediate,False
+S0495,Agile,Advanced,True
+S0495,MS Office,Intermediate,False
+S0495,Scala,Intermediate,True
+S0495,Scrum,Intermediate,False
+S0495,NumPy,Advanced,True
+S0496,MySQL,Beginner,False
+S0496,PyTorch,Advanced,True
+S0497,Excel,Beginner,True
+S0497,NLP,Intermediate,False
+S0497,Verilog,Beginner,True
+S0497,Project Management,Beginner,False
+S0497,Computer Vision,Intermediate,True
+S0497,Hadoop,Beginner,False
+S0498,Linux,Beginner,False
+S0498,TensorFlow,Beginner,False
+S0498,REST APIs,Intermediate,True
+S0498,Ruby,Advanced,True
+S0498,Kubernetes,Intermediate,False
+S0498,Power BI,Beginner,False
+S0499,Swift,Beginner,True
+S0499,Hadoop,Intermediate,False
+S0499,Tableau,Beginner,False
+S0500,Scikit-learn,Advanced,True
+S0500,Swift,Intermediate,False
+S0500,Git,Beginner,False
+S0500,TensorFlow,Intermediate,True
+S0500,Azure,Advanced,True
+S0500,Keras,Intermediate,False
+S0501,Docker,Intermediate,False
+S0501,Jenkins,Advanced,False
+S0501,Git,Intermediate,False
+S0501,AWS,Intermediate,False
+S0501,Penetration Testing,Beginner,False
+S0501,Leadership,Beginner,True
+S0502,MATLAB,Beginner,False
+S0502,Jenkins,Intermediate,True
+S0502,Git,Intermediate,False
+S0502,PHP,Intermediate,False
+S0502,Pandas,Beginner,False
+S0502,GCP,Beginner,True
+S0502,Java,Intermediate,False
+S0503,MS Office,Advanced,True
+S0503,Raspberry Pi,Beginner,False
+S0504,Verilog,Beginner,False
+S0504,Elasticsearch,Intermediate,True
+S0505,Swift,Beginner,False
+S0505,CI/CD,Intermediate,False
+S0505,Excel,Advanced,True
+S0506,Keras,Advanced,True
+S0506,PostgreSQL,Intermediate,False
+S0506,Computer Vision,Advanced,False
+S0507,Swift,Intermediate,False
+S0507,Terraform,Advanced,False
+S0508,Rust,Intermediate,True
+S0508,SQL,Intermediate,False
+S0508,React,Beginner,False
+S0508,Scikit-learn,Intermediate,False
+S0508,Kubernetes,Advanced,False
+S0508,Angular,Beginner,False
+S0509,SpaCy,Advanced,True
+S0509,React,Beginner,False
+S0509,Scala,Beginner,False
+S0509,Vue.js,Intermediate,True
+S0509,Linux,Intermediate,True
+S0510,Node.js,Beginner,True
+S0510,Verilog,Beginner,False
+S0511,Communication,Beginner,True
+S0511,Network Security,Beginner,False
+S0511,Node.js,Advanced,False
+S0511,Ethical Hacking,Intermediate,True
+S0512,Go,Beginner,False
+S0512,React,Advanced,True
+S0512,MLflow,Beginner,True
+S0512,Git,Beginner,False
+S0513,Java,Advanced,True
+S0513,Scrum,Advanced,True
+S0513,Hadoop,Intermediate,False
+S0513,GraphQL,Intermediate,True
+S0513,Python,Intermediate,False
+S0513,Jenkins,Advanced,False
+S0513,Apache Spark,Beginner,False
+S0514,Computer Vision,Beginner,False
+S0514,HTML/CSS,Beginner,False
+S0515,Ruby,Intermediate,False
+S0515,RTOS,Intermediate,False
+S0515,Verilog,Advanced,True
+S0516,Kubernetes,Intermediate,True
+S0516,Scrum,Intermediate,False
+S0516,Tailwind,Intermediate,False
+S0517,TypeScript,Beginner,False
+S0517,GCP,Intermediate,False
+S0517,Jenkins,Intermediate,False
+S0517,SpaCy,Intermediate,False
+S0518,Python,Beginner,True
+S0518,Raspberry Pi,Intermediate,True
+S0518,Arduino,Beginner,True
+S0518,Network Security,Advanced,True
+S0518,MATLAB,Intermediate,False
+S0518,RTOS,Intermediate,False
+S0519,Elasticsearch,Intermediate,True
+S0519,Node.js,Advanced,True
+S0519,CI/CD,Beginner,False
+S0519,MATLAB,Intermediate,False
+S0519,Redis,Advanced,False
+S0520,MySQL,Intermediate,False
+S0520,Raspberry Pi,Intermediate,False
+S0521,Network Security,Intermediate,False
+S0521,Jenkins,Advanced,True
+S0521,Apache Spark,Beginner,False
+S0521,NumPy,Beginner,False
+S0521,PostgreSQL,Advanced,True
+S0522,Power BI,Beginner,False
+S0522,AWS,Advanced,False
+S0522,Deep Learning,Intermediate,False
+S0522,MongoDB,Beginner,False
+S0523,Raspberry Pi,Intermediate,False
+S0523,Express,Advanced,False
+S0523,MySQL,Beginner,False
+S0523,RTOS,Intermediate,False
+S0524,Cryptography,Beginner,False
+S0524,GCP,Intermediate,False
+S0524,Excel,Intermediate,True
+S0525,Deep Learning,Intermediate,False
+S0525,AWS,Intermediate,False
+S0525,MongoDB,Intermediate,False
+S0525,Vue.js,Beginner,False
+S0525,MySQL,Intermediate,False
+S0526,Java,Intermediate,False
+S0526,AWS,Intermediate,False
+S0526,Swift,Intermediate,True
+S0526,Bootstrap,Intermediate,True
+S0527,Firewall Management,Intermediate,False
+S0527,PostgreSQL,Advanced,False
+S0527,AWS,Beginner,False
+S0527,SQL,Intermediate,True
+S0527,Express,Advanced,False
+S0527,Go,Intermediate,True
+S0528,Scikit-learn,Intermediate,False
+S0529,Excel,Intermediate,True
+S0529,Leadership,Intermediate,False
+S0529,NumPy,Advanced,True
+S0529,Scrum,Intermediate,False
+S0530,MATLAB,Advanced,True
+S0530,R,Intermediate,False
+S0530,Ethical Hacking,Beginner,False
+S0530,Kotlin,Intermediate,True
+S0530,Cryptography,Beginner,False
+S0530,JIRA,Advanced,True
+S0531,Ethical Hacking,Intermediate,True
+S0531,Apache Spark,Intermediate,True
+S0531,Jenkins,Beginner,False
+S0532,TypeScript,Advanced,False
+S0533,TypeScript,Beginner,True
+S0533,CI/CD,Advanced,True
+S0533,Elasticsearch,Intermediate,False
+S0533,Scrum,Intermediate,True
+S0533,Embedded C,Beginner,False
+S0533,Kotlin,Intermediate,False
+S0533,Penetration Testing,Beginner,True
+S0534,Hadoop,Intermediate,False
+S0534,Scikit-learn,Intermediate,True
+S0534,MongoDB,Beginner,False
+S0534,PCB Design,Beginner,False
+S0535,Rust,Intermediate,False
+S0535,Scikit-learn,Advanced,True
+S0535,PCB Design,Intermediate,False
+S0535,Java,Beginner,False
+S0536,Embedded C,Beginner,False
+S0536,PHP,Intermediate,True
+S0537,Apache Spark,Beginner,False
+S0537,Swift,Advanced,True
+S0537,Arduino,Intermediate,False
+S0538,Git,Beginner,False
+S0538,VHDL,Advanced,True
+S0538,Kubernetes,Intermediate,False
+S0538,Go,Intermediate,False
+S0539,Embedded C,Beginner,False
+S0539,Agile,Advanced,True
+S0539,Raspberry Pi,Advanced,False
+S0539,JavaScript,Beginner,False
+S0540,MongoDB,Intermediate,True
+S0540,Java,Advanced,False
+S0540,CI/CD,Advanced,True
+S0540,C,Beginner,False
+S0541,Computer Vision,Beginner,True
+S0541,C,Intermediate,False
+S0541,Arduino,Beginner,True
+S0541,GitHub Actions,Advanced,True
+S0541,PHP,Advanced,True
+S0541,TypeScript,Intermediate,True
+S0541,NLTK,Beginner,False
+S0542,MS Office,Advanced,True
+S0542,Excel,Beginner,False
+S0542,JIRA,Beginner,False
+S0543,Docker,Intermediate,False
+S0543,PyTorch,Advanced,True
+S0543,RTOS,Intermediate,True
+S0543,JavaScript,Intermediate,False
+S0544,Elasticsearch,Advanced,False
+S0544,Go,Beginner,False
+S0544,TypeScript,Beginner,False
+S0544,REST APIs,Intermediate,False
+S0544,Flask,Intermediate,True
+S0544,Scala,Beginner,False
+S0544,Hadoop,Intermediate,False
+S0545,MATLAB,Intermediate,True
+S0545,NumPy,Intermediate,False
+S0545,Kotlin,Advanced,True
+S0546,HTML/CSS,Advanced,True
+S0546,Python,Beginner,False
+S0546,Linux,Intermediate,False
+S0547,Next.js,Advanced,True
+S0547,Kubernetes,Advanced,False
+S0547,MLflow,Intermediate,True
+S0547,Swift,Intermediate,False
+S0547,Excel,Beginner,False
+S0547,Scrum,Intermediate,False
+S0548,Deep Learning,Intermediate,True
+S0548,NLTK,Advanced,True
+S0548,PyTorch,Advanced,True
+S0549,PCB Design,Intermediate,False
+S0549,Embedded C,Intermediate,True
+S0549,Arduino,Intermediate,True
+S0550,Leadership,Advanced,True
+S0551,Penetration Testing,Advanced,True
+S0551,Raspberry Pi,Advanced,True
+S0551,Flask,Advanced,True
+S0552,MongoDB,Beginner,False
+S0553,Rust,Intermediate,True
+S0553,React,Intermediate,False
+S0553,Node.js,Intermediate,False
+S0553,Spring Boot,Intermediate,True
+S0553,Git,Intermediate,False
+S0554,NLTK,Advanced,True
+S0554,TypeScript,Intermediate,False
+S0554,Deep Learning,Intermediate,False
+S0554,Git,Intermediate,False
+S0554,C,Advanced,True
+S0554,Apache Spark,Intermediate,False
+S0555,TypeScript,Advanced,True
+S0555,MongoDB,Advanced,True
+S0556,JIRA,Advanced,False
+S0556,Arduino,Intermediate,True
+S0556,Java,Intermediate,True
+S0556,RTOS,Advanced,True
+S0557,Flask,Intermediate,False
+S0557,Scikit-learn,Intermediate,True
+S0557,Express,Beginner,False
+S0558,NumPy,Intermediate,True
+S0558,Scrum,Intermediate,True
+S0559,Hadoop,Beginner,True
+S0559,Keras,Intermediate,False
+S0559,Azure,Beginner,False
+S0560,Deep Learning,Advanced,True
+S0560,CI/CD,Beginner,False
+S0560,R,Beginner,True
+S0561,Vue.js,Intermediate,False
+S0561,Hugging Face,Beginner,False
+S0561,PostgreSQL,Beginner,False
+S0561,AWS,Advanced,False
+S0562,Firewall Management,Beginner,False
+S0562,Scikit-learn,Intermediate,True
+S0563,Communication,Advanced,True
+S0563,Java,Intermediate,False
+S0563,Rust,Intermediate,True
+S0564,Keras,Intermediate,False
+S0565,RTOS,Intermediate,True
+S0565,JavaScript,Advanced,False
+S0565,Ruby,Intermediate,True
+S0565,Node.js,Advanced,True
+S0565,AWS,Intermediate,True
+S0566,SQL,Advanced,False
+S0566,Linux,Advanced,True
+S0566,MLflow,Advanced,False
+S0566,Hadoop,Intermediate,True
+S0566,Pandas,Intermediate,True
+S0566,PHP,Beginner,True
+S0567,Redis,Intermediate,False
+S0567,PyTorch,Intermediate,False
+S0567,Elasticsearch,Intermediate,False
+S0567,SQL,Beginner,False
+S0567,Kubernetes,Intermediate,True
+S0568,Vue.js,Intermediate,True
+S0568,Go,Intermediate,False
+S0568,Raspberry Pi,Advanced,False
+S0568,Docker,Beginner,False
+S0569,Project Management,Intermediate,False
+S0569,Hadoop,Beginner,False
+S0569,AWS,Advanced,False
+S0569,MLflow,Beginner,False
+S0570,NumPy,Advanced,True
+S0570,Kubernetes,Intermediate,False
+S0570,TypeScript,Intermediate,False
+S0570,SpaCy,Beginner,False
+S0570,PostgreSQL,Intermediate,True
+S0570,MLflow,Beginner,True
+S0571,Ethical Hacking,Intermediate,False
+S0571,HTML/CSS,Intermediate,False
+S0571,Tableau,Intermediate,True
+S0571,Apache Spark,Beginner,False
+S0571,React,Beginner,False
+S0572,Communication,Beginner,False
+S0572,Project Management,Intermediate,False
+S0573,VHDL,Advanced,True
+S0573,Agile,Beginner,False
+S0573,Raspberry Pi,Intermediate,True
+S0573,JIRA,Intermediate,True
+S0573,Arduino,Beginner,False
+S0574,Hugging Face,Intermediate,False
+S0574,Go,Intermediate,False
+S0574,Kotlin,Advanced,True
+S0575,Ethical Hacking,Intermediate,True
+S0575,Power BI,Advanced,False
+S0575,Agile,Intermediate,False
+S0576,Go,Intermediate,False
+S0576,Ruby,Beginner,False
+S0577,Scrum,Beginner,False
+S0577,JavaScript,Beginner,False
+S0578,Azure,Advanced,True
+S0578,Redis,Beginner,False
+S0578,Git,Advanced,True
+S0578,Next.js,Beginner,False
+S0578,Power BI,Intermediate,False
+S0579,AWS,Intermediate,False
+S0579,Angular,Intermediate,False
+S0580,Node.js,Advanced,True
+S0580,Pandas,Intermediate,False
+S0580,GraphQL,Intermediate,False
+S0580,Spring Boot,Intermediate,False
+S0580,Git,Advanced,False
+S0580,Scala,Advanced,True
+S0580,Angular,Intermediate,False
+S0581,MS Office,Advanced,True
+S0581,RTOS,Beginner,False
+S0582,C++,Advanced,False
+S0582,Jenkins,Advanced,True
+S0582,GitHub Actions,Intermediate,True
+S0582,React,Beginner,False
+S0582,Hadoop,Intermediate,True
+S0583,Kubernetes,Beginner,False
+S0583,Bootstrap,Advanced,False
+S0583,Spring Boot,Intermediate,False
+S0583,SpaCy,Advanced,False
+S0583,Keras,Advanced,False
+S0583,Scikit-learn,Intermediate,False
+S0583,Pandas,Beginner,False
+S0584,JavaScript,Advanced,True
+S0584,Deep Learning,Intermediate,False
+S0584,Agile,Advanced,True
+S0585,R,Beginner,False
+S0585,Kotlin,Beginner,False
+S0585,Arduino,Beginner,False
+S0585,NumPy,Beginner,False
+S0586,MATLAB,Beginner,False
+S0586,Angular,Advanced,True
+S0586,Python,Advanced,True
+S0587,Ethical Hacking,Intermediate,False
+S0587,PCB Design,Advanced,False
+S0587,VHDL,Intermediate,False
+S0588,Penetration Testing,Advanced,True
+S0588,Communication,Advanced,False
+S0589,GCP,Intermediate,False
+S0589,Git,Intermediate,False
+S0589,Embedded C,Intermediate,True
+S0589,AWS,Advanced,True
+S0590,Swift,Intermediate,False
+S0590,C++,Intermediate,False
+S0590,PHP,Beginner,False
+S0590,Python,Advanced,False
+S0591,VHDL,Beginner,True
+S0591,Pandas,Advanced,True
+S0592,JIRA,Intermediate,True
+S0592,SQL,Intermediate,True
+S0592,Project Management,Beginner,False
+S0592,PyTorch,Beginner,False
+S0592,Agile,Intermediate,False
+S0593,RTOS,Beginner,False
+S0593,MongoDB,Intermediate,True
+S0593,Elasticsearch,Intermediate,False
+S0593,NLTK,Intermediate,True
+S0594,TypeScript,Intermediate,False
+S0594,Scrum,Intermediate,False
+S0594,MySQL,Advanced,False
+S0595,REST APIs,Beginner,False
+S0595,Bootstrap,Intermediate,True
+S0596,SQL,Intermediate,True
+S0596,Penetration Testing,Advanced,True
+S0596,Scala,Intermediate,False
+S0597,Python,Advanced,False
+S0597,Network Security,Intermediate,False
+S0597,Hadoop,Intermediate,False
+S0597,Power BI,Intermediate,False
+S0597,C,Intermediate,False
+S0598,Next.js,Intermediate,False
+S0598,REST APIs,Beginner,False
+S0598,Hadoop,Intermediate,True
+S0598,Python,Advanced,True
+S0599,Ruby,Beginner,False
+S0600,Computer Vision,Beginner,False
+S0600,Terraform,Intermediate,False
+S0600,MongoDB,Intermediate,True
+S0600,Swift,Intermediate,False
+S0601,Scrum,Advanced,True
+S0601,NLP,Advanced,True
+S0601,GraphQL,Advanced,True
+S0601,Rust,Beginner,True
+S0601,Git,Advanced,False
+S0602,R,Intermediate,False
+S0603,Leadership,Intermediate,True
+S0603,Kotlin,Beginner,False
+S0603,JavaScript,Beginner,False
+S0603,Computer Vision,Intermediate,True
+S0604,Scrum,Beginner,False
+S0604,Communication,Intermediate,False
+S0605,C++,Intermediate,True
+S0605,MLflow,Intermediate,False
+S0605,Python,Advanced,True
+S0605,PCB Design,Beginner,True
+S0606,Rust,Intermediate,True
+S0606,Ruby,Advanced,True
+S0606,Linux,Intermediate,False
+S0606,Computer Vision,Advanced,True
+S0606,Pandas,Beginner,False
+S0606,Excel,Intermediate,True
+S0606,Swift,Beginner,False
+S0607,Raspberry Pi,Intermediate,True
+S0608,R,Intermediate,True
+S0608,Git,Beginner,True
+S0609,RTOS,Intermediate,True
+S0609,Linux,Beginner,False
+S0609,Apache Spark,Beginner,True
+S0610,VHDL,Intermediate,False
+S0610,Raspberry Pi,Intermediate,True
+S0610,NLTK,Intermediate,False
+S0610,Hadoop,Intermediate,True
+S0610,Arduino,Intermediate,False
+S0611,MongoDB,Advanced,True
+S0611,Terraform,Intermediate,True
+S0611,Docker,Advanced,True
+S0611,Deep Learning,Beginner,False
+S0612,Go,Beginner,False
+S0612,Computer Vision,Advanced,False
+S0612,Kubernetes,Beginner,False
+S0612,Verilog,Advanced,False
+S0612,MLflow,Beginner,False
+S0612,Deep Learning,Advanced,True
+S0613,GCP,Advanced,True
+S0614,REST APIs,Intermediate,False
+S0614,Tableau,Intermediate,False
+S0615,Embedded C,Advanced,False
+S0615,Azure,Beginner,False
+S0615,Agile,Intermediate,False
+S0615,MATLAB,Beginner,True
+S0616,TypeScript,Intermediate,False
+S0616,Tableau,Advanced,False
+S0616,Git,Intermediate,False
+S0617,Deep Learning,Intermediate,True
+S0617,Ruby,Advanced,True
+S0618,PostgreSQL,Beginner,True
+S0618,GCP,Advanced,True
+S0619,Java,Intermediate,True
+S0619,GitHub Actions,Beginner,False
+S0619,Azure,Advanced,True
+S0619,Angular,Intermediate,False
+S0619,Verilog,Intermediate,False
+S0619,Django,Advanced,True
+S0620,Keras,Beginner,False
+S0620,Agile,Advanced,False
+S0620,Java,Advanced,True
+S0621,Agile,Advanced,True
+S0621,Arduino,Intermediate,True
+S0621,MongoDB,Intermediate,True
+S0622,Project Management,Advanced,True
+S0622,MLflow,Beginner,False
+S0622,Linux,Beginner,False
+S0622,PCB Design,Intermediate,False
+S0623,MongoDB,Advanced,False
+S0623,SpaCy,Intermediate,True
+S0623,Excel,Beginner,False
+S0623,Azure,Advanced,True
+S0624,PyTorch,Beginner,False
+S0624,REST APIs,Beginner,False
+S0624,GCP,Beginner,False
+S0624,NumPy,Beginner,False
+S0624,Jenkins,Intermediate,True
+S0625,JavaScript,Intermediate,False
+S0625,Project Management,Advanced,True
+S0625,Rust,Beginner,False
+S0625,Kubernetes,Intermediate,True
+S0625,Tableau,Advanced,True
+S0625,Vue.js,Advanced,True
+S0625,CI/CD,Intermediate,False
+S0626,Redis,Intermediate,False
+S0626,JIRA,Intermediate,True
+S0626,GraphQL,Beginner,False
+S0627,Go,Intermediate,False
+S0627,NLP,Beginner,False
+S0627,PostgreSQL,Beginner,False
+S0628,Embedded C,Advanced,True
+S0628,Verilog,Intermediate,True
+S0628,Kubernetes,Intermediate,False
+S0628,Tableau,Intermediate,False
+S0628,VHDL,Intermediate,True
+S0628,Raspberry Pi,Intermediate,True
+S0629,GitHub Actions,Intermediate,False
+S0629,Embedded C,Advanced,False
+S0630,Kubernetes,Intermediate,True
+S0630,SIEM,Intermediate,False
+S0630,Docker,Intermediate,True
+S0630,Scrum,Beginner,False
+S0630,Power BI,Advanced,True
+S0630,NLTK,Intermediate,False
+S0630,GraphQL,Advanced,True
+S0631,Agile,Intermediate,False
+S0631,TensorFlow,Advanced,True
+S0631,MySQL,Intermediate,False
+S0631,TypeScript,Beginner,False
+S0631,Project Management,Advanced,True
+S0631,RTOS,Intermediate,True
+S0632,Hadoop,Intermediate,False
+S0632,Java,Beginner,False
+S0632,TensorFlow,Beginner,False
+S0632,JIRA,Advanced,False
+S0633,Linux,Beginner,False
+S0633,Go,Intermediate,False
+S0633,Hadoop,Intermediate,False
+S0634,Docker,Beginner,False
+S0634,Apache Spark,Beginner,False
+S0634,Hugging Face,Intermediate,False
+S0634,RTOS,Intermediate,True
+S0634,GraphQL,Beginner,False
+S0635,Verilog,Intermediate,True
+S0635,PHP,Beginner,False
+S0636,SQL,Intermediate,True
+S0636,Apache Spark,Beginner,False
+S0636,JIRA,Advanced,True
+S0636,Hadoop,Intermediate,False
+S0637,Ruby,Advanced,False
+S0637,Kotlin,Intermediate,True
+S0637,Agile,Beginner,False
+S0638,Tableau,Advanced,True
+S0638,Git,Intermediate,False
+S0638,PHP,Intermediate,False
+S0638,Linux,Intermediate,False
+S0639,PCB Design,Intermediate,True
+S0639,Linux,Advanced,True
+S0639,REST APIs,Advanced,True
+S0639,Docker,Advanced,True
+S0640,MS Office,Intermediate,True
+S0640,Agile,Intermediate,False
+S0640,Tableau,Beginner,False
+S0641,MongoDB,Advanced,False
+S0641,Scikit-learn,Intermediate,True
+S0641,Computer Vision,Advanced,False
+S0641,Rust,Advanced,True
+S0642,Embedded C,Intermediate,False
+S0642,RTOS,Intermediate,False
+S0642,TensorFlow,Advanced,True
+S0643,Apache Spark,Advanced,True
+S0643,MongoDB,Beginner,False
+S0644,Docker,Advanced,True
+S0644,Hadoop,Beginner,False
+S0644,Linux,Intermediate,True
+S0645,Arduino,Intermediate,False
+S0645,Scala,Intermediate,True
+S0646,Express,Intermediate,True
+S0646,Redis,Intermediate,True
+S0646,Pandas,Beginner,False
+S0646,Angular,Advanced,True
+S0646,Computer Vision,Intermediate,False
+S0646,Docker,Intermediate,False
+S0647,MLflow,Beginner,False
+S0647,Excel,Beginner,False
+S0648,Kotlin,Beginner,False
+S0648,Rust,Advanced,True
+S0648,MLflow,Intermediate,True
+S0648,Go,Intermediate,False
+S0649,SQL,Intermediate,True
+S0649,TensorFlow,Intermediate,False
+S0649,C++,Intermediate,True
+S0649,SpaCy,Beginner,False
+S0649,TypeScript,Intermediate,False
+S0650,Apache Spark,Intermediate,False
+S0650,Scrum,Advanced,True
+S0651,Git,Intermediate,True
+S0651,Java,Intermediate,False
+S0651,Embedded C,Advanced,True
+S0652,JIRA,Intermediate,False
+S0652,Rust,Beginner,False
+S0652,VHDL,Advanced,True
+S0652,TensorFlow,Intermediate,False
+S0652,RTOS,Intermediate,False
+S0653,Hugging Face,Intermediate,False
+S0653,Hadoop,Beginner,False
+S0653,PyTorch,Beginner,True
+S0654,Redis,Intermediate,False
+S0654,Flask,Intermediate,False
+S0654,Linux,Advanced,True
+S0654,Project Management,Advanced,True
+S0654,Kotlin,Intermediate,False
+S0654,MongoDB,Advanced,False
+S0655,C++,Beginner,False
+S0655,JIRA,Intermediate,True
+S0655,Rust,Intermediate,False
+S0656,NLTK,Intermediate,True
+S0656,Jenkins,Intermediate,False
+S0656,Agile,Intermediate,True
+S0657,AWS,Beginner,True
+S0657,Rust,Intermediate,False
+S0657,Leadership,Beginner,False
+S0657,Linux,Intermediate,False
+S0658,Express,Beginner,False
+S0658,Spring Boot,Intermediate,False
+S0658,C,Beginner,True
+S0658,AWS,Advanced,True
+S0658,TypeScript,Intermediate,False
+S0659,Flask,Beginner,False
+S0659,Tailwind,Beginner,False
+S0659,Express,Intermediate,True
+S0660,R,Advanced,True
+S0660,Git,Intermediate,True
+S0660,Python,Beginner,False
+S0661,Scala,Advanced,False
+S0661,Keras,Advanced,True
+S0661,Rust,Intermediate,True
+S0661,PHP,Intermediate,False
+S0661,Git,Intermediate,False
+S0662,MLflow,Advanced,True
+S0662,SIEM,Advanced,False
+S0662,RTOS,Intermediate,False
+S0662,Arduino,Intermediate,True
+S0662,Verilog,Intermediate,False
+S0662,Kubernetes,Intermediate,True
+S0662,Bootstrap,Advanced,True
+S0663,PyTorch,Beginner,False
+S0663,Tableau,Intermediate,True
+S0663,Go,Beginner,False
+S0664,PHP,Beginner,False
+S0664,CI/CD,Advanced,True
+S0664,Redis,Beginner,False
+S0664,MS Office,Intermediate,False
+S0665,SIEM,Intermediate,False
+S0665,Swift,Advanced,True
+S0665,Rust,Intermediate,True
+S0665,PCB Design,Intermediate,False
+S0665,Arduino,Intermediate,True
+S0666,GCP,Intermediate,False
+S0666,VHDL,Intermediate,True
+S0666,Rust,Advanced,True
+S0666,TypeScript,Beginner,False
+S0667,Scala,Intermediate,False
+S0667,MS Office,Intermediate,False
+S0667,Computer Vision,Beginner,False
+S0667,NLP,Beginner,False
+S0667,Terraform,Advanced,True
+S0668,Bootstrap,Advanced,False
+S0669,Scala,Intermediate,False
+S0669,TypeScript,Intermediate,True
+S0669,AWS,Advanced,False
+S0669,Embedded C,Advanced,True
+S0670,Kotlin,Beginner,False
+S0670,GraphQL,Beginner,False
+S0670,Scala,Intermediate,True
+S0670,NLP,Beginner,False
+S0671,Swift,Intermediate,True
+S0671,Verilog,Beginner,False
+S0671,PostgreSQL,Advanced,True
+S0671,Scala,Intermediate,False
+S0672,SQL,Intermediate,False
+S0673,AWS,Intermediate,False
+S0673,MySQL,Intermediate,True
+S0674,Firewall Management,Intermediate,True
+S0674,PCB Design,Beginner,False
+S0674,Embedded C,Intermediate,False
+S0674,Scala,Beginner,False
+S0675,GitHub Actions,Intermediate,False
+S0675,Arduino,Intermediate,False
+S0675,Go,Intermediate,True
+S0675,Kubernetes,Intermediate,True
+S0676,Hugging Face,Advanced,True
+S0676,REST APIs,Intermediate,False
+S0676,Vue.js,Beginner,False
+S0677,AWS,Beginner,False
+S0677,Verilog,Beginner,False
+S0677,Jenkins,Advanced,False
+S0677,TypeScript,Advanced,True
+S0677,Firewall Management,Beginner,False
+S0677,Ethical Hacking,Intermediate,True
+S0677,Arduino,Intermediate,True
+S0678,Excel,Advanced,False
+S0678,Penetration Testing,Intermediate,False
+S0678,Azure,Beginner,False
+S0678,Docker,Beginner,True
+S0679,Flask,Intermediate,False
+S0679,TensorFlow,Beginner,True
+S0679,Rust,Advanced,True
+S0679,C++,Beginner,False
+S0679,GitHub Actions,Intermediate,True
+S0680,Tableau,Intermediate,False
+S0680,Penetration Testing,Beginner,False
+S0680,MongoDB,Beginner,False
+S0681,Verilog,Advanced,False
+S0681,Raspberry Pi,Intermediate,True
+S0681,Scala,Beginner,False
+S0682,SpaCy,Advanced,True
+S0683,Agile,Intermediate,True
+S0683,Project Management,Intermediate,True
+S0683,Leadership,Beginner,False
+S0684,SQL,Advanced,True
+S0684,Redis,Beginner,False
+S0684,Scikit-learn,Intermediate,False
+S0684,OpenCV,Intermediate,True
+S0685,Kubernetes,Beginner,False
+S0685,Docker,Intermediate,True
+S0685,Kotlin,Advanced,True
+S0685,Apache Spark,Intermediate,False
+S0686,GCP,Beginner,False
+S0686,Swift,Advanced,True
+S0686,VHDL,Intermediate,True
+S0687,Java,Intermediate,True
+S0687,Azure,Beginner,True
+S0687,Angular,Advanced,True
+S0687,Terraform,Intermediate,False
+S0687,R,Advanced,True
+S0688,GitHub Actions,Beginner,False
+S0688,MongoDB,Advanced,True
+S0688,C,Beginner,True
+S0688,Jenkins,Intermediate,True
+S0689,MySQL,Intermediate,True
+S0689,MATLAB,Beginner,False
+S0690,Penetration Testing,Intermediate,False
+S0690,OpenCV,Intermediate,False
+S0690,Raspberry Pi,Intermediate,False
+S0690,VHDL,Intermediate,False
+S0690,Hugging Face,Intermediate,False
+S0691,Excel,Intermediate,False
+S0691,Scala,Beginner,False
+S0691,Kubernetes,Intermediate,False
+S0692,Computer Vision,Intermediate,False
+S0692,Firewall Management,Intermediate,True
+S0692,OpenCV,Intermediate,False
+S0692,MS Office,Advanced,True
+S0692,Embedded C,Intermediate,True
+S0693,CI/CD,Beginner,True
+S0693,NumPy,Intermediate,True
+S0693,Scala,Advanced,True
+S0694,Embedded C,Advanced,True
+S0694,Project Management,Intermediate,False
+S0694,RTOS,Intermediate,True
+S0694,PHP,Beginner,False
+S0695,Kotlin,Beginner,False
+S0695,PHP,Intermediate,False
+S0695,Verilog,Intermediate,False
+S0696,Scikit-learn,Intermediate,False
+S0696,Node.js,Intermediate,True
+S0697,Arduino,Intermediate,True
+S0697,Ruby,Advanced,False
+S0697,PCB Design,Intermediate,False
+S0698,PCB Design,Beginner,False
+S0698,RTOS,Beginner,False
+S0698,Arduino,Beginner,False
+S0699,TensorFlow,Intermediate,False
+S0699,GCP,Intermediate,True
+S0699,AWS,Intermediate,True
+S0699,Docker,Beginner,False
+S0700,AWS,Advanced,False
+S0700,C++,Intermediate,True
+S0700,Jenkins,Intermediate,True
+S0701,Power BI,Advanced,True
+S0701,Azure,Beginner,False
+S0701,Kotlin,Beginner,False
+S0702,PHP,Intermediate,False
+S0702,Jenkins,Beginner,False
+S0702,Docker,Advanced,False
+S0703,SQL,Beginner,False
+S0703,Project Management,Intermediate,True
+S0703,Keras,Intermediate,True
+S0703,MongoDB,Intermediate,False
+S0703,Git,Beginner,False
+S0703,AWS,Advanced,True
+S0704,Java,Advanced,True
+S0704,Rust,Intermediate,False
+S0704,C,Intermediate,False
+S0704,GitHub Actions,Beginner,False
+S0704,Terraform,Intermediate,False
+S0705,JIRA,Intermediate,True
+S0705,TypeScript,Intermediate,False
+S0705,Go,Advanced,True
+S0705,Rust,Advanced,False
+S0706,Spring Boot,Intermediate,True
+S0706,Scrum,Beginner,False
+S0706,MySQL,Intermediate,False
+S0707,Docker,Advanced,True
+S0707,NumPy,Intermediate,True
+S0707,MS Office,Beginner,False
+S0707,Git,Beginner,False
+S0708,Angular,Beginner,False
+S0708,Java,Intermediate,False
+S0708,Linux,Advanced,True
+S0709,JavaScript,Intermediate,True
+S0709,Scikit-learn,Advanced,False
+S0709,Verilog,Advanced,True
+S0710,Azure,Intermediate,False
+S0710,SQL,Beginner,False
+S0711,R,Beginner,False
+S0711,Jenkins,Intermediate,False
+S0711,Verilog,Beginner,False
+S0711,C,Advanced,True
+S0712,Firewall Management,Intermediate,True
+S0712,RTOS,Intermediate,False
+S0712,MS Office,Intermediate,True
+S0712,PHP,Intermediate,True
+S0713,AWS,Beginner,True
+S0713,Power BI,Beginner,False
+S0713,PostgreSQL,Beginner,False
+S0714,Kubernetes,Beginner,False
+S0714,Docker,Intermediate,False
+S0714,AWS,Intermediate,True
+S0714,Flask,Advanced,True
+S0715,Git,Advanced,True
+S0715,JavaScript,Advanced,True
+S0715,Spring Boot,Advanced,True
+S0716,Verilog,Advanced,True
+S0716,VHDL,Intermediate,False
+S0716,Kubernetes,Intermediate,False
+S0716,Embedded C,Intermediate,True
+S0716,AWS,Advanced,False
+S0716,MATLAB,Advanced,True
+S0716,PCB Design,Advanced,True
+S0717,Docker,Beginner,False
+S0717,GCP,Beginner,False
+S0717,NumPy,Intermediate,False
+S0717,MySQL,Intermediate,False
+S0717,Redis,Advanced,True
+S0717,Linux,Intermediate,False
+S0718,Bootstrap,Advanced,True
+S0718,Go,Beginner,False
+S0719,Docker,Beginner,False
+S0719,CI/CD,Intermediate,True
+S0719,AWS,Advanced,False
+S0719,Tailwind,Advanced,True
+S0719,Kotlin,Intermediate,True
+S0719,OpenCV,Intermediate,True
+S0720,Agile,Beginner,False
+S0720,JavaScript,Intermediate,False
+S0720,Project Management,Beginner,False
+S0720,Verilog,Intermediate,True
+S0721,Docker,Intermediate,True
+S0721,Keras,Advanced,True
+S0721,Apache Spark,Beginner,True
+S0721,PHP,Advanced,True
+S0721,Ruby,Intermediate,False
+S0722,C++,Beginner,False
+S0722,AWS,Beginner,False
+S0722,Linux,Advanced,True
+S0723,MongoDB,Advanced,True
+S0723,NLTK,Advanced,True
+S0723,Computer Vision,Intermediate,False
+S0723,Kubernetes,Beginner,False
+S0723,Next.js,Advanced,False
+S0724,JavaScript,Beginner,False
+S0724,Pandas,Intermediate,False
+S0725,MATLAB,Intermediate,False
+S0725,GCP,Advanced,False
+S0725,Flask,Intermediate,False
+S0725,Python,Beginner,False
+S0726,GCP,Beginner,False
+S0726,HTML/CSS,Beginner,False
+S0726,Django,Intermediate,False
+S0726,NumPy,Intermediate,True
+S0726,Kotlin,Intermediate,False
+S0726,PostgreSQL,Intermediate,True
+S0726,Redis,Beginner,False
+S0727,Java,Beginner,True
+S0727,Hugging Face,Advanced,True
+S0727,PHP,Beginner,True
+S0728,Tableau,Intermediate,False
+S0728,Pandas,Advanced,True
+S0728,Excel,Advanced,True
+S0728,OpenCV,Intermediate,False
+S0728,C,Intermediate,False
+S0729,Deep Learning,Intermediate,False
+S0729,R,Advanced,False
+S0729,Kotlin,Advanced,True
+S0729,Hugging Face,Intermediate,False
+S0729,AWS,Beginner,False
+S0730,Go,Beginner,False
+S0730,Next.js,Advanced,False
+S0730,Hugging Face,Beginner,False
+S0730,MLflow,Beginner,False
+S0731,Spring Boot,Intermediate,True
+S0731,Scrum,Advanced,True
+S0731,Pandas,Intermediate,False
+S0731,Hadoop,Intermediate,False
+S0731,MS Office,Beginner,False
+S0731,Cryptography,Intermediate,True
+S0732,C++,Beginner,False
+S0732,JavaScript,Intermediate,True
+S0732,TypeScript,Intermediate,True
+S0732,Embedded C,Advanced,False
+S0732,Arduino,Intermediate,False
+S0733,Communication,Advanced,True
+S0733,SQL,Intermediate,False
+S0733,Apache Spark,Advanced,True
+S0734,PCB Design,Beginner,False
+S0734,NLTK,Intermediate,False
+S0734,JIRA,Advanced,True
+S0734,Swift,Beginner,True
+S0734,JavaScript,Beginner,False
+S0734,VHDL,Beginner,False
+S0734,Raspberry Pi,Advanced,False
+S0735,JIRA,Advanced,False
+S0735,Docker,Intermediate,True
+S0735,PCB Design,Intermediate,False
+S0736,Express,Intermediate,False
+S0736,C++,Intermediate,False
+S0736,Go,Beginner,False
+S0736,Penetration Testing,Intermediate,False
+S0737,Jenkins,Advanced,True
+S0737,TensorFlow,Advanced,True
+S0737,Hugging Face,Beginner,False
+S0737,Vue.js,Beginner,True
+S0737,Tableau,Beginner,False
+S0737,AWS,Beginner,False
+S0738,Azure,Intermediate,True
+S0738,MATLAB,Advanced,True
+S0738,AWS,Intermediate,True
+S0738,SQL,Intermediate,True
+S0738,Bootstrap,Intermediate,True
+S0739,Excel,Intermediate,True
+S0740,Azure,Beginner,True
+S0741,PHP,Advanced,True
+S0741,Firewall Management,Beginner,True
+S0741,Ruby,Advanced,True
+S0742,VHDL,Intermediate,False
+S0742,RTOS,Beginner,False
+S0742,Express,Beginner,False
+S0742,SIEM,Intermediate,False
+S0742,Python,Intermediate,True
+S0743,Elasticsearch,Advanced,True
+S0743,Raspberry Pi,Advanced,False
+S0743,Terraform,Beginner,False
+S0744,Jenkins,Beginner,False
+S0744,MySQL,Advanced,True
+S0744,Docker,Beginner,False
+S0745,GraphQL,Advanced,True
+S0745,MLflow,Advanced,False
+S0745,Redis,Beginner,False
+S0745,Scikit-learn,Intermediate,False
+S0746,Scala,Beginner,False
+S0746,Bootstrap,Intermediate,True
+S0746,Embedded C,Intermediate,False
+S0746,Arduino,Beginner,False
+S0746,Agile,Advanced,False
+S0747,Embedded C,Beginner,False
+S0747,Raspberry Pi,Intermediate,False
+S0747,R,Beginner,False
+S0747,PCB Design,Advanced,True
+S0747,GitHub Actions,Intermediate,True
+S0747,Arduino,Intermediate,False
+S0748,PHP,Advanced,True
+S0748,OpenCV,Intermediate,False
+S0748,NumPy,Advanced,True
+S0749,Docker,Intermediate,False
+S0749,Apache Spark,Beginner,False
+S0749,Scala,Advanced,True
+S0749,Deep Learning,Beginner,False
+S0750,Agile,Advanced,True
+S0750,Verilog,Intermediate,False
+S0750,Embedded C,Intermediate,False
+S0751,Firewall Management,Advanced,False
+S0751,GCP,Beginner,True
+S0751,PCB Design,Intermediate,False
+S0751,Excel,Beginner,False
+S0751,Python,Beginner,False
+S0751,Elasticsearch,Intermediate,True
+S0752,Hugging Face,Beginner,False
+S0752,C++,Advanced,True
+S0752,CI/CD,Intermediate,False
+S0753,PyTorch,Intermediate,False
+S0753,Ruby,Beginner,False
+S0753,Scala,Intermediate,False
+S0753,Deep Learning,Intermediate,True
+S0754,MATLAB,Intermediate,True
+S0754,SpaCy,Beginner,False
+S0754,Embedded C,Advanced,True
+S0754,Hugging Face,Intermediate,False
+S0755,MATLAB,Intermediate,False
+S0755,SIEM,Intermediate,True
+S0755,Node.js,Beginner,True
+S0755,JavaScript,Intermediate,False
+S0755,Hadoop,Advanced,True
+S0756,Scala,Beginner,False
+S0756,VHDL,Beginner,False
+S0756,Verilog,Advanced,True
+S0756,Java,Beginner,False
+S0756,Embedded C,Beginner,False
+S0757,C++,Intermediate,True
+S0758,RTOS,Intermediate,True
+S0758,Kotlin,Advanced,True
+S0758,MS Office,Advanced,False
+S0758,Rust,Intermediate,True
+S0759,SQL,Intermediate,False
+S0759,Swift,Intermediate,False
+S0759,Excel,Advanced,True
+S0759,Express,Advanced,False
+S0759,Network Security,Advanced,True
+S0760,RTOS,Beginner,False
+S0760,Bootstrap,Advanced,True
+S0761,JavaScript,Intermediate,False
+S0761,Terraform,Beginner,False
+S0761,Linux,Beginner,False
+S0761,Python,Intermediate,False
+S0762,PostgreSQL,Beginner,False
+S0762,Cryptography,Advanced,True
+S0762,Redis,Beginner,False
+S0763,Excel,Intermediate,False
+S0763,NLTK,Intermediate,False
+S0764,Tableau,Advanced,True
+S0764,Arduino,Intermediate,False
+S0764,Leadership,Intermediate,True
+S0765,Apache Spark,Intermediate,False
+S0765,Excel,Advanced,True
+S0765,Kotlin,Intermediate,True
+S0765,PHP,Intermediate,True
+S0766,Hugging Face,Advanced,True
+S0766,GitHub Actions,Intermediate,False
+S0766,Go,Intermediate,False
+S0766,React,Intermediate,False
+S0766,Django,Advanced,False
+S0767,Scrum,Intermediate,False
+S0767,Communication,Intermediate,True
+S0767,Express,Beginner,True
+S0767,Pandas,Advanced,True
+S0767,Django,Beginner,True
+S0767,Excel,Advanced,True
+S0768,Node.js,Advanced,True
+S0768,Terraform,Beginner,False
+S0769,PyTorch,Intermediate,True
+S0769,MySQL,Advanced,False
+S0769,Python,Advanced,False
+S0769,PostgreSQL,Advanced,True
+S0770,Docker,Beginner,False
+S0770,Flask,Intermediate,False
+S0770,Tailwind,Advanced,False
+S0770,Terraform,Advanced,True
+S0771,JavaScript,Intermediate,False
+S0771,Python,Intermediate,True
+S0771,MySQL,Intermediate,True
+S0771,GitHub Actions,Intermediate,False
+S0772,Hugging Face,Intermediate,True
+S0772,Excel,Intermediate,False
+S0772,Redis,Intermediate,False
+S0772,Jenkins,Beginner,True
+S0773,MLflow,Intermediate,False
+S0773,R,Advanced,True
+S0773,HTML/CSS,Advanced,True
+S0774,Swift,Advanced,False
+S0774,SpaCy,Advanced,True
+S0774,Docker,Intermediate,False
+S0775,Tailwind,Intermediate,False
+S0775,C++,Beginner,False
+S0775,Java,Intermediate,True
+S0775,Kubernetes,Intermediate,False
+S0776,MS Office,Intermediate,True
+S0776,GraphQL,Intermediate,False
+S0777,Verilog,Beginner,False
+S0777,Agile,Advanced,True
+S0777,JIRA,Intermediate,False
+S0778,VHDL,Beginner,False
+S0778,Kubernetes,Beginner,False
+S0778,Raspberry Pi,Intermediate,False
+S0779,Arduino,Intermediate,True
+S0779,C++,Intermediate,True
+S0779,Verilog,Beginner,False
+S0780,MySQL,Intermediate,False
+S0780,Jenkins,Intermediate,False
+S0780,Java,Intermediate,False
+S0780,PostgreSQL,Intermediate,True
+S0781,Linux,Advanced,True
+S0781,PHP,Advanced,True
+S0781,Angular,Advanced,True
+S0781,SQL,Intermediate,False
+S0781,Next.js,Beginner,False
+S0782,Pandas,Beginner,False
+S0783,Swift,Intermediate,True
+S0783,Flask,Beginner,False
+S0783,NLP,Advanced,False
+S0784,NumPy,Advanced,False
+S0784,Java,Intermediate,True
+S0784,Tableau,Intermediate,False
+S0784,Express,Beginner,False
+S0784,SpaCy,Intermediate,False
+S0784,Linux,Advanced,True
+S0785,SpaCy,Beginner,False
+S0785,GitHub Actions,Intermediate,True
+S0785,Angular,Beginner,False
+S0785,Terraform,Beginner,False
+S0786,Terraform,Beginner,True
+S0786,VHDL,Beginner,False
+S0787,OpenCV,Intermediate,False
+S0787,Project Management,Advanced,True
+S0788,JIRA,Intermediate,True
+S0788,MATLAB,Intermediate,True
+S0788,Rust,Intermediate,False
+S0789,MS Office,Advanced,True
+S0789,Scrum,Intermediate,True
+S0789,NumPy,Intermediate,False
+S0789,JIRA,Beginner,False
+S0790,Python,Beginner,True
+S0790,Verilog,Advanced,True
+S0790,Kotlin,Intermediate,False
+S0790,C++,Beginner,True
+S0791,GCP,Beginner,False
+S0791,Go,Beginner,False
+S0791,Azure,Intermediate,True
+S0792,MLflow,Beginner,False
+S0793,Swift,Beginner,True
+S0794,GraphQL,Beginner,False
+S0794,JavaScript,Beginner,False
+S0794,TypeScript,Beginner,True
+S0794,Computer Vision,Advanced,True
+S0794,SQL,Advanced,True
+S0795,NumPy,Beginner,False
+S0795,Project Management,Intermediate,True
+S0795,Computer Vision,Intermediate,False
+S0795,Scala,Beginner,False
+S0796,NumPy,Beginner,False
+S0796,Vue.js,Intermediate,True
+S0796,Tableau,Intermediate,True
+S0797,Terraform,Beginner,False
+S0797,NLP,Beginner,False
+S0797,Docker,Advanced,True
+S0798,Raspberry Pi,Beginner,False
+S0798,Verilog,Advanced,True
+S0798,CI/CD,Advanced,True
+S0799,MongoDB,Advanced,True
+S0799,Express,Intermediate,False
+S0799,Terraform,Beginner,False
+S0799,Rust,Advanced,True
+S0799,PCB Design,Intermediate,True
+S0800,C,Beginner,False
+S0800,R,Intermediate,False
+S0800,Kotlin,Intermediate,True
+S0800,Java,Intermediate,True
+S0800,Ruby,Beginner,False
+S0800,C++,Advanced,False
+S0800,RTOS,Beginner,False

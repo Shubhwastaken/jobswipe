@@ -1,0 +1,752 @@
+student_id,internship_id,company_name,company_tier,role,domain,duration_months,stipend,mode,year
+S0001,I0001,GreenPath,Startup,SDE,IoT,1.0,False,Onsite,2023
+S0002,I0002,AlphaSoft,Tier3,Data Analyst,Web,1.0,False,Hybrid,2023
+S0003,I0003,FoodChain Tech,Startup,SDE,Data,1.0,False,Remote,2025
+S0004,I0004,PayEase,Startup,ML Intern,IoT,3.0,True,Remote,2024
+S0006,I0005,JP Morgan,Tier1,Other,Data,3.0,True,Onsite,2022
+S0007,I0006,Freshworks,Tier2,Data Analyst,Web,2.0,True,Remote,2025
+S0008,I0007,Razorpay,Tier2,ML Intern,Data,3.0,True,Onsite,2025
+S0009,I0008,AppForge,Tier3,Other,Other,6.0,False,Remote,2022
+S0009,I0009,RetailSense,Startup,Data Analyst,IoT,1.5,True,Remote,2023
+S0010,I0010,Accenture,Tier2,Management,Finance,6.0,True,Hybrid,2023
+S0013,I0011,Tech Mahindra,Tier2,Management,IoT,3.0,True,Onsite,2022
+S0015,I0012,DigiCraft,Tier3,SDE,Data,1.0,True,Onsite,2023
+S0016,I0013,Capgemini,Tier2,Data Analyst,AI_ML,2.0,True,Hybrid,2022
+S0017,I0014,CleanEnergy Tech,Startup,SDE,Other,2.0,False,Onsite,2023
+S0019,I0015,TravelMate AI,Startup,Management,Finance,1.5,False,Remote,2022
+S0019,I0016,Adobe,Tier1,Other,Finance,3.0,True,Hybrid,2025
+S0021,I0017,CodeWave,Tier3,Management,Data,2.0,True,Onsite,2022
+S0021,I0018,MedConnect,Startup,Other,Finance,3.0,False,Remote,2025
+S0021,I0019,EduTech Innovations,Startup,Other,AI_ML,1.0,False,Onsite,2024
+S0023,I0020,SoftStack,Tier3,SDE,Data,1.0,True,Onsite,2022
+S0023,I0021,SocialImpact AI,Startup,SDE,Other,3.0,True,Onsite,2023
+S0023,I0022,Code for India,NGO,Other,AI_ML,1.0,False,Onsite,2022
+S0023,I0023,CodeBase Solutions,Tier3,SDE,Data,1.0,False,Remote,2022
+S0024,I0024,AppForge,Tier3,Other,AI_ML,1.0,True,Hybrid,2023
+S0024,I0025,Freshworks,Tier2,Web Dev,Other,6.0,True,Remote,2025
+S0026,I0026,LearnLoop,Startup,Other,AI_ML,1.5,True,Remote,2023
+S0027,I0027,CyberShield,Startup,Other,IoT,1.5,False,Hybrid,2022
+S0027,I0028,Uber,Tier1,ML Intern,IoT,3.0,True,Hybrid,2025
+S0029,I0029,Microsoft,Tier1,Web Dev,Data,6.0,True,Hybrid,2023
+S0030,I0030,Open Source for Education,NGO,Other,Other,1.0,False,Hybrid,2024
+S0030,I0031,AgriBot Startup,Startup,ML Intern,IoT,1.5,True,Hybrid,2025
+S0032,I0032,Cognizant,Tier2,SDE,IoT,3.0,True,Onsite,2024
+S0032,I0033,Infosys,Tier2,ML Intern,AI_ML,1.0,True,Onsite,2023
+S0034,I0034,HealthAI Startup,Startup,Other,Web,2.0,False,Hybrid,2024
+S0037,I0035,Microsoft,Tier1,Management,AI_ML,6.0,True,Remote,2023
+S0038,I0036,Code for India,NGO,ML Intern,Web,1.0,True,Onsite,2025
+S0038,I0037,IBM,Tier1,ML Intern,Other,3.0,True,Remote,2024
+S0038,I0038,AgriBot Startup,Startup,Data Analyst,Embedded,3.0,True,Onsite,2023
+S0039,I0039,CloudNine Tech,Tier3,Data Analyst,Web,3.0,False,Remote,2023
+S0040,I0040,Wipro,Tier2,Management,Data,2.0,True,Onsite,2023
+S0040,I0041,Code for India,NGO,Other,Web,2.0,False,Hybrid,2022
+S0040,I0042,SoftStack,Tier3,Other,Embedded,3.0,True,Hybrid,2022
+S0041,I0043,Freshworks,Tier2,Management,Other,2.0,True,Onsite,2024
+S0043,I0044,Ola,Tier2,Web Dev,Web,3.0,True,Hybrid,2022
+S0043,I0045,AlphaSoft,Tier3,Management,Embedded,6.0,True,Remote,2023
+S0044,I0046,SmallTech Solutions,Tier3,ML Intern,Other,3.0,True,Onsite,2023
+S0044,I0047,Goldman Sachs,Tier1,Web Dev,Web,2.0,True,Hybrid,2023
+S0045,I0048,CodeWave,Tier3,Management,AI_ML,3.0,False,Onsite,2023
+S0047,I0049,CodeBase Solutions,Tier3,ML Intern,IoT,6.0,False,Onsite,2023
+S0048,I0050,McKinsey,Tier1,ML Intern,IoT,3.0,True,Hybrid,2022
+S0049,I0051,PhonePe,Tier2,ML Intern,Embedded,6.0,True,Remote,2024
+S0050,I0052,Tech4Good Foundation,NGO,Other,IoT,1.0,False,Onsite,2023
+S0051,I0053,SocialImpact AI,Startup,Management,IoT,1.5,True,Onsite,2024
+S0052,I0054,DigiCraft,Tier3,SDE,Web,3.0,True,Onsite,2022
+S0052,I0055,RetailSense,Startup,SDE,IoT,3.0,True,Remote,2024
+S0054,I0056,Wipro,Tier2,ML Intern,Finance,3.0,True,Hybrid,2022
+S0055,I0057,SmallTech Solutions,Tier3,ML Intern,Embedded,3.0,False,Onsite,2024
+S0056,I0058,AppForge,Tier3,SDE,Web,6.0,False,Remote,2023
+S0056,I0059,AgriBot Startup,Startup,SDE,AI_ML,3.0,False,Remote,2025
+S0056,I0060,FinLit App,Startup,SDE,Data,3.0,False,Hybrid,2024
+S0057,I0061,HCL,Tier2,Data Analyst,Embedded,2.0,False,Hybrid,2023
+S0059,I0062,Women in Tech Foundation,NGO,ML Intern,IoT,2.0,False,Hybrid,2024
+S0061,I0063,Code for India,NGO,Management,AI_ML,2.0,False,Onsite,2022
+S0063,I0064,Women in Tech Foundation,NGO,Data Analyst,IoT,2.0,False,Remote,2024
+S0063,I0065,Mphasis,Tier2,SDE,Embedded,6.0,True,Remote,2023
+S0064,I0066,WebCraft Studios,Tier3,ML Intern,Web,1.0,False,Hybrid,2025
+S0066,I0067,Mindtree,Tier2,Management,Finance,6.0,True,Onsite,2025
+S0066,I0068,Tech Mahindra,Tier2,Web Dev,Embedded,3.0,True,Onsite,2023
+S0068,I0069,PixelPerfect,Tier3,Management,Other,2.0,False,Hybrid,2023
+S0069,I0070,PixelPerfect,Tier3,Web Dev,Finance,1.0,False,Onsite,2025
+S0070,I0071,RetailSense,Startup,SDE,Other,3.0,True,Onsite,2024
+S0070,I0072,CloudNine Tech,Tier3,SDE,AI_ML,1.0,True,Hybrid,2022
+S0071,I0073,Zomato,Tier2,Data Analyst,Web,2.0,False,Onsite,2025
+S0072,I0074,EduTech Innovations,Startup,ML Intern,Web,1.5,True,Hybrid,2022
+S0073,I0075,SoftStack,Tier3,Data Analyst,Finance,2.0,False,Hybrid,2025
+S0073,I0076,CleanEnergy Tech,Startup,Other,Web,2.0,True,Remote,2022
+S0075,I0077,SoftStack,Tier3,SDE,Web,1.0,True,Remote,2022
+S0075,I0078,GreenPath,Startup,Management,Web,2.0,True,Onsite,2023
+S0075,I0079,SmartBuild,Startup,Management,Data,3.0,True,Remote,2024
+S0079,I0080,Capgemini,Tier2,Web Dev,AI_ML,2.0,True,Onsite,2024
+S0079,I0081,Wipro,Tier2,Web Dev,Other,2.0,True,Remote,2023
+S0080,I0082,PhonePe,Tier2,ML Intern,Other,6.0,True,Remote,2025
+S0082,I0083,FinLit App,Startup,Web Dev,Finance,3.0,True,Onsite,2025
+S0084,I0084,SmallTech Solutions,Tier3,ML Intern,AI_ML,3.0,False,Onsite,2023
+S0085,I0085,CodeBase Solutions,Tier3,Other,Embedded,1.0,False,Onsite,2024
+S0086,I0086,Freshworks,Tier2,Other,AI_ML,2.0,False,Hybrid,2024
+S0091,I0087,AlphaSoft,Tier3,Data Analyst,Data,1.0,False,Onsite,2024
+S0093,I0088,Women in Tech Foundation,NGO,Web Dev,Web,2.0,False,Onsite,2025
+S0094,I0089,Swiggy,Tier2,SDE,AI_ML,3.0,False,Hybrid,2025
+S0095,I0090,Rural Innovation Hub,NGO,Data Analyst,Finance,2.0,False,Onsite,2025
+S0097,I0091,Accenture,Tier2,SDE,Embedded,2.0,False,Onsite,2023
+S0098,I0092,HealthAI Startup,Startup,ML Intern,Embedded,1.5,False,Remote,2023
+S0098,I0093,Zoho,Tier2,Management,Data,2.0,False,Remote,2023
+S0099,I0094,Wipro,Tier2,ML Intern,Embedded,6.0,True,Remote,2025
+S0100,I0095,Zomato,Tier2,Data Analyst,Web,2.0,True,Hybrid,2025
+S0100,I0096,Code for India,NGO,Management,Data,1.0,False,Onsite,2024
+S0102,I0097,TechVista,Tier3,Management,AI_ML,1.0,False,Remote,2023
+S0104,I0098,LearnLoop,Startup,Other,Embedded,1.0,True,Remote,2023
+S0105,I0099,TechVista,Tier3,ML Intern,Finance,2.0,False,Hybrid,2022
+S0105,I0100,AgriBot Startup,Startup,SDE,AI_ML,2.0,True,Remote,2022
+S0106,I0101,Infosys,Tier2,Web Dev,Finance,2.0,False,Onsite,2025
+S0107,I0102,PhonePe,Tier2,Data Analyst,IoT,6.0,False,Onsite,2022
+S0108,I0103,WebCraft Studios,Tier3,Other,Finance,2.0,False,Remote,2025
+S0109,I0104,Salesforce,Tier1,Other,Embedded,2.0,True,Remote,2022
+S0109,I0105,Ola,Tier2,Web Dev,Web,6.0,False,Onsite,2023
+S0110,I0106,DigiCraft,Tier3,Management,Data,6.0,False,Hybrid,2024
+S0113,I0107,Wipro,Tier2,Web Dev,Embedded,3.0,True,Hybrid,2025
+S0114,I0108,Razorpay,Tier2,Data Analyst,Other,2.0,True,Onsite,2025
+S0114,I0109,Innov8 Labs,Tier3,Other,Data,6.0,True,Onsite,2024
+S0115,I0110,Innov8 Labs,Tier3,SDE,IoT,1.0,True,Onsite,2024
+S0118,I0111,AgriBot Startup,Startup,SDE,Data,1.5,True,Onsite,2025
+S0119,I0112,FoodChain Tech,Startup,Data Analyst,Data,3.0,True,Onsite,2024
+S0119,I0113,Amazon,Tier1,ML Intern,Web,6.0,True,Hybrid,2025
+S0121,I0114,DataWare Inc,Tier3,SDE,Web,2.0,False,Onsite,2023
+S0123,I0115,CloudNine Tech,Tier3,SDE,Other,3.0,False,Remote,2022
+S0124,I0116,DataWare Inc,Tier3,Other,Web,6.0,False,Onsite,2025
+S0126,I0117,NetGenius,Tier3,Management,Other,6.0,True,Onsite,2023
+S0129,I0118,Tech4Good Foundation,NGO,Other,IoT,1.0,False,Onsite,2024
+S0131,I0119,Swiggy,Tier2,Data Analyst,Data,3.0,True,Onsite,2025
+S0132,I0120,Byju's,Tier2,SDE,Web,6.0,True,Remote,2025
+S0133,I0121,Capgemini,Tier2,Web Dev,Finance,2.0,True,Remote,2025
+S0136,I0122,HCL,Tier2,Data Analyst,Embedded,3.0,False,Hybrid,2024
+S0136,I0123,Innov8 Labs,Tier3,ML Intern,Data,2.0,True,Remote,2022
+S0138,I0124,CloudNine Tech,Tier3,Data Analyst,Data,6.0,True,Onsite,2022
+S0138,I0125,Rural Innovation Hub,NGO,Other,Other,2.0,False,Onsite,2023
+S0138,I0126,Code for India,NGO,Management,Embedded,1.0,False,Remote,2025
+S0139,I0127,TravelMate AI,Startup,SDE,Other,1.0,False,Onsite,2022
+S0139,I0128,HealthAI Startup,Startup,Management,Finance,3.0,False,Onsite,2024
+S0141,I0129,FoodChain Tech,Startup,Management,IoT,3.0,False,Hybrid,2022
+S0143,I0130,RetailSense,Startup,SDE,IoT,3.0,False,Onsite,2022
+S0145,I0131,Code for India,NGO,Web Dev,IoT,1.0,True,Hybrid,2025
+S0150,I0132,Zoho,Tier2,Management,Embedded,2.0,True,Onsite,2025
+S0151,I0133,Amazon,Tier1,SDE,Data,6.0,True,Hybrid,2023
+S0152,I0134,RetailSense,Startup,SDE,Other,3.0,True,Remote,2025
+S0152,I0135,Tech4Good Foundation,NGO,Web Dev,Other,2.0,False,Hybrid,2024
+S0153,I0136,Netflix,Tier1,Data Analyst,AI_ML,3.0,True,Remote,2025
+S0154,I0137,PixelPerfect,Tier3,SDE,IoT,2.0,False,Hybrid,2023
+S0156,I0138,AlphaSoft,Tier3,Other,Embedded,1.0,False,Remote,2025
+S0157,I0139,Wipro,Tier2,Other,IoT,1.0,True,Onsite,2022
+S0158,I0140,CodeWave,Tier3,SDE,AI_ML,6.0,True,Hybrid,2022
+S0161,I0141,Mindtree,Tier2,SDE,IoT,2.0,True,Onsite,2024
+S0163,I0142,Capgemini,Tier2,Web Dev,Embedded,6.0,True,Onsite,2025
+S0164,I0143,Open Source for Education,NGO,Web Dev,IoT,2.0,True,Hybrid,2022
+S0165,I0144,TechVista,Tier3,ML Intern,Web,2.0,False,Onsite,2022
+S0168,I0145,TechVista,Tier3,Web Dev,Other,1.0,False,Onsite,2025
+S0171,I0146,Ola,Tier2,Web Dev,Finance,6.0,True,Remote,2024
+S0171,I0147,Adobe,Tier1,Management,Embedded,2.0,True,Onsite,2025
+S0171,I0148,Mindtree,Tier2,Web Dev,IoT,2.0,True,Hybrid,2023
+S0172,I0149,PixelPerfect,Tier3,Other,Other,1.0,False,Hybrid,2024
+S0175,I0150,Code for India,NGO,ML Intern,IoT,2.0,False,Hybrid,2022
+S0176,I0151,Wipro,Tier2,Data Analyst,AI_ML,1.0,True,Onsite,2023
+S0177,I0152,Adobe,Tier1,Other,Data,6.0,True,Remote,2023
+S0178,I0153,PayEase,Startup,Data Analyst,Web,2.0,False,Onsite,2025
+S0179,I0154,Mphasis,Tier2,Web Dev,Data,6.0,True,Remote,2025
+S0180,I0155,CodeBase Solutions,Tier3,Data Analyst,Embedded,2.0,True,Hybrid,2023
+S0180,I0156,Zomato,Tier2,ML Intern,Embedded,6.0,True,Remote,2024
+S0181,I0157,AgriBot Startup,Startup,Other,IoT,1.0,False,Hybrid,2025
+S0183,I0158,EduTech Innovations,Startup,Other,Other,1.5,False,Remote,2022
+S0186,I0159,TechVista,Tier3,SDE,Embedded,3.0,True,Hybrid,2022
+S0186,I0160,RetailSense,Startup,Other,AI_ML,2.0,True,Onsite,2023
+S0188,I0161,FoodChain Tech,Startup,Web Dev,Other,1.0,False,Remote,2022
+S0189,I0162,Uber,Tier1,ML Intern,Embedded,3.0,True,Hybrid,2022
+S0191,I0163,DigiCraft,Tier3,Other,Embedded,2.0,True,Hybrid,2022
+S0191,I0164,Uber,Tier1,Web Dev,Web,2.0,True,Onsite,2022
+S0193,I0165,FinLit App,Startup,Data Analyst,Finance,2.0,True,Onsite,2023
+S0193,I0166,IBM,Tier1,SDE,Embedded,2.0,False,Remote,2025
+S0194,I0167,CyberShield,Startup,Web Dev,Embedded,1.5,False,Remote,2022
+S0194,I0168,WebCraft Studios,Tier3,SDE,Data,6.0,False,Hybrid,2025
+S0195,I0169,Open Source for Education,NGO,SDE,Data,2.0,True,Hybrid,2023
+S0196,I0170,Netflix,Tier1,Web Dev,Embedded,3.0,True,Remote,2024
+S0196,I0171,CloudNine Tech,Tier3,Management,Embedded,6.0,True,Remote,2022
+S0197,I0172,CloudNine Tech,Tier3,SDE,Embedded,3.0,False,Onsite,2025
+S0197,I0173,Zoho,Tier2,SDE,Data,6.0,True,Remote,2023
+S0200,I0174,Netflix,Tier1,Data Analyst,Embedded,6.0,True,Remote,2023
+S0200,I0175,McKinsey,Tier1,ML Intern,Data,3.0,True,Onsite,2025
+S0200,I0176,FinLit App,Startup,ML Intern,Embedded,3.0,False,Onsite,2025
+S0200,I0177,Mindtree,Tier2,ML Intern,IoT,1.0,True,Hybrid,2023
+S0201,I0178,SoftStack,Tier3,Management,Other,2.0,False,Onsite,2025
+S0202,I0179,Cognizant,Tier2,Management,Embedded,3.0,True,Onsite,2024
+S0202,I0180,TCS,Tier2,Management,Other,3.0,True,Remote,2022
+S0203,I0181,Adobe,Tier1,Other,Embedded,2.0,True,Hybrid,2024
+S0204,I0182,RetailSense,Startup,Other,Embedded,3.0,True,Hybrid,2022
+S0205,I0183,FinLit App,Startup,ML Intern,Embedded,3.0,True,Remote,2023
+S0205,I0184,Zomato,Tier2,Web Dev,Embedded,3.0,True,Remote,2025
+S0206,I0185,HCL,Tier2,Data Analyst,IoT,6.0,True,Remote,2024
+S0206,I0186,Rural Innovation Hub,NGO,SDE,IoT,2.0,False,Hybrid,2024
+S0206,I0187,Deloitte,Tier1,SDE,Other,6.0,True,Remote,2025
+S0206,I0188,Mindtree,Tier2,Data Analyst,Other,3.0,True,Hybrid,2025
+S0207,I0189,TravelMate AI,Startup,SDE,Embedded,2.0,True,Onsite,2022
+S0208,I0190,TCS,Tier2,SDE,Embedded,2.0,True,Hybrid,2025
+S0210,I0191,Tech4Good Foundation,NGO,ML Intern,Web,2.0,False,Hybrid,2023
+S0212,I0192,Byju's,Tier2,Other,Other,3.0,True,Hybrid,2024
+S0213,I0193,CyberShield,Startup,ML Intern,Embedded,1.5,True,Remote,2022
+S0214,I0194,Flipkart,Tier2,Data Analyst,Embedded,3.0,True,Onsite,2023
+S0214,I0195,Ola,Tier2,Data Analyst,AI_ML,2.0,True,Onsite,2024
+S0215,I0196,Flipkart,Tier2,Management,Finance,3.0,True,Remote,2024
+S0219,I0197,CloudNine Tech,Tier3,Web Dev,AI_ML,2.0,True,Onsite,2023
+S0222,I0198,CodeWave,Tier3,Other,Embedded,3.0,False,Onsite,2022
+S0223,I0199,Swiggy,Tier2,Other,Web,2.0,True,Remote,2022
+S0223,I0200,Zomato,Tier2,SDE,Data,6.0,True,Onsite,2025
+S0224,I0201,CyberShield,Startup,Management,Web,1.0,False,Hybrid,2023
+S0225,I0202,SocialImpact AI,Startup,Other,AI_ML,1.0,True,Onsite,2023
+S0229,I0203,CleanEnergy Tech,Startup,Management,Data,1.0,True,Remote,2023
+S0232,I0204,PayEase,Startup,SDE,Web,1.5,False,Remote,2022
+S0232,I0205,AppForge,Tier3,Data Analyst,IoT,6.0,False,Remote,2024
+S0233,I0206,HealthAI Startup,Startup,Management,AI_ML,1.5,False,Hybrid,2023
+S0234,I0207,Mindtree,Tier2,SDE,AI_ML,2.0,True,Remote,2023
+S0235,I0208,SocialImpact AI,Startup,SDE,Data,1.5,False,Hybrid,2023
+S0236,I0209,Code for India,NGO,Data Analyst,Finance,1.0,False,Remote,2023
+S0236,I0210,Razorpay,Tier2,Other,Finance,2.0,True,Onsite,2022
+S0237,I0211,Accenture,Tier2,SDE,Finance,3.0,True,Hybrid,2025
+S0240,I0212,HealthAI Startup,Startup,Web Dev,Embedded,3.0,True,Onsite,2022
+S0240,I0213,NetGenius,Tier3,Management,IoT,6.0,True,Onsite,2022
+S0240,I0214,PhonePe,Tier2,Web Dev,Embedded,1.0,True,Hybrid,2022
+S0240,I0215,NetGenius,Tier3,Management,Data,2.0,True,Onsite,2024
+S0241,I0216,WebCraft Studios,Tier3,Management,Finance,1.0,False,Onsite,2024
+S0241,I0217,AlphaSoft,Tier3,Management,Other,2.0,True,Hybrid,2023
+S0243,I0218,SmartBuild,Startup,SDE,IoT,3.0,False,Remote,2024
+S0243,I0219,LearnLoop,Startup,Other,Web,3.0,False,Onsite,2025
+S0244,I0220,GreenPath,Startup,Data Analyst,Other,3.0,True,Onsite,2022
+S0245,I0221,Tech4Good Foundation,NGO,Web Dev,IoT,1.0,False,Onsite,2022
+S0245,I0222,Code for India,NGO,ML Intern,AI_ML,2.0,False,Remote,2023
+S0246,I0223,Razorpay,Tier2,Web Dev,Finance,3.0,True,Hybrid,2025
+S0246,I0224,TechVista,Tier3,Management,Web,1.0,True,Hybrid,2025
+S0247,I0225,AlphaSoft,Tier3,SDE,Finance,2.0,False,Onsite,2025
+S0248,I0226,Digital Literacy Foundation,NGO,SDE,IoT,2.0,False,Onsite,2024
+S0250,I0227,Microsoft,Tier1,Web Dev,Other,3.0,True,Onsite,2025
+S0252,I0228,IBM,Tier1,Other,Finance,3.0,True,Remote,2024
+S0254,I0229,Code for India,NGO,Management,Web,1.0,False,Onsite,2024
+S0257,I0230,ByteWorks,Tier3,Other,Web,6.0,True,Hybrid,2023
+S0257,I0231,CodeBase Solutions,Tier3,Web Dev,AI_ML,1.0,False,Hybrid,2024
+S0258,I0232,Wipro,Tier2,Data Analyst,Web,6.0,True,Remote,2025
+S0260,I0233,PhonePe,Tier2,Data Analyst,Embedded,6.0,True,Hybrid,2025
+S0261,I0234,CodeBase Solutions,Tier3,ML Intern,AI_ML,2.0,True,Remote,2022
+S0262,I0235,TechVista,Tier3,ML Intern,Data,6.0,True,Onsite,2024
+S0263,I0236,CyberShield,Startup,Other,Other,3.0,False,Hybrid,2023
+S0264,I0237,Accenture,Tier2,ML Intern,AI_ML,2.0,True,Hybrid,2024
+S0264,I0238,HCL,Tier2,Other,IoT,1.0,True,Remote,2025
+S0267,I0239,SoftStack,Tier3,ML Intern,Other,6.0,False,Hybrid,2022
+S0268,I0240,Women in Tech Foundation,NGO,Other,Embedded,1.0,False,Remote,2024
+S0269,I0241,Innov8 Labs,Tier3,Data Analyst,Data,3.0,True,Remote,2025
+S0270,I0242,Wipro,Tier2,Other,Finance,3.0,True,Remote,2023
+S0270,I0243,Women in Tech Foundation,NGO,Other,Embedded,2.0,False,Remote,2023
+S0271,I0244,Uber,Tier1,ML Intern,AI_ML,3.0,True,Remote,2023
+S0271,I0245,AgriBot Startup,Startup,Web Dev,Web,1.5,False,Onsite,2022
+S0274,I0246,FoodChain Tech,Startup,Data Analyst,Embedded,3.0,False,Hybrid,2022
+S0275,I0247,Code for India,NGO,Web Dev,AI_ML,2.0,True,Onsite,2025
+S0276,I0248,ByteWorks,Tier3,Management,Web,3.0,False,Hybrid,2025
+S0281,I0249,Tech4Good Foundation,NGO,Web Dev,Finance,2.0,False,Remote,2025
+S0282,I0250,L&T Infotech,Tier2,Web Dev,AI_ML,1.0,True,Hybrid,2023
+S0283,I0251,Zoho,Tier2,Web Dev,Data,6.0,True,Remote,2022
+S0285,I0252,CleanEnergy Tech,Startup,ML Intern,AI_ML,1.5,False,Onsite,2022
+S0285,I0253,Digital Literacy Foundation,NGO,Data Analyst,Web,1.0,False,Onsite,2024
+S0285,I0254,Capgemini,Tier2,Web Dev,Finance,2.0,True,Remote,2023
+S0285,I0255,Cognizant,Tier2,ML Intern,IoT,1.0,True,Hybrid,2024
+S0286,I0256,Infosys,Tier2,Other,IoT,3.0,True,Onsite,2023
+S0286,I0257,GreenPath,Startup,Management,Other,2.0,False,Remote,2025
+S0288,I0258,NetGenius,Tier3,Web Dev,IoT,3.0,False,Onsite,2023
+S0289,I0259,NetGenius,Tier3,Other,Other,1.0,True,Remote,2025
+S0290,I0260,FoodChain Tech,Startup,SDE,Embedded,1.5,False,Remote,2022
+S0290,I0261,HealthAI Startup,Startup,Management,AI_ML,3.0,True,Onsite,2022
+S0293,I0262,Cognizant,Tier2,SDE,Data,6.0,False,Remote,2025
+S0295,I0263,Zoho,Tier2,Other,IoT,6.0,True,Hybrid,2025
+S0296,I0264,CodeWave,Tier3,SDE,AI_ML,3.0,True,Remote,2025
+S0296,I0265,Code for India,NGO,SDE,Data,2.0,True,Hybrid,2023
+S0296,I0266,CleanEnergy Tech,Startup,Management,Finance,1.0,True,Remote,2023
+S0297,I0267,Uber,Tier1,Web Dev,Embedded,3.0,True,Remote,2023
+S0300,I0268,CodeBase Solutions,Tier3,Management,IoT,3.0,True,Onsite,2025
+S0302,I0269,Wipro,Tier2,Management,IoT,1.0,True,Onsite,2025
+S0303,I0270,CodeWave,Tier3,ML Intern,Embedded,2.0,False,Onsite,2023
+S0305,I0271,Infosys,Tier2,Other,Other,1.0,False,Onsite,2022
+S0305,I0272,AlphaSoft,Tier3,Management,Finance,3.0,False,Remote,2022
+S0306,I0273,TravelMate AI,Startup,Data Analyst,Data,1.5,False,Onsite,2022
+S0307,I0274,AgriBot Startup,Startup,Web Dev,Data,1.0,False,Remote,2022
+S0308,I0275,Tech4Good Foundation,NGO,Other,Finance,2.0,False,Onsite,2024
+S0309,I0276,ByteWorks,Tier3,Other,AI_ML,1.0,True,Hybrid,2024
+S0310,I0277,Zoho,Tier2,Data Analyst,AI_ML,2.0,True,Hybrid,2024
+S0310,I0278,FinLit App,Startup,Data Analyst,Data,3.0,False,Onsite,2022
+S0311,I0279,SmallTech Solutions,Tier3,Data Analyst,Data,3.0,True,Onsite,2024
+S0312,I0280,Apple,Tier1,ML Intern,AI_ML,6.0,False,Remote,2025
+S0313,I0281,FoodChain Tech,Startup,Management,Web,1.0,False,Onsite,2022
+S0314,I0282,Amazon,Tier1,SDE,AI_ML,3.0,True,Remote,2022
+S0317,I0283,Byju's,Tier2,Management,Other,2.0,True,Remote,2024
+S0318,I0284,Code for India,NGO,SDE,Data,2.0,False,Hybrid,2024
+S0320,I0285,WebCraft Studios,Tier3,Data Analyst,Embedded,1.0,True,Remote,2025
+S0321,I0286,Meta,Tier1,Data Analyst,Data,3.0,True,Remote,2025
+S0322,I0287,Code for India,NGO,Other,Data,2.0,False,Hybrid,2023
+S0323,I0288,CyberShield,Startup,Other,Other,3.0,True,Hybrid,2024
+S0326,I0289,TravelMate AI,Startup,Data Analyst,Embedded,2.0,True,Remote,2022
+S0326,I0290,Cognizant,Tier2,Other,Web,1.0,True,Hybrid,2024
+S0328,I0291,Infosys,Tier2,SDE,Web,1.0,True,Hybrid,2022
+S0328,I0292,LearnLoop,Startup,Management,AI_ML,3.0,False,Hybrid,2022
+S0328,I0293,Open Source for Education,NGO,ML Intern,IoT,2.0,True,Onsite,2024
+S0329,I0294,TCS,Tier2,SDE,Web,1.0,True,Remote,2022
+S0331,I0295,DataWare Inc,Tier3,ML Intern,Data,1.0,False,Remote,2022
+S0333,I0296,EduTech Innovations,Startup,Web Dev,IoT,3.0,False,Remote,2023
+S0334,I0297,SmallTech Solutions,Tier3,ML Intern,Web,3.0,True,Onsite,2022
+S0334,I0298,JP Morgan,Tier1,Data Analyst,Web,2.0,True,Hybrid,2023
+S0334,I0299,SmallTech Solutions,Tier3,Other,Web,2.0,True,Onsite,2022
+S0335,I0300,ByteWorks,Tier3,Data Analyst,Finance,1.0,True,Onsite,2022
+S0335,I0301,Zoho,Tier2,Other,Embedded,3.0,False,Onsite,2023
+S0336,I0302,TravelMate AI,Startup,Data Analyst,Web,2.0,True,Remote,2024
+S0336,I0303,Uber,Tier1,Web Dev,IoT,3.0,True,Remote,2022
+S0336,I0304,GreenPath,Startup,Management,AI_ML,1.5,False,Onsite,2022
+S0337,I0305,Deloitte,Tier1,Data Analyst,Finance,2.0,True,Remote,2022
+S0337,I0306,PixelPerfect,Tier3,ML Intern,AI_ML,1.0,True,Hybrid,2024
+S0340,I0307,Razorpay,Tier2,ML Intern,IoT,3.0,True,Remote,2024
+S0340,I0308,Amazon,Tier1,SDE,Other,2.0,True,Remote,2025
+S0341,I0309,Code for India,NGO,SDE,IoT,1.0,True,Onsite,2022
+S0345,I0310,PixelPerfect,Tier3,Other,Embedded,6.0,False,Hybrid,2023
+S0348,I0311,Freshworks,Tier2,Web Dev,Embedded,3.0,True,Onsite,2022
+S0349,I0312,CodeWave,Tier3,Web Dev,Embedded,6.0,True,Remote,2022
+S0350,I0313,FinLit App,Startup,ML Intern,AI_ML,2.0,False,Onsite,2022
+S0350,I0314,LearnLoop,Startup,ML Intern,Embedded,3.0,False,Remote,2022
+S0352,I0315,EduTech Innovations,Startup,Web Dev,Other,2.0,True,Onsite,2023
+S0353,I0316,CodeBase Solutions,Tier3,Other,Finance,3.0,True,Onsite,2025
+S0353,I0317,TechVista,Tier3,Web Dev,Web,3.0,True,Remote,2025
+S0356,I0318,TechVista,Tier3,Management,Embedded,6.0,True,Onsite,2023
+S0358,I0319,CodeBase Solutions,Tier3,SDE,Embedded,2.0,False,Onsite,2022
+S0358,I0320,TravelMate AI,Startup,Web Dev,Embedded,3.0,True,Remote,2024
+S0360,I0321,DigiCraft,Tier3,Web Dev,Other,2.0,True,Hybrid,2024
+S0362,I0322,Open Source for Education,NGO,Web Dev,IoT,1.0,False,Hybrid,2022
+S0365,I0323,CodeWave,Tier3,SDE,Embedded,6.0,False,Hybrid,2023
+S0365,I0324,Flipkart,Tier2,Management,IoT,1.0,True,Hybrid,2025
+S0367,I0325,FinLit App,Startup,SDE,AI_ML,1.5,False,Onsite,2024
+S0368,I0326,IBM,Tier1,ML Intern,Embedded,3.0,True,Hybrid,2022
+S0371,I0327,Innov8 Labs,Tier3,ML Intern,AI_ML,6.0,False,Remote,2025
+S0373,I0328,Zoho,Tier2,Other,Web,2.0,True,Remote,2025
+S0375,I0329,Innov8 Labs,Tier3,SDE,Web,2.0,False,Remote,2022
+S0376,I0330,CyberShield,Startup,Web Dev,Web,1.0,True,Onsite,2023
+S0377,I0331,CloudNine Tech,Tier3,Other,Web,1.0,True,Hybrid,2022
+S0378,I0332,Rural Innovation Hub,NGO,Other,Other,1.0,False,Remote,2022
+S0378,I0333,CodeWave,Tier3,ML Intern,IoT,2.0,False,Onsite,2023
+S0378,I0334,CyberShield,Startup,Data Analyst,Other,1.0,False,Remote,2023
+S0378,I0335,PixelPerfect,Tier3,Management,IoT,1.0,True,Onsite,2024
+S0379,I0336,Wipro,Tier2,SDE,Other,1.0,True,Remote,2025
+S0380,I0337,Cognizant,Tier2,Data Analyst,Other,6.0,True,Hybrid,2025
+S0381,I0338,Swiggy,Tier2,Management,IoT,1.0,True,Remote,2024
+S0381,I0339,Rural Innovation Hub,NGO,Web Dev,Web,2.0,False,Remote,2022
+S0382,I0340,GreenPath,Startup,Management,Finance,1.0,True,Remote,2023
+S0383,I0341,Digital Literacy Foundation,NGO,Web Dev,IoT,1.0,False,Onsite,2024
+S0384,I0342,Digital Literacy Foundation,NGO,ML Intern,Embedded,2.0,False,Remote,2023
+S0385,I0343,Capgemini,Tier2,ML Intern,Embedded,6.0,False,Remote,2022
+S0385,I0344,JP Morgan,Tier1,SDE,Web,2.0,True,Hybrid,2025
+S0386,I0345,TravelMate AI,Startup,Web Dev,Web,2.0,True,Onsite,2022
+S0386,I0346,Zomato,Tier2,ML Intern,AI_ML,1.0,True,Onsite,2025
+S0386,I0347,GreenPath,Startup,Web Dev,Other,2.0,False,Hybrid,2025
+S0387,I0348,JP Morgan,Tier1,Web Dev,Other,6.0,True,Remote,2022
+S0388,I0349,AgriBot Startup,Startup,SDE,AI_ML,3.0,True,Onsite,2025
+S0388,I0350,Ola,Tier2,ML Intern,AI_ML,6.0,True,Hybrid,2023
+S0389,I0351,L&T Infotech,Tier2,Web Dev,AI_ML,2.0,True,Remote,2025
+S0389,I0352,MedConnect,Startup,ML Intern,Data,3.0,True,Onsite,2022
+S0391,I0353,Netflix,Tier1,Web Dev,Embedded,2.0,True,Hybrid,2024
+S0392,I0354,CloudNine Tech,Tier3,Data Analyst,Data,2.0,False,Onsite,2023
+S0393,I0355,Innov8 Labs,Tier3,Management,IoT,6.0,True,Remote,2022
+S0393,I0356,CodeBase Solutions,Tier3,Other,Embedded,3.0,False,Hybrid,2024
+S0393,I0357,Open Source for Education,NGO,SDE,IoT,1.0,False,Onsite,2025
+S0393,I0358,EduTech Innovations,Startup,Data Analyst,Other,2.0,False,Onsite,2022
+S0395,I0359,Google,Tier1,Other,Data,6.0,True,Hybrid,2023
+S0397,I0360,Razorpay,Tier2,Data Analyst,Web,6.0,True,Remote,2025
+S0400,I0361,DigiCraft,Tier3,Data Analyst,Finance,1.0,False,Remote,2023
+S0406,I0362,SmallTech Solutions,Tier3,Web Dev,Other,2.0,False,Remote,2025
+S0407,I0363,SmallTech Solutions,Tier3,Management,Other,6.0,True,Onsite,2025
+S0409,I0364,Wipro,Tier2,Management,Data,1.0,True,Hybrid,2024
+S0411,I0365,EduTech Innovations,Startup,ML Intern,Embedded,1.0,False,Remote,2023
+S0412,I0366,HCL,Tier2,Management,Web,6.0,False,Remote,2022
+S0415,I0367,Tech Mahindra,Tier2,Other,AI_ML,1.0,True,Remote,2023
+S0417,I0368,Razorpay,Tier2,SDE,Finance,6.0,True,Onsite,2025
+S0419,I0369,Swiggy,Tier2,ML Intern,Embedded,6.0,True,Hybrid,2024
+S0421,I0370,Rural Innovation Hub,NGO,Other,Finance,1.0,True,Hybrid,2022
+S0423,I0371,FoodChain Tech,Startup,Web Dev,Embedded,1.0,True,Onsite,2023
+S0424,I0372,PixelPerfect,Tier3,SDE,Web,2.0,True,Remote,2023
+S0426,I0373,Open Source for Education,NGO,ML Intern,Embedded,2.0,False,Onsite,2023
+S0426,I0374,PixelPerfect,Tier3,ML Intern,Finance,1.0,True,Onsite,2022
+S0428,I0375,Ola,Tier2,Other,Finance,6.0,True,Onsite,2022
+S0429,I0376,Code for India,NGO,Other,Other,2.0,False,Remote,2025
+S0430,I0377,Freshworks,Tier2,Management,Other,1.0,False,Remote,2023
+S0432,I0378,MedConnect,Startup,SDE,Embedded,1.5,True,Remote,2024
+S0432,I0379,SmallTech Solutions,Tier3,Management,Embedded,1.0,True,Onsite,2025
+S0433,I0380,WebCraft Studios,Tier3,SDE,Data,6.0,False,Remote,2025
+S0435,I0381,Tech4Good Foundation,NGO,SDE,Data,2.0,False,Hybrid,2024
+S0438,I0382,Wipro,Tier2,Data Analyst,IoT,3.0,True,Hybrid,2024
+S0438,I0383,Code for India,NGO,ML Intern,Embedded,2.0,False,Onsite,2022
+S0438,I0384,Tech4Good Foundation,NGO,Data Analyst,Embedded,2.0,False,Remote,2023
+S0438,I0385,WebCraft Studios,Tier3,Other,Embedded,1.0,True,Onsite,2025
+S0439,I0386,Tech4Good Foundation,NGO,Data Analyst,Data,1.0,False,Remote,2024
+S0440,I0387,AgriBot Startup,Startup,Management,Data,3.0,False,Remote,2024
+S0440,I0388,NetGenius,Tier3,Data Analyst,Embedded,1.0,True,Onsite,2025
+S0441,I0389,Capgemini,Tier2,SDE,Other,2.0,False,Remote,2024
+S0442,I0390,Deloitte,Tier1,Data Analyst,IoT,6.0,True,Hybrid,2022
+S0442,I0391,ByteWorks,Tier3,Data Analyst,Other,6.0,False,Remote,2024
+S0442,I0392,Women in Tech Foundation,NGO,SDE,Finance,1.0,False,Hybrid,2024
+S0442,I0393,PayEase,Startup,ML Intern,Other,2.0,False,Hybrid,2024
+S0443,I0394,HCL,Tier2,Web Dev,Data,6.0,True,Onsite,2023
+S0445,I0395,HealthAI Startup,Startup,Web Dev,Data,3.0,False,Hybrid,2025
+S0445,I0396,Freshworks,Tier2,ML Intern,Other,3.0,True,Hybrid,2023
+S0446,I0397,GreenPath,Startup,ML Intern,IoT,1.0,True,Remote,2025
+S0447,I0398,Flipkart,Tier2,SDE,IoT,3.0,True,Hybrid,2022
+S0448,I0399,Wipro,Tier2,Data Analyst,Embedded,6.0,True,Remote,2023
+S0452,I0400,AppForge,Tier3,Data Analyst,AI_ML,6.0,True,Onsite,2023
+S0453,I0401,AlphaSoft,Tier3,Other,Web,1.0,False,Onsite,2022
+S0454,I0402,AlphaSoft,Tier3,ML Intern,Finance,2.0,False,Onsite,2022
+S0455,I0403,Mphasis,Tier2,Management,Finance,6.0,True,Remote,2022
+S0456,I0404,NetGenius,Tier3,Other,Web,2.0,True,Onsite,2024
+S0457,I0405,FinLit App,Startup,Other,AI_ML,1.0,True,Hybrid,2022
+S0457,I0406,Women in Tech Foundation,NGO,Data Analyst,Other,1.0,False,Hybrid,2024
+S0458,I0407,WebCraft Studios,Tier3,Other,Finance,2.0,True,Hybrid,2022
+S0459,I0408,Ola,Tier2,Web Dev,Embedded,1.0,True,Hybrid,2023
+S0460,I0409,Oracle,Tier1,Data Analyst,Data,6.0,True,Hybrid,2023
+S0461,I0410,TechVista,Tier3,Web Dev,Embedded,1.0,True,Remote,2025
+S0461,I0411,LearnLoop,Startup,Management,Data,1.0,True,Onsite,2022
+S0462,I0412,CodeBase Solutions,Tier3,ML Intern,Embedded,2.0,True,Hybrid,2025
+S0462,I0413,Tech Mahindra,Tier2,Web Dev,IoT,1.0,True,Remote,2025
+S0463,I0414,Salesforce,Tier1,Data Analyst,AI_ML,3.0,True,Onsite,2022
+S0463,I0415,FinLit App,Startup,ML Intern,Other,3.0,True,Onsite,2024
+S0463,I0416,NetGenius,Tier3,ML Intern,Finance,1.0,True,Remote,2024
+S0464,I0417,CloudNine Tech,Tier3,Data Analyst,Embedded,3.0,True,Onsite,2022
+S0467,I0418,HCL,Tier2,Data Analyst,Finance,6.0,False,Remote,2022
+S0467,I0419,L&T Infotech,Tier2,Other,Embedded,1.0,True,Onsite,2023
+S0468,I0420,Razorpay,Tier2,Data Analyst,Data,6.0,False,Remote,2023
+S0468,I0421,FinLit App,Startup,Other,Finance,1.5,True,Hybrid,2025
+S0468,I0422,Zoho,Tier2,Data Analyst,IoT,3.0,True,Onsite,2024
+S0469,I0423,FoodChain Tech,Startup,Data Analyst,Finance,2.0,True,Remote,2024
+S0469,I0424,LearnLoop,Startup,Management,Other,1.0,True,Remote,2024
+S0470,I0425,CyberShield,Startup,Data Analyst,Data,1.0,False,Remote,2025
+S0471,I0426,TechVista,Tier3,ML Intern,Web,1.0,False,Onsite,2022
+S0473,I0427,SocialImpact AI,Startup,Data Analyst,AI_ML,2.0,False,Hybrid,2022
+S0473,I0428,Ola,Tier2,ML Intern,Other,2.0,True,Hybrid,2023
+S0474,I0429,DigiCraft,Tier3,ML Intern,IoT,6.0,False,Remote,2022
+S0475,I0430,Wipro,Tier2,Data Analyst,Other,3.0,True,Remote,2024
+S0476,I0431,NetGenius,Tier3,Data Analyst,AI_ML,3.0,True,Remote,2023
+S0477,I0432,Infosys,Tier2,ML Intern,IoT,3.0,True,Hybrid,2022
+S0479,I0433,L&T Infotech,Tier2,Other,Finance,3.0,True,Onsite,2023
+S0479,I0434,L&T Infotech,Tier2,Other,Finance,6.0,True,Onsite,2025
+S0480,I0435,Digital Literacy Foundation,NGO,Data Analyst,AI_ML,2.0,False,Hybrid,2022
+S0481,I0436,SmartBuild,Startup,Other,Finance,1.5,True,Remote,2025
+S0483,I0437,Ola,Tier2,ML Intern,Web,1.0,True,Onsite,2023
+S0483,I0438,Freshworks,Tier2,Data Analyst,Other,2.0,True,Remote,2024
+S0484,I0439,Women in Tech Foundation,NGO,Web Dev,IoT,2.0,False,Onsite,2023
+S0485,I0440,AlphaSoft,Tier3,Management,IoT,3.0,False,Remote,2023
+S0486,I0441,TravelMate AI,Startup,SDE,IoT,2.0,False,Remote,2022
+S0488,I0442,Wipro,Tier2,Other,IoT,6.0,False,Onsite,2022
+S0488,I0443,AgriBot Startup,Startup,ML Intern,Other,2.0,False,Remote,2024
+S0489,I0444,MedConnect,Startup,Data Analyst,Embedded,1.5,False,Hybrid,2024
+S0492,I0445,FinLit App,Startup,ML Intern,Web,1.0,False,Remote,2024
+S0493,I0446,L&T Infotech,Tier2,SDE,AI_ML,1.0,False,Onsite,2023
+S0494,I0447,LearnLoop,Startup,Management,Web,3.0,False,Onsite,2023
+S0494,I0448,Swiggy,Tier2,Data Analyst,Finance,3.0,True,Remote,2023
+S0495,I0449,Mphasis,Tier2,SDE,AI_ML,6.0,True,Onsite,2024
+S0495,I0450,TCS,Tier2,ML Intern,Embedded,1.0,True,Remote,2022
+S0495,I0451,Zomato,Tier2,ML Intern,Data,1.0,True,Remote,2025
+S0496,I0452,Ola,Tier2,Other,Embedded,2.0,True,Remote,2022
+S0496,I0453,Women in Tech Foundation,NGO,Data Analyst,AI_ML,1.0,False,Onsite,2024
+S0496,I0454,Code for India,NGO,Management,Other,2.0,False,Hybrid,2023
+S0497,I0455,Capgemini,Tier2,Web Dev,Other,6.0,True,Hybrid,2024
+S0498,I0456,Accenture,Tier2,SDE,Other,2.0,True,Hybrid,2024
+S0499,I0457,GreenPath,Startup,Web Dev,Other,1.5,False,Remote,2022
+S0500,I0458,CyberShield,Startup,Other,AI_ML,1.0,True,Hybrid,2022
+S0503,I0459,Wipro,Tier2,Data Analyst,Embedded,2.0,False,Remote,2023
+S0503,I0460,ByteWorks,Tier3,Management,Web,2.0,False,Hybrid,2023
+S0503,I0461,Flipkart,Tier2,Data Analyst,Embedded,2.0,True,Onsite,2025
+S0503,I0462,PixelPerfect,Tier3,ML Intern,IoT,6.0,False,Onsite,2022
+S0504,I0463,CloudNine Tech,Tier3,Data Analyst,Data,6.0,True,Remote,2023
+S0504,I0464,CloudNine Tech,Tier3,ML Intern,Embedded,1.0,False,Hybrid,2023
+S0507,I0465,CodeBase Solutions,Tier3,Data Analyst,IoT,6.0,False,Remote,2022
+S0507,I0466,Infosys,Tier2,SDE,Embedded,6.0,True,Remote,2023
+S0509,I0467,RetailSense,Startup,Other,Other,2.0,True,Onsite,2023
+S0511,I0468,CyberShield,Startup,Management,Other,3.0,True,Remote,2024
+S0511,I0469,MedConnect,Startup,Web Dev,Embedded,2.0,True,Hybrid,2023
+S0514,I0470,TravelMate AI,Startup,ML Intern,Other,1.5,True,Onsite,2024
+S0514,I0471,AppForge,Tier3,Web Dev,Embedded,1.0,True,Remote,2025
+S0515,I0472,Ola,Tier2,SDE,Finance,2.0,True,Hybrid,2024
+S0515,I0473,Open Source for Education,NGO,Web Dev,AI_ML,2.0,False,Onsite,2024
+S0517,I0474,Freshworks,Tier2,Management,Embedded,6.0,True,Hybrid,2022
+S0517,I0475,WebCraft Studios,Tier3,ML Intern,Web,3.0,True,Onsite,2025
+S0518,I0476,SocialImpact AI,Startup,ML Intern,Embedded,2.0,True,Onsite,2025
+S0520,I0477,AgriBot Startup,Startup,SDE,Finance,1.0,True,Remote,2022
+S0521,I0478,Zomato,Tier2,Management,Other,6.0,True,Remote,2025
+S0521,I0479,CloudNine Tech,Tier3,Other,Other,1.0,False,Onsite,2023
+S0522,I0480,HealthAI Startup,Startup,SDE,AI_ML,2.0,False,Hybrid,2025
+S0523,I0481,McKinsey,Tier1,Data Analyst,Other,6.0,True,Remote,2023
+S0523,I0482,Capgemini,Tier2,Management,Other,2.0,True,Remote,2022
+S0524,I0483,Mphasis,Tier2,Web Dev,Other,1.0,False,Remote,2023
+S0525,I0484,Cognizant,Tier2,ML Intern,Data,3.0,True,Onsite,2025
+S0526,I0485,Mindtree,Tier2,Other,Web,1.0,True,Onsite,2022
+S0527,I0486,Zoho,Tier2,SDE,Data,3.0,True,Remote,2024
+S0529,I0487,GreenPath,Startup,Web Dev,Data,3.0,False,Remote,2022
+S0529,I0488,Byju's,Tier2,ML Intern,Other,2.0,True,Remote,2025
+S0530,I0489,DataWare Inc,Tier3,Management,Web,1.0,True,Hybrid,2025
+S0530,I0490,Ola,Tier2,Other,IoT,2.0,True,Remote,2022
+S0531,I0491,Accenture,Tier2,ML Intern,Finance,3.0,True,Onsite,2024
+S0532,I0492,SocialImpact AI,Startup,Management,Other,3.0,False,Hybrid,2024
+S0535,I0493,Adobe,Tier1,Management,Finance,2.0,True,Remote,2022
+S0536,I0494,EduTech Innovations,Startup,Web Dev,AI_ML,2.0,True,Hybrid,2023
+S0536,I0495,Swiggy,Tier2,Management,Other,2.0,True,Remote,2025
+S0537,I0496,Goldman Sachs,Tier1,Web Dev,Finance,3.0,True,Remote,2023
+S0538,I0497,FoodChain Tech,Startup,Management,Finance,3.0,False,Onsite,2022
+S0539,I0498,Wipro,Tier2,Data Analyst,Other,6.0,True,Hybrid,2023
+S0542,I0499,Tech Mahindra,Tier2,Web Dev,IoT,1.0,True,Onsite,2025
+S0542,I0500,Swiggy,Tier2,Web Dev,AI_ML,6.0,True,Remote,2023
+S0546,I0501,L&T Infotech,Tier2,ML Intern,Web,6.0,True,Onsite,2024
+S0548,I0502,Google,Tier1,SDE,Web,6.0,True,Hybrid,2022
+S0548,I0503,Rural Innovation Hub,NGO,Data Analyst,Data,1.0,False,Hybrid,2025
+S0548,I0504,WebCraft Studios,Tier3,Data Analyst,AI_ML,3.0,False,Hybrid,2022
+S0548,I0505,Microsoft,Tier1,Management,Web,6.0,True,Hybrid,2022
+S0549,I0506,Apple,Tier1,Management,Embedded,6.0,True,Remote,2023
+S0551,I0507,FinLit App,Startup,Management,Data,1.0,True,Onsite,2022
+S0552,I0508,CodeBase Solutions,Tier3,Other,Finance,3.0,True,Remote,2022
+S0553,I0509,Uber,Tier1,ML Intern,Embedded,3.0,True,Hybrid,2025
+S0555,I0510,SocialImpact AI,Startup,ML Intern,IoT,1.5,False,Hybrid,2022
+S0556,I0511,GreenPath,Startup,Management,IoT,1.5,False,Remote,2025
+S0556,I0512,Code for India,NGO,Management,IoT,2.0,True,Remote,2023
+S0557,I0513,Byju's,Tier2,ML Intern,Finance,3.0,False,Hybrid,2022
+S0558,I0514,Tech4Good Foundation,NGO,SDE,AI_ML,1.0,False,Onsite,2025
+S0558,I0515,MedConnect,Startup,ML Intern,AI_ML,1.5,True,Hybrid,2024
+S0558,I0516,CleanEnergy Tech,Startup,Other,Other,3.0,True,Hybrid,2025
+S0559,I0517,Tech4Good Foundation,NGO,SDE,AI_ML,2.0,False,Onsite,2025
+S0559,I0518,Code for India,NGO,Web Dev,Other,1.0,False,Remote,2025
+S0560,I0519,RetailSense,Startup,Other,Web,1.5,True,Onsite,2023
+S0561,I0520,WebCraft Studios,Tier3,SDE,Embedded,6.0,False,Hybrid,2024
+S0562,I0521,Wipro,Tier2,Management,Embedded,3.0,True,Onsite,2022
+S0563,I0522,SAP,Tier1,ML Intern,Embedded,2.0,True,Hybrid,2023
+S0564,I0523,WebCraft Studios,Tier3,Web Dev,Data,6.0,False,Remote,2023
+S0564,I0524,SoftStack,Tier3,ML Intern,Finance,6.0,True,Hybrid,2022
+S0565,I0525,Code for India,NGO,Management,Embedded,2.0,False,Hybrid,2023
+S0567,I0526,AppForge,Tier3,Management,Finance,1.0,True,Onsite,2022
+S0568,I0527,SoftStack,Tier3,SDE,Data,2.0,False,Remote,2023
+S0569,I0528,JP Morgan,Tier1,Data Analyst,AI_ML,2.0,True,Onsite,2022
+S0569,I0529,SmallTech Solutions,Tier3,Web Dev,Embedded,2.0,True,Onsite,2024
+S0570,I0530,AlphaSoft,Tier3,Data Analyst,IoT,3.0,True,Hybrid,2024
+S0572,I0531,Byju's,Tier2,Other,AI_ML,2.0,True,Remote,2025
+S0572,I0532,Digital Literacy Foundation,NGO,SDE,Embedded,1.0,False,Onsite,2024
+S0574,I0533,Mindtree,Tier2,Other,Embedded,1.0,True,Remote,2023
+S0575,I0534,Tech Mahindra,Tier2,Data Analyst,IoT,3.0,True,Onsite,2024
+S0575,I0535,MedConnect,Startup,Other,Data,1.0,True,Hybrid,2023
+S0576,I0536,PhonePe,Tier2,SDE,Embedded,6.0,True,Onsite,2025
+S0578,I0537,HealthAI Startup,Startup,Management,IoT,2.0,False,Hybrid,2025
+S0578,I0538,PayEase,Startup,Other,AI_ML,3.0,False,Remote,2023
+S0578,I0539,PhonePe,Tier2,SDE,Finance,2.0,True,Hybrid,2023
+S0580,I0540,Capgemini,Tier2,ML Intern,Data,1.0,False,Onsite,2025
+S0580,I0541,SmartBuild,Startup,Management,IoT,2.0,True,Remote,2024
+S0580,I0542,Rural Innovation Hub,NGO,ML Intern,Data,1.0,False,Remote,2024
+S0580,I0543,GreenPath,Startup,Other,Web,1.5,True,Remote,2025
+S0581,I0544,EduTech Innovations,Startup,Management,AI_ML,2.0,False,Hybrid,2024
+S0582,I0545,CleanEnergy Tech,Startup,SDE,Finance,3.0,False,Remote,2025
+S0583,I0546,Mindtree,Tier2,Web Dev,IoT,1.0,True,Remote,2023
+S0584,I0547,Deloitte,Tier1,SDE,Other,3.0,True,Remote,2025
+S0585,I0548,SmartBuild,Startup,Data Analyst,Finance,1.5,True,Onsite,2024
+S0585,I0549,EduTech Innovations,Startup,ML Intern,AI_ML,1.5,True,Onsite,2025
+S0586,I0550,Tech4Good Foundation,NGO,Web Dev,Other,1.0,False,Onsite,2022
+S0586,I0551,CodeBase Solutions,Tier3,Web Dev,Embedded,3.0,True,Hybrid,2024
+S0586,I0552,Swiggy,Tier2,Data Analyst,IoT,1.0,True,Onsite,2022
+S0586,I0553,ByteWorks,Tier3,Data Analyst,Data,2.0,False,Hybrid,2025
+S0588,I0554,Capgemini,Tier2,ML Intern,Embedded,2.0,True,Hybrid,2023
+S0588,I0555,Microsoft,Tier1,Other,Web,3.0,True,Remote,2024
+S0589,I0556,Open Source for Education,NGO,Other,Other,1.0,False,Hybrid,2024
+S0593,I0557,Open Source for Education,NGO,Management,AI_ML,1.0,False,Remote,2025
+S0595,I0558,TechVista,Tier3,Management,Web,1.0,False,Onsite,2024
+S0598,I0559,Tech Mahindra,Tier2,SDE,Data,1.0,True,Onsite,2022
+S0600,I0560,Open Source for Education,NGO,SDE,Web,2.0,False,Onsite,2023
+S0601,I0561,Tech4Good Foundation,NGO,SDE,Web,1.0,False,Hybrid,2022
+S0606,I0562,RetailSense,Startup,Management,Web,2.0,True,Onsite,2022
+S0607,I0563,FoodChain Tech,Startup,Data Analyst,IoT,2.0,False,Onsite,2022
+S0608,I0564,CloudNine Tech,Tier3,Other,Web,6.0,False,Hybrid,2024
+S0608,I0565,Zomato,Tier2,Other,Data,1.0,False,Hybrid,2024
+S0611,I0566,Flipkart,Tier2,ML Intern,IoT,3.0,True,Onsite,2025
+S0612,I0567,Razorpay,Tier2,Web Dev,Data,3.0,True,Onsite,2025
+S0613,I0568,NetGenius,Tier3,Data Analyst,Embedded,1.0,True,Onsite,2024
+S0613,I0569,Flipkart,Tier2,Data Analyst,Other,6.0,True,Remote,2025
+S0614,I0570,Open Source for Education,NGO,Management,Finance,2.0,False,Onsite,2025
+S0614,I0571,Ola,Tier2,Other,Web,6.0,True,Onsite,2023
+S0615,I0572,SmallTech Solutions,Tier3,Management,Data,3.0,False,Onsite,2024
+S0616,I0573,JP Morgan,Tier1,ML Intern,Web,2.0,True,Hybrid,2022
+S0616,I0574,CodeWave,Tier3,Management,Web,3.0,True,Remote,2023
+S0617,I0575,TravelMate AI,Startup,Other,Other,1.5,False,Remote,2025
+S0617,I0576,PixelPerfect,Tier3,Other,Data,2.0,True,Remote,2023
+S0618,I0577,DataWare Inc,Tier3,Data Analyst,Web,2.0,False,Remote,2023
+S0619,I0578,Wipro,Tier2,Data Analyst,Embedded,6.0,False,Remote,2025
+S0620,I0579,SoftStack,Tier3,Other,Finance,3.0,True,Hybrid,2025
+S0622,I0580,Wipro,Tier2,Management,Embedded,6.0,True,Hybrid,2023
+S0623,I0581,AppForge,Tier3,Management,Other,2.0,False,Remote,2025
+S0623,I0582,Rural Innovation Hub,NGO,Data Analyst,AI_ML,2.0,True,Hybrid,2023
+S0626,I0583,TCS,Tier2,SDE,Other,2.0,True,Hybrid,2023
+S0626,I0584,L&T Infotech,Tier2,Management,Web,3.0,True,Remote,2023
+S0626,I0585,Ola,Tier2,Web Dev,Finance,1.0,True,Onsite,2023
+S0626,I0586,SmallTech Solutions,Tier3,SDE,Finance,6.0,True,Hybrid,2024
+S0627,I0587,FoodChain Tech,Startup,Web Dev,Web,3.0,True,Onsite,2022
+S0628,I0588,Tech4Good Foundation,NGO,Web Dev,Other,2.0,True,Onsite,2024
+S0629,I0589,PhonePe,Tier2,Data Analyst,Web,2.0,True,Onsite,2025
+S0631,I0590,NetGenius,Tier3,ML Intern,Other,6.0,True,Onsite,2022
+S0632,I0591,SmartBuild,Startup,ML Intern,Web,1.0,True,Hybrid,2024
+S0636,I0592,SoftStack,Tier3,Other,IoT,1.0,True,Hybrid,2023
+S0638,I0593,Innov8 Labs,Tier3,Data Analyst,Finance,1.0,True,Hybrid,2024
+S0640,I0594,IBM,Tier1,Web Dev,Data,6.0,True,Remote,2024
+S0641,I0595,NetGenius,Tier3,SDE,Web,2.0,True,Hybrid,2025
+S0642,I0596,CodeBase Solutions,Tier3,Management,Embedded,1.0,False,Onsite,2024
+S0643,I0597,Rural Innovation Hub,NGO,ML Intern,AI_ML,2.0,True,Remote,2022
+S0644,I0598,PixelPerfect,Tier3,SDE,Finance,6.0,True,Remote,2023
+S0644,I0599,EduTech Innovations,Startup,Data Analyst,Embedded,3.0,True,Remote,2025
+S0644,I0600,PayEase,Startup,SDE,Finance,2.0,False,Onsite,2023
+S0647,I0601,CodeBase Solutions,Tier3,Web Dev,AI_ML,3.0,True,Remote,2022
+S0650,I0602,Digital Literacy Foundation,NGO,SDE,Finance,1.0,True,Onsite,2023
+S0653,I0603,Zomato,Tier2,Data Analyst,Finance,2.0,True,Remote,2022
+S0653,I0604,TechVista,Tier3,Management,Finance,6.0,True,Hybrid,2024
+S0654,I0605,ByteWorks,Tier3,SDE,Data,2.0,False,Hybrid,2023
+S0657,I0606,NetGenius,Tier3,ML Intern,Other,3.0,True,Onsite,2022
+S0658,I0607,GreenPath,Startup,Management,Embedded,2.0,False,Remote,2022
+S0659,I0608,Freshworks,Tier2,SDE,IoT,3.0,False,Onsite,2025
+S0659,I0609,Swiggy,Tier2,ML Intern,Finance,1.0,True,Onsite,2022
+S0659,I0610,PayEase,Startup,SDE,Web,1.0,False,Onsite,2023
+S0660,I0611,Cognizant,Tier2,Other,IoT,1.0,True,Remote,2023
+S0662,I0612,HealthAI Startup,Startup,SDE,Web,3.0,False,Remote,2022
+S0662,I0613,SoftStack,Tier3,Web Dev,Data,2.0,False,Onsite,2025
+S0663,I0614,Google,Tier1,Management,Other,6.0,True,Onsite,2022
+S0664,I0615,Ola,Tier2,Management,Embedded,1.0,False,Remote,2022
+S0664,I0616,Wipro,Tier2,Data Analyst,Web,1.0,True,Hybrid,2025
+S0667,I0617,Ola,Tier2,Other,Other,3.0,True,Hybrid,2024
+S0668,I0618,Tech Mahindra,Tier2,Web Dev,IoT,6.0,True,Hybrid,2023
+S0669,I0619,Rural Innovation Hub,NGO,SDE,Embedded,2.0,False,Onsite,2022
+S0672,I0620,ByteWorks,Tier3,Other,Embedded,2.0,False,Onsite,2023
+S0672,I0621,Tech Mahindra,Tier2,Data Analyst,Finance,1.0,True,Remote,2025
+S0672,I0622,HCL,Tier2,SDE,Web,2.0,True,Remote,2024
+S0673,I0623,CleanEnergy Tech,Startup,Other,AI_ML,3.0,True,Remote,2023
+S0674,I0624,WebCraft Studios,Tier3,SDE,AI_ML,1.0,True,Hybrid,2023
+S0675,I0625,JP Morgan,Tier1,Web Dev,AI_ML,3.0,True,Remote,2025
+S0675,I0626,Capgemini,Tier2,SDE,Finance,6.0,True,Remote,2023
+S0676,I0627,TechVista,Tier3,Web Dev,AI_ML,1.0,False,Onsite,2025
+S0679,I0628,CodeWave,Tier3,Data Analyst,Web,2.0,True,Onsite,2023
+S0680,I0629,FoodChain Tech,Startup,Web Dev,Finance,2.0,False,Remote,2024
+S0680,I0630,Meta,Tier1,Data Analyst,Data,6.0,True,Hybrid,2025
+S0681,I0631,Innov8 Labs,Tier3,Data Analyst,AI_ML,1.0,False,Hybrid,2025
+S0681,I0632,Ola,Tier2,Data Analyst,Embedded,6.0,True,Onsite,2023
+S0682,I0633,SocialImpact AI,Startup,Web Dev,Other,1.0,False,Remote,2022
+S0682,I0634,Accenture,Tier2,Data Analyst,Web,2.0,True,Onsite,2023
+S0683,I0635,Google,Tier1,Other,AI_ML,3.0,True,Onsite,2024
+S0683,I0636,Zoho,Tier2,Data Analyst,Other,2.0,True,Remote,2024
+S0684,I0637,Tech Mahindra,Tier2,SDE,Data,1.0,True,Remote,2023
+S0685,I0638,WebCraft Studios,Tier3,ML Intern,IoT,6.0,False,Hybrid,2024
+S0686,I0639,CloudNine Tech,Tier3,Other,Finance,2.0,True,Onsite,2022
+S0686,I0640,SmartBuild,Startup,Web Dev,Finance,1.0,True,Hybrid,2023
+S0686,I0641,Tech4Good Foundation,NGO,SDE,Finance,1.0,False,Remote,2022
+S0686,I0642,Apple,Tier1,Management,Other,6.0,True,Hybrid,2023
+S0687,I0643,AgriBot Startup,Startup,Data Analyst,Embedded,1.5,True,Remote,2022
+S0689,I0644,Byju's,Tier2,Management,IoT,3.0,False,Remote,2025
+S0689,I0645,ByteWorks,Tier3,Management,Web,2.0,False,Remote,2025
+S0689,I0646,Code for India,NGO,Web Dev,Finance,2.0,False,Remote,2024
+S0689,I0647,Infosys,Tier2,SDE,AI_ML,1.0,True,Remote,2023
+S0690,I0648,Deloitte,Tier1,SDE,Embedded,2.0,True,Remote,2023
+S0691,I0649,SocialImpact AI,Startup,ML Intern,Finance,3.0,True,Remote,2022
+S0694,I0650,Razorpay,Tier2,SDE,AI_ML,2.0,True,Remote,2022
+S0694,I0651,TravelMate AI,Startup,Management,Data,1.5,False,Onsite,2022
+S0694,I0652,CodeBase Solutions,Tier3,Management,IoT,1.0,False,Onsite,2024
+S0697,I0653,AgriBot Startup,Startup,Management,Embedded,3.0,True,Hybrid,2024
+S0698,I0654,LearnLoop,Startup,Other,AI_ML,1.0,False,Hybrid,2022
+S0698,I0655,Oracle,Tier1,Other,Other,2.0,True,Onsite,2025
+S0699,I0656,NetGenius,Tier3,ML Intern,Web,6.0,False,Remote,2023
+S0699,I0657,SocialImpact AI,Startup,Other,Data,3.0,False,Onsite,2022
+S0700,I0658,TravelMate AI,Startup,Web Dev,Data,1.0,False,Remote,2022
+S0701,I0659,HCL,Tier2,Data Analyst,Finance,3.0,True,Remote,2022
+S0702,I0660,Rural Innovation Hub,NGO,ML Intern,Finance,2.0,False,Onsite,2025
+S0703,I0661,Open Source for Education,NGO,ML Intern,Web,2.0,False,Onsite,2025
+S0704,I0662,Accenture,Tier2,Data Analyst,IoT,2.0,True,Onsite,2022
+S0705,I0663,Digital Literacy Foundation,NGO,Other,Finance,1.0,False,Remote,2023
+S0705,I0664,Rural Innovation Hub,NGO,ML Intern,Web,1.0,True,Hybrid,2025
+S0706,I0665,PixelPerfect,Tier3,Web Dev,Web,2.0,True,Hybrid,2025
+S0709,I0666,WebCraft Studios,Tier3,Web Dev,IoT,6.0,False,Hybrid,2024
+S0711,I0667,PhonePe,Tier2,SDE,IoT,1.0,True,Onsite,2024
+S0714,I0668,TechVista,Tier3,ML Intern,Web,3.0,True,Onsite,2024
+S0715,I0669,SmartBuild,Startup,SDE,Embedded,3.0,False,Remote,2024
+S0715,I0670,CleanEnergy Tech,Startup,Other,Other,2.0,False,Onsite,2025
+S0716,I0671,Accenture,Tier2,Web Dev,Embedded,1.0,True,Remote,2024
+S0718,I0672,Open Source for Education,NGO,SDE,Other,2.0,False,Hybrid,2023
+S0719,I0673,AgriBot Startup,Startup,Data Analyst,Other,1.5,True,Onsite,2023
+S0722,I0674,NetGenius,Tier3,Web Dev,Embedded,3.0,False,Hybrid,2024
+S0724,I0675,CloudNine Tech,Tier3,ML Intern,Other,6.0,False,Remote,2025
+S0724,I0676,Razorpay,Tier2,Web Dev,Web,2.0,True,Onsite,2023
+S0725,I0677,DataWare Inc,Tier3,ML Intern,Embedded,6.0,True,Hybrid,2022
+S0726,I0678,SmallTech Solutions,Tier3,Management,Other,3.0,True,Onsite,2023
+S0727,I0679,Flipkart,Tier2,Web Dev,Finance,3.0,True,Onsite,2022
+S0728,I0680,Netflix,Tier1,Web Dev,Other,3.0,True,Onsite,2025
+S0728,I0681,Rural Innovation Hub,NGO,Web Dev,Embedded,2.0,False,Hybrid,2023
+S0728,I0682,PayEase,Startup,Management,Embedded,1.0,True,Onsite,2023
+S0728,I0683,HCL,Tier2,ML Intern,Other,1.0,True,Remote,2022
+S0730,I0684,CleanEnergy Tech,Startup,Data Analyst,IoT,1.5,False,Onsite,2023
+S0731,I0685,FinLit App,Startup,ML Intern,Other,2.0,True,Onsite,2025
+S0731,I0686,Ola,Tier2,Management,AI_ML,2.0,False,Remote,2023
+S0732,I0687,Rural Innovation Hub,NGO,ML Intern,AI_ML,1.0,False,Hybrid,2022
+S0733,I0688,CodeWave,Tier3,Other,Data,3.0,True,Onsite,2022
+S0734,I0689,Freshworks,Tier2,Web Dev,IoT,1.0,True,Onsite,2024
+S0734,I0690,LearnLoop,Startup,Web Dev,Finance,3.0,True,Hybrid,2022
+S0735,I0691,GreenPath,Startup,SDE,Embedded,1.0,True,Hybrid,2025
+S0736,I0692,Razorpay,Tier2,ML Intern,AI_ML,3.0,True,Hybrid,2025
+S0736,I0693,SmallTech Solutions,Tier3,Other,Web,3.0,True,Onsite,2023
+S0736,I0694,AgriBot Startup,Startup,ML Intern,AI_ML,2.0,False,Remote,2022
+S0739,I0695,L&T Infotech,Tier2,Web Dev,Other,1.0,True,Remote,2023
+S0739,I0696,CleanEnergy Tech,Startup,Management,Finance,3.0,True,Onsite,2022
+S0742,I0697,CloudNine Tech,Tier3,Management,Embedded,1.0,True,Onsite,2024
+S0743,I0698,Freshworks,Tier2,Management,AI_ML,1.0,True,Onsite,2023
+S0746,I0699,LearnLoop,Startup,Web Dev,Other,3.0,True,Onsite,2023
+S0747,I0700,FinLit App,Startup,Management,Finance,2.0,False,Onsite,2025
+S0747,I0701,DigiCraft,Tier3,ML Intern,Finance,6.0,False,Remote,2024
+S0748,I0702,TravelMate AI,Startup,SDE,AI_ML,1.0,False,Onsite,2024
+S0749,I0703,Capgemini,Tier2,SDE,Embedded,1.0,True,Onsite,2024
+S0750,I0704,SmartBuild,Startup,Management,Other,3.0,False,Hybrid,2024
+S0751,I0705,L&T Infotech,Tier2,ML Intern,Web,2.0,True,Remote,2023
+S0754,I0706,Flipkart,Tier2,SDE,Data,1.0,True,Onsite,2023
+S0754,I0707,TCS,Tier2,ML Intern,AI_ML,2.0,True,Onsite,2023
+S0754,I0708,EduTech Innovations,Startup,ML Intern,Embedded,2.0,False,Hybrid,2023
+S0754,I0709,Meta,Tier1,Web Dev,Other,6.0,True,Hybrid,2022
+S0755,I0710,Innov8 Labs,Tier3,ML Intern,Finance,2.0,True,Hybrid,2023
+S0756,I0711,CleanEnergy Tech,Startup,Data Analyst,AI_ML,3.0,False,Remote,2025
+S0757,I0712,Rural Innovation Hub,NGO,Web Dev,AI_ML,1.0,False,Hybrid,2022
+S0757,I0713,Netflix,Tier1,ML Intern,Finance,3.0,True,Hybrid,2025
+S0759,I0714,RetailSense,Startup,Other,Other,1.5,False,Remote,2024
+S0760,I0715,CodeWave,Tier3,SDE,AI_ML,6.0,True,Onsite,2025
+S0762,I0716,Byju's,Tier2,Other,IoT,3.0,True,Hybrid,2023
+S0762,I0717,TCS,Tier2,Other,Web,6.0,True,Hybrid,2025
+S0764,I0718,NetGenius,Tier3,Other,Finance,2.0,True,Onsite,2023
+S0765,I0719,CyberShield,Startup,Data Analyst,Finance,1.5,True,Remote,2022
+S0766,I0720,MedConnect,Startup,Web Dev,IoT,1.0,False,Remote,2022
+S0766,I0721,Open Source for Education,NGO,Management,AI_ML,2.0,False,Remote,2024
+S0767,I0722,Zomato,Tier2,Management,Web,2.0,True,Onsite,2023
+S0767,I0723,Cognizant,Tier2,Data Analyst,Embedded,3.0,True,Remote,2025
+S0767,I0724,PayEase,Startup,SDE,IoT,2.0,False,Onsite,2024
+S0767,I0725,Zoho,Tier2,Management,Finance,3.0,False,Remote,2025
+S0770,I0726,ByteWorks,Tier3,Web Dev,Other,2.0,False,Remote,2025
+S0770,I0727,AppForge,Tier3,Management,IoT,6.0,False,Hybrid,2023
+S0771,I0728,Uber,Tier1,Management,Web,3.0,True,Onsite,2024
+S0772,I0729,ByteWorks,Tier3,Web Dev,AI_ML,1.0,True,Onsite,2025
+S0774,I0730,CyberShield,Startup,Web Dev,Web,2.0,True,Onsite,2024
+S0775,I0731,Microsoft,Tier1,ML Intern,Data,6.0,True,Remote,2023
+S0776,I0732,CleanEnergy Tech,Startup,Management,Web,1.0,True,Hybrid,2022
+S0776,I0733,LearnLoop,Startup,ML Intern,Web,1.0,False,Onsite,2025
+S0777,I0734,DigiCraft,Tier3,SDE,Finance,3.0,True,Remote,2022
+S0779,I0735,ByteWorks,Tier3,Management,Embedded,1.0,True,Onsite,2023
+S0780,I0736,Oracle,Tier1,Other,Data,6.0,True,Onsite,2023
+S0781,I0737,HCL,Tier2,Management,IoT,3.0,True,Remote,2025
+S0787,I0738,PayEase,Startup,Data Analyst,Web,2.0,True,Remote,2024
+S0787,I0739,Rural Innovation Hub,NGO,Web Dev,AI_ML,1.0,False,Remote,2022
+S0788,I0740,Open Source for Education,NGO,Web Dev,Finance,2.0,False,Hybrid,2023
+S0790,I0741,Salesforce,Tier1,Web Dev,Data,6.0,True,Hybrid,2023
+S0790,I0742,Capgemini,Tier2,Web Dev,Data,1.0,True,Hybrid,2023
+S0791,I0743,AgriBot Startup,Startup,Management,IoT,2.0,False,Remote,2022
+S0794,I0744,Wipro,Tier2,Other,Finance,2.0,False,Onsite,2025
+S0796,I0745,Rural Innovation Hub,NGO,Management,Other,1.0,False,Remote,2025
+S0797,I0746,PhonePe,Tier2,Management,Finance,3.0,True,Remote,2025
+S0798,I0747,Meta,Tier1,Management,Embedded,2.0,True,Remote,2025
+S0798,I0748,HCL,Tier2,Data Analyst,Data,3.0,False,Remote,2023
+S0799,I0749,CloudNine Tech,Tier3,Management,Other,6.0,False,Onsite,2024
+S0800,I0750,RetailSense,Startup,SDE,Embedded,3.0,True,Remote,2023
+S0800,I0751,SmartBuild,Startup,ML Intern,AI_ML,3.0,True,Hybrid,2024
