@@ -10,17 +10,20 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        <Link to="/" className="navbar-brand">
-          <div className="brand-icon">✨</div>
-          JobSwipe AI
-        </Link>
+        <div className="navbar-brand-container">
+          <Link to="/" className="navbar-brand">
+            JobSwipe AI
+          </Link>
+        </div>
         <div className="navbar-links">
           {userRole === 'admin' ? (
              <>
-               <Link to="/" className={isActive('/')}>Dashboard</Link>
+               <Link to="/" className={isActive('/')}>Overview</Link>
                <Link to="/students" className={isActive('/students')}>Students</Link>
                <Link to="/companies" className={isActive('/companies')}>Companies</Link>
                <Link to="/eligibility" className={isActive('/eligibility')}>Eligibility Engine</Link>
+               <Link to="/ranking" className={isActive('/ranking')}>ML Ranked Shortlist</Link>
+               <Link to="/bias" className={isActive('/bias')}>Bias Report</Link>
              </>
           ) : (
             <>
@@ -29,7 +32,9 @@ export default function Navbar() {
                <Link to="/improvement" className={isActive('/improvement')}>Improvement Plan</Link>
             </>
           )}
-          <button onClick={logout} className="btn btn-ghost btn-sm" style={{marginLeft: '16px'}}>
+        </div>
+        <div className="navbar-actions">
+          <button onClick={logout} className="btn-signup">
              Logout
           </button>
         </div>

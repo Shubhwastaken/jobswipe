@@ -7,6 +7,8 @@ import AdminDashboard from './pages/AdminDashboard'
 import StudentsPage from './pages/StudentsPage'
 import CompaniesPage from './pages/CompaniesPage'
 import EligibilityEngine from './pages/EligibilityEngine'
+import MLRankedShortlist from './pages/MLRankedShortlist'
+import BiasDetection from './pages/BiasDetection'
 
 import LoginPage from './pages/LoginPage'
 
@@ -38,6 +40,8 @@ function App() {
         <Route path="/students" element={<AdminRoute><StudentsPage /></AdminRoute>} />
         <Route path="/companies" element={<AdminRoute><CompaniesPage /></AdminRoute>} />
         <Route path="/eligibility" element={<AdminRoute><EligibilityEngine /></AdminRoute>} />
+        <Route path="/ranking" element={<AdminRoute><MLRankedShortlist /></AdminRoute>} />
+        <Route path="/bias" element={<AdminRoute><BiasDetection /></AdminRoute>} />
         
         {/* Catch all */}
         <Route path="*" element={<Navigate to="/dashboard" replace />} />

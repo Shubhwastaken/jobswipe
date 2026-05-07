@@ -1,0 +1,9 @@
+{
+  "name": "job-swipe",
+  "version": "1.0.0",
+  "description": "Root workspace",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "install:all": "npm --prefix frontend install"
+  }
+}
