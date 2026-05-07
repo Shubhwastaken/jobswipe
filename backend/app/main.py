@@ -34,16 +34,46 @@ from src.explainability.criteria_checker import check_criteria
 from src.explainability.explanation_generator import generate_explanation, generate_detailed_report
 from src.explainability.improvement_planner import generate_improvement_plan
 
-# Try to load model (may not be trained yet)
+# Try to load classifier model (may not be trained yet)
 try:
     from src.model.inference import load_model, run_inference, build_inference_features
     model, scaler, feature_cols = load_model()
     MODEL_LOADED = True
 except Exception as e:
-    print(f"Warning: Model not loaded: {e}")
+    print(f"Warning: Classifier model not loaded: {e}")
     MODEL_LOADED = False
     model, scaler, feature_cols = None, None, None
 
+# Try to load Option 1 — XGBoost Ranker
+try:
+    import pickle, json as _json
+    _mdir = os.path.join(os.path.dirname(__file__), '..', 'models')
+    with open(os.path.join(_mdir, 'ranker.pkl'), 'rb') as f:           ranker = pickle.load(f)
+    with open(os.path.join(_mdir, 'ranker_scaler.pkl'), 'rb') as f:   ranker_scaler = pickle.load(f)
+    with open(os.path.join(_mdir, 'ranker_feature_columns.json')) as f: ranker_feat_cols = _json.load(f)
+    RANKER_LOADED = True
+    print("Option 1 ranker loaded")
+except Exception as e:
+    print(f"Warning: Ranker not loaded: {e}")
+    RANKER_LOADED = False
+    ranker = ranker_scaler = ranker_feat_cols = None
+
+# Try to load Option 2 — Skill Recommender
+try:
+    with open(os.path.join(_mdir, 'skill_recommender.pkl'), 'rb') as f:               skill_rec_model = pickle.load(f)
+    with open(os.path.join(_mdir, 'skill_recommender_scaler.pkl'), 'rb') as f:        skill_rec_scaler = pickle.load(f)
+    with open(os.path.join(_mdir, 'skill_recommender_label_encoder.pkl'), 'rb') as f: skill_rec_le = pickle.load(f)
+    with open(os.path.join(_mdir, 'skill_recommender_features.json')) as f:           skill_rec_feat_cols = _json.load(f)
+    SKILL_REC_LOADED = True
+    print("Option 2 skill recommender loaded")
+except Exception as e:
+    print(f"Warning: Skill recommender not loaded: {e}")
+    SKILL_REC_LOADED = False
+    skill_rec_model = skill_rec_scaler = skill_rec_le = skill_rec_feat_cols = None
+
+# Option 3 — Bias report is read from JSON on demand (no model object needed)
+_bias_report_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'criteria_bias_report.json')
+BIAS_REPORT_AVAILABLE = os.path.exists(_bias_report_path)
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 
 app = FastAPI(
@@ -393,10 +423,201 @@ async def get_stats():
         },
         "company_tiers": companies_df["tier"].value_counts().to_dict() if companies_df is not None else {},
         "model_loaded": MODEL_LOADED,
+        "ranker_loaded": RANKER_LOADED,
+        "skill_rec_loaded": SKILL_REC_LOADED,
+        "bias_report_available": BIAS_REPORT_AVAILABLE,
     }
     return stats
 
 
+# ═══════════════════════════════════════════════════════════
+# OPTION 1 — ML Ranked Shortlist
+# GET /api/ml/ranked-shortlist/{company_id}?top_k=20
+# ═══════════════════════════════════════════════════════════
+@app.get("/api/ml/ranked-shortlist/{company_id}")
+async def get_ranked_shortlist(company_id: str, top_k: int = Query(default=20, le=800)):
+    """Return ML-ranked shortlist of students for a company (Option 1)."""
+    if not RANKER_LOADED:
+        raise HTTPException(503, "Ranker model not loaded. Run: python -m src.model.run_ranking")
+    if student_features_df is None or companies_df is None:
+        raise HTTPException(500, "Data not loaded")
+
+    company = companies_df[companies_df["company_id"] == company_id]
+    if company.empty:
+        raise HTTPException(404, f"Company {company_id} not found")
+    company_data = company.iloc[0].to_dict()
+
+    # Build feature rows for all students vs this company
+    import numpy as np
+    from src.preprocessing.feature_engineering import compute_skill_match, COMPANY_COMPLEXITY_MAP, COMPANY_CERT_TIER_MAP
+
+    allowed_depts = [d.strip() for d in str(company_data.get("allowed_departments", "")).split(",")]
+    company_min_complexity = COMPANY_COMPLEXITY_MAP.get(company_data.get("project_complexity_min", "None"), 0)
+    company_cert_req = COMPANY_CERT_TIER_MAP.get(str(company_data.get("cert_tier_required", "None")), 0)
+
+    rows = []
+    for _, sf in student_features_df.iterrows():
+        dept_match = 1 if sf["department"] in allowed_depts else 0
+        req_ratio, pref_ratio = compute_skill_match(
+            sf.get("skill_list", []),
+            company_data.get("required_skills", ""),
+            company_data.get("preferred_skills", ""),
+        )
+        meets_complexity = 1 if sf.get("max_project_complexity", 0) >= company_min_complexity else 0
+        meets_cert = 1 if sf.get("max_cert_tier", 0) >= company_cert_req else 0
+
+        rows.append({
+            "student_id": sf["student_id"],
+            "cgpa_normalized": sf.get("cgpa_normalized", 0),
+            "10th_normalized": sf.get("10th_normalized", 0),
+            "12th_normalized": sf.get("12th_normalized", 0),
+            "active_backlogs": sf.get("active_backlogs", 0),
+            "dept_match": dept_match,
+            "required_skills_match_ratio": round(req_ratio, 3),
+            "preferred_skills_match_ratio": round(pref_ratio, 3),
+            "total_internship_months": sf.get("total_internship_months", 0),
+            "max_internship_tier": sf.get("max_internship_tier", 0),
+            "num_projects": sf.get("num_projects", 0),
+            "max_project_complexity": sf.get("max_project_complexity", 0),
+            "meets_project_complexity": meets_complexity,
+            "num_global_premium_certs": sf.get("num_global_premium", 0),
+            "num_global_standard_certs": sf.get("num_global_standard", 0),
+            "num_national_certs": sf.get("num_national", 0),
+            "meets_cert_tier": meets_cert,
+            "num_papers": sf.get("num_papers", 0),
+            "max_paper_tier": sf.get("max_paper_tier", 0),
+            "num_advanced_skills": sf.get("num_advanced_skills", 0),
+            "num_verified_skills": sf.get("num_verified_skills", 0),
+        })
+
+    feat_df = pd.DataFrame(rows)
+    student_ids = feat_df["student_id"].tolist()
+    X = feat_df[ranker_feat_cols].fillna(0)
+    scores = ranker.predict(ranker_scaler.transform(X))
+
+    # Attach names from students_df
+    name_map = dict(zip(students_df["student_id"], students_df["full_name"]))
+    dept_map = dict(zip(students_df["student_id"], students_df["department"]))
+    cgpa_map = dict(zip(students_df["student_id"], students_df["cgpa"]))
+
+    results = sorted([
+        {
+            "rank": 0,
+            "student_id": sid,
+            "full_name": name_map.get(sid, sid),
+            "department": dept_map.get(sid, ""),
+            "cgpa": round(float(cgpa_map.get(sid, 0)), 2),
+            "rank_score": round(float(s), 4),
+            "dept_eligible": bool(feat_df.loc[feat_df["student_id"] == sid, "dept_match"].values[0]),
+        }
+        for sid, s in zip(student_ids, scores)
+    ], key=lambda x: x["rank_score"], reverse=True)
+
+    for i, r in enumerate(results, 1):
+        r["rank"] = i
+
+    return clean_nan({
+        "company_id": company_id,
+        "company_name": company_data.get("company_name", ""),
+        "tier": company_data.get("tier", ""),
+        "total_students": len(results),
+        "top_k": top_k,
+        "shortlist": results[:top_k],
+    })
+
+
+# ═══════════════════════════════════════════════════════════
+# OPTION 2 — ML Skill Gap Recommendations
+# GET /api/ml/skill-gap/{student_id}?top_k=5
+# ═══════════════════════════════════════════════════════════
+@app.get("/api/ml/skill-gap/{student_id}")
+async def get_skill_gap(student_id: str, top_k: int = Query(default=5, le=20)):
+    """Return ML-predicted top skill recommendations for a student (Option 2)."""
+    if not SKILL_REC_LOADED:
+        raise HTTPException(503, "Skill recommender not loaded. Run: python -m src.model.run_skill_gap")
+    if student_features_df is None:
+        raise HTTPException(500, "Data not loaded")
+
+    sf = student_features_df[student_features_df["student_id"] == student_id]
+    if sf.empty:
+        raise HTTPException(404, f"Student {student_id} not found")
+    student_row = sf.iloc[0]
+
+    # Score every skill using surrogate model
+    rec_rows = []
+    for skill in skill_rec_le.classes_:
+        skill_enc = int(skill_rec_le.transform([skill])[0])
+        feats = {"skill_encoded": skill_enc}
+        for col in skill_rec_feat_cols:
+            if col != "skill_encoded":
+                feats[col] = float(student_row.get(col, 0) or 0)
+        import numpy as np
+        X = pd.DataFrame([feats])[skill_rec_feat_cols].fillna(0)
+        gain = float(skill_rec_model.predict(skill_rec_scaler.transform(X.values))[0])
+        rec_rows.append({"skill": skill, "predicted_gain": round(gain, 4)})
+
+    rec_rows.sort(key=lambda x: x["predicted_gain"], reverse=True)
+
+    # Exclude skills student already has
+    current_skills = {s.lower() for s in (student_row.get("skill_list") or [])}
+    filtered = [r for r in rec_rows if r["skill"].lower() not in current_skills]
+
+    student_raw = students_df[students_df["student_id"] == student_id].iloc[0]
+    return clean_nan({
+        "student_id": student_id,
+        "full_name": student_raw.get("full_name", ""),
+        "department": student_raw.get("department", ""),
+        "current_skill_count": len(current_skills),
+        "recommendations": filtered[:top_k],
+        "model": "GradientBoosting surrogate (Spearman rho=0.77)",
+    })
+
+
+# ═══════════════════════════════════════════════════════════
+# OPTION 3 — Criteria Bias Report
+# GET /api/ml/bias-report
+# ═══════════════════════════════════════════════════════════
+@app.get("/api/ml/bias-report")
+async def get_bias_report(flagged_only: bool = False):
+    """Return upstream criteria bias detection results (Option 3)."""
+    if not BIAS_REPORT_AVAILABLE:
+        raise HTTPException(503, "Bias report not available. Run: python -m src.model.run_bias_detection")
+
+    with open(_bias_report_path) as f:
+        report = json.load(f)
+
+    if flagged_only:
+        return clean_nan({
+            "summary": report["summary"],
+            "flagged_companies": report["flagged_companies"],
+        })
+
+    # Return summary + flat company list (without full nested analysis for API speed)
+    companies_flat = []
+    for c in report.get("all_companies", []):
+        ga = c.get("gender_analysis", {})
+        da = c.get("dept_analysis", {})
+        cd = c.get("criteria_diagnosis", {})
+        companies_flat.append({
+            "company_id": c["company_id"],
+            "company_name": c["company_name"],
+            "tier": c["tier"],
+            "pool_pass_rate": c["pool_pass_rate"],
+            "gender_disparity": ga.get("disparity", 0),
+            "gender_p_value": ga.get("p_value", 1),
+            "gender_flagged": ga.get("flagged", False),
+            "gender_pass_rates": ga.get("pass_rates", {}),
+            "dept_disparity": da.get("disparity", 0),
+            "top_bias_criterion": max(
+                cd, key=lambda k: cd[k].get("disparity", 0), default="none"
+            ) if cd else "none",
+        })
+
+    return clean_nan({
+        "summary": report["summary"],
+        "flagged_companies": report["flagged_companies"],
+        "all_companies": companies_flat,
+    })
 if __name__ == "__main__":
     import uvicorn
     port = int(os.getenv("BACKEND_PORT", 8000))

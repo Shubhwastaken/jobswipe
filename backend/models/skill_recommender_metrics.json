@@ -1,0 +1,6 @@
+{
+  "test_mae": 0.005625,
+  "test_rmse": 0.008608,
+  "test_r2": 0.6455,
+  "test_spearman_rho": 0.7743
+}
