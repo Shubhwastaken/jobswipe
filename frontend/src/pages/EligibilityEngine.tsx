@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { 
-  getCompanies, getStudents, checkEligibility, batchCheckEligibility,
-  Company, Student, BatchResult, EligibilityResult 
+  getCompanies, getStudents, checkEligibility, batchCheckEligibility, getSkillGap,
+  Company, Student, BatchResult, EligibilityResult, SkillGapResult 
 } from '../services/api';
 
 export default function EligibilityEngine() {
@@ -19,6 +19,7 @@ export default function EligibilityEngine() {
     eligible: number;
     results: BatchResult[];
   } | null>(null);
+  const [skillGap, setSkillGap] = useState<SkillGapResult | null>(null);
 
   useEffect(() => {
     getCompanies({}).then(res => setCompanies(res.data.companies));
@@ -32,11 +33,16 @@ export default function EligibilityEngine() {
     setChecking(true);
     setSingleResult(null);
     setBatchResults(null);
+    setSkillGap(null);
 
     try {
       if (mode === 'single' && selectedStudent) {
-        const res = await checkEligibility(selectedStudent, selectedCompany);
-        setSingleResult(res.data);
+        const [eligRes, skillRes] = await Promise.all([
+          checkEligibility(selectedStudent, selectedCompany),
+          getSkillGap(selectedStudent, 5).catch(() => null)
+        ]);
+        setSingleResult(eligRes.data);
+        if (skillRes) setSkillGap(skillRes.data);
       } else if (mode === 'batch') {
         const res = await batchCheckEligibility(selectedCompany);
         setBatchResults({
@@ -63,7 +69,7 @@ export default function EligibilityEngine() {
 
       <div className="glass-card animate-slide delay-100" style={{ marginBottom: '24px' }}>
         <div className="grid grid-2">
-           <div>
+            <div>
              <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: 'var(--text-secondary)' }}>Select Company Role</label>
              <select 
                 className="input" 
@@ -121,7 +127,7 @@ export default function EligibilityEngine() {
               onClick={runCheck} 
               disabled={checking || !selectedCompany || (mode === 'single' && !selectedStudent)}
            >
-              {checking ? 'Running Assessment Engine...' : mode === 'single' ? 'Run ML Pipeline' : 'Run Batch Pipeline'}
+              {checking ? 'Executing Unified Engine...' : (mode === 'single' ? 'Run Unified ML Assessment' : 'Run Batch Pipeline')}
            </button>
         </div>
       </div>
@@ -199,8 +205,8 @@ export default function EligibilityEngine() {
                          </>
                       )}
                       
-                      {singleResult.criteria_eligible && (
-                         <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(16, 185, 129, 0.05)', borderRadius: '12px', border: '1px solid rgba(16, 185, 129, 0.2)' }}>
+                       {singleResult.criteria_eligible && (
+                         <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(16, 185, 129, 0.05)', borderRadius: '12px', border: '1px solid rgba(16, 185, 129, 0.2)', minHeight: '120px' }}>
                             <div style={{ textAlign: 'center' }}>
                                <div style={{ fontSize: '48px', marginBottom: '16px' }}>🎉</div>
                                <h3 style={{ color: 'var(--accent-success)' }}>Outstanding Candidate!</h3>
@@ -210,6 +216,46 @@ export default function EligibilityEngine() {
                       )}
                    </div>
                 </div>
+
+                {skillGap && (
+                   <div style={{ marginTop: '32px', paddingTop: '24px', borderTop: '1px solid var(--border-color)' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+                        <div>
+                          <h4 style={{ color: 'var(--text-accent)' }}>Long-Term Career Growth: Skill Gap AI</h4>
+                          <p style={{ color: 'var(--text-secondary)', fontSize: '13px' }}>
+                             Counterfactual surrogate model predicts skills that maximize overall placement odds across all companies.
+                          </p>
+                        </div>
+                        <span className="badge badge-ghost" style={{ fontSize: '11px' }}>{skillGap.model}</span>
+                      </div>
+                      
+                      <div className="grid grid-3">
+                        {skillGap.recommendations.slice(0, 3).map((r, i) => (
+                           <div key={r.skill} style={{ display: 'flex', flexDirection: 'column', gap: '8px', padding: '16px', background: 'var(--bg-secondary)', borderRadius: '10px', border: '1px solid var(--border-color)' }}>
+                              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                                 <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: i === 0 ? 'var(--accent-primary)' : 'var(--bg-tertiary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '13px', color: i === 0 ? '#fff' : 'var(--text-muted)' }}>
+                                    {i + 1}
+                                 </div>
+                                 <div style={{ textAlign: 'right' }}>
+                                    <div style={{ fontWeight: 700, color: 'var(--accent-success)', fontSize: '16px' }}>
+                                       +{(r.predicted_gain * 100).toFixed(1)}%
+                                    </div>
+                                    <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>market gain</div>
+                                 </div>
+                              </div>
+                              <div style={{ fontWeight: 600, marginTop: '8px', fontSize: '15px' }}>{r.skill}</div>
+                              <div style={{ height: '4px', borderRadius: '2px', background: 'var(--bg-tertiary)', overflow: 'hidden', marginTop: 'auto' }}>
+                                 <div style={{
+                                    height: '100%', borderRadius: '2px',
+                                    width: `${Math.max(r.predicted_gain * 1000, 4)}%`,
+                                    background: i === 0 ? 'var(--accent-primary)' : 'var(--accent-success)',
+                                 }}></div>
+                              </div>
+                           </div>
+                        ))}
+                      </div>
+                   </div>
+                )}
             </div>
          </div>
       )}
@@ -293,6 +339,8 @@ export default function EligibilityEngine() {
              </div>
          </div>
       )}
+
+
     </div>
   );
 }
