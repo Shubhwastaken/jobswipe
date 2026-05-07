@@ -1,0 +1,7 @@
+{
+  "ndcg@5": 1.0,
+  "ndcg@10": 1.0,
+  "precision@5": 1.0,
+  "precision@10": 1.0,
+  "num_queries": 10
+}

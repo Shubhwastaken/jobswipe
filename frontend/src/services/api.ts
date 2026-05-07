@@ -117,6 +117,78 @@ export interface Stats {
   cgpa_distribution: Record<string, number>;
   company_tiers: Record<string, number>;
   model_loaded: boolean;
+  ranker_loaded: boolean;
+  skill_rec_loaded: boolean;
+  bias_report_available: boolean;
+}
+
+// ── ML Types ────────────────────────────────────────────────
+export interface RankedStudent {
+  rank: number;
+  student_id: string;
+  full_name: string;
+  department: string;
+  cgpa: number;
+  rank_score: number;
+  dept_eligible: boolean;
+}
+
+export interface RankedShortlist {
+  company_id: string;
+  company_name: string;
+  tier: string;
+  total_students: number;
+  top_k: number;
+  shortlist: RankedStudent[];
+}
+
+export interface SkillRecommendation {
+  skill: string;
+  predicted_gain: number;
+}
+
+export interface SkillGapResult {
+  student_id: string;
+  full_name: string;
+  department: string;
+  current_skill_count: number;
+  recommendations: SkillRecommendation[];
+  model: string;
+}
+
+export interface BiasCompany {
+  company_id: string;
+  company_name: string;
+  tier: string;
+  pool_pass_rate: number;
+  gender_disparity: number;
+  gender_p_value: number;
+  gender_flagged: boolean;
+  gender_pass_rates: Record<string, number>;
+  dept_disparity: number;
+  top_bias_criterion: string;
+}
+
+export interface BiasReport {
+  summary: {
+    n_companies: number;
+    n_flagged: number;
+    flag_rate: number;
+    threshold: number;
+    significance: number;
+    student_pool_size: number;
+    gender_pool_dist: Record<string, number>;
+  };
+  flagged_companies: Array<{
+    company_id: string;
+    company_name: string;
+    tier: string;
+    disparity: number;
+    p_value: number;
+    pass_rates: Record<string, number>;
+    top_bias_criterion: string;
+  }>;
+  all_companies: BiasCompany[];
 }
 
 // --- API Methods ---
@@ -150,4 +222,13 @@ export const getModelMetrics = () =>
 export const getStats = () =>
   api.get<Stats>('/api/stats');
 
+// ── ML API Methods ──────────────────────────────────────────
+export const getRankedShortlist = (companyId: string, topK = 20) =>
+  api.get<RankedShortlist>(`/api/ml/ranked-shortlist/${companyId}`, { params: { top_k: topK } });
+
+export const getSkillGap = (studentId: string, topK = 5) =>
+  api.get<SkillGapResult>(`/api/ml/skill-gap/${studentId}`, { params: { top_k: topK } });
+
+export const getBiasReport = (flaggedOnly = false) =>
+  api.get<BiasReport>('/api/ml/bias-report', { params: { flagged_only: flaggedOnly } });
 export default api;

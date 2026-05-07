@@ -1,6 +1,9 @@
 """
 Fairness Audit: Check for demographic bias in model predictions.
 Runs demographic parity and equalized odds checks across gender/department groups.
+
+Extended (Option 3): also runs upstream criteria bias detection to flag
+companies whose hard rules produce statistically significant disparate impact.
 """
 
 import pandas as pd
@@ -208,5 +211,28 @@ def run_fairness_audit():
     return report
 
 
+def upstream_criteria_audit() -> dict:
+    """
+    Option 3 integration: run criteria-level bias detection and return summary.
+    Flags companies whose hard placement rules produce statistically significant
+    gender disparate impact (Fisher's Exact Test, p < 0.05, disparity > 10%).
+    """
+    try:
+        from src.model.criteria_bias_detector import run_criteria_bias_detection
+        print("\n" + "=" * 60)
+        print("  🔬  Upstream Criteria Bias Audit (Option 3)")
+        print("=" * 60)
+        report = run_criteria_bias_detection()
+        n_flagged = report["summary"]["n_flagged"]
+        n_total   = report["summary"]["n_companies"]
+        print(f"\n  Summary: {n_flagged}/{n_total} companies have biased criteria ")
+        print(f"  (p < 0.05, disparity > 10%)")
+        return report
+    except ImportError:
+        print("⚠️  criteria_bias_detector not found — skipping upstream audit")
+        return {}
+
+
 if __name__ == "__main__":
     run_fairness_audit()
+    upstream_criteria_audit()
