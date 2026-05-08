@@ -191,6 +191,21 @@ export interface BiasReport {
   all_companies: BiasCompany[];
 }
 
+export interface SkillDeficit {
+  skill: string;
+  students_with_skill: number;
+  missing_students: number;
+  missing_share: number;
+  coverage_share: number;
+  company_demand: number;
+  severity: string;
+}
+
+export interface SkillDeficitReport {
+  total_students: number;
+  deficits: SkillDeficit[];
+}
+
 // --- API Methods ---
 export const getStudents = (params?: { department?: string; min_cgpa?: number; limit?: number; offset?: number }) =>
   api.get<{ total: number; students: Student[] }>('/api/students', { params });
@@ -221,6 +236,9 @@ export const getModelMetrics = () =>
 
 export const getStats = () =>
   api.get<Stats>('/api/stats');
+
+export const getSkillDeficits = (limit = 8) =>
+  api.get<SkillDeficitReport>('/api/skill-deficits', { params: { limit } });
 
 // ── ML API Methods ──────────────────────────────────────────
 export const getRankedShortlist = (companyId: string, topK = 20) =>

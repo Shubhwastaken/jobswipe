@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getCompanies, getRankedShortlist, Company, RankedShortlist } from '../services/api';
+import { recordActivity } from '../services/activityLog';
 
 export default function MLRankedShortlist() {
   const [companies, setCompanies] = useState<Company[]>([]);
@@ -17,6 +18,14 @@ export default function MLRankedShortlist() {
     try {
       const res = await getRankedShortlist(selectedCompany, 20);
       setShortlist(res.data);
+      recordActivity({
+        kind: 'ranking',
+        tone: 'success',
+        title: 'ML shortlist generated',
+        detail: `${res.data.company_name} ranked ${res.data.total_students} students; top ${res.data.top_k} shown`,
+        actor: 'Ranking Pipeline',
+        status: 'Generated',
+      });
     } catch { alert('Ranker not loaded or company not found.'); }
     finally { setMlLoading(false); }
   };

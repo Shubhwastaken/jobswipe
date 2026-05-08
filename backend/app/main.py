@@ -95,14 +95,16 @@ app.add_middleware(
 students_df = None
 companies_df = None
 student_features_df = None
+skills_df = None
 
 
 def load_data():
-    global students_df, companies_df, student_features_df
+    global students_df, companies_df, student_features_df, skills_df
     try:
         students_raw, certs, projects, internships, papers, skills, companies = load_all_data()
         students_df = students_raw
         companies_df = companies
+        skills_df = skills
         student_features_df = build_student_features(
             students_raw, certs, projects, internships, papers, skills
         )
@@ -428,6 +430,73 @@ async def get_stats():
         "bias_report_available": BIAS_REPORT_AVAILABLE,
     }
     return stats
+
+
+@app.get("/api/skill-deficits")
+async def get_skill_deficits(limit: int = Query(default=8, le=25)):
+    """Get cohort-level missing-skill aggregates for company-required skills."""
+    if students_df is None or companies_df is None or skills_df is None:
+        raise HTTPException(500, "Data not loaded")
+
+    total_students = len(students_df)
+    required_skill_counts = {}
+    for value in companies_df["required_skills"].fillna("").tolist():
+        for skill in str(value).split(","):
+            normalized = skill.strip()
+            if normalized:
+                key = normalized.lower()
+                required_skill_counts[key] = {
+                    "skill": normalized,
+                    "company_demand": required_skill_counts.get(key, {}).get("company_demand", 0) + 1,
+                }
+
+    student_skill_counts = (
+        skills_df.assign(skill_key=skills_df["skill_name"].astype(str).str.strip().str.lower())
+        .drop_duplicates(["student_id", "skill_key"])
+        .groupby("skill_key")["student_id"]
+        .nunique()
+        .to_dict()
+    )
+
+    deficits = []
+    for skill_key, demand_info in required_skill_counts.items():
+        students_with_skill = int(student_skill_counts.get(skill_key, 0))
+        missing_students = max(total_students - students_with_skill, 0)
+        missing_share = missing_students / total_students if total_students else 0
+        coverage_share = students_with_skill / total_students if total_students else 0
+
+        if missing_share >= 0.85:
+            severity = "Critical"
+        elif missing_share >= 0.7:
+            severity = "High"
+        elif missing_share >= 0.5:
+            severity = "Moderate"
+        else:
+            severity = "Low"
+
+        deficits.append({
+            "skill": demand_info["skill"],
+            "students_with_skill": students_with_skill,
+            "missing_students": missing_students,
+            "missing_share": round(missing_share, 4),
+            "coverage_share": round(coverage_share, 4),
+            "company_demand": int(demand_info["company_demand"]),
+            "severity": severity,
+        })
+
+    deficits.sort(
+        key=lambda item: (
+            item["missing_share"] * item["company_demand"],
+            item["company_demand"],
+            item["missing_students"],
+        ),
+        reverse=True,
+    )
+
+    return {
+        "total_students": total_students,
+        "deficits": deficits[:limit],
+    }
 
 
 # ═══════════════════════════════════════════════════════════
