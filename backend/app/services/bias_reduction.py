@@ -509,39 +509,41 @@ def counterfactual_rules(
     original_metrics = compute_gender_metrics(original_mask, frame["gender"])
     drivers = leave_one_out_drivers(frame, company)
     top_driver = drivers[0]["criterion"] if drivers else "cgpa"
+    selected_drivers = [driver["criterion"] for driver in drivers[:3]] or [top_driver]
 
-    candidates = substitution_candidates_for_driver(frame, company, top_driver, original_mask)[:3]
     payload = []
-    for index, candidate in enumerate(candidates, start=1):
-        payload.append({
-            "candidate_id": f"{company_id}-{top_driver}-{candidate['kind']}-{index}",
-            "description": candidate_plain_english(top_driver, candidate),
-            "confidence": candidate["confidence"],
-            "composite_score": candidate["composite_score"],
-            "current_rule": {
-                "criterion": top_driver,
-                "threshold": criterion_current_value(company, top_driver) if top_driver != "department" else company.get("allowed_departments", ""),
-                "gender_disparity": original_metrics["disparity"],
-                "pool_size": int(original_mask.sum()),
-            },
-            "alternative_rule": {
-                "criterion": candidate["kind"],
-                "threshold": candidate["value"],
-                "label": substitution_label(candidate["kind"], candidate["value"]),
-                "gender_disparity": candidate["gender_disparity"],
-                "pool_size": candidate["pool_size"],
-                "p_value": candidate["p_value"],
-                "performance_preservation_score": candidate["performance_preservation_score"],
-                "pool_similarity": candidate["pool_similarity"],
-            },
-            "spec": {
-                "remove_criterion": top_driver,
-                "substitution": {
-                    "kind": candidate["kind"],
-                    "value": candidate["value"],
+    for driver in selected_drivers:
+        candidates = substitution_candidates_for_driver(frame, company, driver, original_mask)[:2]
+        for index, candidate in enumerate(candidates, start=1):
+            payload.append({
+                "candidate_id": f"{company_id}-{driver}-{candidate['kind']}-{index}",
+                "description": candidate_plain_english(driver, candidate),
+                "confidence": candidate["confidence"],
+                "composite_score": candidate["composite_score"],
+                "current_rule": {
+                    "criterion": driver,
+                    "threshold": criterion_current_value(company, driver) if driver != "department" else company.get("allowed_departments", ""),
+                    "gender_disparity": original_metrics["disparity"],  # decimal fraction, not percentage
+                    "pool_size": int(original_mask.sum()),
                 },
-            },
-        })
+                "alternative_rule": {
+                    "criterion": candidate["kind"],
+                    "threshold": candidate["value"],
+                    "label": substitution_label(candidate["kind"], candidate["value"]),
+                    "gender_disparity": candidate["gender_disparity"],  # decimal fraction, not percentage
+                    "pool_size": candidate["pool_size"],
+                    "p_value": candidate["p_value"],
+                    "performance_preservation_score": candidate["performance_preservation_score"],
+                    "pool_similarity": candidate["pool_similarity"],
+                },
+                "spec": {
+                    "remove_criterion": driver,
+                    "substitution": {
+                        "kind": candidate["kind"],
+                        "value": candidate["value"],
+                    },
+                },
+            })
 
     return clean_nan({
         "company_id": company_id,

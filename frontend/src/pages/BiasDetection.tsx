@@ -3,6 +3,7 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
+  Cell,
   Legend,
   Line,
   LineChart,
@@ -48,11 +49,24 @@ import { useAuthStore } from '../store/authStore';
 
 type DetailTab = 'rules' | 'ml';
 
+const GENDER_COLOURS: Record<string, string> = {
+  M: '#378ADD',
+  Male: '#378ADD',
+  F: '#E24B4A',
+  Female: '#E24B4A',
+  'Non-binary': '#EF9F27',
+  NB: '#EF9F27',
+};
+
 function formatPercent(value?: number | null, digits = 1) {
   if (value === undefined || value === null || Number.isNaN(value)) {
     return '--';
   }
   return `${(value * 100).toFixed(digits)}%`;
+}
+
+function normaliseDisparity(value: number): number {
+  return value > 1 ? value / 100 : value;
 }
 
 function formatCriterionLabel(criterion?: string) {
@@ -122,6 +136,14 @@ export default function BiasDetection() {
   const [retrainLoading, setRetrainLoading] = useState(false);
   const [retrainError, setRetrainError] = useState('');
   const [retrainMessage, setRetrainMessage] = useState('');
+  const [lastRetrainResult, setLastRetrainResult] = useState<{
+    accuracy: number;
+    f1: number;
+    delta_dp: number;
+    delta_eo: number;
+    shortlist_overlap?: number;
+  } | null>(null);
+  const [lastTrainedEpsilon, setLastTrainedEpsilon] = useState<number | null>(null);
 
   const studentId = useAuthStore((state) => state.studentId);
 
@@ -154,6 +176,15 @@ export default function BiasDetection() {
     [biasReport],
   );
 
+  const auditInsight = useMemo(() => {
+    if (!biasReport) return '';
+    const topFlag = biasReport.flagged_companies[0];
+    if (!topFlag) {
+      return `All ${biasReport.summary.n_companies} companies passed the fairness threshold. No criteria-level gender disparity detected above ${(biasReport.summary.threshold * 100).toFixed(0)}%.`;
+    }
+    return `${biasReport.summary.n_flagged} of ${biasReport.summary.n_companies} companies produce statistically significant gender disparity (p < ${biasReport.summary.significance}). Highest offender: ${topFlag.company_name} at ${(topFlag.disparity * 100).toFixed(1)}% disparity driven by ${topFlag.top_bias_criterion} grade threshold.`;
+  }, [biasReport]);
+
   const selectedCompany = useMemo(
     () => sortedCompanies.find((company) => company.company_id === selectedCompanyId) || sortedCompanies[0],
     [selectedCompanyId, sortedCompanies],
@@ -172,7 +203,6 @@ export default function BiasDetection() {
 
   const baselineVariant = selectedFairness?.variants.find((variant) => variant.key === 'baseline' && variant.available);
   const championVariant = selectedFairness?.variants.find((variant) => variant.key === 'champion' && variant.available);
-  const tightenedVariant = selectedFairness?.variants.find((variant) => variant.key === 'tightened' && variant.available);
   const shortlistA = baselineVariant?.shortlist || [];
   const shortlistB = championVariant?.shortlist || [];
   const shortlistBSet = new Set(shortlistB.map((student) => student.student_id));
@@ -181,13 +211,12 @@ export default function BiasDetection() {
   const selectedRecommendationPersistence = selectedCompany ? recommendationPersistenceByCompany[selectedCompany.company_id] : undefined;
 
   const fairnessCallout = useMemo(() => {
-    if (!baselineVariant?.available || !tightenedVariant?.available) {
-      return null;
-    }
-    const accuracyTrade = ((baselineVariant.accuracy || 0) - (tightenedVariant.accuracy || 0)) * 100;
-    const disparityReduction = ((baselineVariant.delta_dp || 0) - (tightenedVariant.delta_dp || 0)) * 100;
-    return `At epsilon=${epsilonDraft.toFixed(3)}, the model trades ${accuracyTrade.toFixed(2)}% accuracy for ${disparityReduction.toFixed(2)}% reduction in gender disparity.`;
-  }, [baselineVariant, tightenedVariant, epsilonDraft]);
+    if (!baselineVariant?.available || !lastRetrainResult) return null;
+    const accuracyTrade = ((baselineVariant.accuracy ?? 0) - lastRetrainResult.accuracy) * 100;
+    const disparityReduction = ((baselineVariant.delta_dp ?? 0) - lastRetrainResult.delta_dp) * 100;
+    const eps = lastTrainedEpsilon?.toFixed(3) ?? epsilonDraft.toFixed(3);
+    return `At \u03b5=${eps}, the model trades ${accuracyTrade.toFixed(2)}% accuracy for ${disparityReduction.toFixed(2)}% reduction in gender disparity.`;
+  }, [baselineVariant, lastRetrainResult, lastTrainedEpsilon, epsilonDraft]);
 
   async function runSimulation(company: BiasCompany) {
     const companyId = company.company_id;
@@ -354,7 +383,23 @@ export default function BiasDetection() {
         }),
       ]);
 
-      setFairnessByCompany((current) => ({ ...current, [companyId]: comparisonResponse.data }));
+      setFairnessByCompany((current) => {
+        const retrainedVariant = current[companyId]?.variants.find(
+          (variant) => variant.key === 'tightened' && variant.label.startsWith('Retrained ')
+        );
+        if (!retrainedVariant) {
+          return { ...current, [companyId]: comparisonResponse.data };
+        }
+        return {
+          ...current,
+          [companyId]: {
+            ...comparisonResponse.data,
+            variants: comparisonResponse.data.variants.map((variant) =>
+              variant.key === 'tightened' ? { ...variant, ...retrainedVariant } : variant
+            ),
+          },
+        };
+      });
       if (historyResponse) {
         setFairnessHistoryByCompany((current) => ({ ...current, [companyId]: historyResponse.data }));
       }
@@ -398,7 +443,45 @@ export default function BiasDetection() {
           committedEpsilon,
           studentId || 'admin-dashboard',
         );
-        setRetrainMessage(`Retrained constrained model in ${response.data.training_time_seconds.toFixed(2)}s.`);
+        const retrainData = response.data as typeof response.data & { shortlist_overlap?: number };
+
+        setLastRetrainResult({
+          accuracy: retrainData.accuracy,
+          f1: retrainData.f1,
+          delta_dp: retrainData.delta_dp,
+          delta_eo: retrainData.delta_eo,
+          shortlist_overlap: retrainData.shortlist_overlap,
+        });
+        setLastTrainedEpsilon(committedEpsilon);
+        setRetrainMessage(
+          `Retrained constrained model in ${retrainData.training_time_seconds.toFixed(2)}s.`
+        );
+
+        setFairnessByCompany(current => {
+          const existing = current[selectedCompany.company_id];
+          if (!existing) return current;
+          return {
+            ...current,
+            [selectedCompany.company_id]: {
+              ...existing,
+              variants: existing.variants.map(v =>
+                v.key === 'tightened'
+                  ? {
+                      ...v,
+                      available: true,
+                      accuracy: retrainData.accuracy,
+                      f1: retrainData.f1,
+                      delta_dp: retrainData.delta_dp,
+                      delta_eo: retrainData.delta_eo,
+                      shortlist_overlap: retrainData.shortlist_overlap ?? v.shortlist_overlap,
+                      label: `Retrained \u03b5=${committedEpsilon?.toFixed(3)}`,
+                    }
+                  : v
+              ),
+            },
+          };
+        });
+
         await loadFairness(selectedCompany.company_id);
       } catch (error: any) {
         setRetrainError(error?.response?.data?.detail || 'Failed to retrain constrained model.');
@@ -445,7 +528,7 @@ export default function BiasDetection() {
                 <span className="bento-pill">{biasReport.summary.n_companies} companies</span>
               </div>
               <p className="audit-finding">
-                The current page still shows the original Fisher-based detection layer, but now the flagged company panel continues into a three-step reduction workflow: threshold tuning, rule substitution, and ML fairness inspection.
+                {auditInsight}
               </p>
               <div className="audit-stat-row">
                 <div>
@@ -507,15 +590,10 @@ export default function BiasDetection() {
                         className="btn btn-ghost btn-sm"
                         onClick={(event) => {
                           event.stopPropagation();
-                          void runSimulation({
-                            ...company,
-                            pool_pass_rate: 0,
-                            gender_disparity: company.disparity,
-                            gender_p_value: company.p_value,
-                            gender_flagged: true,
-                            gender_pass_rates: company.pass_rates,
-                            dept_disparity: 0,
-                          });
+                          const fullCompany = sortedCompanies.find(
+                            (c) => c.company_id === company.company_id
+                          );
+                          if (fullCompany) void runSimulation(fullCompany);
                         }}
                       >
                         {simulationLoading[company.company_id] ? 'Running...' : 'Simulate fix'}
@@ -567,7 +645,37 @@ export default function BiasDetection() {
                         <XAxis dataKey="group" axisLine={false} tickLine={false} tick={{ fill: '#a1a1aa', fontSize: 12 }} />
                         <YAxis axisLine={false} tickLine={false} tick={{ fill: '#a1a1aa', fontSize: 12 }} />
                         <Tooltip contentStyle={{ background: '#050505', border: '1px solid rgba(255,255,255,0.16)', borderRadius: 8 }} />
-                        <Bar dataKey="rate" fill="#f59e0b" radius={[6, 6, 0, 0]} />
+                        <Legend
+                          verticalAlign="top"
+                          align="center"
+                          height={0}
+                          content={() => (
+                            <div style={{ display: 'flex', justifyContent: 'center', gap: 14, fontSize: 12, color: '#a1a1aa' }}>
+                              {['Female', 'Male', 'Non-binary'].map((label) => (
+                                <span key={label} style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                                  <span
+                                    style={{
+                                      width: 10,
+                                      height: 10,
+                                      borderRadius: '50%',
+                                      background: GENDER_COLOURS[label],
+                                      display: 'inline-block',
+                                    }}
+                                  />
+                                  {label}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        />
+                        <Bar dataKey="rate" radius={[6, 6, 0, 0]}>
+                          {passRates.map((entry) => (
+                            <Cell
+                              key={entry.group}
+                              fill={GENDER_COLOURS[entry.group] ?? '#6366f1'}
+                            />
+                          ))}
+                        </Bar>
                       </BarChart>
                     </ResponsiveContainer>
                   </div>
@@ -696,7 +804,9 @@ export default function BiasDetection() {
 
                                 <div className="candidate-stack">
                                   {selectedCounterfactual.candidates.map((candidate) => {
-                                    const disparityDelta = candidate.alternative_rule.gender_disparity - candidate.current_rule.gender_disparity;
+                                    const currentDisparity = normaliseDisparity(candidate.current_rule.gender_disparity);
+                                    const alternativeDisparity = normaliseDisparity(candidate.alternative_rule.gender_disparity);
+                                    const disparityDelta = alternativeDisparity - currentDisparity;
                                     const poolDelta = candidate.alternative_rule.pool_size - candidate.current_rule.pool_size;
                                     const preview = previewByCandidate[candidate.candidate_id];
                                     return (
@@ -707,7 +817,7 @@ export default function BiasDetection() {
                                             <strong>{formatCriterionLabel(candidate.current_rule.criterion)}</strong>
                                             <small>Threshold: {String(candidate.current_rule.threshold)}</small>
                                             <div className="candidate-metric-list">
-                                              <span>Disparity {formatPercent(candidate.current_rule.gender_disparity)}</span>
+                                              <span>Disparity {formatPercent(normaliseDisparity(candidate.current_rule.gender_disparity))}</span>
                                               <span>Pool {candidate.current_rule.pool_size}</span>
                                             </div>
                                           </div>
@@ -719,7 +829,7 @@ export default function BiasDetection() {
                                             <div className="candidate-metric-list">
                                               <span className={`delta-chip ${deltaClass(disparityDelta, true)}`}>
                                                 {disparityDelta < 0 ? <IconArrowDownRight size={14} /> : <IconArrowUpRight size={14} />}
-                                                Disparity {formatPercent(candidate.alternative_rule.gender_disparity)}
+                                                Disparity {formatPercent(normaliseDisparity(candidate.alternative_rule.gender_disparity))}
                                               </span>
                                               <span className={`delta-chip ${deltaClass(poolDelta, false)} ${poolDelta < -(candidate.current_rule.pool_size * 0.15) ? 'warning' : ''}`}>
                                                 {poolDelta >= 0 ? <IconArrowUpRight size={14} /> : <IconArrowDownRight size={14} />}
@@ -1018,6 +1128,7 @@ export default function BiasDetection() {
                     <th>Tier</th>
                     <th>Pool Pass</th>
                     <th>Disparity</th>
+                    <th>Dept disparity</th>
                     <th>p-value</th>
                     <th>Driver</th>
                     <th>Status</th>
@@ -1026,10 +1137,27 @@ export default function BiasDetection() {
                 <tbody>
                   {sortedCompanies.map((company: BiasCompany) => (
                     <tr key={company.company_id}>
-                      <td><strong>{company.company_name}</strong></td>
+                      <td>
+                        <strong>{company.company_name}</strong>
+                        {company.dept_disparity > 0.1 && (
+                          <span
+                            title="Department disparity > 10%"
+                            style={{
+                              display: 'inline-block',
+                              width: 7,
+                              height: 7,
+                              borderRadius: '50%',
+                              background: '#f59e0b',
+                              marginLeft: 6,
+                              verticalAlign: 'middle',
+                            }}
+                          />
+                        )}
+                      </td>
                       <td><span className="badge badge-info">{company.tier}</span></td>
                       <td>{(company.pool_pass_rate * 100).toFixed(1)}%</td>
                       <td>{(company.gender_disparity * 100).toFixed(1)}%</td>
+                      <td>{(company.dept_disparity * 100).toFixed(1)}%</td>
                       <td>{company.gender_p_value.toFixed(4)}</td>
                       <td>{formatCriterionLabel(company.top_bias_criterion)}</td>
                       <td>
