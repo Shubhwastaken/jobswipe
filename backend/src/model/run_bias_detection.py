@@ -19,6 +19,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 from src.model.criteria_bias_detector import run_criteria_bias_detection
 
 import pandas as pd
+from app.services.data_paths import dataset_variant
 
 MODEL_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "models")
 
@@ -96,7 +97,8 @@ def main():
     print_ieee_summary(report)
 
     # Load metrics for quick verification
-    csv_path = os.path.join(MODEL_DIR, "criteria_bias_report.csv")
+    prefix = "resume_realworld_" if dataset_variant() == "realworld" else ""
+    csv_path = os.path.join(MODEL_DIR, f"{prefix}criteria_bias_report.csv")
     if os.path.exists(csv_path):
         df = pd.read_csv(csv_path)
         print(f"\n📊  Disparity distribution across all companies:")

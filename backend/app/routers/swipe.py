@@ -11,6 +11,7 @@ from pydantic import BaseModel
 
 from app.database import supabase
 from app.routers.deps import get_current_recruiter, get_current_user
+from app.services.data_paths import data_dir, dataset_variant
 from app.services.bias_reduction import load_variant_artifact, score_variant_probabilities
 from app.services.talentforge_matcher import all_student_rows, enrich_student_row, is_canonical_job, score_student_for_job
 from src.explainability.criteria_checker import check_criteria
@@ -19,7 +20,7 @@ from src.model.inference import build_inference_features
 
 router = APIRouter(tags=["swipe"])
 _SUPABASE_LOCK = threading.Lock()
-DATA_DIR = Path(__file__).resolve().parents[2] / "data"
+DATA_DIR = data_dir()
 FAIRNESS_BLEND_TALENTFORGE_WEIGHT = 0.6
 FAIRNESS_BLEND_MODEL_WEIGHT = 0.4
 PROJECT_COMPLEXITY_MAP = {"Basic": 1, "Intermediate": 2, "Advanced": 3}
@@ -520,7 +521,7 @@ def scorecard_for_job(student: Dict[str, Any], job: Dict[str, Any]) -> Dict[str,
 
 
 def compare_against_role_pool(student: Dict[str, Any], job: Dict[str, Any]) -> Dict[str, Any]:
-    supabase_students = execute_supabase(lambda: supabase.table("students").select("*")).data or []
+    supabase_students = [] if dataset_variant() == "realworld" else execute_supabase(lambda: supabase.table("students").select("*")).data or []
     students_by_id = {student_id(row): row for row in all_student_rows()}
     for row in supabase_students:
         sid = student_id(row)
@@ -987,7 +988,7 @@ def recruiter_feed_with_track(
         if row.get("student_id")
     ]
     interested_rank = {sid: index for index, sid in enumerate(interested)}
-    supabase_students = execute_supabase(lambda: supabase.table("students").select("*")).data or []
+    supabase_students = [] if dataset_variant() == "realworld" else execute_supabase(lambda: supabase.table("students").select("*")).data or []
     students_by_id = {
         student_id(row): row
         for row in all_student_rows()

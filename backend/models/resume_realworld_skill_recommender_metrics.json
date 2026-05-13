@@ -1,0 +1,7 @@
+{
+  "trained_on": "resume_realworld",
+  "test_mae": 0.002884,
+  "test_rmse": 0.004901,
+  "test_r2": 0.7007,
+  "test_spearman_rho": 0.7968
+}

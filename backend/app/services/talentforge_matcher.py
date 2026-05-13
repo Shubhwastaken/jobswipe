@@ -8,7 +8,9 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-DATA_DIR = Path(__file__).resolve().parents[2] / "data"
+from app.services.data_paths import data_dir
+
+DATA_DIR = data_dir()
 
 WEIGHTS = {
     "skills": 0.5,
@@ -72,7 +74,6 @@ def canonical_company_keys() -> set[Tuple[str, str]]:
     companies = _read_csv("companies.csv")
     if companies.empty:
         return set()
-    companies = companies[companies["company_id"].astype(str).str.startswith("CO")].copy()
     keys = set()
     for _, row in companies.iterrows():
         keys.add((_clean(row.get("company_name")), _clean(row.get("role_offered"))))
@@ -100,7 +101,6 @@ def load_profiles() -> Dict[str, Dict[str, Any]]:
     if students.empty:
         return profiles
 
-    students = students[students["student_id"].astype(str).str.startswith("S")].copy()
     allowed_student_ids = set(students["student_id"].astype(str))
 
     for _, row in students.iterrows():

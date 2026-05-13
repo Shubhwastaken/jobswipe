@@ -1,0 +1,122 @@
+[
+  {
+    "eps": 0.005,
+    "accuracy": 87.242,
+    "f1": 0.6498,
+    "precision": 0.822,
+    "recall": 0.5373,
+    "department_parity_gap": 4.804,
+    "sensitive_feature": "department",
+    "composite_score": 0.5244
+  },
+  {
+    "eps": 0.01,
+    "accuracy": 87.208,
+    "f1": 0.6494,
+    "precision": 0.8198,
+    "recall": 0.5376,
+    "department_parity_gap": 3.052,
+    "sensitive_feature": "department",
+    "composite_score": 0.5941
+  },
+  {
+    "eps": 0.015,
+    "accuracy": 87.05,
+    "f1": 0.6466,
+    "precision": 0.8109,
+    "recall": 0.5376,
+    "department_parity_gap": 4.057,
+    "sensitive_feature": "department",
+    "composite_score": 0.5515
+  },
+  {
+    "eps": 0.017,
+    "accuracy": 87.204,
+    "f1": 0.6502,
+    "precision": 0.8175,
+    "recall": 0.5397,
+    "department_parity_gap": 4.014,
+    "sensitive_feature": "department",
+    "composite_score": 0.5562
+  },
+  {
+    "eps": 0.019,
+    "accuracy": 87.296,
+    "f1": 0.6529,
+    "precision": 0.8203,
+    "recall": 0.5422,
+    "department_parity_gap": 4.663,
+    "sensitive_feature": "department",
+    "composite_score": 0.5324
+  },
+  {
+    "eps": 0.02,
+    "accuracy": 87.154,
+    "f1": 0.6487,
+    "precision": 0.816,
+    "recall": 0.5384,
+    "department_parity_gap": 2.881,
+    "sensitive_feature": "department",
+    "composite_score": 0.7156
+  },
+  {
+    "eps": 0.025,
+    "accuracy": 87.121,
+    "f1": 0.6488,
+    "precision": 0.8127,
+    "recall": 0.5399,
+    "department_parity_gap": 3.959,
+    "sensitive_feature": "department",
+    "composite_score": 0.5572
+  },
+  {
+    "eps": 0.028,
+    "accuracy": 87.221,
+    "f1": 0.6502,
+    "precision": 0.819,
+    "recall": 0.5391,
+    "department_parity_gap": 4.068,
+    "sensitive_feature": "department",
+    "composite_score": 0.5541
+  },
+  {
+    "eps": 0.029,
+    "accuracy": 87.096,
+    "f1": 0.6472,
+    "precision": 0.8138,
+    "recall": 0.5373,
+    "department_parity_gap": 3.934,
+    "sensitive_feature": "department",
+    "composite_score": 0.557
+  },
+  {
+    "eps": 0.034,
+    "accuracy": 87.204,
+    "f1": 0.6504,
+    "precision": 0.817,
+    "recall": 0.5403,
+    "department_parity_gap": 4.343,
+    "sensitive_feature": "department",
+    "composite_score": 0.5432
+  },
+  {
+    "eps": 0.04,
+    "accuracy": 87.121,
+    "f1": 0.6493,
+    "precision": 0.8116,
+    "recall": 0.541,
+    "department_parity_gap": 5.022,
+    "sensitive_feature": "department",
+    "composite_score": 0.515
+  },
+  {
+    "eps": 0.05,
+    "accuracy": 87.446,
+    "f1": 0.6552,
+    "precision": 0.8296,
+    "recall": 0.5414,
+    "department_parity_gap": 4.58,
+    "sensitive_feature": "department",
+    "composite_score": 0.5378
+  }
+]

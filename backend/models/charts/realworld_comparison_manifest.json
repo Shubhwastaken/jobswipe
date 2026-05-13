@@ -1,0 +1,11 @@
+{
+  "generated_charts": [
+    "canonical_vs_realworld_model_metrics.png",
+    "canonical_vs_realworld_ranker_metrics.png",
+    "canonical_vs_realworld_dataset_profile.png",
+    "canonical_vs_realworld_bias_audit.png",
+    "resume_realworld_f1_comparison.png",
+    "resume_realworld_parser_robustness.png"
+  ],
+  "generated_at_note": "Charts are derived from existing canonical and resume_realworld artifacts."
+}

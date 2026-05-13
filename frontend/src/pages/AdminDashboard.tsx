@@ -485,6 +485,7 @@ export default function AdminDashboard() {
           <div className="artifact-note-row">
             <span>Pareto chart artifact {artifacts?.available_charts?.pareto_frontier ? 'available' : 'missing'}</span>
             <span>Epsilon chart artifact {artifacts?.available_charts?.epsilon_sweep ? 'available' : 'missing'}</span>
+            <span>Real-world comparison charts {artifacts?.available_charts?.realworld_comparison?.length || 0}</span>
           </div>
         </article>
       </section>

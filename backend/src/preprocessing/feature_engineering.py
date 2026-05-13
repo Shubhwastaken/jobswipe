@@ -9,7 +9,11 @@ import pandas as pd
 import numpy as np
 import os
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'data')
+try:
+    from app.services.data_paths import data_dir
+    DATA_DIR = str(data_dir())
+except Exception:
+    DATA_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'data')
 
 # Tier encoding maps (ordinal, higher = better)
 CERT_TIER_MAP = {

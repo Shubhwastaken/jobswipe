@@ -16,10 +16,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 from app.services.artifact_registry import load_classifier_artifact, load_fair_champion_artifact
+from app.services.data_paths import data_dir, dataset_variant
 from src.model.inference import build_inference_features
 
 MODEL_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "models")
-DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "data")
+DATA_DIR = str(data_dir())
 ENV_PATH = os.path.join(os.path.dirname(__file__), "..", "..", ".env")
 LOCAL_RECOMMENDATIONS_PATH = os.path.join(MODEL_DIR, "bias_recommendations_local.json")
 LOCAL_FAIRNESS_HISTORY_PATH = os.path.join(MODEL_DIR, "model_fairness_history_local.json")
@@ -897,7 +898,11 @@ def fairness_comparison(
 
 
 def load_model_json(filename: str) -> Dict[str, Any]:
-    path = os.path.join(MODEL_DIR, filename)
+    candidates = []
+    if dataset_variant() == "realworld":
+        candidates.append(os.path.join(MODEL_DIR, f"resume_realworld_{filename}"))
+    candidates.append(os.path.join(MODEL_DIR, filename))
+    path = next((candidate for candidate in candidates if os.path.exists(candidate)), candidates[0])
     if not os.path.exists(path):
         return {}
     with open(path, "r", encoding="utf-8") as handle:

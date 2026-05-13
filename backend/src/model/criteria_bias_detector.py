@@ -23,8 +23,14 @@ import numpy as np
 import pandas as pd
 from scipy.stats import chi2_contingency, fisher_exact
 
+try:
+    from app.services.data_paths import data_dir, dataset_variant
+except Exception:
+    data_dir = None
+    dataset_variant = None
+
 _HERE     = os.path.dirname(__file__)
-DATA_DIR  = os.path.join(_HERE, "..", "..", "data")
+DATA_DIR  = str(data_dir()) if data_dir else os.path.join(_HERE, "..", "..", "data")
 MODEL_DIR = os.path.join(_HERE, "..", "..", "models")
 
 DISPARITY_THRESHOLD = 0.10
@@ -116,10 +122,12 @@ def diagnose_criteria(students_df: pd.DataFrame, company: pd.Series) -> dict:
 
 
 def run_criteria_bias_detection(output_json=None, output_csv=None) -> dict:
+    active_variant = dataset_variant() if dataset_variant else "canonical"
+    artifact_prefix = "resume_realworld_" if active_variant == "realworld" else ""
     if output_json is None:
-        output_json = os.path.join(MODEL_DIR, "criteria_bias_report.json")
+        output_json = os.path.join(MODEL_DIR, f"{artifact_prefix}criteria_bias_report.json")
     if output_csv is None:
-        output_csv  = os.path.join(MODEL_DIR, "criteria_bias_report.csv")
+        output_csv  = os.path.join(MODEL_DIR, f"{artifact_prefix}criteria_bias_report.csv")
     os.makedirs(MODEL_DIR, exist_ok=True)
 
     print("=" * 60)
