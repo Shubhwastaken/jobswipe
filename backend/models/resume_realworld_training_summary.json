@@ -1,0 +1,129 @@
+{
+  "baseline": {
+    "trained_on": "resume_realworld",
+    "num_pairs": 96000,
+    "num_students": 1200,
+    "num_companies": 80,
+    "accuracy": 0.8839270833333334,
+    "precision": 0.8623986095017381,
+    "recall": 0.56299938537185,
+    "f1": 0.6812551846448697,
+    "cv_results": [
+      {
+        "fold": 1,
+        "accuracy": 0.8775,
+        "precision": 0.8524774774774775,
+        "recall": 0.5368794326241135,
+        "f1": 0.6588337684943429
+      },
+      {
+        "fold": 2,
+        "accuracy": 0.88,
+        "precision": 0.8574610244988864,
+        "recall": 0.5460992907801419,
+        "f1": 0.6672443674176777
+      },
+      {
+        "fold": 3,
+        "accuracy": 0.88078125,
+        "precision": 0.8492263404102195,
+        "recall": 0.557919621749409,
+        "f1": 0.6734198887145099
+      },
+      {
+        "fold": 4,
+        "accuracy": 0.87828125,
+        "precision": 0.8350442477876107,
+        "recall": 0.5576832151300236,
+        "f1": 0.6687455705173636
+      },
+      {
+        "fold": 5,
+        "accuracy": 0.8797395833333334,
+        "precision": 0.8412642045454546,
+        "recall": 0.5599149137319782,
+        "f1": 0.6723428409252165
+      }
+    ]
+  },
+  "fair_champion": {
+    "trained_on": "resume_realworld",
+    "accuracy": 0.8724375,
+    "precision": 0.8169264716349918,
+    "recall": 0.5426220982459459,
+    "f1": 0.6521022727272727,
+    "epsilon": 0.01
+  },
+  "ranker": {
+    "ndcg@5": 0.9750027918183788,
+    "ndcg@5_mean": 0.9750027918183788,
+    "ndcg@5_std": 0.02203600428610464,
+    "ndcg@10": 0.9643390802893179,
+    "ndcg@10_mean": 0.9643390802893179,
+    "ndcg@10_std": 0.027683664360670462,
+    "precision@5": 0.985,
+    "precision@5_mean": 0.985,
+    "precision@5_std": 0.0270993542358485,
+    "precision@10": 0.96875,
+    "precision@10_mean": 0.96875,
+    "precision@10_std": 0.028980057798424042,
+    "num_folds": 5,
+    "num_queries": 80,
+    "folds": [
+      {
+        "ndcg@5": 0.9394325055516387,
+        "ndcg@10": 0.9182345204623108,
+        "precision@5": 0.9375,
+        "precision@10": 0.925,
+        "num_queries": 16,
+        "fold": 1
+      },
+      {
+        "ndcg@5": 0.9914781315887338,
+        "ndcg@10": 0.977920003360691,
+        "precision@5": 1.0,
+        "precision@10": 0.98125,
+        "num_queries": 16,
+        "fold": 2
+      },
+      {
+        "ndcg@5": 0.978802487170399,
+        "ndcg@10": 0.9641731031269796,
+        "precision@5": 0.9875,
+        "precision@10": 0.95625,
+        "num_queries": 16,
+        "fold": 3
+      },
+      {
+        "ndcg@5": 0.9709403829032157,
+        "ndcg@10": 0.9701687504457484,
+        "precision@5": 1.0,
+        "precision@10": 1.0,
+        "num_queries": 16,
+        "fold": 4
+      },
+      {
+        "ndcg@5": 0.9943604518779069,
+        "ndcg@10": 0.9911990240508599,
+        "precision@5": 1.0,
+        "precision@10": 0.98125,
+        "num_queries": 16,
+        "fold": 5
+      }
+    ],
+    "trained_on": "resume_realworld",
+    "num_pairs": 96000
+  },
+  "skill_gap": {
+    "rows": 41606,
+    "students": 1200,
+    "candidate_skills": 36
+  },
+  "skill_recommender": {
+    "trained_on": "resume_realworld",
+    "test_mae": 0.002884,
+    "test_rmse": 0.004901,
+    "test_r2": 0.7007,
+    "test_spearman_rho": 0.7968
+  }
+}

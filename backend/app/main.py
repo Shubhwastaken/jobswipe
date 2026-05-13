@@ -44,6 +44,7 @@ from app.services.bias_reduction import (
     save_bias_recommendation,
     simulate_fix,
 )
+from app.services.data_paths import data_dir, dataset_variant
 from app.services.artifact_registry import load_classifier_artifact, load_ranker_artifact
 from app.routers import auth, resume, swipe
 
@@ -79,21 +80,42 @@ except Exception as e:
 
 # Try to load Option 2 — Skill Recommender
 try:
-    with open(os.path.join(_mdir, 'skill_recommender.pkl'), 'rb') as f:               skill_rec_model = pickle.load(f)
-    with open(os.path.join(_mdir, 'skill_recommender_scaler.pkl'), 'rb') as f:        skill_rec_scaler = pickle.load(f)
-    with open(os.path.join(_mdir, 'skill_recommender_label_encoder.pkl'), 'rb') as f: skill_rec_le = pickle.load(f)
-    with open(os.path.join(_mdir, 'skill_recommender_features.json')) as f:           skill_rec_feat_cols = _json.load(f)
+    _skill_prefix = 'resume_realworld_' if os.getenv("JOBSWIPE_ARTIFACT_VARIANT", os.getenv("JOBSWIPE_DATASET", "canonical")).strip().lower() == "realworld" else ''
+    with open(os.path.join(_mdir, f'{_skill_prefix}skill_recommender.pkl'), 'rb') as f:               skill_rec_model = pickle.load(f)
+    with open(os.path.join(_mdir, f'{_skill_prefix}skill_recommender_scaler.pkl'), 'rb') as f:        skill_rec_scaler = pickle.load(f)
+    with open(os.path.join(_mdir, f'{_skill_prefix}skill_recommender_label_encoder.pkl'), 'rb') as f: skill_rec_le = pickle.load(f)
+    with open(os.path.join(_mdir, f'{_skill_prefix}skill_recommender_features.json')) as f:           skill_rec_feat_cols = _json.load(f)
     SKILL_REC_LOADED = True
     print("Option 2 skill recommender loaded")
 except Exception as e:
-    print(f"Warning: Skill recommender not loaded: {e}")
-    SKILL_REC_LOADED = False
-    skill_rec_model = skill_rec_scaler = skill_rec_le = skill_rec_feat_cols = None
+    try:
+        with open(os.path.join(_mdir, 'resume_realworld_skill_recommender.pkl'), 'rb') as f:               skill_rec_model = pickle.load(f)
+        with open(os.path.join(_mdir, 'resume_realworld_skill_recommender_scaler.pkl'), 'rb') as f:        skill_rec_scaler = pickle.load(f)
+        with open(os.path.join(_mdir, 'resume_realworld_skill_recommender_label_encoder.pkl'), 'rb') as f: skill_rec_le = pickle.load(f)
+        with open(os.path.join(_mdir, 'resume_realworld_skill_recommender_features.json')) as f:           skill_rec_feat_cols = _json.load(f)
+        SKILL_REC_LOADED = True
+        print("Option 2 realworld skill recommender loaded")
+    except Exception:
+        print(f"Warning: Skill recommender not loaded: {e}")
+        SKILL_REC_LOADED = False
+        skill_rec_model = skill_rec_scaler = skill_rec_le = skill_rec_feat_cols = None
 
 # Option 3 — Bias report is read from JSON on demand (no model object needed)
-_bias_report_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'criteria_bias_report.json')
+DATA_DIR = str(data_dir())
+MODEL_DIR = os.path.join(os.path.dirname(__file__), '..', 'models')
+
+
+def active_model_json(filename: str, default_filename: Optional[str] = None) -> str:
+    """Return the dataset-specific JSON artifact path, falling back to legacy names."""
+    candidates = []
+    if dataset_variant() == "realworld":
+        candidates.append(os.path.join(MODEL_DIR, f"resume_realworld_{filename}"))
+    candidates.append(os.path.join(MODEL_DIR, default_filename or filename))
+    return next((path for path in candidates if os.path.exists(path)), candidates[0])
+
+
+_bias_report_path = active_model_json("criteria_bias_report.json")
 BIAS_REPORT_AVAILABLE = os.path.exists(_bias_report_path)
-DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 
 app = FastAPI(
     title="Bias-Free AI Placement System",
@@ -125,14 +147,12 @@ def load_data():
     global students_df, companies_df, student_features_df, skills_df
     try:
         students_raw, certs, projects, internships, papers, skills, companies = load_all_data()
-        students_raw = students_raw[students_raw["student_id"].astype(str).str.startswith("S")].copy()
         valid_student_ids = set(students_raw["student_id"].astype(str))
         certs = certs[certs["student_id"].astype(str).isin(valid_student_ids)].copy()
         projects = projects[projects["student_id"].astype(str).isin(valid_student_ids)].copy()
         internships = internships[internships["student_id"].astype(str).isin(valid_student_ids)].copy()
         papers = papers[papers["student_id"].astype(str).isin(valid_student_ids)].copy()
         skills = skills[skills["student_id"].astype(str).isin(valid_student_ids)].copy()
-        companies = companies[companies["company_id"].astype(str).str.startswith("CO")].copy()
         students_df = students_raw
         companies_df = companies
         skills_df = skills
@@ -473,14 +493,14 @@ async def batch_check_eligibility(request: BatchEligibilityRequest):
 @app.get("/api/model/metrics")
 async def get_model_metrics():
     """Get model training metrics."""
-    metrics_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'metrics.json')
+    metrics_path = active_model_json("baseline_metrics.json", "metrics.json")
     if not os.path.exists(metrics_path):
         raise HTTPException(404, "Model metrics not found (model not trained yet)")
 
     with open(metrics_path) as f:
         metrics = json.load(f)
 
-    fairness_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'fairness_report.json')
+    fairness_path = active_model_json("fair_champion_metrics.json", "fairness_report.json")
     fairness = None
     if os.path.exists(fairness_path):
         with open(fairness_path) as f:
@@ -496,7 +516,7 @@ async def get_model_metrics():
 @app.get("/api/model/artifacts")
 async def get_model_artifacts():
     """Return admin-facing summaries from generated model evaluation artifacts."""
-    model_dir = os.path.join(os.path.dirname(__file__), '..', 'models')
+    model_dir = MODEL_DIR
 
     def read_json(filename: str, default: Any):
         path = os.path.join(model_dir, filename)
@@ -505,11 +525,45 @@ async def get_model_artifacts():
         with open(path) as f:
             return json.load(f)
 
+    def active_json(filename: str, default: Any = None, default_filename: Optional[str] = None):
+        path = active_model_json(filename, default_filename)
+        if not os.path.exists(path):
+            return default
+        with open(path) as f:
+            return json.load(f)
+
+    def realworld_parser_accuracy():
+        path = os.path.join(os.path.dirname(__file__), '..', 'data', 'resume_realworld_parsed', 'parser_robustness_metrics.json')
+        if dataset_variant() != "realworld" or not os.path.exists(path):
+            return None
+        with open(path) as f:
+            metrics = json.load(f)
+        buckets = {}
+        for name, bucket in (metrics.get("by_format") or {}).items():
+            buckets[name] = {
+                "n": bucket.get("count", 0),
+                "cgpa_mae": None if bucket.get("cgpa_accuracy") is None else round(1 - float(bucket.get("cgpa_accuracy")), 4),
+                "skills_recall": bucket.get("avg_skill_recall"),
+            }
+        buckets["source"] = "resume_realworld_parser_robustness"
+        return buckets
+
+    training_summary = active_json("training_summary.json", {})
     epsilon_sweep = read_json("epsilon_sweep_results.json", [])
     cv_results = read_json("cv_results.json", None)
+    if dataset_variant() == "realworld" and training_summary:
+        baseline = training_summary.get("baseline") or {}
+        folds = baseline.get("cv_results")
+        if folds:
+            cv_results = {
+                "accuracy_mean": round(sum(float(f.get("accuracy", 0)) for f in folds) / len(folds), 4),
+                "f1_mean": round(sum(float(f.get("f1", 0)) for f in folds) / len(folds), 4),
+                "n_folds": len(folds),
+                "folds": folds,
+            }
     scalability = read_json("scalability_results.json", None)
-    resume_parser_accuracy = read_json("resume_parser_accuracy.json", None)
-    dept_constrained = read_json("fairlearn_lightgbm_dept_constrained_metrics.json", None)
+    resume_parser_accuracy = realworld_parser_accuracy() or read_json("resume_parser_accuracy.json", None)
+    dept_constrained = active_json("fair_champion_metrics.json", None, "fairlearn_lightgbm_dept_constrained_metrics.json")
 
     best_epsilon = None
     if epsilon_sweep:
@@ -521,6 +575,20 @@ async def get_model_artifacts():
             ),
         )
 
+    chart_dir = os.path.join(model_dir, "charts")
+    realworld_chart_names = [
+        "resume_realworld_combined_dashboard.png",
+        "resume_realworld_composite_score_ranking.png",
+        "resume_realworld_epsilon_sweep.png",
+        "resume_realworld_pareto_frontier.png",
+        "canonical_vs_realworld_model_metrics.png",
+        "canonical_vs_realworld_ranker_metrics.png",
+        "canonical_vs_realworld_dataset_profile.png",
+        "canonical_vs_realworld_bias_audit.png",
+        "resume_realworld_f1_comparison.png",
+        "resume_realworld_parser_robustness.png",
+    ]
+
     return clean_nan({
         "cv_results": cv_results,
         "epsilon_sweep": epsilon_sweep,
@@ -529,8 +597,12 @@ async def get_model_artifacts():
         "resume_parser_accuracy": resume_parser_accuracy,
         "dept_constrained": dept_constrained,
         "available_charts": {
-            "pareto_frontier": os.path.exists(os.path.join(model_dir, "charts", "pareto_frontier.png")),
-            "epsilon_sweep": os.path.exists(os.path.join(model_dir, "charts", "epsilon_sweep.png")),
+            "pareto_frontier": os.path.exists(os.path.join(chart_dir, "pareto_frontier.png")),
+            "epsilon_sweep": os.path.exists(os.path.join(chart_dir, "epsilon_sweep.png")),
+            "realworld_comparison": [
+                name for name in realworld_chart_names
+                if os.path.exists(os.path.join(chart_dir, name))
+            ],
         },
     })
 
@@ -765,7 +837,7 @@ async def get_skill_gap(student_id: str, top_k: int = Query(default=5, le=20)):
     current_skills = {s.lower() for s in (student_row.get("skill_list") or [])}
     filtered = [r for r in rec_rows if r["skill"].lower() not in current_skills]
 
-    metrics_path = os.path.join(_mdir, "skill_recommender_metrics.json")
+    metrics_path = active_model_json("skill_recommender_metrics.json")
     model_label = "GradientBoosting surrogate"
     if os.path.exists(metrics_path):
         with open(metrics_path) as f:
@@ -819,6 +891,13 @@ async def get_bias_report(flagged_only: bool = False):
     summary["n_companies"] = len(all_companies)
     summary["n_flagged"] = len(flagged_companies)
     summary["flag_rate"] = round(len(flagged_companies) / len(all_companies), 4) if all_companies else 0.0
+    if students_df is not None and not students_df.empty:
+        summary["student_pool_size"] = int(len(students_df))
+        if "gender" in students_df.columns:
+            summary["gender_pool_dist"] = {
+                str(gender): round(float(share), 4)
+                for gender, share in students_df["gender"].value_counts(normalize=True).to_dict().items()
+            }
 
     if flagged_only:
         return clean_nan({

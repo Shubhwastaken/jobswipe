@@ -1,0 +1,2576 @@
+{
+  "summary": {
+    "n_companies": 80,
+    "n_flagged": 0,
+    "flag_rate": 0.0,
+    "threshold": 0.1,
+    "significance": 0.05,
+    "student_pool_size": 1200,
+    "gender_pool_dist": {
+      "Prefer not to say": 1.0
+    }
+  },
+  "flagged_companies": [],
+  "all_companies": [
+    {
+      "company_id": "CO001",
+      "company_name": "Google India",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.055,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.055
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1529,
+          "AIML": 0.0701,
+          "CSE": 0.0822,
+          "ECE": 0.0,
+          "IT": 0.0,
+          "MECH": 0.0
+        },
+        "disparity": 0.1529,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO002",
+      "company_name": "Microsoft India",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.0708,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.07083333333333333
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.0,
+          "AIML": 0.0,
+          "CSE": 0.1178,
+          "ECE": 0.0,
+          "IT": 0.1538,
+          "MECH": 0.0
+        },
+        "disparity": 0.1538,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO003",
+      "company_name": "Amazon Development Center",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.085,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.085
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1529,
+          "AIML": 0.0762,
+          "CSE": 0.0932,
+          "ECE": 0.0,
+          "IT": 0.1099,
+          "MECH": 0.0
+        },
+        "disparity": 0.1529,
+        "p_value": 0.000598,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO004",
+      "company_name": "Goldman Sachs",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.065,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.065
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1412,
+          "AIML": 0.0671,
+          "CSE": 0.0548,
+          "ECE": 0.0,
+          "IT": 0.0879,
+          "MECH": 0.0
+        },
+        "disparity": 0.1412,
+        "p_value": 0.000657,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO005",
+      "company_name": "Adobe Systems",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.0475,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.0475
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.0,
+          "AIML": 0.0,
+          "CSE": 0.1068,
+          "ECE": 0.1443,
+          "IT": 0.0,
+          "MECH": 0.0769
+        },
+        "disparity": 0.1443,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO006",
+      "company_name": "Oracle India",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.0583,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.058333333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.0,
+          "AIML": 0.0823,
+          "CSE": 0.0932,
+          "ECE": 0.0928,
+          "IT": 0.0,
+          "MECH": 0.0
+        },
+        "disparity": 0.0932,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": false
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO007",
+      "company_name": "Salesforce India",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.055,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.055
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.0,
+          "AIML": 0.0,
+          "CSE": 0.1288,
+          "ECE": 0.1546,
+          "IT": 0.0,
+          "MECH": 0.0769
+        },
+        "disparity": 0.1546,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO008",
+      "company_name": "JPMorgan Chase",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.0558,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.05583333333333333
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1412,
+          "AIML": 0.0,
+          "CSE": 0.0849,
+          "ECE": 0.0,
+          "IT": 0.0879,
+          "MECH": 0.0
+        },
+        "disparity": 0.1412,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO009",
+      "company_name": "Apple India",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.065,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.065
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.0,
+          "AIML": 0.0823,
+          "CSE": 0.0767,
+          "ECE": 0.0,
+          "IT": 0.0842,
+          "MECH": 0.0
+        },
+        "disparity": 0.0842,
+        "p_value": 0.001063,
+        "significant": true,
+        "flagged": false
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO010",
+      "company_name": "Meta Platforms",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.04,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.04
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.0,
+          "AIML": 0.061,
+          "CSE": 0.0521,
+          "ECE": 0.0928,
+          "IT": 0.0,
+          "MECH": 0.0
+        },
+        "disparity": 0.0928,
+        "p_value": 2.1e-05,
+        "significant": true,
+        "flagged": false
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO011",
+      "company_name": "Infosys",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.17,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.17
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.2824,
+          "AIML": 0.1402,
+          "CSE": 0.1753,
+          "ECE": 0.2268,
+          "IT": 0.1758,
+          "MECH": 0.0
+        },
+        "disparity": 0.2824,
+        "p_value": 0.00039,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO012",
+      "company_name": "TCS",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1192,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.11916666666666667
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.2706,
+          "AIML": 0.0,
+          "CSE": 0.1808,
+          "ECE": 0.0,
+          "IT": 0.1758,
+          "MECH": 0.1154
+        },
+        "disparity": 0.2706,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO013",
+      "company_name": "Wipro",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1417,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.14166666666666666
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.2706,
+          "AIML": 0.1524,
+          "CSE": 0.1863,
+          "ECE": 0.2165,
+          "IT": 0.0,
+          "MECH": 0.1538
+        },
+        "disparity": 0.2706,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO014",
+      "company_name": "HCL Technologies",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1375,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.1375
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.2588,
+          "AIML": 0.122,
+          "CSE": 0.1562,
+          "ECE": 0.0,
+          "IT": 0.1685,
+          "MECH": 0.0
+        },
+        "disparity": 0.2588,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO015",
+      "company_name": "Cognizant",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1867,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.18666666666666668
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.2824,
+          "AIML": 0.1768,
+          "CSE": 0.2137,
+          "ECE": 0.0,
+          "IT": 0.1978,
+          "MECH": 0.1923
+        },
+        "disparity": 0.2824,
+        "p_value": 1.8e-05,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO016",
+      "company_name": "Tech Mahindra",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1442,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.14416666666666667
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.2588,
+          "AIML": 0.122,
+          "CSE": 0.1671,
+          "ECE": 0.0,
+          "IT": 0.1832,
+          "MECH": 0.0
+        },
+        "disparity": 0.2588,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO017",
+      "company_name": "Capgemini",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1733,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.17333333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.2706,
+          "AIML": 0.1463,
+          "CSE": 0.1808,
+          "ECE": 0.2165,
+          "IT": 0.1832,
+          "MECH": 0.0
+        },
+        "disparity": 0.2706,
+        "p_value": 0.001381,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO018",
+      "company_name": "Accenture",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1383,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.13833333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.2706,
+          "AIML": 0.0,
+          "CSE": 0.189,
+          "ECE": 0.2268,
+          "IT": 0.1905,
+          "MECH": 0.0
+        },
+        "disparity": 0.2706,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO019",
+      "company_name": "L&T Infotech",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.125,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.125
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.0,
+          "AIML": 0.1524,
+          "CSE": 0.1918,
+          "ECE": 0.2268,
+          "IT": 0.0,
+          "MECH": 0.1538
+        },
+        "disparity": 0.2268,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO020",
+      "company_name": "Mindtree",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.215,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.215
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.4706,
+          "AIML": 0.0,
+          "CSE": 0.4274,
+          "ECE": 0.4536,
+          "IT": 0.0,
+          "MECH": 0.3462
+        },
+        "disparity": 0.4706,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO021",
+      "company_name": "Zoho Corporation",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1025,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.1025
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.0,
+          "AIML": 0.0,
+          "CSE": 0.1507,
+          "ECE": 0.1856,
+          "IT": 0.1612,
+          "MECH": 0.1154
+        },
+        "disparity": 0.1856,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO022",
+      "company_name": "Freshworks",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.115,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.115
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.0,
+          "AIML": 0.1463,
+          "CSE": 0.1781,
+          "ECE": 0.1959,
+          "IT": 0.0,
+          "MECH": 0.1154
+        },
+        "disparity": 0.1959,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO023",
+      "company_name": "Razorpay",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1975,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.1975
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.0,
+          "AIML": 0.0,
+          "CSE": 0.4575,
+          "ECE": 0.5052,
+          "IT": 0.0,
+          "MECH": 0.4038
+        },
+        "disparity": 0.5052,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO024",
+      "company_name": "PhonePe",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.365,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.365
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.4471,
+          "AIML": 0.3628,
+          "CSE": 0.4575,
+          "ECE": 0.0,
+          "IT": 0.4176,
+          "MECH": 0.0
+        },
+        "disparity": 0.4575,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO025",
+      "company_name": "Flipkart",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.0958,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.09583333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.0,
+          "AIML": 0.1098,
+          "CSE": 0.1562,
+          "ECE": 0.1856,
+          "IT": 0.0,
+          "MECH": 0.0769
+        },
+        "disparity": 0.1856,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO026",
+      "company_name": "Mphasis",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1617,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.16166666666666665
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.2471,
+          "AIML": 0.128,
+          "CSE": 0.1644,
+          "ECE": 0.2165,
+          "IT": 0.1832,
+          "MECH": 0.0
+        },
+        "disparity": 0.2471,
+        "p_value": 0.001034,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO027",
+      "company_name": "KPMG India",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1475,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.1475
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.2471,
+          "AIML": 0.1311,
+          "CSE": 0.1671,
+          "ECE": 0.0,
+          "IT": 0.1905,
+          "MECH": 0.0
+        },
+        "disparity": 0.2471,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO028",
+      "company_name": "Deloitte India",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1783,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.17833333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.2824,
+          "AIML": 0.1768,
+          "CSE": 0.2137,
+          "ECE": 0.0,
+          "IT": 0.1978,
+          "MECH": 0.0
+        },
+        "disparity": 0.2824,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO029",
+      "company_name": "EY India",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1267,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.12666666666666668
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.2824,
+          "AIML": 0.0,
+          "CSE": 0.2082,
+          "ECE": 0.0,
+          "IT": 0.1905,
+          "MECH": 0.0
+        },
+        "disparity": 0.2824,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO030",
+      "company_name": "PwC India",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1633,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.16333333333333333
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.2824,
+          "AIML": 0.1524,
+          "CSE": 0.1918,
+          "ECE": 0.0,
+          "IT": 0.1905,
+          "MECH": 0.0
+        },
+        "disparity": 0.2824,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO031",
+      "company_name": "DataSolve Analytics",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.8933,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.8933333333333333
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.9412,
+          "AIML": 0.8506,
+          "CSE": 0.9014,
+          "ECE": 0.9278,
+          "IT": 0.9084,
+          "MECH": 0.8846
+        },
+        "disparity": 0.0906,
+        "p_value": 0.062772,
+        "significant": false,
+        "flagged": false
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO032",
+      "company_name": "CloudNine Solutions",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.75,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.75
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.8471,
+          "AIML": 0.7683,
+          "CSE": 0.8301,
+          "ECE": 0.0,
+          "IT": 0.8425,
+          "MECH": 0.8269
+        },
+        "disparity": 0.8471,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO033",
+      "company_name": "WebCraft Studios",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.8733,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.8733333333333333
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.8941,
+          "AIML": 0.8567,
+          "CSE": 0.8849,
+          "ECE": 0.8763,
+          "IT": 0.8718,
+          "MECH": 0.8654
+        },
+        "disparity": 0.0374,
+        "p_value": 0.896544,
+        "significant": false,
+        "flagged": false
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO034",
+      "company_name": "AlphaSoft Technologies",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.4625,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.4625
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.9412,
+          "AIML": 0.0,
+          "CSE": 0.9178,
+          "ECE": 0.9278,
+          "IT": 0.0,
+          "MECH": 0.9615
+        },
+        "disparity": 0.9615,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO035",
+      "company_name": "ByteWorks Systems",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.7175,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.7175
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.7647,
+          "AIML": 0.6707,
+          "CSE": 0.7479,
+          "ECE": 0.7423,
+          "IT": 0.7216,
+          "MECH": 0.6538
+        },
+        "disparity": 0.1109,
+        "p_value": 0.186102,
+        "significant": false,
+        "flagged": false
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO036",
+      "company_name": "NexGen Software",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.8717,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.8716666666666667
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.9647,
+          "AIML": 0.872,
+          "CSE": 0.9233,
+          "ECE": 0.9278,
+          "IT": 0.9194,
+          "MECH": 0.0
+        },
+        "disparity": 0.9647,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO037",
+      "company_name": "PixelPerfect Design",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.6942,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.6941666666666667
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.8,
+          "AIML": 0.6555,
+          "CSE": 0.7644,
+          "ECE": 0.7732,
+          "IT": 0.7179,
+          "MECH": 0.0
+        },
+        "disparity": 0.8,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO038",
+      "company_name": "CodeBase Solutions",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.1767,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.17666666666666667
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2104,
+          "CSE": 0.2521,
+          "ECE": 0.2474,
+          "IT": 0.0,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO039",
+      "company_name": "TechVista Global",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.5408,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.5408333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.8118,
+          "AIML": 0.0,
+          "CSE": 0.7589,
+          "ECE": 0.7629,
+          "IT": 0.7106,
+          "MECH": 0.6731
+        },
+        "disparity": 0.8118,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO040",
+      "company_name": "SmartBuild Software",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.2283,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.22833333333333333
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2073,
+          "CSE": 0.2411,
+          "ECE": 0.2371,
+          "IT": 0.2125,
+          "MECH": 0.1923
+        },
+        "disparity": 0.1253,
+        "p_value": 0.323727,
+        "significant": false,
+        "flagged": false
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO041",
+      "company_name": "DigiCraft IT",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.2117,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.21166666666666667
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2012,
+          "CSE": 0.2329,
+          "ECE": 0.2268,
+          "IT": 0.1978,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.000702,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO042",
+      "company_name": "SoftStack India",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.6525,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.6525
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.7529,
+          "AIML": 0.5884,
+          "CSE": 0.6795,
+          "ECE": 0.6907,
+          "IT": 0.6593,
+          "MECH": 0.5962
+        },
+        "disparity": 0.1645,
+        "p_value": 0.030881,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO043",
+      "company_name": "AppForge Technologies",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.8492,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.8491666666666666
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.9529,
+          "AIML": 0.9085,
+          "CSE": 0.926,
+          "ECE": 0.0,
+          "IT": 0.9231,
+          "MECH": 0.9615
+        },
+        "disparity": 0.9615,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO044",
+      "company_name": "NetGenius Solutions",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.2083,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.20833333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2134,
+          "CSE": 0.2548,
+          "ECE": 0.0,
+          "IT": 0.2198,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO045",
+      "company_name": "InnovateTech",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.2383,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.23833333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2348,
+          "CSE": 0.263,
+          "ECE": 0.2474,
+          "IT": 0.2271,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.000923,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO046",
+      "company_name": "CyberPulse",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.6808,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.6808333333333333
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.7765,
+          "AIML": 0.6494,
+          "CSE": 0.7534,
+          "ECE": 0.7526,
+          "IT": 0.696,
+          "MECH": 0.0
+        },
+        "disparity": 0.7765,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO047",
+      "company_name": "DataDriven Co",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.2025,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.2025
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3059,
+          "AIML": 0.1951,
+          "CSE": 0.2329,
+          "ECE": 0.0,
+          "IT": 0.2125,
+          "MECH": 0.1923
+        },
+        "disparity": 0.3059,
+        "p_value": 4e-06,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO048",
+      "company_name": "CloudFirst India",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.715,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.715
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.8353,
+          "AIML": 0.6494,
+          "CSE": 0.7425,
+          "ECE": 0.7526,
+          "IT": 0.7143,
+          "MECH": 0.6731
+        },
+        "disparity": 0.1859,
+        "p_value": 0.008648,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO049",
+      "company_name": "UrbanTech Solutions",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.22,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.22
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2165,
+          "CSE": 0.2575,
+          "ECE": 0.0,
+          "IT": 0.2271,
+          "MECH": 0.1923
+        },
+        "disparity": 0.3176,
+        "p_value": 1e-06,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "CO050",
+      "company_name": "GreenCode Systems",
+      "tier": "Tier3",
+      "pool_pass_rate": 0.69,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.69
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.8588,
+          "AIML": 0.75,
+          "CSE": 0.8164,
+          "ECE": 0.0,
+          "IT": 0.7729,
+          "MECH": 0.0
+        },
+        "disparity": 0.8588,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ001",
+      "company_name": "Tata Consultancy Services",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.2333,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.23333333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2622,
+          "CSE": 0.2712,
+          "ECE": 0.0,
+          "IT": 0.2491,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ002",
+      "company_name": "Google",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.0675,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.0675
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1294,
+          "AIML": 0.0671,
+          "CSE": 0.0685,
+          "ECE": 0.0,
+          "IT": 0.0842,
+          "MECH": 0.0
+        },
+        "disparity": 0.1294,
+        "p_value": 0.004162,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ003",
+      "company_name": "Infosys",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.2333,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.23333333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2622,
+          "CSE": 0.2712,
+          "ECE": 0.0,
+          "IT": 0.2491,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ004",
+      "company_name": "Microsoft",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.0675,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.0675
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1294,
+          "AIML": 0.0671,
+          "CSE": 0.0685,
+          "ECE": 0.0,
+          "IT": 0.0842,
+          "MECH": 0.0
+        },
+        "disparity": 0.1294,
+        "p_value": 0.004162,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ005",
+      "company_name": "Amazon",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.0675,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.0675
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1294,
+          "AIML": 0.0671,
+          "CSE": 0.0685,
+          "ECE": 0.0,
+          "IT": 0.0842,
+          "MECH": 0.0
+        },
+        "disparity": 0.1294,
+        "p_value": 0.004162,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ006",
+      "company_name": "Wipro",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1925,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.1925
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3059,
+          "AIML": 0.2012,
+          "CSE": 0.2219,
+          "ECE": 0.0,
+          "IT": 0.2125,
+          "MECH": 0.0
+        },
+        "disparity": 0.3059,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ007",
+      "company_name": "Adobe",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.2333,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.23333333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2622,
+          "CSE": 0.2712,
+          "ECE": 0.0,
+          "IT": 0.2491,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ008",
+      "company_name": "Flipkart",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.2333,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.23333333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2622,
+          "CSE": 0.2712,
+          "ECE": 0.0,
+          "IT": 0.2491,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ009",
+      "company_name": "Paytm",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.0675,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.0675
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1294,
+          "AIML": 0.0671,
+          "CSE": 0.0685,
+          "ECE": 0.0,
+          "IT": 0.0842,
+          "MECH": 0.0
+        },
+        "disparity": 0.1294,
+        "p_value": 0.004162,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ010",
+      "company_name": "Ola",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.2333,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.23333333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2622,
+          "CSE": 0.2712,
+          "ECE": 0.0,
+          "IT": 0.2491,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ011",
+      "company_name": "Cognizant",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.2333,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.23333333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2622,
+          "CSE": 0.2712,
+          "ECE": 0.0,
+          "IT": 0.2491,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ012",
+      "company_name": "Capgemini",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.0675,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.0675
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1294,
+          "AIML": 0.0671,
+          "CSE": 0.0685,
+          "ECE": 0.0,
+          "IT": 0.0842,
+          "MECH": 0.0
+        },
+        "disparity": 0.1294,
+        "p_value": 0.004162,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ013",
+      "company_name": "Mindtree",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.2333,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.23333333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2622,
+          "CSE": 0.2712,
+          "ECE": 0.0,
+          "IT": 0.2491,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ014",
+      "company_name": "Razorpay",
+      "tier": "Startup",
+      "pool_pass_rate": 0.1925,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.1925
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3059,
+          "AIML": 0.2012,
+          "CSE": 0.2219,
+          "ECE": 0.0,
+          "IT": 0.2125,
+          "MECH": 0.0
+        },
+        "disparity": 0.3059,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ015",
+      "company_name": "Meesho",
+      "tier": "Startup",
+      "pool_pass_rate": 0.2333,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.23333333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2622,
+          "CSE": 0.2712,
+          "ECE": 0.0,
+          "IT": 0.2491,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ016",
+      "company_name": "Urban Company",
+      "tier": "Startup",
+      "pool_pass_rate": 0.2333,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.23333333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2622,
+          "CSE": 0.2712,
+          "ECE": 0.0,
+          "IT": 0.2491,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ017",
+      "company_name": "1mg",
+      "tier": "Startup",
+      "pool_pass_rate": 0.0675,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.0675
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1294,
+          "AIML": 0.0671,
+          "CSE": 0.0685,
+          "ECE": 0.0,
+          "IT": 0.0842,
+          "MECH": 0.0
+        },
+        "disparity": 0.1294,
+        "p_value": 0.004162,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFJ018",
+      "company_name": "upGrad",
+      "tier": "Startup",
+      "pool_pass_rate": 0.0675,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.0675
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1294,
+          "AIML": 0.0671,
+          "CSE": 0.0685,
+          "ECE": 0.0,
+          "IT": 0.0842,
+          "MECH": 0.0
+        },
+        "disparity": 0.1294,
+        "p_value": 0.004162,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFI001",
+      "company_name": "Tata Consultancy Services",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.2333,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.23333333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2622,
+          "CSE": 0.2712,
+          "ECE": 0.0,
+          "IT": 0.2491,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFI002",
+      "company_name": "Google",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.0675,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.0675
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1294,
+          "AIML": 0.0671,
+          "CSE": 0.0685,
+          "ECE": 0.0,
+          "IT": 0.0842,
+          "MECH": 0.0
+        },
+        "disparity": 0.1294,
+        "p_value": 0.004162,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFI003",
+      "company_name": "Microsoft",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.0675,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.0675
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1294,
+          "AIML": 0.0671,
+          "CSE": 0.0685,
+          "ECE": 0.0,
+          "IT": 0.0842,
+          "MECH": 0.0
+        },
+        "disparity": 0.1294,
+        "p_value": 0.004162,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFI004",
+      "company_name": "Wipro",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.1925,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.1925
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3059,
+          "AIML": 0.2012,
+          "CSE": 0.2219,
+          "ECE": 0.0,
+          "IT": 0.2125,
+          "MECH": 0.0
+        },
+        "disparity": 0.3059,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFI005",
+      "company_name": "Paytm",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.0675,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.0675
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1294,
+          "AIML": 0.0671,
+          "CSE": 0.0685,
+          "ECE": 0.0,
+          "IT": 0.0842,
+          "MECH": 0.0
+        },
+        "disparity": 0.1294,
+        "p_value": 0.004162,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFI006",
+      "company_name": "Ola",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.2333,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.23333333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2622,
+          "CSE": 0.2712,
+          "ECE": 0.0,
+          "IT": 0.2491,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFI007",
+      "company_name": "Cognizant",
+      "tier": "Tier1",
+      "pool_pass_rate": 0.2333,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.23333333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2622,
+          "CSE": 0.2712,
+          "ECE": 0.0,
+          "IT": 0.2491,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFI008",
+      "company_name": "Capgemini",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.0675,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.0675
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1294,
+          "AIML": 0.0671,
+          "CSE": 0.0685,
+          "ECE": 0.0,
+          "IT": 0.0842,
+          "MECH": 0.0
+        },
+        "disparity": 0.1294,
+        "p_value": 0.004162,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFI009",
+      "company_name": "Mindtree",
+      "tier": "Tier2",
+      "pool_pass_rate": 0.2333,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.23333333333333334
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3176,
+          "AIML": 0.2622,
+          "CSE": 0.2712,
+          "ECE": 0.0,
+          "IT": 0.2491,
+          "MECH": 0.0
+        },
+        "disparity": 0.3176,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFI010",
+      "company_name": "Razorpay",
+      "tier": "Startup",
+      "pool_pass_rate": 0.1925,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.1925
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.3059,
+          "AIML": 0.2012,
+          "CSE": 0.2219,
+          "ECE": 0.0,
+          "IT": 0.2125,
+          "MECH": 0.0
+        },
+        "disparity": 0.3059,
+        "p_value": 0.0,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFI011",
+      "company_name": "1mg",
+      "tier": "Startup",
+      "pool_pass_rate": 0.0675,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.0675
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1294,
+          "AIML": 0.0671,
+          "CSE": 0.0685,
+          "ECE": 0.0,
+          "IT": 0.0842,
+          "MECH": 0.0
+        },
+        "disparity": 0.1294,
+        "p_value": 0.004162,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    },
+    {
+      "company_id": "TFI012",
+      "company_name": "upGrad",
+      "tier": "Startup",
+      "pool_pass_rate": 0.0675,
+      "gender_analysis": {
+        "pass_rates": {
+          "Prefer not to say": 0.0675
+        },
+        "disparity": 0.0,
+        "odds_ratio": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "flagged": false
+      },
+      "dept_analysis": {
+        "pass_rates": {
+          "AIDS": 0.1294,
+          "AIML": 0.0671,
+          "CSE": 0.0685,
+          "ECE": 0.0,
+          "IT": 0.0842,
+          "MECH": 0.0
+        },
+        "disparity": 0.1294,
+        "p_value": 0.004162,
+        "significant": true,
+        "flagged": true
+      },
+      "criteria_diagnosis": {},
+      "flagged_gender_bias": false
+    }
+  ]
+}

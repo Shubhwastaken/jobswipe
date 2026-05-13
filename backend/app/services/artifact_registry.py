@@ -4,6 +4,7 @@ import pickle
 from typing import Any, Dict, List
 
 MODEL_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "models")
+ARTIFACT_VARIANT = os.getenv("JOBSWIPE_ARTIFACT_VARIANT", os.getenv("JOBSWIPE_DATASET", "canonical")).strip().lower()
 
 CANONICAL_ARTIFACTS = {
     "baseline_classifier": {
@@ -31,6 +32,36 @@ CANONICAL_ARTIFACTS = {
     },
 }
 
+REALWORLD_ARTIFACTS = {
+    "baseline_classifier": {
+        "model": "resume_realworld_baseline_model.pkl",
+        "scaler": "resume_realworld_baseline_scaler.pkl",
+        "features": "resume_realworld_baseline_feature_columns.json",
+        "metrics": "resume_realworld_baseline_metrics.json",
+        "legacy_model": "canonical_baseline_model.pkl",
+        "legacy_scaler": "canonical_baseline_scaler.pkl",
+        "legacy_features": "canonical_baseline_feature_columns.json",
+    },
+    "fair_champion": {
+        "bundle": "resume_realworld_fair_champion.pkl",
+        "metrics": "resume_realworld_fair_champion_metrics.json",
+        "legacy_bundle": "canonical_fair_champion.pkl",
+    },
+    "ranker": {
+        "model": "resume_realworld_ranker.pkl",
+        "scaler": "resume_realworld_ranker_scaler.pkl",
+        "features": "resume_realworld_ranker_feature_columns.json",
+        "metrics": "resume_realworld_ranker_metrics.json",
+        "legacy_model": "canonical_ranker.pkl",
+        "legacy_scaler": "canonical_ranker_scaler.pkl",
+        "legacy_features": "canonical_ranker_feature_columns.json",
+    },
+}
+
+
+def active_artifacts() -> Dict[str, Dict[str, str]]:
+    return REALWORLD_ARTIFACTS if ARTIFACT_VARIANT == "realworld" else CANONICAL_ARTIFACTS
+
 
 def _path(name: str) -> str:
     return os.path.join(MODEL_DIR, name)
@@ -54,7 +85,7 @@ def _load_json(path: str) -> Any:
 
 
 def load_classifier_artifact() -> Dict[str, Any]:
-    config = CANONICAL_ARTIFACTS["baseline_classifier"]
+    config = active_artifacts()["baseline_classifier"]
     model_path = _first_existing(config["model"], config["legacy_model"])
     scaler_path = _first_existing(config["scaler"], config["legacy_scaler"])
     feature_path = _first_existing(config["features"], config["legacy_features"])
@@ -67,7 +98,7 @@ def load_classifier_artifact() -> Dict[str, Any]:
 
 
 def load_ranker_artifact() -> Dict[str, Any]:
-    config = CANONICAL_ARTIFACTS["ranker"]
+    config = active_artifacts()["ranker"]
     model_path = _first_existing(config["model"], config["legacy_model"])
     scaler_path = _first_existing(config["scaler"], config["legacy_scaler"])
     feature_path = _first_existing(config["features"], config["legacy_features"])
@@ -80,7 +111,7 @@ def load_ranker_artifact() -> Dict[str, Any]:
 
 
 def load_fair_champion_artifact() -> Dict[str, Any]:
-    config = CANONICAL_ARTIFACTS["fair_champion"]
+    config = active_artifacts()["fair_champion"]
     bundle_path = _first_existing(config["bundle"], config["legacy_bundle"])
     bundle = _load_pickle(bundle_path)
     if isinstance(bundle, dict):
@@ -111,4 +142,4 @@ def save_pickle(name: str, payload: Any) -> str:
 
 
 def artifact_names() -> Dict[str, Dict[str, str]]:
-    return CANONICAL_ARTIFACTS
+    return active_artifacts()

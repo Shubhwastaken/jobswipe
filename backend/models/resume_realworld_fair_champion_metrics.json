@@ -1,0 +1,8 @@
+{
+  "trained_on": "resume_realworld",
+  "accuracy": 0.8724375,
+  "precision": 0.8169264716349918,
+  "recall": 0.5426220982459459,
+  "f1": 0.6521022727272727,
+  "epsilon": 0.01
+}

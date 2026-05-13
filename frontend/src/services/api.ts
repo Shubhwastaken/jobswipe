@@ -243,6 +243,7 @@ export interface ModelArtifacts {
   available_charts: {
     pareto_frontier: boolean;
     epsilon_sweep: boolean;
+    realworld_comparison?: string[];
   };
 }
 

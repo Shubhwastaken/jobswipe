@@ -1,0 +1,35 @@
+{
+  "ground_truth_backed_resumes": 400,
+  "by_format": {
+    "standard": {
+      "count": 80,
+      "cgpa_accuracy": 0.5,
+      "department_accuracy": 0.1625,
+      "avg_skill_recall": 0.0
+    },
+    "two_column": {
+      "count": 80,
+      "cgpa_accuracy": 0.5,
+      "department_accuracy": 0.2,
+      "avg_skill_recall": 0.0
+    },
+    "table_heavy": {
+      "count": 80,
+      "cgpa_accuracy": 0.5,
+      "department_accuracy": 0.225,
+      "avg_skill_recall": 0.0
+    },
+    "dense_text": {
+      "count": 80,
+      "cgpa_accuracy": 0.5,
+      "department_accuracy": 0.1875,
+      "avg_skill_recall": 0.0
+    },
+    "latex_style": {
+      "count": 80,
+      "cgpa_accuracy": 0.5,
+      "department_accuracy": 0.125,
+      "avg_skill_recall": 0.0
+    }
+  }
+}
