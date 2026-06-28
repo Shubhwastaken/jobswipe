@@ -17,3 +17,6 @@ build/
 # Raw resume PDFs and per-resume ground-truth JSONs are intentionally kept out of Git.
 backend/data/resume_realworld_raw/
 backend/data/resume_realworld_parsed/parsed_records.json
+
+# Local planning / brainstorming notes — not tracked.
+idea.md
