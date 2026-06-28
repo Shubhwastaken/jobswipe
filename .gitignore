@@ -18,5 +18,6 @@ build/
 backend/data/resume_realworld_raw/
 backend/data/resume_realworld_parsed/parsed_records.json
 
-# Local planning / brainstorming notes — not tracked.
-idea.md
+# Track only the top-level README; keep all other markdown (docs, planning notes) local.
+*.md
+!README.md
