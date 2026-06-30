@@ -18,6 +18,10 @@ build/
 backend/data/resume_realworld_raw/
 backend/data/resume_realworld_parsed/parsed_records.json
 
+# Large ML model binaries — kept on disk, not in Git (regenerate via training
+# scripts or fetch separately). Lightweight JSON/PNG artifacts stay tracked.
+backend/models/*.pkl
+
 # Track only the top-level README; keep all other markdown (docs, planning notes) local.
 *.md
 !README.md
