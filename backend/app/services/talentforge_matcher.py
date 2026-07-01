@@ -9,6 +9,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 from app.services.data_paths import data_dir
+from app.services.skill_normalizer import normalize_skill
 
 DATA_DIR = data_dir()
 
@@ -52,10 +53,30 @@ def _text_similarity(left: str, right: str) -> float:
         return 0.0
 
 
+def _normalized_skill_tokens(values: Iterable[str]) -> set:
+    """Expand skill values into a set of single-word tokens with aliases applied.
+
+    Each raw token is normalized and then re-tokenized, so multi-word alias
+    *targets* (e.g. "ml" -> "machine learning") become comparable at the token
+    level ({"machine", "learning"}) against a job that lists "machine learning"
+    directly. Single-token aliases ("js" -> "javascript") unify too, including
+    when embedded in multi-skill strings like "React, JS".
+    """
+    out = set()
+    for value in values:
+        for token in _tokens(value):
+            for norm_token in _tokens(normalize_skill(token)):
+                out.add(norm_token)
+    return out
+
+
 def _overlap_score(student_values: Iterable[str], required: Iterable[str], preferred: Iterable[str]) -> float:
-    student = {token for value in student_values for token in _tokens(value)}
-    req = {token for value in required for token in _tokens(value)}
-    pref = {token for value in preferred for token in _tokens(value)}
+    # Normalize the compared token sets so synonymous skills (e.g. "js"/"javascript",
+    # "ml"/"machine learning") count as the same. Scoring math below is unchanged —
+    # only what it compares.
+    student = _normalized_skill_tokens(student_values)
+    req = _normalized_skill_tokens(required)
+    pref = _normalized_skill_tokens(preferred)
     req_score = len(student & req) / len(req) if req else 1.0
     pref_score = len(student & pref) / len(pref) if pref else 1.0
     return (req_score * 0.7) + (pref_score * 0.3)

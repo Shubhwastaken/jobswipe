@@ -1,14 +1,16 @@
 from typing import Callable, Optional
 
+from app.services.skill_normalizer import normalize_skill_set
+
 
 def baseline_overlap_score(student: dict, job: dict) -> tuple[float, str]:
-    student_skills = set(s.lower().strip() for s in (student.get("skills") or []) if s)
+    student_skills = normalize_skill_set(student.get("skills") or [])
     student_branch = str(student.get("branch") or student.get("department") or "").lower()
     job_branch = job.get("allowed_branches") or job.get("allowed_departments") or []
 
     if student_skills:
-        required = set(s.lower().strip() for s in (job.get("required_skills") or []) if s)
-        preferred = set(s.lower().strip() for s in (job.get("preferred_skills") or []) if s)
+        required = normalize_skill_set(job.get("required_skills") or [])
+        preferred = normalize_skill_set(job.get("preferred_skills") or [])
         all_job_skills = required | preferred
         if not all_job_skills:
             return 0.0, "No comparable skills listed"
