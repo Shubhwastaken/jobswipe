@@ -110,6 +110,13 @@ def load_ranker_artifact() -> Dict[str, Any]:
     }
 
 
+def champion_bundle_name() -> str:
+    """Basename of the artifact that *should* load as the fair champion for the
+    active variant. Callers compare this against a loaded artifact's
+    ``artifact_path`` to detect a silent fallback substitution."""
+    return os.path.basename(active_artifacts()["fair_champion"]["bundle"])
+
+
 def load_fair_champion_artifact() -> Dict[str, Any]:
     config = active_artifacts()["fair_champion"]
     bundle_path = _first_existing(config["bundle"], config["legacy_bundle"])
@@ -123,7 +130,13 @@ def load_fair_champion_artifact() -> Dict[str, Any]:
           "scaler": classifier["scaler"],
           "feature_cols": classifier["feature_cols"],
       }
-    artifact["artifact_path"] = os.path.basename(bundle_path)
+    loaded_name = os.path.basename(bundle_path)
+    is_champion = loaded_name == os.path.basename(config["bundle"])
+    artifact["artifact_path"] = loaded_name
+    # Additive substitution metadata. Existing callers (bias_reduction.load_variant_artifact
+    # and the admin/paper pipeline) ignore unknown keys, so this is non-breaking.
+    artifact["is_champion"] = is_champion
+    artifact["loaded_artifact"] = "champion" if is_champion else f"fallback:{loaded_name}"
     return artifact
 
 
