@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { IconFileCheck, IconUpload } from '@tabler/icons-react';
 import CardCarousel from '../../components/swipe/CardCarousel';
 import CompanyCard from '../../components/swipe/CompanyCard';
-import { uploadStudentResume } from '../../services/api';
+import ResumeConfidenceReview from '../../components/student/ResumeConfidenceReview';
+import { ResumeUploadResponse, uploadStudentResume } from '../../services/api';
 import { BrowseTrack, JobCardData, getStudentFeed, studentSwipeLeft, studentSwipeRight } from '../../services/swipeApi';
 import { useAuthStore } from '../../store/authStore';
 
@@ -14,6 +15,7 @@ export default function StudentBrowse() {
   const [loading, setLoading] = useState(true);
   const [uploading, setUploading] = useState(false);
   const [uploadMessage, setUploadMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [parseReview, setParseReview] = useState<ResumeUploadResponse | null>(null);
 
   async function loadFeed() {
     const response = await getStudentFeed(track);
@@ -54,11 +56,13 @@ export default function StudentBrowse() {
 
     setUploading(true);
     setUploadMessage(null);
+    setParseReview(null);
     try {
-      await uploadStudentResume(studentId, file);
+      const { data } = await uploadStudentResume(studentId, file);
+      setParseReview(data);
       setUploadMessage({
         type: 'success',
-        text: `Resume parsed and profile updated. CGPA, skills, projects, certifications, internships, and research details were synced where found.`,
+        text: `Resume parsed and profile updated. Review the flagged fields below and correct anything the parser was unsure about.`,
       });
       loadFeed().catch(() => undefined);
     } catch (err: any) {
@@ -108,6 +112,13 @@ export default function StudentBrowse() {
           <IconFileCheck size={17} />
           <span>{uploadMessage.text}</span>
         </section>
+      )}
+      {parseReview && studentId && (
+        <ResumeConfidenceReview
+          studentId={studentId}
+          data={parseReview}
+          onClose={() => setParseReview(null)}
+        />
       )}
       {error && <div className="bias-inline-error">{error}</div>}
       <CardCarousel

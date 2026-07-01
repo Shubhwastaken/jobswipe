@@ -1283,6 +1283,99 @@ tr:hover td {
   font-size: 13px;
   line-height: 1.5;
 }
+
+/* Parsed-field confidence review (paper §IV-C: H/M/L badges + correction) */
+.rp-panel {
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(8, 13, 24, 0.86);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(16px);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.rp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+.rp-head h3 {
+  margin: 8px 0 4px;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+.rp-head p {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.rp-dismiss {
+  flex: 0 0 auto;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--text-secondary);
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.rp-dismiss:hover { color: var(--text-primary); border-color: rgba(255, 255, 255, 0.32); }
+.rp-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #030303;
+}
+.rp-row.flagged {
+  border-color: rgba(245, 158, 11, 0.45);
+  background: rgba(245, 158, 11, 0.06);
+}
+.rp-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.rp-field { font-weight: 600; color: var(--text-primary); font-size: 14px; }
+.rp-badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 2px 9px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+.rp-badge.high { color: #34d399; background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.35); }
+.rp-badge.medium { color: #fbbf24; background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.35); }
+.rp-badge.low { color: #f87171; background: rgba(239, 68, 68, 0.12); border-color: rgba(239, 68, 68, 0.35); }
+.rp-badge.missing { color: var(--text-secondary); background: rgba(148, 163, 184, 0.1); border-color: rgba(148, 163, 184, 0.28); }
+.rp-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #fbbf24;
+}
+.rp-edit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.rp-edit .input { flex: 1 1 220px; min-width: 0; }
+.rp-edit .iv-btn { flex: 0 0 auto; }
+.rp-ok { display: inline-flex; align-items: center; gap: 4px; color: #34d399; font-size: 12px; }
+.rp-readonly { display: flex; flex-direction: column; gap: 4px; color: #cbd5e1; font-size: 13px; }
+.rp-hint { color: var(--text-secondary); font-size: 12px; }
+.rp-missing { margin: 0; color: var(--text-secondary); font-size: 12px; }
 .resume-upload-panel .resume-upload-button {
   margin-top: 0;
 }
