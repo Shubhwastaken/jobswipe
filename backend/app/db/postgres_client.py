@@ -337,13 +337,13 @@ class PostgresClient:
 
 
 def get_postgres_client() -> PostgresClient:
-    """Return a module-level singleton PostgresClient from SUPABASE_URL."""
-    dsn = os.getenv("SUPABASE_URL", "")
+    """Return a PostgresClient from DATABASE_URL (SUPABASE_URL kept as fallback)."""
+    dsn = os.getenv("DATABASE_URL") or os.getenv("SUPABASE_URL", "")
     if not dsn:
-        raise RuntimeError("SUPABASE_URL not set in .env")
+        raise RuntimeError("DATABASE_URL not set in .env")
     if not dsn.startswith(("postgresql://", "postgres://")):
         raise RuntimeError(
-            "SUPABASE_URL must be a postgresql:// connection string "
+            "DATABASE_URL must be a postgresql:// connection string "
             f"(got: {dsn[:30]}...)"
         )
     # Append sslmode=require if not present

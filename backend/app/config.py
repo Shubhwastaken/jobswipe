@@ -4,9 +4,10 @@ from dotenv import load_dotenv
 ENV_PATH = os.path.join(os.path.dirname(__file__), "..", ".env")
 load_dotenv(ENV_PATH)
 
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_ANON_KEY = os.getenv("SUPABASE_ANON_KEY")
-SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
+# Postgres connection string (postgresql://user:pass@host:5432/db). The old
+# SUPABASE_URL name is kept as a fallback for existing .env files.
+DATABASE_URL = os.getenv("DATABASE_URL") or os.getenv("SUPABASE_URL", "")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 JWT_SECRET = os.getenv("JWT_SECRET", "supersecretkey")
 STUDENT_EMAIL_DOMAIN = os.getenv("STUDENT_EMAIL_DOMAIN", "srmist.edu.in").lower()
 ADMIN_EMAIL_DOMAIN = os.getenv("ADMIN_EMAIL_DOMAIN", "admin.com").lower()
@@ -30,5 +31,5 @@ CORS_ORIGINS = [
 
 BACKEND_PORT = int(os.getenv("BACKEND_PORT", 8000))
 
-if not SUPABASE_URL or not SUPABASE_ANON_KEY or not SUPABASE_SERVICE_KEY:
-    raise RuntimeError("Supabase URL/keys are missing in .env")
+if not DATABASE_URL:
+    raise RuntimeError("DATABASE_URL not set in .env")
