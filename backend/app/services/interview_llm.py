@@ -201,54 +201,108 @@ def generate_questions(
     return result
 
 
-# ── 2. In-session follow-up decision ─────────────────────────────────────────
-_FOLLOWUP_SYSTEM = (
-    "You are a professional interviewer deciding whether to ask one short "
-    "follow-up probe. Maintain a neutral tone. Never praise, never give hints, "
-    "never reveal you are an AI. Focus on what was missing or vague in the answer; "
-    "you may reference the candidate's background only when it sharpens the probe "
-    "(e.g. naming a specific tool or project they listed). Return ONLY JSON: "
-    '{"should_follow_up": boolean, "probe": string}. should_follow_up is true '
-    "only if the candidate's answer was surface-level, missing a concrete "
-    "example, or missing the outcome. probe is one concise question (no preamble)."
+# ── 1c. Role-specific technical questions (generated once at session creation) ─
+_TECHNICAL_SYSTEM = (
+    "You are an expert technical interviewer. Given a target role, domain, and the "
+    "candidate's stack, write role-specific TECHNICAL questions that test practical "
+    "knowledge and judgment — concepts, trade-offs, debugging, design decisions — NOT "
+    "behavioral 'tell me about a time' questions. Each question must:\n"
+    "- be answerable out loud (no coding), concise (one or two sentences);\n"
+    "- be grounded in the role/domain/stack where it reads naturally;\n"
+    "- match the given seniority (harder for senior, fundamentals for entry);\n"
+    "- be distinct from the others.\n"
+    'Return ONLY JSON: {"questions": [string, ...]} in ascending difficulty. '
+    "No preamble, no markdown."
 )
 
 
-def decide_follow_up(
+def generate_technical_questions(
+    target_role: str, seniority: str, domain: str, profile: Dict[str, Any], n: int
+) -> List[str]:
+    """Return up to n tailored technical questions, or [] on failure (caller falls
+    back to the deterministic bank)."""
+    if n <= 0:
+        return []
+    domain_part = f", domain: {domain}" if domain else ""
+    user_prompt = (
+        f"Target role: {target_role} (seniority: {seniority}{domain_part}).\n"
+        f"Candidate background:\n{_profile_brief(profile)}\n\n"
+        f"Write exactly {n} role-specific technical questions, ordered easy to hard."
+    )
+    data = _groq_json(_TECHNICAL_SYSTEM, user_prompt, max_tokens=700, temperature=0.5)
+    if isinstance(data, dict):
+        questions = data.get("questions")
+        if isinstance(questions, list):
+            cleaned = [q.strip() for q in questions if isinstance(q, str) and q.strip()]
+            return cleaned[:n]
+    return []
+
+
+# ── 2. In-session answer evaluation ──────────────────────────────────────────
+_EVAL_SYSTEM = (
+    "You are a professional interviewer conducting a mock interview. Given the "
+    "question asked and the candidate's answer, evaluate the answer and decide your "
+    "next move. Keep a neutral, professional tone. Never praise, never reveal you are "
+    "an AI, never give hints or supply the answer. Return ONLY JSON: "
+    '{"assessment": "substantive"|"thin"|"evasive"|"off_topic", '
+    '"action": "advance"|"probe"|"redirect", "reply": string}.\n'
+    "- off_topic: the answer is irrelevant, a joke, trolling, or does not address the "
+    'question -> action "redirect"; reply firmly but professionally reminds the '
+    "candidate that this is a real interview setting and that off-topic or flippant "
+    "responses won't be tolerated, then restates specifically what you asked and "
+    "requests a concrete example.\n"
+    "- evasive: the candidate refuses or dodges (e.g. 'can't disclose', 'no', 'yes') "
+    '-> action "redirect"; reply notes that declining to answer doesn\'t work in an '
+    "interview and asks for a hypothetical or a different concrete example.\n"
+    "- thin: on-topic but missing a concrete example or a measurable outcome -> action "
+    '"probe"; reply is one focused follow-up question.\n'
+    '- substantive: specific and complete -> action "advance"; reply is "".\n'
+    "reply is one or two sentences, no preamble."
+)
+
+
+def evaluate_answer(
     question: str, competency: str, answer: str, profile: Optional[Dict[str, Any]] = None
 ) -> Dict[str, Any]:
-    """Decide whether to probe. Falls back to the question bank if Groq fails."""
+    """Assess the candidate's answer and pick the interviewer's next move.
+
+    Returns {"action": "advance"|"probe"|"redirect", "reply": str, "assessment": str|None}.
+    Falls back to a length heuristic if Groq is unavailable.
+    """
     background = f"\nCandidate background:\n{_profile_brief(profile)}" if profile else ""
     data = _groq_json(
-        _FOLLOWUP_SYSTEM,
+        _EVAL_SYSTEM,
         (
             f"Competency being assessed: {content.competency_label(competency)}\n"
             f"Question asked: {question}\n"
             f"Candidate answer: {answer[:2000]}"
             f"{background}"
         ),
-        max_tokens=200,
+        max_tokens=220,
         temperature=0.3,
     )
-    if isinstance(data, dict) and isinstance(data.get("should_follow_up"), bool):
-        probe = str(data.get("probe") or "").strip()
-        if data["should_follow_up"] and probe:
-            return {"should_follow_up": True, "probe": probe}
-        if data["should_follow_up"]:
-            return {"should_follow_up": True, "probe": content.fallback_probe(competency)}
-        return {"should_follow_up": False, "probe": ""}
+    if isinstance(data, dict) and data.get("action") in {"advance", "probe", "redirect"}:
+        action = data["action"]
+        assessment = (str(data.get("assessment") or "").strip() or None)
+        if action in ("probe", "redirect"):
+            reply = str(data.get("reply") or "").strip() or content.fallback_probe(competency)
+            return {"action": action, "reply": reply, "assessment": assessment}
+        return {"action": "advance", "reply": "", "assessment": assessment}
     # Groq unavailable: probe once for short answers, using the bank.
     if content.word_count(answer) < content.SHORT_ANSWER_WORDS:
-        return {"should_follow_up": True, "probe": content.fallback_probe(competency)}
-    return {"should_follow_up": False, "probe": ""}
+        return {"action": "probe", "reply": content.fallback_probe(competency), "assessment": "thin"}
+    return {"action": "advance", "reply": "", "assessment": None}
 
 
 # ── 3. Post-session feedback synthesis ───────────────────────────────────────
 _FEEDBACK_SYSTEM = (
-    "You are an expert interview coach reviewing a completed mock interview "
-    "transcript. Give specific, behavioral, actionable feedback. Quote the "
-    "candidate's actual words when identifying issues. Be honest, not "
-    "encouraging. Return ONLY valid JSON (one object), no preamble, no markdown.\n"
+    "You are an expert interview coach reviewing a completed mock interview. Give "
+    "specific, actionable feedback. Quote the candidate's actual words when identifying "
+    "issues. Be honest, not encouraging. You are given the interview as a numbered list "
+    "of question/answer pairs. Produce EXACTLY ONE per_question_feedback entry for each "
+    "provided pair, in the same order, copying that pair's question and competency label "
+    "verbatim — do not merge, split, reorder, invent, or duplicate entries. Return ONLY "
+    "valid JSON (one object), no preamble, no markdown.\n"
     "Schema: {\n"
     '  "overall_summary": string (3-4 sentences max),\n'
     '  "headline_takeaway": string (single most important fix, one sentence),\n'
@@ -267,16 +321,25 @@ _FEEDBACK_SYSTEM = (
 def synthesize_feedback(
     profile: Dict[str, Any],
     competency_plan: Dict[str, Any],
-    transcript: List[Dict[str, Any]],
+    qa_pairs: List[Dict[str, Any]],
 ) -> Optional[Dict[str, Any]]:
-    transcript_text = "\n".join(
-        f"{t.get('speaker', '').upper()}: {t.get('content', '')}" for t in transcript
+    """Synthesize coaching feedback from structured Q&A pairs (one per question).
+
+    Passing the deterministic pairs — instead of the raw transcript — keeps the
+    per-question feedback aligned 1:1 with the real questions and their competency
+    labels, so entries can't be duplicated, dropped, or mislabeled.
+    """
+    numbered = "\n\n".join(
+        f"{i + 1}. [{p.get('competency_label') or p.get('competency') or ''}] "
+        f"Q: {p.get('question', '')}\n   A: {p.get('answer', '') or '(no answer)'}"
+        for i, p in enumerate(qa_pairs)
     )
     user_prompt = (
         f"Candidate target role context: {profile.get('current_role') or 'n/a'} "
         f"({profile.get('domain') or 'n/a'}).\n"
-        f"Competency plan: {json.dumps(competency_plan)[:1500]}\n\n"
-        f"Full transcript:\n{transcript_text[:12000]}"
+        f"Competency plan: {json.dumps(competency_plan)[:1200]}\n\n"
+        f"Interview ({len(qa_pairs)} question/answer pairs) — produce exactly "
+        f"{len(qa_pairs)} feedback entries in this order:\n{numbered[:12000]}"
     )
     data = _groq_json(_FEEDBACK_SYSTEM, user_prompt, max_tokens=4000, temperature=0.4)
     if isinstance(data, dict):

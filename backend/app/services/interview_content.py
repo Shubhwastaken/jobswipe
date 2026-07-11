@@ -13,6 +13,11 @@ from typing import Any, Dict, List
 
 OPENER = "Walk me through your background and what brings you to this role."
 CLOSER = "That's everything from my side. Do you have any questions for me?"
+# Spoken when the interview ends — a brief sign-off pointing to the feedback page.
+SIGN_OFF = (
+    "Thanks for your time — that brings our interview to a close. For a detailed "
+    "breakdown of how you did, tap 'Get my feedback' below."
+)
 
 # Brief neutral acknowledgments rotated between scripted questions.
 ACKS = ["Got it.", "Thank you.", "Understood.", "Okay.", "Thanks for that."]
@@ -53,6 +58,9 @@ ROLE_ALIASES = {
     "developer": "software_engineer", "backend engineer": "software_engineer",
     "frontend engineer": "software_engineer", "full stack": "software_engineer",
     "full stack engineer": "software_engineer", "programmer": "software_engineer",
+    "ai engineer": "software_engineer", "ml engineer": "software_engineer",
+    "machine learning engineer": "software_engineer", "data engineer": "software_engineer",
+    "devops engineer": "software_engineer", "platform engineer": "software_engineer",
     "pm": "product_manager", "product manager": "product_manager",
     "associate product manager": "product_manager", "apm": "product_manager",
     "data analyst": "data_analyst", "analyst": "data_analyst",
@@ -84,6 +92,44 @@ COMPETENCY_LABELS = {
     "campaign_thinking": "Campaign thinking",
     "measuring_impact": "Measuring impact",
     "creative_under_constraint": "Creativity under constraint",
+    "technical_depth": "Role-specific technical",
+}
+
+# ── Role-specific technical questions (knowledge/judgment, NOT behavioral) ─────
+# Deterministic fallback used when the LLM can't generate tailored technical
+# questions. The LLM version (interview_llm.generate_technical_questions) is
+# preferred; these keep a real technical round alive when Groq is unavailable.
+TECHNICAL_FALLBACK: Dict[str, List[str]] = {
+    "software_engineer": [
+        "How would you design and scale a REST API that suddenly has to handle ten times its traffic?",
+        "When a query is slow, how do you decide between adding a database index, caching, or restructuring it — and what are the trade-offs?",
+        "Walk me through how you'd debug a production service that intermittently returns 500s only under load.",
+        "When would you choose an asynchronous, queue-based design over a synchronous request/response one?",
+    ],
+    "product_manager": [
+        "How would you size the opportunity for a new feature when there's no existing data?",
+        "Walk me through how you'd design an A/B test for a change you're unsure about.",
+        "How do you decide what to cut when engineering says the deadline is at risk?",
+        "How would you define and instrument the success metrics for a feature you're launching?",
+    ],
+    "data_analyst": [
+        "How would you investigate a sudden twenty-percent drop in a key dashboard metric?",
+        "How do you decide whether a difference between two groups is real or just noise?",
+        "Walk me through how you'd clean and validate a messy dataset before trusting it.",
+        "How do you choose the right metric or chart to answer a stakeholder's vague question?",
+    ],
+    "marketing": [
+        "How would you structure and measure a multi-channel campaign on a fixed budget?",
+        "Walk me through diagnosing why a well-performing ad suddenly dropped in conversion.",
+        "How would you attribute a single sale across several marketing touchpoints?",
+        "With limited data, how would you decide which channel to double down on?",
+    ],
+    "__default__": [
+        "Walk me through a technical decision in your field and the trade-offs you weighed.",
+        "How would you approach diagnosing a problem in your domain when the cause isn't obvious?",
+        "What tools or methods do you reach for first in your work, and why?",
+        "How would you evaluate whether a solution in your field is actually working?",
+    ],
 }
 
 # ── Question bank: competency -> core questions + follow-up probes ────────────
@@ -435,6 +481,14 @@ def build_question_sequence(gaps: Dict[str, List[str]], max_questions: int = 7) 
 
     sequence.append({"competency": "closing", "question": CLOSER, "type": "closer"})
     return sequence
+
+
+def technical_fallback_questions(role: str, n: int) -> List[str]:
+    """Deterministic role-specific technical questions (LLM-independent fallback)."""
+    if n <= 0:
+        return []
+    bank = TECHNICAL_FALLBACK.get(normalize_role(role), TECHNICAL_FALLBACK["__default__"])
+    return list(bank[:n])
 
 
 def fallback_probe(competency: str) -> str:

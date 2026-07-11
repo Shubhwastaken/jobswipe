@@ -25,6 +25,12 @@ router = APIRouter(prefix="/interview", tags=["interview"])
 MAX_SESSIONS_PER_DAY = 3
 SECONDS_PER_QUESTION_ESTIMATE = 300
 
+# How many role-specific technical questions to add, by seniority. Mid+ roles get
+# a real technical round alongside the behavioral questions; entry-level gets one.
+TECHNICAL_BY_SENIORITY = {"entry": 1, "mid": 3, "senior": 3, "lead": 3}
+# Behavioral question budget (opener + core + closer) before technical is added.
+BEHAVIORAL_MAX_QUESTIONS = 6
+
 
 class CreateSessionRequest(BaseModel):
     target_role: str
@@ -177,21 +183,40 @@ def create_session(req: CreateSessionRequest, user=Depends(get_current_user)):
         profile = build_profile_from_db(sid)
 
     seniority = (req.seniority or profile.get("seniority") or "mid").strip().lower()
+    domain = (req.target_domain or "").strip()
     competencies = content.competencies_for_role(req.target_role)
     gaps = content.analyze_gaps(profile, competencies)
-    sequence = content.build_question_sequence(gaps)
+    sequence = content.build_question_sequence(gaps, max_questions=BEHAVIORAL_MAX_QUESTIONS)
 
-    # Tailor each core question to the role + domain + candidate profile (one LLM
-    # call, at creation time). Falls back to the bank question on any failure.
+    # Tailor each behavioral core question to the role + domain + candidate profile
+    # (one LLM call, at creation time). Falls back to the bank question on failure.
     core_indices = [i for i, step in enumerate(sequence) if step.get("type") == "core"]
     core_labels = [content.competency_label(sequence[i]["competency"]) for i in core_indices]
     tailored = llm.generate_questions(
-        req.target_role, seniority, (req.target_domain or "").strip(), profile, core_labels
+        req.target_role, seniority, domain, profile, core_labels
     )
     if tailored.get("opener") and sequence and sequence[0].get("type") == "opener":
         sequence[0]["question"] = tailored["opener"]
     for idx, question in zip(core_indices, tailored.get("questions") or []):
         sequence[idx]["question"] = question
+
+    # Add a role-specific technical round (knowledge/judgment, not behavioral),
+    # inserted before the closer. LLM-tailored, with a deterministic bank fallback.
+    n_tech = TECHNICAL_BY_SENIORITY.get(seniority, 3)
+    tech_qs = llm.generate_technical_questions(req.target_role, seniority, domain, profile, n_tech)
+    if len(tech_qs) < n_tech:
+        for q in content.technical_fallback_questions(req.target_role, n_tech):
+            if len(tech_qs) >= n_tech:
+                break
+            if q not in tech_qs:
+                tech_qs.append(q)
+    tech_steps = [
+        {"competency": "technical_depth", "question": q, "type": "technical"}
+        for q in tech_qs[:n_tech]
+    ]
+    if tech_steps:
+        insert_at = len(sequence) - 1 if sequence and sequence[-1].get("type") == "closer" else len(sequence)
+        sequence[insert_at:insert_at] = tech_steps
 
     insert = execute_supabase(
         lambda: supabase.table("interview_sessions").insert({
@@ -286,7 +311,7 @@ def answer(session_id: str, req: AnswerRequest, user=Depends(get_current_user)):
     sequence = session.get("question_sequence") or []
     idx = session.get("current_index", 0)
     if idx >= len(sequence):
-        return {"interviewer_turn": None, "done": True}
+        return {"interviewer_turn": content.SIGN_OFF, "done": True, "feedback_ready": True}
 
     cq = sequence[idx]
     competency = cq.get("competency")
@@ -295,17 +320,23 @@ def answer(session_id: str, req: AnswerRequest, user=Depends(get_current_user)):
     # record candidate answer
     append_turn(session_id, next_turn_index(session_id), "candidate", answer_text, competency)
 
-    # follow-up only on core questions, once per question
-    if qtype == "core" and not session.get("follow_up_used"):
-        decision = llm.decide_follow_up(cq["question"], competency, answer_text, session.get("structured_profile"))
-        if decision.get("should_follow_up"):
-            probe = decision["probe"]
+    # Evaluate the answer and, at most once per question, either probe deeper or
+    # redirect an off-topic/evasive answer. Applies to opener, core, and technical
+    # questions (not the closer).
+    if qtype in ("opener", "core", "technical") and not session.get("follow_up_used"):
+        decision = llm.evaluate_answer(cq["question"], competency, answer_text, session.get("structured_profile"))
+        if decision.get("action") in ("probe", "redirect") and decision.get("reply"):
+            reply = decision["reply"]
             update_session(session_id, {"follow_up_used": True})
-            append_turn(session_id, next_turn_index(session_id), "interviewer", probe, competency)
+            # question_ref=None marks this as a follow-up turn so post-session
+            # feedback folds it into its parent question instead of counting it twice.
+            append_turn(session_id, next_turn_index(session_id), "interviewer", reply, None)
             return {
-                "interviewer_turn": probe,
-                "is_follow_up": True,
-                "competency": content.competency_label(competency),
+                "interviewer_turn": reply,
+                "is_follow_up": decision["action"] == "probe",
+                "is_redirect": decision["action"] == "redirect",
+                "assessment": decision.get("assessment"),
+                "competency": content.competency_label(competency) if competency not in ("intro", "closing") else None,
                 "question_number": idx + 1,
                 "total_questions": len(sequence),
                 "done": False,
@@ -315,7 +346,8 @@ def answer(session_id: str, req: AnswerRequest, user=Depends(get_current_user)):
     new_idx = idx + 1
     if new_idx >= len(sequence):
         update_session(session_id, {"current_index": new_idx, "follow_up_used": False})
-        return {"interviewer_turn": None, "done": True}
+        append_turn(session_id, next_turn_index(session_id), "interviewer", content.SIGN_OFF, "closing")
+        return {"interviewer_turn": content.SIGN_OFF, "done": True, "feedback_ready": True}
 
     next_q = sequence[new_idx]
     ack = content.ack_for_index(new_idx)
@@ -355,14 +387,23 @@ def _build_fallback_feedback(qa_pairs: List[Dict[str, Any]]) -> Dict[str, Any]:
 
 
 def _qa_pairs(turns: List[Dict[str, Any]], sequence: List[Dict[str, str]]) -> List[Dict[str, Any]]:
-    """Pair each interviewer question turn with the candidate answer that follows it."""
+    """Pair each interviewer *question* with the candidate answer(s) that follow it.
+
+    Follow-up turns (probe/redirect) are stored with question_ref=None; they are
+    folded into the current question's pair rather than counted as new questions,
+    so each real question yields exactly one pair.
+    """
     pairs: List[Dict[str, Any]] = []
     pending: Optional[Dict[str, Any]] = None
     for t in turns:
+        ref = t.get("question_ref")
         if t["speaker"] == "interviewer":
+            if ref is None and pending is not None:
+                # follow-up probe/redirect — same question thread, not a new question
+                continue
             if pending:
                 pairs.append(pending)
-            pending = {"question": t["content"], "competency": t.get("question_ref") or "core", "answer": ""}
+            pending = {"question": t["content"], "competency": ref or "core", "answer": ""}
         elif t["speaker"] == "candidate" and pending is not None:
             pending["answer"] = (pending["answer"] + " " + t["content"]).strip()
     if pending:
@@ -385,17 +426,19 @@ def complete_session(session_id: str, user=Depends(get_current_user)):
     turns = load_turns(session_id)
     sequence = session.get("question_sequence") or []
     pairs = _qa_pairs(turns, sequence)
+    answer_pairs = [p for p in pairs if p["competency"] not in ("intro", "closing")]
+    for p in answer_pairs:
+        p["competency_label"] = content.competency_label(p["competency"])
 
     feedback = llm.synthesize_feedback(
         session.get("structured_profile") or {},
         session.get("competency_plan") or {},
-        turns,
+        answer_pairs,
     )
     if not feedback:
-        feedback = _build_fallback_feedback(pairs)
+        feedback = _build_fallback_feedback(answer_pairs)
 
-    # attach code-computed answer metrics (deterministic, accurate) per question
-    answer_pairs = [p for p in pairs if p["competency"] not in ("intro", "closing")]
+    # attach code-computed answer metrics (deterministic); per_q aligns 1:1 with answer_pairs
     per_q = feedback.get("per_question_feedback") or []
     for i, item in enumerate(per_q):
         if i < len(answer_pairs):

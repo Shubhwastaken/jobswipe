@@ -199,7 +199,7 @@ export default function InterviewRoom() {
         {done ? (
           <div className="iv-card iv-card--accent iv-finish">
             <span className="iv-hero__eyebrow"><IconSparkles size={14} /> Interview complete</span>
-            <p style={{ margin: 0, color: 'var(--text-secondary)' }}>That's the end of the interview. Generate your feedback when you're ready.</p>
+            <p style={{ margin: 0, color: 'var(--text-secondary)' }}>That's the end of the interview. Click below for your detailed feedback on how you did.</p>
             <button className="iv-btn" type="button" onClick={handleFinish} disabled={completing}>
               {completing ? 'Analyzing your interview…' : 'Get my feedback'}
             </button>
