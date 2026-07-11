@@ -77,6 +77,28 @@ Expected output:
 
 ---
 
+## System dependencies
+
+The resume builder's PDF download compiles LaTeX with `pdflatex`, which is a
+**system binary from TeX Live — it cannot be installed via pip/requirements.txt**.
+Install it per platform:
+
+```bash
+# Debian/Ubuntu
+sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-latex-extra
+
+# macOS
+brew install --cask basictex
+
+# Windows
+# Install MiKTeX: https://miktex.org/download
+```
+
+Verify with `pdflatex --version`. Without it, the resume PDF download endpoint
+will fail on any machine where TeX is not installed.
+
+---
+
 ## Troubleshooting
 
 ### "Invalid API key" error
