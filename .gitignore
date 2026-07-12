@@ -27,6 +27,9 @@ backend/models/*.pkl
 backend/models/paper_frozen/
 backend/data/paper_frozen/
 
+# Database dumps — contain real student PII. Never committed.
+backups/
+
 # Track only the top-level README; keep all other markdown (docs, planning notes) local.
 *.md
 !README.md
