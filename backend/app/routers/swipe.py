@@ -1,6 +1,5 @@
 import logging
 import os
-import hashlib
 import re
 import threading
 import time
@@ -20,6 +19,11 @@ from app.services.data_paths import data_dir, dataset_variant
 from app.services.bias_reduction import load_variant_artifact, score_variant_probabilities
 from app.services.artifact_registry import champion_bundle_name
 from app.services.cache_control import clear_profile_dependent_caches
+from app.services.profile_source import (
+    student_csv_rows_from_db,
+    student_feature_rows_from_db,
+    use_db_profiles,
+)
 from app.services.talentforge_matcher import all_student_rows, enrich_student_row, is_canonical_job, score_student_for_job
 from src.explainability.criteria_checker import check_criteria
 from src.explainability.improvement_planner import generate_improvement_plan
@@ -35,6 +39,9 @@ DATA_DIR = data_dir()
 # Fairlearn probability decides their order. Fairness never reorders across bands,
 # so it can nudge balance without overriding match quality.
 FAIRNESS_TIE_EPSILON = 0.05
+# Value of breakdown["fairness_effective"] for a single-pair breakdown, where a set of
+# one is trivially constant and False would misreport an ineffective fairness stage.
+FAIRNESS_EFFECTIVE_NOT_APPLICABLE = "not_applicable"
 REQUIRE_FAIRNESS_SCORING = os.getenv("JOBSWIPE_REQUIRE_FAIRNESS", "").lower() in {"1", "true", "yes"}
 _FAIRLEARN_ARTIFACT: Optional[Dict[str, Any]] = None
 _FAIRLEARN_LAST_ERROR: Optional[str] = None
@@ -243,61 +250,6 @@ def merge_unique_texts(*sources: Any, limit: int = 8) -> List[str]:
     return merged
 
 
-def name_tokens(value: Any) -> List[str]:
-    return [token for token in re.split(r"[^a-z0-9]+", str(value or "").lower()) if token]
-
-
-def is_placeholder_student_record(student: Dict[str, Any]) -> bool:
-    if not student:
-        return True
-    cgpa = safe_float(student.get("cgpa"))
-    year_of_study = safe_int(student.get("year_of_study"))
-    skills = as_list(student.get("skills")) or as_list(student.get("skill_list"))
-    projects = student.get("projects") or []
-    certifications = student.get("certifications") or []
-    internships = student.get("internships") or []
-    return (
-        cgpa <= 0
-        and year_of_study in {0, 3}
-        and not skills
-        and not projects
-        and not certifications
-        and not internships
-    )
-
-
-def select_seed_student_profile(user: Dict[str, Any], sid: str) -> Dict[str, Any]:
-    rows = all_student_rows()
-    if not rows:
-        return {}
-
-    search_terms = {
-        *name_tokens(sid),
-        *name_tokens(user.get("full_name") or user.get("name") or ""),
-        *name_tokens(user.get("email") or ""),
-    }
-
-    best_row: Dict[str, Any] = {}
-    best_score = 0
-    for row in rows:
-        row_terms = {
-            *name_tokens(row.get("student_id")),
-            *name_tokens(row.get("full_name")),
-        }
-        score = len(search_terms & row_terms)
-        if score > best_score:
-            best_score = score
-            best_row = row
-
-    if best_score > 0:
-        return best_row
-
-    ordered_rows = sorted(rows, key=lambda item: str(item.get("student_id") or ""))
-    seed_key = str(user.get("email") or sid or "trial-student").lower().encode()
-    seed_index = int(hashlib.sha256(seed_key).hexdigest(), 16) % len(ordered_rows)
-    return ordered_rows[seed_index]
-
-
 def canonicalize_job_record(job: Dict[str, Any]) -> Dict[str, Any]:
     normalized = dict(job)
     normalized["company_name"] = first_present(normalized, "company_name", default="Company")
@@ -316,6 +268,8 @@ def canonicalize_job_record(job: Dict[str, Any]) -> Dict[str, Any]:
 
 @lru_cache(maxsize=1)
 def load_student_csv_rows() -> Dict[str, Dict[str, Any]]:
+    if use_db_profiles():
+        return student_csv_rows_from_db()
     path = DATA_DIR / "students.csv"
     if not path.exists():
         return {}
@@ -325,6 +279,11 @@ def load_student_csv_rows() -> Dict[str, Dict[str, Any]]:
 
 @lru_cache(maxsize=1)
 def load_student_feature_rows() -> Dict[str, Dict[str, Any]]:
+    # student_features.csv is a precomputed aggregate, not a table. The DB path
+    # therefore recomputes it through the same build_student_features() that wrote
+    # the CSV, rather than reading a stored copy — see profile_source.
+    if use_db_profiles():
+        return student_feature_rows_from_db()
     path = DATA_DIR / "student_features.csv"
     if not path.exists():
         return {}
@@ -659,6 +618,46 @@ def rerank_with_fairness(scored_rows: List[Dict[str, Any]], score_key: str, fair
     return [scored_rows[i] for i in order_frame["_idx"].tolist()]
 
 
+def stamp_fairness_effectiveness(
+    scored_rows: List[Dict[str, Any]],
+    fairness_key: str = "_fairness_score",
+    breakdown_key: str = "_match_breakdown",
+) -> None:
+    """Record whether the fairness stage could have changed this ranked set's order.
+
+    ``fairness_status`` only reports that the champion artifact loaded and returned a
+    number — it says nothing about whether that number did any work. The champion is an
+    ExponentiatedGradient whose output has few attainable levels and is 0.0 for roughly a
+    quarter of students on every job they are eligible for. When the score is constant
+    across a ranked set, every candidate ties, the near-tie reorder collapses to the
+    match-score order, and the fairness stage contributes nothing — yet the API still
+    reports "active".
+
+    So ``fairness_effective`` is stamped onto each row's breakdown, alongside (not
+    instead of) ``fairness_status``, which keeps switching on ``status == "active"``
+    working:
+      * ``True``             — the score varies, so the reorder could act.
+      * ``False``            — the score is constant (or absent) across the set; the
+                               fairness stage contributed nothing.
+      * ``"not_applicable"`` — fewer than two rows. Constancy is undefined for a set of
+                               one, so False would be misleading.
+
+    Visibility only: this mutates the breakdown dicts that already flow to the card
+    builder and never touches ordering, scores, or the rerank.
+    """
+    if len(scored_rows) < 2:
+        effective: Any = FAIRNESS_EFFECTIVE_NOT_APPLICABLE
+    else:
+        scores = [row.get(fairness_key) for row in scored_rows]
+        # A None anywhere means rerank_with_fairness skipped the reorder outright.
+        effective = None not in scores and len(set(scores)) > 1
+
+    for row in scored_rows:
+        breakdown = row.get(breakdown_key)
+        if isinstance(breakdown, dict):
+            breakdown["fairness_effective"] = effective
+
+
 def sort_jobs_for_student(student: Dict[str, Any], jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     reset_fairness_cycle()
     scored_jobs = []
@@ -670,6 +669,7 @@ def sort_jobs_for_student(student: Dict[str, Any], jobs: List[Dict[str, Any]]) -
             "_fairness_score": breakdown.get("fairlearn"),
             "_match_breakdown": breakdown,
         })
+    stamp_fairness_effectiveness(scored_jobs)
     # Stage 2: rank by match, fairness reorders near-ties (or no-op if unavailable).
     ranked = rerank_with_fairness(scored_jobs, "phi_score", "_fairness_score")
     # Outer constraint: jobs carrying a job_type stay ahead of those without.
@@ -692,6 +692,15 @@ def ensure_pair_passes_hard_criteria(student: Dict[str, Any], job: Dict[str, Any
 
 
 def load_current_student(sid: str, user: Dict[str, Any]) -> Dict[str, Any]:
+    """Load the student's OWN row: their canonical dataset row (if any) as the base,
+    overlaid with their students-table row.
+
+    A student with no data returns empty fields. It must never be topped up from
+    another student's profile - the previous seed substitution merged a
+    name-matched (or, failing that, a SHA256-of-email-selected) stranger's
+    _talentforge_profile into placeholder accounts, so the profile display and
+    match scoring ran on borrowed data.
+    """
     merged = {}
     for row in all_student_rows():
         if student_id(row) == sid:
@@ -700,18 +709,6 @@ def load_current_student(sid: str, user: Dict[str, Any]) -> Dict[str, Any]:
     result = execute_supabase(lambda: supabase.table("students").select("*").eq("student_id", sid).maybe_single())
     if result and result.data:
         merged = {**merged, **result.data}
-    elif user.get("id") and user.get("id") != sid:
-        fallback = execute_supabase(lambda: supabase.table("students").select("*").eq("id", user["id"]).maybe_single())
-        if fallback and fallback.data:
-            merged = {**merged, **fallback.data}
-    if not merged or is_placeholder_student_record(merged):
-        seed_profile = select_seed_student_profile({**merged, **user}, sid)
-        if seed_profile:
-            merged = {
-                **seed_profile,
-                **merged,
-                "_talentforge_profile": seed_profile.get("_talentforge_profile") or {},
-            }
     return {**merged, **user, "student_id": sid}
 
 
@@ -807,8 +804,9 @@ def count_rows(table: str, filters: Dict[str, Any]) -> int:
 
 
 def student_skill_details(sid: str, profile_meta: Optional[Dict[str, Any]] = None) -> List[Dict[str, Any]]:
-    if not (profile_meta or {}).get("manual_skills_saved"):
-        return []
+    # Skills always come from the child `skills` table (the DB is the base layer).
+    # manual_skills_saved is retained as an informational flag (written by
+    # PUT /profile/{id}/skills) but no longer gates whether skills are shown.
     rows = execute_supabase(lambda: supabase.table("skills").select("skill_name, proficiency, verified").eq("student_id", sid)).data or []
     return [
         {
@@ -1016,6 +1014,10 @@ def build_rejection_insight(student: Dict[str, Any], job: Dict[str, Any], recrui
     scorecard = scorecard_for_job(student_input, job)
     enriched = enrich_student_row(student_input)
     overall_score, breakdown = blended_pair_score(enriched, job)
+    # A single pair is a set of one: constancy is undefined, so this is neither
+    # effective nor ineffective. Stamped explicitly so a missing field and an
+    # ineffective one stay distinguishable.
+    breakdown["fairness_effective"] = FAIRNESS_EFFECTIVE_NOT_APPLICABLE
     peer_comparison = compare_against_role_pool(student_input, job)
     improvement_plan = generate_improvement_plan(
         scorecard,
@@ -1149,36 +1151,62 @@ def swipe_fairness_status(user=Depends(get_current_user)):
     return fairness_artifact_status()
 
 
+def _profile_overlay(meta: Dict[str, Any], raw: Dict[str, Any]):
+    """Return a resolver where the `students` table is the base layer and
+    profile_meta holds student edits that override it.
+
+    Precedence per field: profile_meta value (if present and non-empty) ->
+    else the corresponding students column -> else None. Empty string /
+    whitespace is treated as absent, never as an override.
+    """
+    def pick(meta_key: str, db_col: str):
+        v = meta.get(meta_key)
+        if v is not None and not (isinstance(v, str) and v.strip() == ""):
+            return v
+        col = raw.get(db_col)
+        if isinstance(col, str) and col.strip() == "":
+            return None
+        return col
+    return pick
+
+
+def _int_opt(value: Any) -> Optional[int]:
+    """safe_int that preserves 0 and maps only None -> None (so a real 0 backlog
+    count is not dropped)."""
+    return safe_int(value) if value is not None else None
+
+
 @router.get("/student/profile")
 def student_profile(user=Depends(get_current_user)):
     sid = student_id(user)
     raw_student = load_current_student(sid, user)
     profile_meta = ((raw_student.get("resume_parse_confidence") or {}).get("profile_meta") or {})
+    pick = _profile_overlay(profile_meta, raw_student)
     personal_email, college_email = split_student_emails(raw_student, user)
     skills = student_skill_details(sid, profile_meta)
 
     return {
         "basic_info": {
-            "name": profile_meta.get("full_name") or user.get("full_name") or user.get("name") or sid,
+            "name": pick("full_name", "full_name") or user.get("full_name") or user.get("name") or sid,
             "personal_email": personal_email,
             "college_email": college_email,
             "phone_number": profile_meta.get("phone_number"),
-            "college_roll_number": profile_meta.get("register_number") or sid,
+            "college_roll_number": pick("register_number", "register_number") or sid,
             "student_id": sid,
-            "department": profile_meta.get("department") or profile_meta.get("branch"),
-            "current_year": safe_int(profile_meta.get("year_of_study")) or None,
-            "graduation_year": safe_int(profile_meta.get("batch_year")) or None,
+            "department": pick("department", "department") or pick("branch", "branch"),
+            "current_year": safe_int(pick("year_of_study", "year_of_study")) or None,
+            "graduation_year": safe_int(pick("batch_year", "batch_year")) or None,
         },
         "education": {
-            "class_10_marks": safe_float(profile_meta.get("class_10_marks")) or None,
-            "class_10_board": profile_meta.get("class_10_board"),
-            "class_12_marks": safe_float(profile_meta.get("class_12_marks")) or None,
-            "class_12_board": profile_meta.get("class_12_board"),
-            "college_name": profile_meta.get("college_name"),
+            "class_10_marks": safe_float(pick("class_10_marks", "10th_marks")) or None,
+            "class_10_board": pick("class_10_board", "10th_board"),
+            "class_12_marks": safe_float(pick("class_12_marks", "12th_marks")) or None,
+            "class_12_board": pick("class_12_board", "12th_board"),
+            "college_name": pick("college_name", "college_name"),
             "degree": profile_meta.get("degree"),
-            "cgpa": safe_float(profile_meta.get("cgpa")) or None,
-            "active_backlogs": safe_int(profile_meta.get("active_backlogs")) if "active_backlogs" in profile_meta else None,
-            "backlog_history": safe_int(profile_meta.get("backlog_history")) if "backlog_history" in profile_meta else None,
+            "cgpa": safe_float(pick("cgpa", "cgpa")) or None,
+            "active_backlogs": _int_opt(pick("active_backlogs", "active_backlogs")),
+            "backlog_history": _int_opt(pick("backlog_history", "backlogs_history")),
         },
         "skills": skills,
         "preferences": {
@@ -1192,7 +1220,7 @@ def student_profile(user=Depends(get_current_user)):
             "resume_url": raw_student.get("resume_url"),
             "linkedin_url": profile_meta.get("linkedin_url"),
             "github_url": profile_meta.get("github_url"),
-            "portfolio_url": profile_meta.get("portfolio_url"),
+            "portfolio_url": pick("portfolio_url", "portfolio_url"),
             "coding_profile_url": profile_meta.get("coding_profile_url"),
         },
         "activity": {
@@ -1435,6 +1463,7 @@ def recruiter_feed_with_track(
             enriched["_fairness_score"] = breakdown.get("fairlearn")
             enriched["_match_breakdown"] = breakdown
             scored_rows.append(enriched)
+        stamp_fairness_effectiveness(scored_rows)
         return scored_rows
 
     scored_rows = score_student_rows(eligible_students)

@@ -54,7 +54,7 @@ JobSwipe is a three-sided product:
 | Layer | Stack |
 |-------|-------|
 | **Backend / API** | FastAPI (Python), JWT auth |
-| **Database** | Supabase (Postgres) |
+| **Database** | Postgres (Supabase-hosted) via direct psycopg2 client |
 | **ML / pipeline** | pandas, scikit-learn, LightGBM, Fairlearn |
 | **AI assist** | Groq (LLM) for resume text generation |
 | **Frontend** | React 18, Vite, TypeScript, Zustand, TailwindCSS |
@@ -79,6 +79,7 @@ jobswipe/
 ├── frontend/               # React + TypeScript + Vite (Tailwind)
 │   └── src/                # components, pages (student/recruiter/admin), services, store
 ├── supabase/               # SQL schema + migrations
+├── start_dev.bat           # launch backend + frontend together (Windows)
 ├── run_backend.{sh,bat}    # local dev launchers
 └── run_frontend.{sh,bat}
 ```
@@ -87,7 +88,8 @@ jobswipe/
 
 ## Quick start
 
-**Prerequisites:** Node.js 18+, Python 3.9+, a Supabase project.
+**Prerequisites:** Node.js 18+, Python 3.9+, a Postgres database (e.g. a Supabase
+project — see `SUPABASE_SETUP.md` for schema setup and system dependencies).
 
 ### Backend
 ```bash
@@ -95,7 +97,7 @@ cd backend
 python -m venv venv
 # Windows: venv\Scripts\activate   |   macOS/Linux: source venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env        # fill in the values below
+cp .env.example .env        # fill in the values below (DATABASE_URL is required)
 uvicorn app.main:app --reload --port 8000
 ```
 API runs at `http://localhost:8000` (Swagger UI at `/docs`).
@@ -108,7 +110,8 @@ npm run dev
 ```
 App runs at `http://localhost:3000`.
 
-> Windows users can double-click `run_backend.bat` / `run_frontend.bat` instead.
+> Windows users can double-click `start_dev.bat` (launches backend + frontend
+> together) or `run_backend.bat` / `run_frontend.bat` individually.
 
 ---
 
@@ -121,7 +124,7 @@ files (with placeholders) are tracked.
 
 | Variable | Purpose |
 |----------|---------|
-| `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_KEY` | Supabase connection |
+| `DATABASE_URL` | Postgres connection string (`postgresql://user:pass@host:5432/db`; Supabase: Project Settings → Database) |
 | `JWT_SECRET` | Token signing secret (use a long random value) |
 | `JWT_TTL_HOURS` | Access-token lifetime (default 12) |
 | `CORS_ORIGINS` | Allowed browser origins (default `http://localhost:3000`) |

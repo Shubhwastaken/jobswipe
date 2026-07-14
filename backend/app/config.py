@@ -4,14 +4,21 @@ from dotenv import load_dotenv
 ENV_PATH = os.path.join(os.path.dirname(__file__), "..", ".env")
 load_dotenv(ENV_PATH)
 
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_ANON_KEY = os.getenv("SUPABASE_ANON_KEY")
-SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
+# Postgres connection string (postgresql://user:pass@host:5432/db).
+DATABASE_URL = os.getenv("DATABASE_URL", "")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 JWT_SECRET = os.getenv("JWT_SECRET", "supersecretkey")
 STUDENT_EMAIL_DOMAIN = os.getenv("STUDENT_EMAIL_DOMAIN", "srmist.edu.in").lower()
 ADMIN_EMAIL_DOMAIN = os.getenv("ADMIN_EMAIL_DOMAIN", "admin.com").lower()
 ADMIN_LOGIN_PASSWORD = os.getenv("ADMIN_LOGIN_PASSWORD", "Test123")
 TRIAL_LOGIN_PASSWORD = os.getenv("TRIAL_LOGIN_PASSWORD", "Test123")
+
+# Dev/demo backdoor: when enabled, TRIAL_LOGIN_PASSWORD logs a user in against any
+# student account (auto-provisioning a row for an unknown email). Convenient for demos,
+# dangerous in production — an unknown email + the shared password would mint accounts,
+# and the shared password would log in AS any existing student. Off by default so it
+# can never be enabled by accident; set ENABLE_TRIAL_LOGIN=true only for a demo host.
+ENABLE_TRIAL_LOGIN = os.getenv("ENABLE_TRIAL_LOGIN", "false").strip().lower() in {"1", "true", "yes"}
 
 # Access-token lifetime in hours. Tokens carry an `exp` claim so leaked
 # tokens stop working after this window (no refresh flow yet).
@@ -30,5 +37,14 @@ CORS_ORIGINS = [
 
 BACKEND_PORT = int(os.getenv("BACKEND_PORT", 8000))
 
-if not SUPABASE_URL or not SUPABASE_ANON_KEY or not SUPABASE_SERVICE_KEY:
-    raise RuntimeError("Supabase URL/keys are missing in .env")
+# Where the ML serving path reads student profiles from: "csv" (backend/data/*.csv)
+# or "db" (the students/skills/projects/certifications/internships/research_papers
+# tables). Only the three loader functions honour this; the matcher, ranker, feature
+# builder and Fairlearn artifact are unaware of it.
+#
+# Forced to "csv" under JOBSWIPE_DATASET=realworld — that is the paper's frozen
+# evaluation path and must never read the live DB. See profile_source.profile_source().
+PROFILE_SOURCE = os.getenv("PROFILE_SOURCE", "csv").strip().lower()
+
+if not DATABASE_URL:
+    raise RuntimeError("DATABASE_URL not set in .env")

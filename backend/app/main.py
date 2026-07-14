@@ -47,7 +47,7 @@ from app.services.bias_reduction import (
 from app.services.data_paths import data_dir, dataset_variant
 from app.services.artifact_registry import load_classifier_artifact, load_ranker_artifact
 from app.config import CORS_ORIGINS
-from app.routers import auth, interview, profile, resume, resume_builder, swipe
+from app.routers import auth, interview, profile, resume, resume_builder, swipe, upskill
 from app.routers.deps import require_admin
 
 # Try to load classifier model (may not be trained yet)
@@ -145,6 +145,7 @@ app.include_router(resume.router)
 app.include_router(resume_builder.router)
 app.include_router(swipe.router)
 app.include_router(interview.router)
+app.include_router(upskill.router)
 
 # ---------- Load data at startup ----------
 students_df = None

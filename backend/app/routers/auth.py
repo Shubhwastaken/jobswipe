@@ -8,7 +8,7 @@ from fastapi import APIRouter, HTTPException, status
 from jose import jwt
 from pydantic import BaseModel, EmailStr, validator
 
-from app.config import ADMIN_EMAIL_DOMAIN, ADMIN_LOGIN_PASSWORD, JWT_SECRET, JWT_TTL_HOURS, STUDENT_EMAIL_DOMAIN, TRIAL_LOGIN_PASSWORD
+from app.config import ADMIN_EMAIL_DOMAIN, ADMIN_LOGIN_PASSWORD, ENABLE_TRIAL_LOGIN, JWT_SECRET, JWT_TTL_HOURS, STUDENT_EMAIL_DOMAIN, TRIAL_LOGIN_PASSWORD
 from app.database import supabase
 
 router = APIRouter(prefix="/auth", tags=["auth"])
@@ -368,8 +368,8 @@ class AdminLoginRequest(BaseModel):
     password: str
 
 
-@router.post("/student/signup")
-@router.post("/signup")
+@router.post("/student/signup", status_code=status.HTTP_201_CREATED)
+@router.post("/signup", status_code=status.HTTP_201_CREATED)
 def student_signup(req: StudentSignupRequest):
     if not is_student_email(str(req.email)):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"Student email must end with @{STUDENT_EMAIL_DOMAIN}")
@@ -379,6 +379,8 @@ def student_signup(req: StudentSignupRequest):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Register number already exists")
 
     student_id = req.register_number
+    # supabase_insert already calls .execute(); a second .execute() here threw
+    # AttributeError on the returned APIResponse, 500-ing after the row had landed.
     supabase_insert("students", {
         "student_id": student_id,
         "register_number": req.register_number,
@@ -389,7 +391,7 @@ def student_signup(req: StudentSignupRequest):
         "department": "CSE",
         "cgpa": 0,
         "year_of_study": 3,
-    }).execute()
+    })
     return {"message": "Signup successful"}
 
 
@@ -408,19 +410,26 @@ def student_login(req: StudentLoginRequest):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Email is required")
 
     student = result.data if result and result.data else None
-    matched_student = canonical_student_match(email) if email else None
 
-    if matched_student and (not student or is_placeholder_student(student)):
-        student = matched_student
+    # A login always resolves to the account's own row. The previous
+    # canonical_student_match() substitution fuzzy-matched the email's local part
+    # against every student's name and silently logged the user in AS that student
+    # (e.g. arjun@ -> S0354 "Arjun Jadhav"), so profile edits, skill saves, resume
+    # uploads, interviews and swipes were all written against a stranger's row.
+
+    # The trial password only means anything while the demo backdoor is enabled.
+    # With ENABLE_TRIAL_LOGIN off it is treated as an ordinary (wrong) password: no
+    # auto-provisioning of unknown emails, and no bypass of an existing account's hash.
+    trial_ok = ENABLE_TRIAL_LOGIN and is_trial_password(req.password)
 
     if not student:
-        if req.email and is_trial_password(req.password):
+        if req.email and trial_ok:
             student = create_trial_student(str(req.email).lower(), req.password)
         else:
             raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Student not found")
 
     stored_hash = student.get("password_hash", "")
-    if not is_trial_password(req.password) and (not stored_hash or not verify_password(req.password, stored_hash)):
+    if not trial_ok and (not stored_hash or not verify_password(req.password, stored_hash)):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid password")
 
     student_id = student_id_from_record(student)
