@@ -1,5 +1,6 @@
 from pathlib import Path
 import re
+import sys
 
 import pandas as pd
 from dotenv import load_dotenv
@@ -12,11 +13,51 @@ SOURCE_DIR = Path(r"c:\Users\Asus\OneDrive\Desktop\TalentForge")
 
 load_dotenv(ENV_PATH)
 
+sys.path.insert(0, str(BASE_DIR))
+from app.services.skill_normalizer import normalize_skill  # noqa: E402
+
+# A spreadsheet "skills" cell is free text. Comma-splitting it produced sentence
+# fragments stored as skills ("Libraries : Numpy", "achieving 85% accuracy.",
+# "and exam platforms."). num_verified_skills is a champion feature_col, so junk
+# skills corrupt the model input. Reject anything that does not look like a skill
+# name before it is written; the matcher normalizes on read, but nothing cleaned
+# the write path.
+MAX_SKILL_LEN = 40
+MAX_SKILL_WORDS = 4
+
+
+def is_valid_skill(name: str) -> bool:
+    name = (name or "").strip()
+    if not name or len(name) > MAX_SKILL_LEN:
+        return False
+    if any(ch in name for ch in (":", "%", ".")):
+        return False
+    if len(name.split()) > MAX_SKILL_WORDS:
+        return False
+    return True
+
 
 def split_list(value):
     if pd.isna(value):
         return []
     return [item.strip() for item in str(value).split(",") if item.strip()]
+
+
+def clean_skill_names(value):
+    """Split a free-text skills cell, drop non-skill fragments, and normalize
+    what survives. Returns de-duplicated, normalized skill names."""
+    seen = set()
+    out = []
+    for raw in split_list(value):
+        if not is_valid_skill(raw):
+            continue
+        normalized = normalize_skill(raw)
+        key = normalized.lower()
+        if not normalized or key in seen:
+            continue
+        seen.add(key)
+        out.append(normalized)
+    return out
 
 
 def clean_text(value, fallback=""):
@@ -102,8 +143,14 @@ def build_student_records(path):
             "name": clean_text(row["student_name"], student_id),
             "email": f"{student_id.lower()}@srmist.edu.in",
             "gender": None,
-            "department": category.upper(),
-            "branch": category,
+            # `Category` is a skill tier (Advanced/Intermediate/Rookie), NOT a
+            # department. Writing it into students.department produced garbage
+            # departments that can never match a job's allowed_departments. This
+            # source carries no real department, so leave it unset rather than
+            # fabricate one. NOTE: students.department is currently NOT NULL — the
+            # column must be made nullable for this to persist (see Task 3 report).
+            "department": None,
+            "branch": None,
             "college_name": f"Preference: {job_type} | {role} | {location} | {size} | {expectation_label}",
             "cgpa": float(row["CGPA"]),
             "active_backlogs": 0,
@@ -126,7 +173,7 @@ def build_skill_records(path):
     for _, row in df.iterrows():
         sid = normalize_student_id(row["student_id"])
         proficiency = "Advanced" if clean_text(row["Category"]).lower() == "advanced" else "Intermediate"
-        for skill in split_list(row["skills"]):
+        for skill in clean_skill_names(row["skills"]):
             key = (sid, skill.lower())
             if key in seen:
                 continue
@@ -135,7 +182,9 @@ def build_skill_records(path):
                 "student_id": sid,
                 "skill_name": skill,
                 "proficiency": proficiency,
-                "verified": True,
+                # verified means the student passed a skill test. A bulk import cannot
+                # assert that; claiming it inflates num_verified_skills, a model feature.
+                "verified": False,
             })
     return records
 
