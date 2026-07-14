@@ -408,10 +408,12 @@ def student_login(req: StudentLoginRequest):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Email is required")
 
     student = result.data if result and result.data else None
-    matched_student = canonical_student_match(email) if email else None
 
-    if matched_student and (not student or is_placeholder_student(student)):
-        student = matched_student
+    # A login always resolves to the account's own row. The previous
+    # canonical_student_match() substitution fuzzy-matched the email's local part
+    # against every student's name and silently logged the user in AS that student
+    # (e.g. arjun@ -> S0354 "Arjun Jadhav"), so profile edits, skill saves, resume
+    # uploads, interviews and swipes were all written against a stranger's row.
 
     if not student:
         if req.email and is_trial_password(req.password):
