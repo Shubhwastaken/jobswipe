@@ -39,6 +39,9 @@ DATA_DIR = data_dir()
 # Fairlearn probability decides their order. Fairness never reorders across bands,
 # so it can nudge balance without overriding match quality.
 FAIRNESS_TIE_EPSILON = 0.05
+# Value of breakdown["fairness_effective"] for a single-pair breakdown, where a set of
+# one is trivially constant and False would misreport an ineffective fairness stage.
+FAIRNESS_EFFECTIVE_NOT_APPLICABLE = "not_applicable"
 REQUIRE_FAIRNESS_SCORING = os.getenv("JOBSWIPE_REQUIRE_FAIRNESS", "").lower() in {"1", "true", "yes"}
 _FAIRLEARN_ARTIFACT: Optional[Dict[str, Any]] = None
 _FAIRLEARN_LAST_ERROR: Optional[str] = None
@@ -615,6 +618,46 @@ def rerank_with_fairness(scored_rows: List[Dict[str, Any]], score_key: str, fair
     return [scored_rows[i] for i in order_frame["_idx"].tolist()]
 
 
+def stamp_fairness_effectiveness(
+    scored_rows: List[Dict[str, Any]],
+    fairness_key: str = "_fairness_score",
+    breakdown_key: str = "_match_breakdown",
+) -> None:
+    """Record whether the fairness stage could have changed this ranked set's order.
+
+    ``fairness_status`` only reports that the champion artifact loaded and returned a
+    number — it says nothing about whether that number did any work. The champion is an
+    ExponentiatedGradient whose output has few attainable levels and is 0.0 for roughly a
+    quarter of students on every job they are eligible for. When the score is constant
+    across a ranked set, every candidate ties, the near-tie reorder collapses to the
+    match-score order, and the fairness stage contributes nothing — yet the API still
+    reports "active".
+
+    So ``fairness_effective`` is stamped onto each row's breakdown, alongside (not
+    instead of) ``fairness_status``, which keeps switching on ``status == "active"``
+    working:
+      * ``True``             — the score varies, so the reorder could act.
+      * ``False``            — the score is constant (or absent) across the set; the
+                               fairness stage contributed nothing.
+      * ``"not_applicable"`` — fewer than two rows. Constancy is undefined for a set of
+                               one, so False would be misleading.
+
+    Visibility only: this mutates the breakdown dicts that already flow to the card
+    builder and never touches ordering, scores, or the rerank.
+    """
+    if len(scored_rows) < 2:
+        effective: Any = FAIRNESS_EFFECTIVE_NOT_APPLICABLE
+    else:
+        scores = [row.get(fairness_key) for row in scored_rows]
+        # A None anywhere means rerank_with_fairness skipped the reorder outright.
+        effective = None not in scores and len(set(scores)) > 1
+
+    for row in scored_rows:
+        breakdown = row.get(breakdown_key)
+        if isinstance(breakdown, dict):
+            breakdown["fairness_effective"] = effective
+
+
 def sort_jobs_for_student(student: Dict[str, Any], jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     reset_fairness_cycle()
     scored_jobs = []
@@ -626,6 +669,7 @@ def sort_jobs_for_student(student: Dict[str, Any], jobs: List[Dict[str, Any]]) -
             "_fairness_score": breakdown.get("fairlearn"),
             "_match_breakdown": breakdown,
         })
+    stamp_fairness_effectiveness(scored_jobs)
     # Stage 2: rank by match, fairness reorders near-ties (or no-op if unavailable).
     ranked = rerank_with_fairness(scored_jobs, "phi_score", "_fairness_score")
     # Outer constraint: jobs carrying a job_type stay ahead of those without.
@@ -970,6 +1014,10 @@ def build_rejection_insight(student: Dict[str, Any], job: Dict[str, Any], recrui
     scorecard = scorecard_for_job(student_input, job)
     enriched = enrich_student_row(student_input)
     overall_score, breakdown = blended_pair_score(enriched, job)
+    # A single pair is a set of one: constancy is undefined, so this is neither
+    # effective nor ineffective. Stamped explicitly so a missing field and an
+    # ineffective one stay distinguishable.
+    breakdown["fairness_effective"] = FAIRNESS_EFFECTIVE_NOT_APPLICABLE
     peer_comparison = compare_against_role_pool(student_input, job)
     improvement_plan = generate_improvement_plan(
         scorecard,
@@ -1415,6 +1463,7 @@ def recruiter_feed_with_track(
             enriched["_fairness_score"] = breakdown.get("fairlearn")
             enriched["_match_breakdown"] = breakdown
             scored_rows.append(enriched)
+        stamp_fairness_effectiveness(scored_rows)
         return scored_rows
 
     scored_rows = score_student_rows(eligible_students)
