@@ -807,8 +807,9 @@ def count_rows(table: str, filters: Dict[str, Any]) -> int:
 
 
 def student_skill_details(sid: str, profile_meta: Optional[Dict[str, Any]] = None) -> List[Dict[str, Any]]:
-    if not (profile_meta or {}).get("manual_skills_saved"):
-        return []
+    # Skills always come from the child `skills` table (the DB is the base layer).
+    # manual_skills_saved is retained as an informational flag (written by
+    # PUT /profile/{id}/skills) but no longer gates whether skills are shown.
     rows = execute_supabase(lambda: supabase.table("skills").select("skill_name, proficiency, verified").eq("student_id", sid)).data or []
     return [
         {
@@ -1149,36 +1150,62 @@ def swipe_fairness_status(user=Depends(get_current_user)):
     return fairness_artifact_status()
 
 
+def _profile_overlay(meta: Dict[str, Any], raw: Dict[str, Any]):
+    """Return a resolver where the `students` table is the base layer and
+    profile_meta holds student edits that override it.
+
+    Precedence per field: profile_meta value (if present and non-empty) ->
+    else the corresponding students column -> else None. Empty string /
+    whitespace is treated as absent, never as an override.
+    """
+    def pick(meta_key: str, db_col: str):
+        v = meta.get(meta_key)
+        if v is not None and not (isinstance(v, str) and v.strip() == ""):
+            return v
+        col = raw.get(db_col)
+        if isinstance(col, str) and col.strip() == "":
+            return None
+        return col
+    return pick
+
+
+def _int_opt(value: Any) -> Optional[int]:
+    """safe_int that preserves 0 and maps only None -> None (so a real 0 backlog
+    count is not dropped)."""
+    return safe_int(value) if value is not None else None
+
+
 @router.get("/student/profile")
 def student_profile(user=Depends(get_current_user)):
     sid = student_id(user)
     raw_student = load_current_student(sid, user)
     profile_meta = ((raw_student.get("resume_parse_confidence") or {}).get("profile_meta") or {})
+    pick = _profile_overlay(profile_meta, raw_student)
     personal_email, college_email = split_student_emails(raw_student, user)
     skills = student_skill_details(sid, profile_meta)
 
     return {
         "basic_info": {
-            "name": profile_meta.get("full_name") or user.get("full_name") or user.get("name") or sid,
+            "name": pick("full_name", "full_name") or user.get("full_name") or user.get("name") or sid,
             "personal_email": personal_email,
             "college_email": college_email,
             "phone_number": profile_meta.get("phone_number"),
-            "college_roll_number": profile_meta.get("register_number") or sid,
+            "college_roll_number": pick("register_number", "register_number") or sid,
             "student_id": sid,
-            "department": profile_meta.get("department") or profile_meta.get("branch"),
-            "current_year": safe_int(profile_meta.get("year_of_study")) or None,
-            "graduation_year": safe_int(profile_meta.get("batch_year")) or None,
+            "department": pick("department", "department") or pick("branch", "branch"),
+            "current_year": safe_int(pick("year_of_study", "year_of_study")) or None,
+            "graduation_year": safe_int(pick("batch_year", "batch_year")) or None,
         },
         "education": {
-            "class_10_marks": safe_float(profile_meta.get("class_10_marks")) or None,
-            "class_10_board": profile_meta.get("class_10_board"),
-            "class_12_marks": safe_float(profile_meta.get("class_12_marks")) or None,
-            "class_12_board": profile_meta.get("class_12_board"),
-            "college_name": profile_meta.get("college_name"),
+            "class_10_marks": safe_float(pick("class_10_marks", "10th_marks")) or None,
+            "class_10_board": pick("class_10_board", "10th_board"),
+            "class_12_marks": safe_float(pick("class_12_marks", "12th_marks")) or None,
+            "class_12_board": pick("class_12_board", "12th_board"),
+            "college_name": pick("college_name", "college_name"),
             "degree": profile_meta.get("degree"),
-            "cgpa": safe_float(profile_meta.get("cgpa")) or None,
-            "active_backlogs": safe_int(profile_meta.get("active_backlogs")) if "active_backlogs" in profile_meta else None,
-            "backlog_history": safe_int(profile_meta.get("backlog_history")) if "backlog_history" in profile_meta else None,
+            "cgpa": safe_float(pick("cgpa", "cgpa")) or None,
+            "active_backlogs": _int_opt(pick("active_backlogs", "active_backlogs")),
+            "backlog_history": _int_opt(pick("backlog_history", "backlogs_history")),
         },
         "skills": skills,
         "preferences": {
@@ -1192,7 +1219,7 @@ def student_profile(user=Depends(get_current_user)):
             "resume_url": raw_student.get("resume_url"),
             "linkedin_url": profile_meta.get("linkedin_url"),
             "github_url": profile_meta.get("github_url"),
-            "portfolio_url": profile_meta.get("portfolio_url"),
+            "portfolio_url": pick("portfolio_url", "portfolio_url"),
             "coding_profile_url": profile_meta.get("coding_profile_url"),
         },
         "activity": {
