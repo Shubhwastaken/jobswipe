@@ -112,6 +112,15 @@ def is_canonical_job(job: Dict[str, Any]) -> bool:
 
 @lru_cache(maxsize=1)
 def load_profiles() -> Dict[str, Dict[str, Any]]:
+    # Stage 10c: same shape either way. Under PROFILE_SOURCE=db the rows come from
+    # the students/skills/projects/certifications/internships tables instead of the
+    # CSVs, so students who signed up after the dataset was frozen are visible to
+    # the matcher. Forced back to CSV under JOBSWIPE_DATASET=realworld.
+    from app.services.profile_source import profiles_from_db, use_db_profiles
+
+    if use_db_profiles():
+        return profiles_from_db()
+
     students = _read_csv("students.csv")
     skills = _read_csv("skills.csv")
     projects = _read_csv("projects.csv")

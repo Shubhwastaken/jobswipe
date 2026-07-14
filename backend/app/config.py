@@ -30,5 +30,14 @@ CORS_ORIGINS = [
 
 BACKEND_PORT = int(os.getenv("BACKEND_PORT", 8000))
 
+# Where the ML serving path reads student profiles from: "csv" (backend/data/*.csv)
+# or "db" (the students/skills/projects/certifications/internships/research_papers
+# tables). Only the three loader functions honour this; the matcher, ranker, feature
+# builder and Fairlearn artifact are unaware of it.
+#
+# Forced to "csv" under JOBSWIPE_DATASET=realworld — that is the paper's frozen
+# evaluation path and must never read the live DB. See profile_source.profile_source().
+PROFILE_SOURCE = os.getenv("PROFILE_SOURCE", "csv").strip().lower()
+
 if not DATABASE_URL:
     raise RuntimeError("DATABASE_URL not set in .env")

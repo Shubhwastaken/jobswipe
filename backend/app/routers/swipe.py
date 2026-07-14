@@ -19,6 +19,11 @@ from app.services.data_paths import data_dir, dataset_variant
 from app.services.bias_reduction import load_variant_artifact, score_variant_probabilities
 from app.services.artifact_registry import champion_bundle_name
 from app.services.cache_control import clear_profile_dependent_caches
+from app.services.profile_source import (
+    student_csv_rows_from_db,
+    student_feature_rows_from_db,
+    use_db_profiles,
+)
 from app.services.talentforge_matcher import all_student_rows, enrich_student_row, is_canonical_job, score_student_for_job
 from src.explainability.criteria_checker import check_criteria
 from src.explainability.improvement_planner import generate_improvement_plan
@@ -260,6 +265,8 @@ def canonicalize_job_record(job: Dict[str, Any]) -> Dict[str, Any]:
 
 @lru_cache(maxsize=1)
 def load_student_csv_rows() -> Dict[str, Dict[str, Any]]:
+    if use_db_profiles():
+        return student_csv_rows_from_db()
     path = DATA_DIR / "students.csv"
     if not path.exists():
         return {}
@@ -269,6 +276,11 @@ def load_student_csv_rows() -> Dict[str, Dict[str, Any]]:
 
 @lru_cache(maxsize=1)
 def load_student_feature_rows() -> Dict[str, Dict[str, Any]]:
+    # student_features.csv is a precomputed aggregate, not a table. The DB path
+    # therefore recomputes it through the same build_student_features() that wrote
+    # the CSV, rather than reading a stored copy — see profile_source.
+    if use_db_profiles():
+        return student_feature_rows_from_db()
     path = DATA_DIR / "student_features.csv"
     if not path.exists():
         return {}
