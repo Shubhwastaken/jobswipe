@@ -13,6 +13,13 @@ ADMIN_EMAIL_DOMAIN = os.getenv("ADMIN_EMAIL_DOMAIN", "admin.com").lower()
 ADMIN_LOGIN_PASSWORD = os.getenv("ADMIN_LOGIN_PASSWORD", "Test123")
 TRIAL_LOGIN_PASSWORD = os.getenv("TRIAL_LOGIN_PASSWORD", "Test123")
 
+# Dev/demo backdoor: when enabled, TRIAL_LOGIN_PASSWORD logs a user in against any
+# student account (auto-provisioning a row for an unknown email). Convenient for demos,
+# dangerous in production — an unknown email + the shared password would mint accounts,
+# and the shared password would log in AS any existing student. Off by default so it
+# can never be enabled by accident; set ENABLE_TRIAL_LOGIN=true only for a demo host.
+ENABLE_TRIAL_LOGIN = os.getenv("ENABLE_TRIAL_LOGIN", "false").strip().lower() in {"1", "true", "yes"}
+
 # Access-token lifetime in hours. Tokens carry an `exp` claim so leaked
 # tokens stop working after this window (no refresh flow yet).
 JWT_TTL_HOURS = int(os.getenv("JWT_TTL_HOURS", "12"))
