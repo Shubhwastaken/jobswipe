@@ -1,6 +1,5 @@
 import logging
 import os
-import hashlib
 import re
 import threading
 import time
@@ -241,61 +240,6 @@ def merge_unique_texts(*sources: Any, limit: int = 8) -> List[str]:
             if len(merged) >= limit:
                 return merged
     return merged
-
-
-def name_tokens(value: Any) -> List[str]:
-    return [token for token in re.split(r"[^a-z0-9]+", str(value or "").lower()) if token]
-
-
-def is_placeholder_student_record(student: Dict[str, Any]) -> bool:
-    if not student:
-        return True
-    cgpa = safe_float(student.get("cgpa"))
-    year_of_study = safe_int(student.get("year_of_study"))
-    skills = as_list(student.get("skills")) or as_list(student.get("skill_list"))
-    projects = student.get("projects") or []
-    certifications = student.get("certifications") or []
-    internships = student.get("internships") or []
-    return (
-        cgpa <= 0
-        and year_of_study in {0, 3}
-        and not skills
-        and not projects
-        and not certifications
-        and not internships
-    )
-
-
-def select_seed_student_profile(user: Dict[str, Any], sid: str) -> Dict[str, Any]:
-    rows = all_student_rows()
-    if not rows:
-        return {}
-
-    search_terms = {
-        *name_tokens(sid),
-        *name_tokens(user.get("full_name") or user.get("name") or ""),
-        *name_tokens(user.get("email") or ""),
-    }
-
-    best_row: Dict[str, Any] = {}
-    best_score = 0
-    for row in rows:
-        row_terms = {
-            *name_tokens(row.get("student_id")),
-            *name_tokens(row.get("full_name")),
-        }
-        score = len(search_terms & row_terms)
-        if score > best_score:
-            best_score = score
-            best_row = row
-
-    if best_score > 0:
-        return best_row
-
-    ordered_rows = sorted(rows, key=lambda item: str(item.get("student_id") or ""))
-    seed_key = str(user.get("email") or sid or "trial-student").lower().encode()
-    seed_index = int(hashlib.sha256(seed_key).hexdigest(), 16) % len(ordered_rows)
-    return ordered_rows[seed_index]
 
 
 def canonicalize_job_record(job: Dict[str, Any]) -> Dict[str, Any]:
@@ -692,6 +636,15 @@ def ensure_pair_passes_hard_criteria(student: Dict[str, Any], job: Dict[str, Any
 
 
 def load_current_student(sid: str, user: Dict[str, Any]) -> Dict[str, Any]:
+    """Load the student's OWN row: their canonical dataset row (if any) as the base,
+    overlaid with their students-table row.
+
+    A student with no data returns empty fields. It must never be topped up from
+    another student's profile - the previous seed substitution merged a
+    name-matched (or, failing that, a SHA256-of-email-selected) stranger's
+    _talentforge_profile into placeholder accounts, so the profile display and
+    match scoring ran on borrowed data.
+    """
     merged = {}
     for row in all_student_rows():
         if student_id(row) == sid:
@@ -700,18 +653,6 @@ def load_current_student(sid: str, user: Dict[str, Any]) -> Dict[str, Any]:
     result = execute_supabase(lambda: supabase.table("students").select("*").eq("student_id", sid).maybe_single())
     if result and result.data:
         merged = {**merged, **result.data}
-    elif user.get("id") and user.get("id") != sid:
-        fallback = execute_supabase(lambda: supabase.table("students").select("*").eq("id", user["id"]).maybe_single())
-        if fallback and fallback.data:
-            merged = {**merged, **fallback.data}
-    if not merged or is_placeholder_student_record(merged):
-        seed_profile = select_seed_student_profile({**merged, **user}, sid)
-        if seed_profile:
-            merged = {
-                **seed_profile,
-                **merged,
-                "_talentforge_profile": seed_profile.get("_talentforge_profile") or {},
-            }
     return {**merged, **user, "student_id": sid}
 
 
