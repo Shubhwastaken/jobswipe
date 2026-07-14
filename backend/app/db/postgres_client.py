@@ -337,8 +337,8 @@ class PostgresClient:
 
 
 def get_postgres_client() -> PostgresClient:
-    """Return a PostgresClient from DATABASE_URL (SUPABASE_URL kept as fallback)."""
-    dsn = os.getenv("DATABASE_URL") or os.getenv("SUPABASE_URL", "")
+    """Return a PostgresClient from DATABASE_URL."""
+    dsn = os.getenv("DATABASE_URL", "")
     if not dsn:
         raise RuntimeError("DATABASE_URL not set in .env")
     if not dsn.startswith(("postgresql://", "postgres://")):

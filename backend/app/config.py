@@ -4,9 +4,8 @@ from dotenv import load_dotenv
 ENV_PATH = os.path.join(os.path.dirname(__file__), "..", ".env")
 load_dotenv(ENV_PATH)
 
-# Postgres connection string (postgresql://user:pass@host:5432/db). The old
-# SUPABASE_URL name is kept as a fallback for existing .env files.
-DATABASE_URL = os.getenv("DATABASE_URL") or os.getenv("SUPABASE_URL", "")
+# Postgres connection string (postgresql://user:pass@host:5432/db).
+DATABASE_URL = os.getenv("DATABASE_URL", "")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 JWT_SECRET = os.getenv("JWT_SECRET", "supersecretkey")
 STUDENT_EMAIL_DOMAIN = os.getenv("STUDENT_EMAIL_DOMAIN", "srmist.edu.in").lower()
