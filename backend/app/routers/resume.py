@@ -143,8 +143,8 @@ async def upload_resume(student_id: str, file: UploadFile = File(...), payload=D
     update_result = _safe_execute(
         supabase.table("students").update(update_payload).eq("student_id", student_id)
     )
-    if update_result is not None and not update_result.data:
-        _safe_execute(supabase.table("students").update(update_payload).eq("id", student_id))
+    # (removed dead .eq("id", ...) update fallback: students.id is NULL for every
+    #  row, so it never matched. One identity column: student_id.)
 
     # Populate the profile from the parsed résumé. The call site was dropped in
     # d0110b7, so upload parsed the PDF and then discarded the result — the product

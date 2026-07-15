@@ -186,9 +186,9 @@ def test_all_routers_are_mounted_or_declared_unmounted():
 
     app_paths = {r.path for r in app.routes if isinstance(r, APIRoute)}
 
-    # applications.py is dead code (Phase 5 removes it); until then it is knowingly
-    # unmounted. Any OTHER unmounted router is a bug.
-    intentionally_unmounted = {"applications"}
+    # No router may be defined-but-unmounted. (applications.py was deleted in
+    # Phase 5; if a future unmounted-on-purpose router appears, list it here.)
+    intentionally_unmounted: set = set()
 
     routers_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "app", "routers")
     offenders = []
