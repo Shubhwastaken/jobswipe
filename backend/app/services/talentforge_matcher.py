@@ -285,8 +285,20 @@ def enrich_student_row(student: Dict[str, Any]) -> Dict[str, Any]:
     enriched = {**student}
     enriched.setdefault("student_id", sid)
     enriched["full_name"] = enriched.get("full_name") or profile.get("full_name")
-    enriched["department"] = enriched.get("department") or profile.get("department")
-    enriched["cgpa"] = enriched.get("cgpa") or profile.get("cgpa")
+    # cgpa / department are hard-eligibility inputs, so the `x or y` idiom broke them
+    # two ways: `None or nan` = nan — a DB NULL (which must read as 'not on file' ->
+    # incomplete) got overwritten by the profile's nan and read as a hard failure;
+    # and `0.0 or y` = y — a real 0.0 was wrongly treated as missing. Keep the base
+    # value whenever the key is present (None stays None, 0.0 stays 0.0); fall back to
+    # the profile only when the field is genuinely absent AND the profile value is
+    # real. load_profiles' NULL->nan convention is untouched — we only stop
+    # eligibility from misreading it.
+    if "cgpa" not in enriched:
+        pv = profile.get("cgpa")
+        enriched["cgpa"] = pv if isinstance(pv, (int, float)) and not (isinstance(pv, float) and math.isnan(pv)) else None
+    if "department" not in enriched:
+        pv = profile.get("department")
+        enriched["department"] = pv if (pv is not None and str(pv).strip() != "") else None
     enriched["skills"] = profile.get("skills") or enriched.get("skills")
     enriched["_talentforge_profile"] = profile
     return enriched
