@@ -200,7 +200,7 @@ def _fetch_data(student_id: str) -> Dict[str, Any]:
     if not student:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Student profile not found.")
 
-    skills = execute_supabase(lambda: supabase.table("skills").select("skill_name, proficiency, verified").eq("student_id", student_id)).data or []
+    skills = execute_supabase(lambda: supabase.table("skills").select("skill_name, proficiency, verified, verified_by").eq("student_id", student_id)).data or []
     projects = execute_supabase(lambda: supabase.table("projects").select("project_title, domain, tech_stack, complexity, has_deployment, has_github, duration_weeks").eq("student_id", student_id).limit(6)).data or []
     certs = execute_supabase(lambda: supabase.table("certifications").select("cert_name, issuing_body, tier, domain, year_obtained").eq("student_id", student_id).limit(6)).data or []
     internships = execute_supabase(lambda: supabase.table("internships").select("company_name, role, duration_months, domain, stipend, mode").eq("student_id", student_id).limit(4)).data or []
@@ -232,9 +232,12 @@ def _fetch_job(job_id: str) -> Optional[Dict[str, Any]]:
 def _fmt_skill(x: Dict) -> str:
     name = x.get("skill_name", "")
     prof = x.get("proficiency")
-    verified = x.get("verified")
+    # The ✓ means "verified" to a recruiter, so it must reflect a passed skill test,
+    # not a seed/import flag. Read verified_by == 'skill_test', not the raw verified
+    # column (which is asserted by seed/import scripts). No skill-test feature exists
+    # yet, so this is honestly empty today — zero is the correct count.
     tag = ""
-    if verified:
+    if x.get("verified_by") == "skill_test":
         tag = " ✓"
     elif prof:
         tag = f"({prof})"
