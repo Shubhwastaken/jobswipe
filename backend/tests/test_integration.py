@@ -110,13 +110,6 @@ def test_resume_builder_prompt_uses_real_profile(client):
 
 @requires_db
 @pytest.mark.skipif(not os.getenv("GROQ_API_KEY"), reason="GROQ_API_KEY not set; interview creation needs the LLM")
-@pytest.mark.xfail(
-    strict=True,
-    reason="BUG (found by this test, out of Phase 0 scope): interview.py:171 calls "
-    "QueryBuilder.gte(), which the postgres_client shim does not implement, so "
-    "POST /interview/sessions 500s before the LLM is ever reached. Remove this "
-    "xfail when .gte is added to the shim.",
-)
 def test_interview_session_creates_with_questions(client, auth_headers):
     resp = client.post(
         "/interview/sessions",
