@@ -545,7 +545,62 @@ def fairlearn_score_for_pair(student: Dict[str, Any], job: Dict[str, Any]) -> Di
         }
 
 
-def blended_pair_score(student: Dict[str, Any], job: Dict[str, Any], interested_rank: Optional[Dict[str, int]] = None) -> Tuple[float, Dict[str, Any]]:
+def batch_fairlearn_scores(student: Dict[str, Any], jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Score every (student, job) pair through the champion in ONE scaler.transform
+    and ONE model call, instead of a fresh one-row DataFrame + transform + predict
+    per pair (swipe.py's per-pair path did 56 round-trips for a 56-job feed).
+
+    Returns a list parallel to `jobs`, each element the same dict
+    fairlearn_score_for_pair returns. Bit-identical by construction: build_student_model_input
+    is deterministic, and scaler.transform / _pmf_predict are row-wise, so batching
+    changes only the number of calls, not any value.
+    """
+    global _FAIRLEARN_LOAD_FAILED_THIS_CYCLE
+    n = len(jobs)
+    if _FAIRLEARN_LOAD_FAILED_THIS_CYCLE:
+        return [{"score": None, "source": "unavailable", "fallback_reason": "artifact_load_failed",
+                 "error": _FAIRLEARN_LAST_ERROR} for _ in range(n)]
+    artifact = load_fairlearn_artifact()
+    if not artifact:
+        _FAIRLEARN_LOAD_FAILED_THIS_CYCLE = True
+        return [{"score": None, "source": "unavailable", "fallback_reason": "artifact_load_failed",
+                 "error": _FAIRLEARN_LAST_ERROR} for _ in range(n)]
+
+    student_input = build_student_model_input(student)  # once per student, not per pair
+    results: List[Optional[Dict[str, Any]]] = [None] * n
+    rows: List[Dict[str, Any]] = []
+    ok_idx: List[int] = []
+    for i, job in enumerate(jobs):
+        try:
+            rows.append(build_inference_features(student_input, normalize_job_for_rules_and_model(job)))
+            ok_idx.append(i)
+        except Exception:
+            logger.exception("Fairlearn feature build failed for a pair; TalentForge-only for it")
+            results[i] = {"score": None, "source": "unavailable", "fallback_reason": "pair_scoring_failed"}
+
+    if rows:
+        try:
+            frame = pd.DataFrame(rows).reindex(columns=artifact["feature_cols"], fill_value=0)
+            probabilities = score_variant_probabilities(artifact["model"], artifact["scaler"].transform(frame.fillna(0)))
+            for k, i in enumerate(ok_idx):
+                results[i] = {
+                    "score": float(probabilities[k]),
+                    "source": "fairlearn_champion" if _FAIRLEARN_IS_CHAMPION else "fairlearn_fallback",
+                    "fallback_reason": None,
+                    "is_champion": _FAIRLEARN_IS_CHAMPION,
+                    "loaded_artifact": _FAIRLEARN_LOADED_NAME,
+                }
+        except Exception as exc:
+            logger.exception("Batched Fairlearn scoring failed; TalentForge-only for the feed")
+            for i in ok_idx:
+                results[i] = {"score": None, "source": "unavailable",
+                              "fallback_reason": "pair_scoring_failed", "error": str(exc)}
+    return [r if r is not None else {"score": None, "source": "unavailable",
+            "fallback_reason": "pair_scoring_failed"} for r in results]
+
+
+def blended_pair_score(student: Dict[str, Any], job: Dict[str, Any], interested_rank: Optional[Dict[str, int]] = None,
+                       fairlearn_result: Optional[Dict[str, Any]] = None) -> Tuple[float, Dict[str, Any]]:
     """Stage 1 of Algorithm 1: return the TalentForge *match* score as the primary
     ranking score. The Fairlearn probability is kept strictly separate (carried in
     the breakdown, never averaged into the match score) for the pool-level fairness
@@ -559,7 +614,10 @@ def blended_pair_score(student: Dict[str, Any], job: Dict[str, Any], interested_
       - ``fairness_note``    : human-readable note, present only when not fully active
     """
     match_score, breakdown = score_student_for_job(student, job, interested_rank or {})
-    fairlearn_result = fairlearn_score_for_pair(student, job)
+    # Use a precomputed (batched) fairness result when the caller supplies one; else
+    # fall back to the per-pair call, so callers outside the feed are unchanged.
+    if fairlearn_result is None:
+        fairlearn_result = fairlearn_score_for_pair(student, job)
     fairlearn_score = fairlearn_result.get("score")
 
     # Match score is the primary ranking score in every case — no blending.
@@ -691,9 +749,10 @@ def stamp_fairness_effectiveness(
 
 def sort_jobs_for_student(student: Dict[str, Any], jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     reset_fairness_cycle()
+    fair_results = batch_fairlearn_scores(student, jobs)  # one transform + one model call for the whole feed
     scored_jobs = []
-    for job in jobs:
-        score, breakdown = blended_pair_score(student, job)
+    for job, fair in zip(jobs, fair_results):
+        score, breakdown = blended_pair_score(student, job, fairlearn_result=fair)
         scored_jobs.append({
             **job,
             "phi_score": score,
