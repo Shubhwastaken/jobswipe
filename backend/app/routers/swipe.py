@@ -25,7 +25,7 @@ from app.services.profile_source import (
     use_db_profiles,
 )
 from app.services.talentforge_matcher import all_student_rows, enrich_student_row, is_canonical_job, score_student_for_job
-from src.explainability.criteria_checker import check_criteria
+from src.explainability.criteria_checker import check_criteria, _is_missing
 from src.explainability.improvement_planner import generate_improvement_plan
 from src.model.inference import build_inference_features
 
@@ -377,10 +377,20 @@ def build_student_model_input(student: Dict[str, Any]) -> Dict[str, Any]:
     merged = {**base_row, **feature_row, **profile, **student}
     merged["student_id"] = sid
     merged["full_name"] = first_present(merged, "full_name", "name", default=sid)
-    merged["department"] = normalize_department(first_present(merged, "department", "branch", default=""))
-    merged["cgpa"] = safe_float(merged.get("cgpa"))
-    merged["10th_marks"] = safe_float(first_present(merged, "10th_marks", "tenth_marks"))
-    merged["12th_marks"] = safe_float(first_present(merged, "12th_marks", "twelfth_marks"))
+    # Eligibility path (1b): keep a missing hard-check input as None so check_criteria
+    # can flag it 'incomplete' instead of coercing it to 0 and reporting a false
+    # failure. The *_normalized feature-vector fields below are computed independently
+    # and stay coerced exactly as before — build_inference_features reads only the
+    # normalized keys, never the raw cgpa/marks/department. For a complete profile the
+    # missing branch never fires, so the model input is byte-identical.
+    _raw_dept = first_present(merged, "department", "branch", default=None)
+    merged["department"] = None if _is_missing(_raw_dept) else normalize_department(_raw_dept)
+    _raw_cgpa = merged.get("cgpa")
+    merged["cgpa"] = None if _is_missing(_raw_cgpa) else safe_float(_raw_cgpa)
+    _raw_10 = first_present(merged, "10th_marks", "tenth_marks", default=None)
+    merged["10th_marks"] = None if _is_missing(_raw_10) else safe_float(_raw_10)
+    _raw_12 = first_present(merged, "12th_marks", "twelfth_marks", default=None)
+    merged["12th_marks"] = None if _is_missing(_raw_12) else safe_float(_raw_12)
     merged["cgpa_normalized"] = safe_float(merged.get("cgpa_normalized"), merged["cgpa"] / 10 if merged["cgpa"] else 0.0)
     merged["10th_normalized"] = safe_float(merged.get("10th_normalized"), merged["10th_marks"] / 100 if merged["10th_marks"] else 0.0)
     merged["12th_normalized"] = safe_float(merged.get("12th_normalized"), merged["12th_marks"] / 100 if merged["12th_marks"] else 0.0)
@@ -425,9 +435,17 @@ def build_student_model_input(student: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def refresh_scorecard_summary(scorecard: Dict[str, Any]) -> Dict[str, Any]:
+    # Mirror check_criteria's _summary (1b): unknown hard checks are 'incomplete',
+    # not 'hard_failures'; add status + incomplete_fields. Kept in lockstep so a
+    # scorecard recomputed here (department override below) matches one straight
+    # from check_criteria.
     hard_failures = [
         key for key, value in scorecard.items()
-        if key != "_summary" and value.get("is_hard") and not value.get("passed")
+        if key != "_summary" and value.get("is_hard") and not value.get("passed") and not value.get("unknown")
+    ]
+    incomplete_fields = [
+        key for key, value in scorecard.items()
+        if key != "_summary" and value.get("is_hard") and value.get("unknown")
     ]
     soft_weaknesses = [
         key for key, value in scorecard.items()
@@ -436,12 +454,21 @@ def refresh_scorecard_summary(scorecard: Dict[str, Any]) -> Dict[str, Any]:
     hard_checks = [value for key, value in scorecard.items() if key != "_summary" and value.get("is_hard")]
     soft_checks = [value for key, value in scorecard.items() if key != "_summary" and not value.get("is_hard")]
     soft_score = sum(1 for value in soft_checks if value.get("passed", True)) / len(soft_checks) if soft_checks else 1.0
+    hard_pass = all(value.get("passed") for value in hard_checks)
+    if hard_failures:
+        status = "ineligible"
+    elif incomplete_fields:
+        status = "incomplete"
+    else:
+        status = "eligible"
     scorecard["_summary"] = {
-        "hard_pass": all(value.get("passed") for value in hard_checks),
+        "hard_pass": hard_pass,
         "soft_score": soft_score,
-        "eligible": all(value.get("passed") for value in hard_checks) and soft_score >= 0.4,
+        "eligible": hard_pass and soft_score >= 0.4,
         "hard_failures": hard_failures,
         "soft_weaknesses": soft_weaknesses,
+        "status": status,
+        "incomplete_fields": incomplete_fields,
     }
     return scorecard
 
@@ -453,10 +480,14 @@ def passes_hard_criteria(student: Dict[str, Any], job: Dict[str, Any]) -> bool:
 
     if not as_list(job.get("allowed_departments") or job.get("allowed_branches")):
         scorecard["department_check"]["passed"] = True
+        scorecard["department_check"]["unknown"] = False  # no dept requirement → a missing dept is not 'incomplete'
         scorecard["department_check"]["required_value"] = "Any"
         scorecard["department_check"]["message"] = "No department restriction for this job"
         refresh_scorecard_summary(scorecard)
 
+    # Bool gate: incomplete => hard_pass False => returns False, exactly as a real
+    # failure does. The incomplete-vs-failed distinction is not lost — it lives in
+    # _summary.status / .incomplete_fields, surfaced by scorecard_for_job.
     return bool(scorecard.get("_summary", {}).get("hard_pass"))
 
 
@@ -861,6 +892,7 @@ def scorecard_for_job(student: Dict[str, Any], job: Dict[str, Any]) -> Dict[str,
     scorecard = check_criteria(student_input, normalized_job, student_skills=student_input.get("skill_list", []))
     if not as_list(job.get("allowed_departments") or job.get("allowed_branches")):
         scorecard["department_check"]["passed"] = True
+        scorecard["department_check"]["unknown"] = False  # no dept requirement → a missing dept is not 'incomplete'
         scorecard["department_check"]["required_value"] = "Any"
         scorecard["department_check"]["message"] = "No department restriction for this job"
     return refresh_scorecard_summary(scorecard)

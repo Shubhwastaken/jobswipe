@@ -24,49 +24,68 @@ def tier_meets_requirement(student_tier_value, required_tier_str, tier_order):
     return student_tier_value >= req_idx
 
 
+def _is_missing(value):
+    """A hard-check input is *missing* (not on file) when it is None, the empty
+    string, or an absent key — as opposed to a known value that fails a threshold.
+
+    Deliberately NOT pandas NaN: the model/admin path (main.py's eligibility
+    endpoints, src/model/inference.run_inference) builds its student dict from
+    DataFrame rows, where an absent value arrives as NaN. Those callers must stay
+    byte-identical — NaN is coerced and fails a threshold, exactly as before. Only
+    the swipe eligibility path passes raw None (build_student_model_input no longer
+    zeroes the four hard-check fields), so only it can produce an 'incomplete'
+    state. This is the containment boundary, not an oversight.
+    """
+    return value is None or (isinstance(value, str) and value.strip() == "")
+
+
+def _numeric_hard_check(raw_value, minimum, label):
+    """Build a numeric hard-check entry (cgpa / 10th / 12th).
+
+    Missing input is only 'unknown' (=> incomplete) when the minimum is BINDING
+    (> 0). Against a zero threshold a missing value is trivially satisfied, so it
+    passes — a student with no marks on file must not be blocked from jobs that do
+    not require marks. This mirrors the department 'no restriction' handling and is
+    why a new student still sees the jobs with no academic bar.
+    """
+    if _is_missing(raw_value):
+        if minimum > 0:
+            return {"passed": False, "unknown": True, "student_value": None,
+                    "required_value": minimum, "is_hard": True,
+                    "message": f"{label} not on file; minimum {minimum} cannot be verified"}
+        return {"passed": True, "unknown": False, "student_value": None,
+                "required_value": minimum, "is_hard": True,
+                "message": f"No {label} requirement for this job"}
+    value = float(raw_value)
+    return {"passed": value >= minimum, "unknown": False, "student_value": value,
+            "required_value": minimum, "is_hard": True,
+            "message": f"{label} {value} {'meets' if value >= minimum else 'does not meet'} minimum {minimum}"}
+
+
 def check_criteria(student_data, company_data, student_skills=None):
     """
     Run all criteria checks for one student–company pair.
     Returns a detailed scorecard dict with pass/fail for each criterion.
+
+    Each hard check carries an ``unknown`` flag: True when the student's input is
+    missing (see _is_missing). An unknown hard check has ``passed=False`` so every
+    existing hard_pass reader gates identically (incomplete => hard_pass=False),
+    but it is reported in ``_summary.incomplete_fields`` rather than
+    ``_summary.hard_failures`` — a profile to complete, not a criterion failed.
     """
     scorecard = {}
 
     # --- HARD CHECKS (any failure = immediate disqualification) ---
 
-    # CGPA
-    cgpa = float(student_data.get("cgpa", 0))
-    min_cgpa = float(company_data.get("min_cgpa", 0))
-    scorecard["cgpa_check"] = {
-        "passed": cgpa >= min_cgpa,
-        "student_value": cgpa,
-        "required_value": min_cgpa,
-        "is_hard": True,
-        "message": f"CGPA {cgpa} {'meets' if cgpa >= min_cgpa else 'does not meet'} minimum {min_cgpa}"
-    }
+    scorecard["cgpa_check"] = _numeric_hard_check(
+        student_data.get("cgpa"), float(company_data.get("min_cgpa", 0)), "CGPA")
+    scorecard["10th_check"] = _numeric_hard_check(
+        student_data.get("10th_marks"), float(company_data.get("min_10th", 0)), "10th marks")
+    scorecard["12th_check"] = _numeric_hard_check(
+        student_data.get("12th_marks"), float(company_data.get("min_12th", 0)), "12th marks")
 
-    # 10th marks
-    marks_10 = float(student_data.get("10th_marks", 0))
-    min_10 = float(company_data.get("min_10th", 0))
-    scorecard["10th_check"] = {
-        "passed": marks_10 >= min_10,
-        "student_value": marks_10,
-        "required_value": min_10,
-        "is_hard": True,
-        "message": f"10th marks {marks_10} {'meets' if marks_10 >= min_10 else 'does not meet'} minimum {min_10}"
-    }
-
-    # 12th marks
-    marks_12 = float(student_data.get("12th_marks", 0))
-    min_12 = float(company_data.get("min_12th", 0))
-    scorecard["12th_check"] = {
-        "passed": marks_12 >= min_12,
-        "student_value": marks_12,
-        "required_value": min_12,
-        "is_hard": True,
-        "message": f"12th marks {marks_12} {'meets' if marks_12 >= min_12 else 'does not meet'} minimum {min_12}"
-    }
-
-    # Active backlogs
+    # Active backlogs (unchanged: a missing value coerces to 0 and always passes,
+    # so it is never a disqualifier and gets no unknown state).
     active = int(student_data.get("active_backlogs", 0))
     max_backlogs = int(company_data.get("max_active_backlogs", 0))
     scorecard["backlog_check"] = {
@@ -78,16 +97,22 @@ def check_criteria(student_data, company_data, student_skills=None):
     }
 
     # Department
-    dept = student_data.get("department", "")
     allowed = [d.strip() for d in str(company_data.get("allowed_departments", "")).split(",")]
-    dept_pass = dept in allowed
-    scorecard["department_check"] = {
-        "passed": dept_pass,
-        "student_value": dept,
-        "required_value": ", ".join(allowed),
-        "is_hard": True,
-        "message": f"Department {dept} {'is in' if dept_pass else 'is not in'} allowed list: {', '.join(allowed)}"
-    }
+    raw_dept = student_data.get("department")
+    if _is_missing(raw_dept):
+        scorecard["department_check"] = {
+            "passed": False, "unknown": True,
+            "student_value": None, "required_value": ", ".join(allowed), "is_hard": True,
+            "message": f"Department not on file; allowed list {', '.join(allowed)} cannot be verified",
+        }
+    else:
+        dept = raw_dept
+        dept_pass = dept in allowed
+        scorecard["department_check"] = {
+            "passed": dept_pass, "unknown": False,
+            "student_value": dept, "required_value": ", ".join(allowed), "is_hard": True,
+            "message": f"Department {dept} {'is in' if dept_pass else 'is not in'} allowed list: {', '.join(allowed)}"
+        }
 
     # --- SOFT CHECKS (scored, not pass/fail) ---
 
@@ -187,20 +212,37 @@ def check_criteria(student_data, company_data, student_skills=None):
 
     # --- OVERALL VERDICT ---
     hard_checks = [v for v in scorecard.values() if v.get("is_hard")]
-    hard_pass = all(c["passed"] for c in hard_checks)
+    hard_pass = all(c["passed"] for c in hard_checks)  # unknown has passed=False → dominates
 
     soft_checks = [v for v in scorecard.values() if not v.get("is_hard")]
     soft_passed = sum(1 for c in soft_checks if c.get("passed", True))
     soft_total = len(soft_checks)
 
+    # hard_failures = KNOWN fails only (value on file, below threshold). Unknown hard
+    # checks go to incomplete_fields instead. On the model/admin path no input is ever
+    # missing (NaN is not missing), so no check is unknown and this list is identical
+    # to before — the invariant that keeps run_inference byte-identical.
+    hard_failures = [k for k, v in scorecard.items()
+                     if k != "_summary" and v.get("is_hard") and not v.get("passed") and not v.get("unknown")]
+    incomplete_fields = [k for k, v in scorecard.items()
+                         if k != "_summary" and v.get("is_hard") and v.get("unknown")]
+
+    if hard_failures:
+        status = "ineligible"       # a real fail dominates over a missing value
+    elif incomplete_fields:
+        status = "incomplete"
+    else:
+        status = "eligible"
+
     scorecard["_summary"] = {
         "hard_pass": hard_pass,
         "soft_score": soft_passed / soft_total if soft_total > 0 else 1.0,
         "eligible": hard_pass and (soft_passed / soft_total >= 0.4 if soft_total > 0 else True),
-        "hard_failures": [k for k, v in scorecard.items()
-                          if v.get("is_hard") and not v.get("passed") and k != "_summary"],
+        "hard_failures": hard_failures,
         "soft_weaknesses": [k for k, v in scorecard.items()
                             if not v.get("is_hard") and not v.get("passed", True) and k != "_summary"],
+        "status": status,
+        "incomplete_fields": incomplete_fields,
     }
 
     return scorecard
