@@ -1244,13 +1244,27 @@ def student_feed(
         jobs = [job for job in jobs if job_track(job) == requested_track]
     student = enrich_student_row(build_student_model_input(load_current_student(sid, user)))
     unseen_jobs = [job for job in jobs if job["id"] not in liked and job["id"] not in passed]
-    eligible_jobs = [
-        job for job in unseen_jobs
-        if passes_hard_criteria(student, job)
-    ]
+    # One hard-check pass per unseen job gives BOTH the eligibility decision and the
+    # per-job status (eligible/ineligible/incomplete). scorecard_for_job's
+    # _summary.hard_pass is identical to passes_hard_criteria (same check_criteria),
+    # so the eligible set/order is unchanged — this only also reads the status that
+    # pass already computed. No extra ML: check_criteria is rule-based, and the
+    # batched Fairlearn scoring still runs only on eligible_jobs in sort_jobs_for_student.
+    summaries = {job["id"]: scorecard_for_job(student, job)["_summary"] for job in unseen_jobs}
+    eligible_jobs = [job for job in unseen_jobs if summaries[job["id"]]["hard_pass"]]
     ranked_jobs = sort_jobs_for_student(student, eligible_jobs)
     cards = [job_to_card(job, get_recruiter(job.get("recruiter_id"))) for job in ranked_jobs]
-    return {"jobs": cards[offset:offset + limit]}
+
+    # 1b(b): tell an incomplete student how many jobs would unlock if they completed
+    # their profile. A job is 'incomplete' iff it is blocked ONLY by unknown (missing)
+    # fields — 1b precedence makes any genuine hard-fail 'ineligible', so counting
+    # status=='incomplete' excludes jobs that would still fail on a known criterion.
+    incomplete = [s for s in summaries.values() if s.get("status") == "incomplete"]
+    profile_status = {
+        "incomplete_fields": sorted({f for s in summaries.values() for f in s.get("incomplete_fields", [])}),
+        "jobs_would_unlock": len(incomplete),
+    }
+    return {"jobs": cards[offset:offset + limit], "profile_status": profile_status}
 
 
 @router.get("/fairness/status")
