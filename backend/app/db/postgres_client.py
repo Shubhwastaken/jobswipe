@@ -151,6 +151,26 @@ class QueryBuilder:
         self._params.append(pattern)
         return self
 
+    def gt(self, col: str, val: Any) -> "QueryBuilder":
+        self._filters.append(f'"{col}" > %s')
+        self._params.append(_serialize(val))
+        return self
+
+    def gte(self, col: str, val: Any) -> "QueryBuilder":
+        self._filters.append(f'"{col}" >= %s')
+        self._params.append(_serialize(val))
+        return self
+
+    def lt(self, col: str, val: Any) -> "QueryBuilder":
+        self._filters.append(f'"{col}" < %s')
+        self._params.append(_serialize(val))
+        return self
+
+    def lte(self, col: str, val: Any) -> "QueryBuilder":
+        self._filters.append(f'"{col}" <= %s')
+        self._params.append(_serialize(val))
+        return self
+
     def match(self, filters: Dict) -> "QueryBuilder":
         for col, val in filters.items():
             self.eq(col, val)

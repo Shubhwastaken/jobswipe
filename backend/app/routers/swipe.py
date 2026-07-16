@@ -1,4 +1,5 @@
 import logging
+import math
 import os
 import re
 import threading
@@ -25,7 +26,7 @@ from app.services.profile_source import (
     use_db_profiles,
 )
 from app.services.talentforge_matcher import all_student_rows, enrich_student_row, is_canonical_job, score_student_for_job
-from src.explainability.criteria_checker import check_criteria
+from src.explainability.criteria_checker import check_criteria, _is_missing
 from src.explainability.improvement_planner import generate_improvement_plan
 from src.model.inference import build_inference_features
 
@@ -377,10 +378,20 @@ def build_student_model_input(student: Dict[str, Any]) -> Dict[str, Any]:
     merged = {**base_row, **feature_row, **profile, **student}
     merged["student_id"] = sid
     merged["full_name"] = first_present(merged, "full_name", "name", default=sid)
-    merged["department"] = normalize_department(first_present(merged, "department", "branch", default=""))
-    merged["cgpa"] = safe_float(merged.get("cgpa"))
-    merged["10th_marks"] = safe_float(first_present(merged, "10th_marks", "tenth_marks"))
-    merged["12th_marks"] = safe_float(first_present(merged, "12th_marks", "twelfth_marks"))
+    # Eligibility path (1b): keep a missing hard-check input as None so check_criteria
+    # can flag it 'incomplete' instead of coercing it to 0 and reporting a false
+    # failure. The *_normalized feature-vector fields below are computed independently
+    # and stay coerced exactly as before — build_inference_features reads only the
+    # normalized keys, never the raw cgpa/marks/department. For a complete profile the
+    # missing branch never fires, so the model input is byte-identical.
+    _raw_dept = first_present(merged, "department", "branch", default=None)
+    merged["department"] = None if _is_missing(_raw_dept) else normalize_department(_raw_dept)
+    _raw_cgpa = merged.get("cgpa")
+    merged["cgpa"] = None if _is_missing(_raw_cgpa) else safe_float(_raw_cgpa)
+    _raw_10 = first_present(merged, "10th_marks", "tenth_marks", default=None)
+    merged["10th_marks"] = None if _is_missing(_raw_10) else safe_float(_raw_10)
+    _raw_12 = first_present(merged, "12th_marks", "twelfth_marks", default=None)
+    merged["12th_marks"] = None if _is_missing(_raw_12) else safe_float(_raw_12)
     merged["cgpa_normalized"] = safe_float(merged.get("cgpa_normalized"), merged["cgpa"] / 10 if merged["cgpa"] else 0.0)
     merged["10th_normalized"] = safe_float(merged.get("10th_normalized"), merged["10th_marks"] / 100 if merged["10th_marks"] else 0.0)
     merged["12th_normalized"] = safe_float(merged.get("12th_normalized"), merged["12th_marks"] / 100 if merged["12th_marks"] else 0.0)
@@ -425,9 +436,17 @@ def build_student_model_input(student: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def refresh_scorecard_summary(scorecard: Dict[str, Any]) -> Dict[str, Any]:
+    # Mirror check_criteria's _summary (1b): unknown hard checks are 'incomplete',
+    # not 'hard_failures'; add status + incomplete_fields. Kept in lockstep so a
+    # scorecard recomputed here (department override below) matches one straight
+    # from check_criteria.
     hard_failures = [
         key for key, value in scorecard.items()
-        if key != "_summary" and value.get("is_hard") and not value.get("passed")
+        if key != "_summary" and value.get("is_hard") and not value.get("passed") and not value.get("unknown")
+    ]
+    incomplete_fields = [
+        key for key, value in scorecard.items()
+        if key != "_summary" and value.get("is_hard") and value.get("unknown")
     ]
     soft_weaknesses = [
         key for key, value in scorecard.items()
@@ -436,12 +455,21 @@ def refresh_scorecard_summary(scorecard: Dict[str, Any]) -> Dict[str, Any]:
     hard_checks = [value for key, value in scorecard.items() if key != "_summary" and value.get("is_hard")]
     soft_checks = [value for key, value in scorecard.items() if key != "_summary" and not value.get("is_hard")]
     soft_score = sum(1 for value in soft_checks if value.get("passed", True)) / len(soft_checks) if soft_checks else 1.0
+    hard_pass = all(value.get("passed") for value in hard_checks)
+    if hard_failures:
+        status = "ineligible"
+    elif incomplete_fields:
+        status = "incomplete"
+    else:
+        status = "eligible"
     scorecard["_summary"] = {
-        "hard_pass": all(value.get("passed") for value in hard_checks),
+        "hard_pass": hard_pass,
         "soft_score": soft_score,
-        "eligible": all(value.get("passed") for value in hard_checks) and soft_score >= 0.4,
+        "eligible": hard_pass and soft_score >= 0.4,
         "hard_failures": hard_failures,
         "soft_weaknesses": soft_weaknesses,
+        "status": status,
+        "incomplete_fields": incomplete_fields,
     }
     return scorecard
 
@@ -453,10 +481,14 @@ def passes_hard_criteria(student: Dict[str, Any], job: Dict[str, Any]) -> bool:
 
     if not as_list(job.get("allowed_departments") or job.get("allowed_branches")):
         scorecard["department_check"]["passed"] = True
+        scorecard["department_check"]["unknown"] = False  # no dept requirement → a missing dept is not 'incomplete'
         scorecard["department_check"]["required_value"] = "Any"
         scorecard["department_check"]["message"] = "No department restriction for this job"
         refresh_scorecard_summary(scorecard)
 
+    # Bool gate: incomplete => hard_pass False => returns False, exactly as a real
+    # failure does. The incomplete-vs-failed distinction is not lost — it lives in
+    # _summary.status / .incomplete_fields, surfaced by scorecard_for_job.
     return bool(scorecard.get("_summary", {}).get("hard_pass"))
 
 
@@ -514,7 +546,62 @@ def fairlearn_score_for_pair(student: Dict[str, Any], job: Dict[str, Any]) -> Di
         }
 
 
-def blended_pair_score(student: Dict[str, Any], job: Dict[str, Any], interested_rank: Optional[Dict[str, int]] = None) -> Tuple[float, Dict[str, Any]]:
+def batch_fairlearn_scores(student: Dict[str, Any], jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Score every (student, job) pair through the champion in ONE scaler.transform
+    and ONE model call, instead of a fresh one-row DataFrame + transform + predict
+    per pair (swipe.py's per-pair path did 56 round-trips for a 56-job feed).
+
+    Returns a list parallel to `jobs`, each element the same dict
+    fairlearn_score_for_pair returns. Bit-identical by construction: build_student_model_input
+    is deterministic, and scaler.transform / _pmf_predict are row-wise, so batching
+    changes only the number of calls, not any value.
+    """
+    global _FAIRLEARN_LOAD_FAILED_THIS_CYCLE
+    n = len(jobs)
+    if _FAIRLEARN_LOAD_FAILED_THIS_CYCLE:
+        return [{"score": None, "source": "unavailable", "fallback_reason": "artifact_load_failed",
+                 "error": _FAIRLEARN_LAST_ERROR} for _ in range(n)]
+    artifact = load_fairlearn_artifact()
+    if not artifact:
+        _FAIRLEARN_LOAD_FAILED_THIS_CYCLE = True
+        return [{"score": None, "source": "unavailable", "fallback_reason": "artifact_load_failed",
+                 "error": _FAIRLEARN_LAST_ERROR} for _ in range(n)]
+
+    student_input = build_student_model_input(student)  # once per student, not per pair
+    results: List[Optional[Dict[str, Any]]] = [None] * n
+    rows: List[Dict[str, Any]] = []
+    ok_idx: List[int] = []
+    for i, job in enumerate(jobs):
+        try:
+            rows.append(build_inference_features(student_input, normalize_job_for_rules_and_model(job)))
+            ok_idx.append(i)
+        except Exception:
+            logger.exception("Fairlearn feature build failed for a pair; TalentForge-only for it")
+            results[i] = {"score": None, "source": "unavailable", "fallback_reason": "pair_scoring_failed"}
+
+    if rows:
+        try:
+            frame = pd.DataFrame(rows).reindex(columns=artifact["feature_cols"], fill_value=0)
+            probabilities = score_variant_probabilities(artifact["model"], artifact["scaler"].transform(frame.fillna(0)))
+            for k, i in enumerate(ok_idx):
+                results[i] = {
+                    "score": float(probabilities[k]),
+                    "source": "fairlearn_champion" if _FAIRLEARN_IS_CHAMPION else "fairlearn_fallback",
+                    "fallback_reason": None,
+                    "is_champion": _FAIRLEARN_IS_CHAMPION,
+                    "loaded_artifact": _FAIRLEARN_LOADED_NAME,
+                }
+        except Exception as exc:
+            logger.exception("Batched Fairlearn scoring failed; TalentForge-only for the feed")
+            for i in ok_idx:
+                results[i] = {"score": None, "source": "unavailable",
+                              "fallback_reason": "pair_scoring_failed", "error": str(exc)}
+    return [r if r is not None else {"score": None, "source": "unavailable",
+            "fallback_reason": "pair_scoring_failed"} for r in results]
+
+
+def blended_pair_score(student: Dict[str, Any], job: Dict[str, Any], interested_rank: Optional[Dict[str, int]] = None,
+                       fairlearn_result: Optional[Dict[str, Any]] = None) -> Tuple[float, Dict[str, Any]]:
     """Stage 1 of Algorithm 1: return the TalentForge *match* score as the primary
     ranking score. The Fairlearn probability is kept strictly separate (carried in
     the breakdown, never averaged into the match score) for the pool-level fairness
@@ -528,7 +615,10 @@ def blended_pair_score(student: Dict[str, Any], job: Dict[str, Any], interested_
       - ``fairness_note``    : human-readable note, present only when not fully active
     """
     match_score, breakdown = score_student_for_job(student, job, interested_rank or {})
-    fairlearn_result = fairlearn_score_for_pair(student, job)
+    # Use a precomputed (batched) fairness result when the caller supplies one; else
+    # fall back to the per-pair call, so callers outside the feed are unchanged.
+    if fairlearn_result is None:
+        fairlearn_result = fairlearn_score_for_pair(student, job)
     fairlearn_score = fairlearn_result.get("score")
 
     # Match score is the primary ranking score in every case — no blending.
@@ -604,9 +694,25 @@ def rerank_with_fairness(scored_rows: List[Dict[str, Any]], score_key: str, fair
     # Fairness-active: band near-ties by match score, break them by fairness prob.
     # Band-edge cases (two rows within epsilon but straddling a band boundary) are
     # an accepted approximation of the tie-band heuristic.
+    def finite_match(row: Dict[str, Any]) -> float:
+        """Banding does .astype(int), which raises IntCastingNaNError on a non-finite
+        value — a nan match score once 500'd the whole feed. A ranked score must always
+        be a real number, so coerce non-finite to 0.0 and WARN loudly: reaching this
+        means an upstream scoring bug, not a normal state. Permanent invariant guard,
+        not a substitute for scoring correctly."""
+        value = float(row.get(score_key) or 0.0)
+        if not math.isfinite(value):
+            logger.warning(
+                "Non-finite match score %r for student=%s job=%s — coercing to 0.0 for "
+                "banding. This is a last-resort guard; the score should never be non-finite.",
+                value, row.get("student_id"), row.get("id") or row.get("job_id"),
+            )
+            return 0.0
+        return value
+
     order_frame = pd.DataFrame({
         "_idx": range(len(scored_rows)),
-        "match": [float(row.get(score_key) or 0.0) for row in scored_rows],
+        "match": [finite_match(row) for row in scored_rows],
         "fair": [float(row.get(fairness_key)) for row in scored_rows],
     }).assign(
         band=lambda d: (d["match"] / FAIRNESS_TIE_EPSILON).round().astype(int),
@@ -660,9 +766,10 @@ def stamp_fairness_effectiveness(
 
 def sort_jobs_for_student(student: Dict[str, Any], jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     reset_fairness_cycle()
+    fair_results = batch_fairlearn_scores(student, jobs)  # one transform + one model call for the whole feed
     scored_jobs = []
-    for job in jobs:
-        score, breakdown = blended_pair_score(student, job)
+    for job, fair in zip(jobs, fair_results):
+        score, breakdown = blended_pair_score(student, job, fairlearn_result=fair)
         scored_jobs.append({
             **job,
             "phi_score": score,
@@ -861,6 +968,7 @@ def scorecard_for_job(student: Dict[str, Any], job: Dict[str, Any]) -> Dict[str,
     scorecard = check_criteria(student_input, normalized_job, student_skills=student_input.get("skill_list", []))
     if not as_list(job.get("allowed_departments") or job.get("allowed_branches")):
         scorecard["department_check"]["passed"] = True
+        scorecard["department_check"]["unknown"] = False  # no dept requirement → a missing dept is not 'incomplete'
         scorecard["department_check"]["required_value"] = "Any"
         scorecard["department_check"]["message"] = "No department restriction for this job"
     return refresh_scorecard_summary(scorecard)
@@ -1136,13 +1244,27 @@ def student_feed(
         jobs = [job for job in jobs if job_track(job) == requested_track]
     student = enrich_student_row(build_student_model_input(load_current_student(sid, user)))
     unseen_jobs = [job for job in jobs if job["id"] not in liked and job["id"] not in passed]
-    eligible_jobs = [
-        job for job in unseen_jobs
-        if passes_hard_criteria(student, job)
-    ]
+    # One hard-check pass per unseen job gives BOTH the eligibility decision and the
+    # per-job status (eligible/ineligible/incomplete). scorecard_for_job's
+    # _summary.hard_pass is identical to passes_hard_criteria (same check_criteria),
+    # so the eligible set/order is unchanged — this only also reads the status that
+    # pass already computed. No extra ML: check_criteria is rule-based, and the
+    # batched Fairlearn scoring still runs only on eligible_jobs in sort_jobs_for_student.
+    summaries = {job["id"]: scorecard_for_job(student, job)["_summary"] for job in unseen_jobs}
+    eligible_jobs = [job for job in unseen_jobs if summaries[job["id"]]["hard_pass"]]
     ranked_jobs = sort_jobs_for_student(student, eligible_jobs)
     cards = [job_to_card(job, get_recruiter(job.get("recruiter_id"))) for job in ranked_jobs]
-    return {"jobs": cards[offset:offset + limit]}
+
+    # 1b(b): tell an incomplete student how many jobs would unlock if they completed
+    # their profile. A job is 'incomplete' iff it is blocked ONLY by unknown (missing)
+    # fields — 1b precedence makes any genuine hard-fail 'ineligible', so counting
+    # status=='incomplete' excludes jobs that would still fail on a known criterion.
+    incomplete = [s for s in summaries.values() if s.get("status") == "incomplete"]
+    profile_status = {
+        "incomplete_fields": sorted({f for s in summaries.values() for f in s.get("incomplete_fields", [])}),
+        "jobs_would_unlock": len(incomplete),
+    }
+    return {"jobs": cards[offset:offset + limit], "profile_status": profile_status}
 
 
 @router.get("/fairness/status")

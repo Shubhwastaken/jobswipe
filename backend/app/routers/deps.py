@@ -54,9 +54,8 @@ def get_current_user(payload=Depends(decode_token)):
     try:
         user_result = supabase.table("students").select("*").eq("student_id", student_id).maybe_single().execute()
         user = user_result.data if user_result else None
-        if not user:
-            user_result = supabase.table("students").select("*").eq("id", student_id).maybe_single().execute()
-            user = user_result.data if user_result else None
+        # (removed dead .eq("id", ...) fallback: students.id is NULL for every row,
+        #  so it never matched. One identity column: student_id.)
     except Exception:
         email = str(payload.get("email") or "")
         user = {

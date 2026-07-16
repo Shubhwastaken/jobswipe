@@ -50,6 +50,36 @@ def _skill_key(value: str) -> str:
     return re.sub(r"[^a-z0-9+#]+", " ", value.lower()).strip()
 
 
+try:
+    from app.services.skill_normalizer import normalize_skill
+except Exception:  # standalone use without the app package on the path
+    def normalize_skill(value: str) -> str:
+        return value
+
+
+def _is_valid_skill_name(name: str) -> bool:
+    """Gate skill text on write. Rejects sentence fragments that a free-text
+    résumé skills section produces ("achieving 85% accuracy.", "and exam
+    platforms.", "Developer Tools : Docker") while allowing real skills. A `.`
+    inside a single token is allowed (Node.js, Vue.js, .NET) — only a *trailing*
+    period is a fragment signal. A blanket `.`/length rule would strip legitimate
+    skills, which real data has already proven.
+    """
+    n = (name or "").strip()
+    if not n or len(n) > 40:
+        return False
+    if ":" in n or "%" in n:
+        return False
+    if n.endswith("."):
+        return False
+    words = n.split()
+    if len(words) > 4:
+        return False
+    if words and words[0].lower() in {"and", "or", "with"}:
+        return False
+    return True
+
+
 def _load_dynamic_skills() -> set[str]:
     skills = set(DEFAULT_KNOWN_SKILLS)
     candidate_paths = []
@@ -400,15 +430,24 @@ def _extract_skills(skill_lines: List[str], full_text: str, tables: List[Any], l
     def add(name: str, proficiency: str, source: str) -> None:
         clean = re.sub(r"\s*\(\d+\s+verified\)", "", name).strip(" -;|")
         clean = re.sub(r"^[\u2022*\-•]+\s*", "", clean)
-        clean = re.sub(r"^(Languages|Programming|Backend\s*&\s*Systems|ML\s*&\s*Data|Databases\s*&\s*Cloud|Tools|Frameworks|Platforms)\s*:\s*", "", clean, flags=re.IGNORECASE)
         clean = clean.strip(" -;|")
-        key = _skill_key(clean)
+        # General "Heading : Skill" rule (replaces the hardcoded label whitelist,
+        # which missed "Developer Tools :" / "Libraries :"): if the text after a
+        # colon is itself a known skill, keep only that remainder.
+        if ":" in clean:
+            tail = clean.split(":", 1)[1].strip(" -;|")
+            if tail and _skill_key(normalize_skill(tail)) in KNOWN_SKILLS:
+                clean = tail
+        if not _is_valid_skill_name(clean):
+            return
+        normalized = normalize_skill(clean)  # normalize on WRITE, not only on read
+        key = _skill_key(normalized)
         if key in {"beginner", "intermediate", "advanced", "expert", "proficient"}:
             return
         if key and key not in seen and len(key) >= 2:
             seen.add(key)
-            skills.append({"skill_name": clean, "proficiency": proficiency})
-            log.append(f"skill '{clean}': {source}")
+            skills.append({"skill_name": normalized, "proficiency": proficiency})
+            log.append(f"skill '{normalized}': {source}")
 
     prof_pattern = re.compile(r"(Advanced|Intermediate|Beginner|Expert|Proficient)[:\s]+(.+)", re.IGNORECASE)
     for line in skill_lines:
@@ -420,12 +459,10 @@ def _extract_skills(skill_lines: List[str], full_text: str, tables: List[Any], l
             for skill in re.split(r"[,;|/•\u2022]", match.group(2)):
                 add(skill, proficiency, "proficiency prefix [high]")
 
-    if not skills:
-        for line in skill_lines:
-            clean = re.sub(r"^[*\-]+\s*", "", line.strip())
-            if clean and len(clean) < 90:
-                for skill in re.split(r"[,;|/•\u2022]", clean):
-                    add(skill, "Intermediate", "section fallback [medium]")
+    # NOTE: the old 'section fallback' branch (accept any <90-char line when
+    # nothing else matched) is deleted. It accepted arbitrary free text and was
+    # the source of sentence-fragment skills. If branches 1/3/4 find nothing,
+    # return nothing rather than guess.
 
     text_keyed = _skill_key(full_text)
     for skill in sorted(KNOWN_SKILLS, key=len, reverse=True):

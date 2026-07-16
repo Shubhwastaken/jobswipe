@@ -143,8 +143,15 @@ async def upload_resume(student_id: str, file: UploadFile = File(...), payload=D
     update_result = _safe_execute(
         supabase.table("students").update(update_payload).eq("student_id", student_id)
     )
-    if update_result is not None and not update_result.data:
-        _safe_execute(supabase.table("students").update(update_payload).eq("id", student_id))
+    # (removed dead .eq("id", ...) update fallback: students.id is NULL for every
+    #  row, so it never matched. One identity column: student_id.)
+
+    # Populate the profile from the parsed résumé. The call site was dropped in
+    # d0110b7, so upload parsed the PDF and then discarded the result — the product
+    # loop (résumé in -> profile out -> matching) had its middle step cut. Skill
+    # extraction is now gated (validated + normalized on write), and every parsed
+    # skill row is written verified=False: a résumé is a claim, not a passed test.
+    _sync_parsed_children(student_id, parsed)
     clear_profile_dependent_caches()
 
     return {
@@ -152,5 +159,5 @@ async def upload_resume(student_id: str, file: UploadFile = File(...), payload=D
         "parsed": parsed,
         "confidence": confidence,
         "resume_url": public_url or "",
-        "message": "Resume uploaded. Profile details can be completed manually.",
+        "message": "Resume uploaded. Profile populated from the parsed résumé.",
     }

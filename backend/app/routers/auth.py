@@ -301,7 +301,10 @@ def create_trial_student(email: str, password: str) -> dict:
         "email": email,
         "password_hash": hash_password(password),
         "department": "CSE",
-        "cgpa": 0,
+        # Unset CGPA is NULL, not 0. A literal 0 is a KNOWN value that fails every
+        # cgpa>0 job (ineligible); NULL is 'not on file', which the three-state
+        # eligibility engine reports as 'incomplete' — the "add your CGPA" signal.
+        "cgpa": None,
         "year_of_study": 3,
     }
     result = supabase_insert("students", payload)
@@ -389,7 +392,9 @@ def student_signup(req: StudentSignupRequest):
         "email": str(req.email),
         "password_hash": hash_password(req.password),
         "department": "CSE",
-        "cgpa": 0,
+        # Unset CGPA is NULL, not 0 (see create_trial_student): NULL -> 'incomplete',
+        # a literal 0 -> 'ineligible'.
+        "cgpa": None,
         "year_of_study": 3,
     })
     return {"message": "Signup successful"}
