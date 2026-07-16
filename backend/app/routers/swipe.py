@@ -1,4 +1,5 @@
 import logging
+import math
 import os
 import re
 import threading
@@ -693,9 +694,25 @@ def rerank_with_fairness(scored_rows: List[Dict[str, Any]], score_key: str, fair
     # Fairness-active: band near-ties by match score, break them by fairness prob.
     # Band-edge cases (two rows within epsilon but straddling a band boundary) are
     # an accepted approximation of the tie-band heuristic.
+    def finite_match(row: Dict[str, Any]) -> float:
+        """Banding does .astype(int), which raises IntCastingNaNError on a non-finite
+        value — a nan match score once 500'd the whole feed. A ranked score must always
+        be a real number, so coerce non-finite to 0.0 and WARN loudly: reaching this
+        means an upstream scoring bug, not a normal state. Permanent invariant guard,
+        not a substitute for scoring correctly."""
+        value = float(row.get(score_key) or 0.0)
+        if not math.isfinite(value):
+            logger.warning(
+                "Non-finite match score %r for student=%s job=%s — coercing to 0.0 for "
+                "banding. This is a last-resort guard; the score should never be non-finite.",
+                value, row.get("student_id"), row.get("id") or row.get("job_id"),
+            )
+            return 0.0
+        return value
+
     order_frame = pd.DataFrame({
         "_idx": range(len(scored_rows)),
-        "match": [float(row.get(score_key) or 0.0) for row in scored_rows],
+        "match": [finite_match(row) for row in scored_rows],
         "fair": [float(row.get(fairness_key)) for row in scored_rows],
     }).assign(
         band=lambda d: (d["match"] / FAIRNESS_TIE_EPSILON).round().astype(int),

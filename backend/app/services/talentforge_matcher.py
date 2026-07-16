@@ -21,6 +21,12 @@ WEIGHTS = {
     "category": 0.3,
 }
 
+# Cohort-mean cgpa (synthetic S0 cohort ~= 7.4). Used to impute the cgpa sub-term of
+# category_score when cgpa is genuinely missing (None/nan). Missing != 0: an unknown cgpa is
+# estimated at the population mean, not floored. Revisit / make config-driven at real-data
+# handover — this constant is tied to the current synthetic cohort.
+MISSING_CGPA_IMPUTE = 7.4
+
 
 def _read_csv(name: str) -> pd.DataFrame:
     path = DATA_DIR / name
@@ -211,6 +217,31 @@ def profile_for_student(student_id: str) -> Dict[str, Any]:
     return load_profiles().get(str(student_id), {})
 
 
+def _resolve_cgpa(*candidates: Any) -> float:
+    """Resolve the cgpa used by the match score, imputing a genuinely missing one.
+
+    The old `profile.get("cgpa") or student.get("cgpa") or 0` idiom broke twice: a NULL
+    cgpa arrives from the loader as nan, and nan is TRUTHY, so it survived the `or`
+    chain and poisoned category_score -> the whole match score became nan (and then
+    crashed rerank_with_fairness's int cast). It also treated a real 0.0 as falsy.
+
+    Take the first candidate that is present AND finite (a known 0.0 counts — it stays
+    0.0 and scores 0 on the term). If every candidate is missing (None/nan/inf), impute
+    MISSING_CGPA_IMPUTE: an unknown cgpa is estimated at the population mean, NOT floored
+    to 0, so a student is not ranked at the bottom merely for not having filled it in yet.
+    """
+    for value in candidates:
+        if value is None:
+            continue
+        try:
+            number = float(value)
+        except (TypeError, ValueError):
+            continue
+        if math.isfinite(number):
+            return number
+    return MISSING_CGPA_IMPUTE
+
+
 def score_student_for_job(student: Dict[str, Any], job: Dict[str, Any], interested_rank: Dict[str, int]) -> Tuple[float, Dict[str, float]]:
     sid = str(student.get("student_id") or student.get("id") or student.get("register_number"))
     profile = profile_for_student(sid)
@@ -220,7 +251,7 @@ def score_student_for_job(student: Dict[str, Any], job: Dict[str, Any], interest
     internships = profile.get("internships") or []
     certs = profile.get("certifications") or []
     department = str(profile.get("department") or student.get("department") or student.get("branch") or "")
-    cgpa = float(profile.get("cgpa") or student.get("cgpa") or 0)
+    cgpa = _resolve_cgpa(profile.get("cgpa"), student.get("cgpa"))
 
     role_title = job.get("role_title") or job.get("role") or ""
     job_text = " ".join([
